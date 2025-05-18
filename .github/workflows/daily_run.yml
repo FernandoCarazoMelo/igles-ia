@@ -1,0 +1,73 @@
+name: Run Iglesia Content Script Daily and Commit Results
+
+on:
+  schedule:
+    # Ejecuta todos los días a las 00:00 UTC (ajusta según necesites)
+    - cron: '0 0 * * *'
+  workflow_dispatch: # Permite ejecutar el workflow manualmente
+
+jobs:
+  run_script_and_commit: # Renombrado para mayor claridad
+    runs-on: ubuntu-latest
+    # Necesitamos permisos para escribir en el repositorio
+    permissions:
+      contents: write # Permite a la acción hacer commit y push
+      
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Necesitamos el token para poder hacer push más adelante
+          # También puedes usar un PAT (Personal Access Token) si tienes configuraciones específicas
+          # token: ${{ secrets.PAT_TOKEN }} # Descomentar si usas un PAT en lugar del GITHUB_TOKEN por defecto
+          fetch-depth: 0 # Obtiene todo el historial para que git sepa en qué rama está
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11' # O la versión que estés usando
+
+      - name: Install uv
+        run: curl -LsSf https://astral.sh/uv/install.sh | sh
+        # O: run: pip install uv
+
+      - name: Install dependencies with uv
+        run: uv pip install . # Asumiendo que tu pyproject.toml está configurado
+
+      - name: Run the script
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: uv run python main.py
+
+      # El paso de "Upload results" como artefacto sigue siendo útil para
+      # acceder rápidamente a los archivos de una ejecución específica sin navegar por los commits.
+      - name: Upload results as artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: iglesia-summary-csv
+          path: summaries/ # Sube toda la carpeta summaries
+
+      - name: Configure Git user
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions-bot@users.noreply.github.com" # Email válido para bots de GitHub
+
+      - name: Commit and push changes
+        run: |
+          git pull # Asegura que la copia local esté actualizada antes de intentar hacer push
+          git add summaries/ # Añade todos los cambios en la carpeta summaries
+          # Comprueba si hay algo para confirmar
+          if git diff --staged --quiet; then
+            echo "No changes to commit in summaries directory."
+          else
+            # Puedes personalizar el mensaje del commit
+            # Usamos la fecha actual en el mensaje del commit para mayor claridad
+            COMMIT_DATE=$(date +'%Y-%m-%d %H:%M:%S')
+            git commit -m "📄 Daily summary update: ${COMMIT_DATE}"
+            git push
+            echo "Changes committed and pushed."
+          fi
+        # La autenticación para git push se maneja automáticamente por actions/checkout@v4
+        # cuando se usa el GITHUB_TOKEN implícito (gracias a `permissions: contents: write`)
+        # o un token explícito.
