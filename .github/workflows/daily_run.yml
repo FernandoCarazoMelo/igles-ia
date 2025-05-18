@@ -32,7 +32,7 @@ jobs:
         # O: run: pip install uv
 
       - name: Install dependencies with uv
-        run: uv pip sync uv.lock --system # Asumiendo que tu pyproject.toml está configurado
+        run: uv pip install . --system  # Asumiendo que tu pyproject.toml está configurado
 
       - name: Run the script
         env:
