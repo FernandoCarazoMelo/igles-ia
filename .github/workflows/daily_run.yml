@@ -2,8 +2,8 @@ name: Run Iglesia Content Script Daily and Commit Results
 
 on:
   schedule:
-    # Ejecuta todos los días a las 00:00 UTC (ajusta según necesites)
-    - cron: '0 0 * * *'
+    # Ejecuta el script todos los lunes a las 6:30 AM UTC, hora España: 8:30 AM
+    - cron: '30 6 * * 1'
   workflow_dispatch: # Permite ejecutar el workflow manualmente
 
 jobs:
@@ -36,7 +36,7 @@ jobs:
 
       - name: Run the script
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }} # Asegúrate de que este secreto esté configurado en tu repositorio
         run: uv run python main.py
 
       # El paso de "Upload results" como artefacto sigue siendo útil para

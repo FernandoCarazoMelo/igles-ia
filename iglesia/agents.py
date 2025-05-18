@@ -94,8 +94,8 @@ def create_iglesia_content_crew(df, llm_instance):
         url_doc = row["url"]
         filename = row["filename"]
         
-        # Generar un nombre de archivo único para cada análisis semana_fecha_tipo_titulo
-        output_filename_individual = f"summaries/{filename}.json"
+        fecha_de_hoy = pd.Timestamp.now().strftime("%Y-%m-%d")
+        output_filename_individual = f"summaries/{fecha_de_hoy}/{filename}.json"
 
         task_individual = Task(
             description=f"""Analiza en profundidad el siguiente texto eclesiástico.
@@ -215,7 +215,8 @@ def create_iglesia_content_crew(df, llm_instance):
         # """,
         agent=periodista_catolico,
         context=analysis_tasks,
-        output_file="summaries/resumen_semanal_igles-ia.txt"
+        output_file=f"summaries/{fecha_de_hoy}/resumen_semanal_igles-ia.txt"
+        
     )
     
     iglesia_content_crew = Crew(
