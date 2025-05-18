@@ -1,7 +1,7 @@
 [project]
-name = "iglesia"
+name = "igles-ia"
 version = "0.1.0"
-description = "Add your description here"
+description = "Weekly newsletter about the Pope Leon XIV"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
