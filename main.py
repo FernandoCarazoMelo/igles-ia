@@ -10,6 +10,7 @@ from iglesia.utils import obtener_todos_los_textos
 
 def main(debug=True):
     load_dotenv()
+    print(os.getcwd())
     LLM_used = LLM(
         model="gpt-4.1-nano",
         temperature=0.2,

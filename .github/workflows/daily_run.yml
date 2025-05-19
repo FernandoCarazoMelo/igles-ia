@@ -50,7 +50,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: iglesia-summary-csv
-          path: summaries-remote/ # Sube toda la carpeta summaries
+          path: ./summaries-remote/ # Sube toda la carpeta summaries
 
       - name: Configure Git user
         run: |
