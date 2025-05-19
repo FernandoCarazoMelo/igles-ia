@@ -76,25 +76,25 @@ def create_iglesia_content_crew(df, llm_instance):
     )
 
     # Agente 2: Redactor del Resumen Semanal
-    redactor_jefe_iglesia = Agent(
-        role="Redactor Jefe del portal Igles-IA, con especial habilidad para la síntesis pastoral",
-        goal="Elaborar un resumen semanal inspirador y pastoral para los subscriptores de Igles-IA, integrando los análisis de los textos de la semana, comenzando con un recuento de los tipos de documentos y enlazando a las fuentes originales.",
-        backstory="""Como corazón editorial de Igles-IA, tu pluma transforma análisis doctrinales en mensajes semanales que nutren la fe. 
-        Eres experto en tejer una narrativa coherente a partir de múltiples fuentes, destacando los mensajes clave de la Iglesia de forma accesible, motivadora y digitalmente atractiva, incluyendo referencias claras a los textos completos para quien desee profundizar.""",
-        llm=llm_instance,
-        verbose=True,
-        allow_delegation=False
-    )
+    # redactor_jefe_iglesia = Agent(
+    #     role="Redactor Jefe del portal Igles-IA, con especial habilidad para la síntesis pastoral",
+    #     goal="Elaborar un resumen semanal inspirador y pastoral para los subscriptores de Igles-IA, integrando los análisis de los textos de la semana, comenzando con un recuento de los tipos de documentos y enlazando a las fuentes originales.",
+    #     backstory="""Como corazón editorial de Igles-IA, tu pluma transforma análisis doctrinales en mensajes semanales que nutren la fe. 
+    #     Eres experto en tejer una narrativa coherente a partir de múltiples fuentes, destacando los mensajes clave de la Iglesia de forma accesible, motivadora y digitalmente atractiva, incluyendo referencias claras a los textos completos para quien desee profundizar.""",
+    #     llm=llm_instance,
+    #     verbose=True,
+    #     allow_delegation=False
+    # )
     
-    editor_html = Agent(
-        role="Editor HTML",
-        goal="Convertir el resumen semanal en un formato HTML básico, ya que será integrado en una plantilla.",
-        backstory="""Eres un experto en edición HTML, capaz de transformar textos en formatos visualmente atractivos y accesibles. 
-        Tu tarea es asegurar que el contenido se presente de manera profesional sin cambiar nada del contenido.""",
-        llm=llm_instance,
-        verbose=True,
-        allow_delegation=False
-    )
+    # editor_html = Agent(
+    #     role="Editor HTML",
+    #     goal="Convertir el resumen semanal en un formato HTML básico, ya que será integrado en una plantilla.",
+    #     backstory="""Eres un experto en edición HTML, capaz de transformar textos en formatos visualmente atractivos y accesibles. 
+    #     Tu tarea es asegurar que el contenido se presente de manera profesional sin cambiar nada del contenido.""",
+    #     llm=llm_instance,
+    #     verbose=True,
+    #     allow_delegation=False
+    # )
     fecha_de_hoy = pd.Timestamp.now().strftime("%Y-%m-%d")
 
     print(f"Agents: {os.environ.get('SUMMARIES_FOLDER')}/{fecha_de_hoy}")
@@ -183,7 +183,7 @@ def create_iglesia_content_crew(df, llm_instance):
     # Fase 2: Tarea de Consolidación Semanal
     weekly_summary_task = Task(
         description= "Resumen de los resumenes recibidos",
-        expected_output= "Un txt con un mensaje breve y directo para el 'Resumen Semanal de Igles-IA'. Resume los resumenes que has recibido. Al final añade los links a TODAS las urls originales.",
+        expected_output= "Un txt con un mensaje breve y directo para el 'Resumen Semanal de Igles-IA'. Resume los resumenes que has recibido. Utiliza saltos de linea. Puedes empezar con un saludo como ¡Bienvenidos al Resumen Semanal de Igles-IA! \n\n Esta semana,... ",
         # # Descripción MUY SIMPLIFICADA para weekly_summary_task
         # description = f"""Tu tarea es crear un 'Resumen Semanal de Igles-IA' muy sencillo.
         # Recibirás análisis JSON de varios textos. Cada JSON tiene "fuente_documento", "tipo_documento", "url_original", y "resumen_general".
@@ -232,16 +232,16 @@ def create_iglesia_content_crew(df, llm_instance):
         
     )
     
-    task_format_html = Task(
-        description="Convierte el resumen semanal en un formato HTML básico.",
-        expected_output="Un archivo HTML básico. No cambies el contenido, solo el formato.",
-        agent=editor_html,
-        context=[weekly_summary_task],
-        output_file=f"{os.environ.get('SUMMARIES_FOLDER')}/{fecha_de_hoy}/resumen_semanal_igles-ia.html"
-    )
+    # task_format_html = Task(
+    #     description="Convierte el resumen semanal en un formato HTML básico.",
+    #     expected_output="Un archivo HTML básico. No cambies el contenido, solo el formato.",
+    #     agent=editor_html,
+    #     context=[weekly_summary_task],
+    #     output_file=f"{os.environ.get('SUMMARIES_FOLDER')}/{fecha_de_hoy}/resumen_semanal_igles-ia.html"
+    # )
     iglesia_content_crew = Crew(
         agents=[periodista_catolico],
-        tasks=analysis_tasks + [weekly_summary_task, task_format_html],
+        tasks=analysis_tasks + [weekly_summary_task],
         verbose=True
     )
     
