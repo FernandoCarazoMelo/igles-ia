@@ -36,7 +36,9 @@ jobs:
 
       - name: Run the script
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }} # Asegúrate de que este secreto esté configurado en tu repositorio
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          EMAIL_USER: ${{ secrets.EMAIL_USER }}
+          EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
           SUMMARIES_FOLDER: summaries-remote
         run: |
           echo "Folder: $SUMMARIES_FOLDER"
