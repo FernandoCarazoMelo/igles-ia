@@ -1,0 +1,15 @@
+{
+  "Resumen general": "El Papa León XIV en su audiencia al cuerpo diplomático enfatiza la importancia de la paz, la justicia y la verdad como pilares fundamentales para la convivencia y la misión de la Iglesia en el mundo. Invita al diálogo, al respeto mutuo y a la colaboración para construir un mundo más humano y fraterno, especialmente en tiempos de desafíos globales y conflictos.",
+  "Ideas clave": [
+    "La diplomacia pontificia refleja la comunidad universal de los pueblos y su misión pastoral.",
+    "La paz es un don activo que requiere trabajo interior, diálogo interreligioso y desarme.",
+    "La justicia es esencial para construir sociedades armónicas, protegiendo la dignidad de todos.",
+    "La verdad es fundamental para relaciones auténticas y requiere un compromiso valiente y sincero.",
+    "La Iglesia busca promover la esperanza, la conversión y la colaboración para un mundo mejor.",
+    "El diálogo y el respeto son esenciales para superar conflictos y fortalecer las relaciones internacionales.",
+    "La protección de la creación y los desafíos éticos, como la inteligencia artificial, demandan colaboración global.",
+    "El tiempo del Año jubilar es una oportunidad para renovar la esperanza y construir puentes de paz.",
+    "El Papa agradece el trabajo de los diplomáticos en la construcción de puentes entre países y la Santa Sede."
+  ],
+  "Tags": ["Paz", "Justicia", "Verdad", "Diálogo interreligioso", "Colaboración internacional"]
+}
