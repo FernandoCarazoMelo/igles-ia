@@ -37,7 +37,7 @@ jobs:
       - name: Run the script
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }} # Asegúrate de que este secreto esté configurado en tu repositorio
-          SUMMARIES_FOLDER: ./summaries-remote
+          SUMMARIES_FOLDER: summaries
         run: |
           echo "Folder: $SUMMARIES_FOLDER"
           echo "Running script..."
@@ -50,7 +50,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: iglesia-summary-csv
-          path: ./summaries-remote/ # Sube toda la carpeta summaries
+          path: summaries # Sube toda la carpeta summaries
 
       - name: Configure Git user
         run: |
