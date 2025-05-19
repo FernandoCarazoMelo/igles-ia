@@ -9,7 +9,7 @@ from iglesia.email_utils import enviar_correos
 from iglesia.utils import obtener_todos_los_textos
 
 
-def main(debug=True):
+def main(debug=False):
     load_dotenv()
     print(os.getcwd())
     LLM_used = LLM(
