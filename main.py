@@ -8,7 +8,7 @@ from iglesia.agents import create_iglesia_content_crew
 from iglesia.utils import obtener_todos_los_textos
 
 
-def main(debug=True):
+def main(debug=False):
     load_dotenv()
     LLM_used = LLM(
         model="gpt-4.1-nano",
