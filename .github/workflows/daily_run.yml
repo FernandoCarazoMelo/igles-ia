@@ -38,7 +38,10 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }} # Asegúrate de que este secreto esté configurado en tu repositorio
           SUMMARIES_FOLDER: summaries-remote
-        run: uv run python main.py
+        run: |
+          echo "Folder: $SUMMARIES_FOLDER"
+          echo "Running script..."
+          uv run python main.py
 
       # El paso de "Upload results" como artefacto sigue siendo útil para
       # acceder rápidamente a los archivos de una ejecución específica sin navegar por los commits.

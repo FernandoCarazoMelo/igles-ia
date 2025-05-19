@@ -216,7 +216,7 @@ def create_iglesia_content_crew(df, llm_instance):
         # """,
         agent=periodista_catolico,
         context=analysis_tasks,
-        output_file=f"summaries/{fecha_de_hoy}/resumen_semanal_igles-ia.txt"
+        output_file=f"{os.environ.get('SUMMARIES_FOLDER')}/{fecha_de_hoy}/resumen_semanal_igles-ia.txt"
         
     )
     
