@@ -1,3 +1,4 @@
+import os
 from collections import Counter
 
 import pandas as pd
@@ -95,7 +96,7 @@ def create_iglesia_content_crew(df, llm_instance):
         filename = row["filename"]
         
         fecha_de_hoy = pd.Timestamp.now().strftime("%Y-%m-%d")
-        output_filename_individual = f"summaries/{fecha_de_hoy}/{filename}.json"
+        output_filename_individual = f"{os.environ.get('SUMMARIES_FOLDER')}/{fecha_de_hoy}/{filename}.json"
 
         task_individual = Task(
             description=f"""Analiza en profundidad el siguiente texto eclesiástico.
