@@ -9,6 +9,27 @@ from iglesia.email_utils import enviar_correos
 from iglesia.utils import obtener_todos_los_textos
 
 
+def save_wordcloud(text, path_save="wordcloud.png"):
+    from collections import Counter
+
+    import matplotlib.pyplot as plt
+    from nltk.corpus import stopwords
+    from wordcloud import WordCloud
+
+    # Preprocess the text
+    stop_words = set(stopwords.words("spanish"))
+    words = [word for word in text.split() if word.lower() not in stop_words]
+    word_counts = Counter(words)
+
+    # Create a word cloud
+    wordcloud = WordCloud(
+        width=800, height=400, background_color="white"
+    ).generate_from_frequencies(word_counts)
+
+    # Save the word cloud to a file
+    wordcloud.to_file(path_save)
+
+
 def main(debug=False):
     load_dotenv()
     print(os.getcwd())
@@ -40,15 +61,25 @@ def main(debug=False):
     # filtrar los df de la última semana
     print(df)
 
-    run_date = pd.Timestamp('today').normalize()
-    df['fecha_dt'] = pd.to_datetime(df['fecha'])
-    df = df[(df['fecha_dt'] >= (run_date - pd.Timedelta(days=7))) & (df['fecha_dt'] < run_date)]
-    
+    run_date = pd.Timestamp("today").normalize()
+    df["fecha_dt"] = pd.to_datetime(df["fecha"])
+    df = df[
+        (df["fecha_dt"] >= (run_date - pd.Timedelta(days=7)))
+        & (df["fecha_dt"] < run_date)
+    ]
+
     # por ejemplo, si hoy es lunes 18 de mayo, se filtran los df de lunes 11 de mayo
     # qué dias se incluesn: lunes 11, martes 12, miércoles 13, jueves 14, viernes 15, sábado 16 y domingo 17
     df = df.drop(columns=["fecha_dt"])
+    all_text = " ".join(df["texto"])
+    save_wordcloud(
+        all_text,
+        path_save=f"{os.environ.get('SUMMARIES_FOLDER')}/{fecha_de_hoy}/wordcloud.png",
+    )
     print(df)
-    df.to_csv(f"{os.environ.get('SUMMARIES_FOLDER')}/{fecha_de_hoy}/iglesia.csv", index=False)
+    df.to_csv(
+        f"{os.environ.get('SUMMARIES_FOLDER')}/{fecha_de_hoy}/iglesia.csv", index=False
+    )
     iglesia_content_crew = create_iglesia_content_crew(df, LLM_used)
     _ = iglesia_content_crew.kickoff()
 

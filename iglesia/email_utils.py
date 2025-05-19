@@ -128,7 +128,6 @@ def _crear_mensaje(destinatario, nombre, fecha_resumen="2025-05-19"):
         resumen_txt = f.read()
         resumen_principal = convertir_txt_a_html(resumen_txt)
 
-
     # Contenido extendido desde JSONs
     contenido_extra = construir_html_desde_jsons(resumen_path)
 
@@ -138,7 +137,12 @@ def _crear_mensaje(destinatario, nombre, fecha_resumen="2025-05-19"):
     html_con_nombre = html_template.replace("{{nombre}}", nombre)
     html_con_nombre = html_con_nombre.replace("{{body}}", cuerpo_completo)
 
+    # adjuntar archivo png
+    with open(os.path.join(resumen_path, "wordcloud.png"), "rb") as f:
+        img_data = f.read()
+        msg.add_attachment(img_data, maintype="image", subtype="png", filename="wordcloud.png")
     msg.add_alternative(html_con_nombre, subtype="html")
+    
     return msg
 
 
