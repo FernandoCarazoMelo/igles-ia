@@ -5,6 +5,7 @@ from crewai import LLM
 from dotenv import load_dotenv
 
 from iglesia.agents import create_iglesia_content_crew
+from iglesia.email_utils import enviar_correos
 from iglesia.utils import obtener_todos_los_textos
 
 
@@ -54,3 +55,5 @@ def main(debug=True):
 
 if __name__ == "__main__":
     main()
+    fecha_de_hoy = pd.Timestamp.now().strftime("%Y-%m-%d")
+    enviar_correos("emails.csv", fecha_de_hoy)

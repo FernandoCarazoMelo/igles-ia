@@ -142,7 +142,7 @@ def _crear_mensaje(destinatario, nombre, fecha_resumen="2025-05-19"):
     return msg
 
 
-def enviar_correos(correos_path="emails.csv"):
+def enviar_correos(correos_path="emails.csv", fecha_resumen="2025-05-19"):
     df = pd.read_csv(correos_path)  # columnas: email,nombre
     EMAIL_USER = os.getenv("EMAIL_USER")
     EMAIL_PASS = os.getenv("EMAIL_PASS")
@@ -152,9 +152,9 @@ def enviar_correos(correos_path="emails.csv"):
         for _, row in df.iterrows():
             correo = row["email"]
             nombre = row.get("nombre", "amigo")
-            msg = _crear_mensaje(correo, nombre)
+            msg = _crear_mensaje(correo, nombre, fecha_resumen)
             smtp.send_message(msg)
-            print(f"Correo enviado a {correo}")
+            print(f"Correo enviado a {correo}, con fecha resumen ({fecha_resumen})")
 
 if __name__ == "__main__":
     print("hi!")

@@ -183,7 +183,7 @@ def create_iglesia_content_crew(df, llm_instance):
     # Fase 2: Tarea de Consolidación Semanal
     weekly_summary_task = Task(
         description= "Resumen de los resumenes recibidos",
-        expected_output= "Un txt con un mensaje breve y directo para el 'Resumen Semanal de Igles-IA'. Resume los resumenes que has recibido. Utiliza saltos de linea. Puedes empezar con un saludo como ¡Bienvenidos al Resumen Semanal de Igles-IA! \n\n Esta semana,... ",
+        expected_output= "Un txt con un mensaje breve y directo para el 'Resumen Semanal de Igles-IA'. Resume los resumenes que has recibido. Utiliza saltos de linea. Puedes subrayar alguna frase en negrita (con html tags). Puedes empezar con un saludo como ¡Bienvenidos al Resumen Semanal de Igles-IA! \n\n Esta semana,... ",
         # # Descripción MUY SIMPLIFICADA para weekly_summary_task
         # description = f"""Tu tarea es crear un 'Resumen Semanal de Igles-IA' muy sencillo.
         # Recibirás análisis JSON de varios textos. Cada JSON tiene "fuente_documento", "tipo_documento", "url_original", y "resumen_general".
