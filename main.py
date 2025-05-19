@@ -24,7 +24,7 @@ def main(debug=True):
 
     # crear carpeta dentro de summaries con la fecha de hoy
     os.makedirs(f"{os.environ.get('SUMMARIES_FOLDER')}/{fecha_de_hoy}", exist_ok=True)
-    
+    print(f"{os.environ.get('SUMMARIES_FOLDER')}/{fecha_de_hoy}")
     df = obtener_todos_los_textos(urls)
     df = df[df["titulo"].str.len() > 10]
     df = df.reset_index(drop=True)

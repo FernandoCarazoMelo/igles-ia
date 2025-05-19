@@ -85,7 +85,9 @@ def create_iglesia_content_crew(df, llm_instance):
         verbose=True,
         allow_delegation=False
     )
+    fecha_de_hoy = pd.Timestamp.now().strftime("%Y-%m-%d")
 
+    print(f"Agents: {os.environ.get('SUMMARIES_FOLDER')}/{fecha_de_hoy}")
     # Fase 1: Tareas de Análisis Individual
     analysis_tasks = []
     for idx, row in df.iterrows():
