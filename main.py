@@ -23,7 +23,7 @@ def main(debug=False):
     fecha_de_hoy = pd.Timestamp.now().strftime("%Y-%m-%d")
 
     # crear carpeta dentro de summaries con la fecha de hoy
-    os.makedirs(f"summaries/{fecha_de_hoy}", exist_ok=True)
+    os.makedirs(f"{os.environ.get('SUMMARIES_FOLDER')}/{fecha_de_hoy}", exist_ok=True)
     
     df = obtener_todos_los_textos(urls)
     df = df[df["titulo"].str.len() > 10]
@@ -46,7 +46,7 @@ def main(debug=False):
     # qué dias se incluesn: lunes 11, martes 12, miércoles 13, jueves 14, viernes 15, sábado 16 y domingo 17
     df = df.drop(columns=["fecha_dt"])
     print(df)
-    df.to_csv(f"summaries/{fecha_de_hoy}/iglesia.csv", index=False)
+    df.to_csv(f"{os.environ.get('SUMMARIES_FOLDER')}/{fecha_de_hoy}/iglesia.csv", index=False)
     iglesia_content_crew = create_iglesia_content_crew(df, LLM_used)
     _ = iglesia_content_crew.kickoff()
 

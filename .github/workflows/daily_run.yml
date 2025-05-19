@@ -37,6 +37,7 @@ jobs:
       - name: Run the script
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }} # Asegúrate de que este secreto esté configurado en tu repositorio
+          SUMMARIES_FOLDER: summaries-remote
         run: uv run python main.py
 
       # El paso de "Upload results" como artefacto sigue siendo útil para
@@ -46,7 +47,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: iglesia-summary-csv
-          path: summaries/ # Sube toda la carpeta summaries
+          path: summaries-remote/ # Sube toda la carpeta summaries
 
       - name: Configure Git user
         run: |
