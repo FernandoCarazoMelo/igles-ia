@@ -85,6 +85,16 @@ def create_iglesia_content_crew(df, llm_instance):
         verbose=True,
         allow_delegation=False
     )
+    
+    editor_html = Agent(
+        role="Editor HTML",
+        goal="Convertir el resumen semanal en un formato HTML básico, ya que será integrado en una plantilla.",
+        backstory="""Eres un experto en edición HTML, capaz de transformar textos en formatos visualmente atractivos y accesibles. 
+        Tu tarea es asegurar que el contenido se presente de manera profesional sin cambiar nada del contenido.""",
+        llm=llm_instance,
+        verbose=True,
+        allow_delegation=False
+    )
     fecha_de_hoy = pd.Timestamp.now().strftime("%Y-%m-%d")
 
     print(f"Agents: {os.environ.get('SUMMARIES_FOLDER')}/{fecha_de_hoy}")
@@ -222,9 +232,16 @@ def create_iglesia_content_crew(df, llm_instance):
         
     )
     
+    task_format_html = Task(
+        description="Convierte el resumen semanal en un formato HTML básico.",
+        expected_output="Un archivo HTML básico. No cambies el contenido, solo el formato.",
+        agent=editor_html,
+        context=[weekly_summary_task],
+        output_file=f"{os.environ.get('SUMMARIES_FOLDER')}/{fecha_de_hoy}/resumen_semanal_igles-ia.html"
+    )
     iglesia_content_crew = Crew(
         agents=[periodista_catolico],
-        tasks=analysis_tasks + [weekly_summary_task],
+        tasks=analysis_tasks + [weekly_summary_task, task_format_html],
         verbose=True
     )
     
