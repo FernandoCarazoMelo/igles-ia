@@ -41,7 +41,7 @@ jobs:
         run: |
           echo "Folder: $SUMMARIES_FOLDER"
           echo "Running script..."
-          uv run python main.py
+          # uv run python main.py
 
       # El paso de "Upload results" como artefacto sigue siendo útil para
       # acceder rápidamente a los archivos de una ejecución específica sin navegar por los commits.
