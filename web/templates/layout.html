@@ -4,24 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Igles-IA{% endblock %}</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1><a href="{{ url_for('index') }}">Igles-IA: Palabras del Papa León XIV</a></h1>
+            <h1><a href="{{ url_for('index') }}">Igles-IA</a></h1>
+            <p class="site-description">Palabras del Papa León XIV: Resumen Semanal</p>
         </div>
     </header>
 
-    <div class="container">
-        <div class="content">
-            {% block content %}
-            {% endblock %}
-        </div>
+    <div class="container main-container">
+        {% block content %}
+        {% endblock %}
     </div>
 
     <footer>
-        <p>&copy; {{ current_year }} Igles-IA. Todos los derechos reservados.</p>
+        <p>&copy; {{ current_year }} Igles-IA. Desarrollado con inspiración.</p>
     </footer>
 </body>
 </html>
