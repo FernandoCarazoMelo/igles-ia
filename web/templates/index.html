@@ -1,18 +1,19 @@
 {% extends "layout.html" %}
 
 {% block title %}
-Resumen Semanal - Igles-IA
+Resumen Semanal y Documentos - Igles-IA
 {% endblock %}
 
 {% block content %}
-    <div class="content-card"> {# <--- Añadida esta clase #}
-        <h2>Resumen de la Semana</h2>
+    <div class="content-card">
+        {# El contenido pre-generado ya debería tener sus propios H2, H3, etc. #}
         <div>
-            {{ resumen_html_content | safe }}
+            {{ pagina_completa_html | safe }}
         </div>
     </div>
 
-    <div class="content-card newsletter-form"> {# <--- Añadidas estas clases #}
+    {# El formulario de newsletter se mantiene igual, ya que es parte de la web #}
+    <div class="content-card newsletter-form">
         <h3>Suscríbete a nuestra Newsletter Semanal</h3>
         <p>Recibe cada semana un resumen con las palabras del Papa León XIV directamente en tu correo.</p>
         

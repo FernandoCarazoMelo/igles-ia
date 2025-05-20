@@ -1,7 +1,6 @@
-import datetime  # <--- AÑADE ESTA LÍNEA para importar el módulo datetime
-import os  # Para manejar rutas de archivos de forma robusta
+import os
+from datetime import datetime  # Para el año en el footer
 
-import markdown  # Para convertir Markdown a HTML
 from flask import Flask, render_template
 
 # Inicializar la aplicación Flask
@@ -9,32 +8,33 @@ app = Flask(__name__)
 
 # Configuración para Flask-Frozen
 app.config['FREEZER_DESTINATION'] = 'build'
+app.config['FREEZER_RELATIVE_URLS'] = True
+
+# Ruta al archivo HTML pre-generado
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PREGENERATED_HTML_PATH = os.path.join(BASE_DIR, 'data', 'contenido_semanal_para_web.html')
 
 @app.route('/')
 def index():
-    """Ruta principal que muestra el resumen semanal."""
-    resumen_html_content = "No se pudo cargar el resumen."
-    try:
-        base_dir = os.path.dirname(os.path.abspath(__file__))
-        file_path = os.path.join(base_dir, 'resumen-semanal.md')
-
-        with open(file_path, 'r', encoding='utf-8') as f:
-            markdown_content = f.read()
-        
-        resumen_html_content = markdown.markdown(markdown_content, extensions=['fenced_code', 'tables'])
+    """Ruta principal que muestra el contenido HTML pre-generado."""
     
-    except FileNotFoundError:
-        resumen_html_content = "<p>Error: No se encontró el archivo <code>resumen-semanal.md</code>.</p>"
+    pagina_completa_html = "<p>Contenido no disponible. Por favor, genera el archivo <code>contenido_semanal_para_web.html</code>.</p>"
+    try:
+        if os.path.exists(PREGENERATED_HTML_PATH):
+            with open(PREGENERATED_HTML_PATH, 'r', encoding='utf-8') as f:
+                pagina_completa_html = f.read()
+        else:
+            pagina_completa_html = f"<p>Error: No se encontró el archivo de contenido pre-generado en <code>{PREGENERATED_HTML_PATH}</code>.</p>"
     except Exception as e:
-        resumen_html_content = f"<p>Ocurrió un error al procesar el resumen: {e}</p>"
+        pagina_completa_html = f"<p>Ocurrió un error al leer el contenido pre-generado: {e}</p>"
+        # Podrías añadir un logging más detallado aquí para el servidor
+        # print(f"Error leyendo HTML pre-generado: {e}")
 
-    # Obtener el año actual
-    current_year = datetime.datetime.now().year # <--- AÑADE ESTA LÍNEA
-
-    # Pasa el año actual a la plantilla
+    current_year = datetime.now().year
+    
     return render_template('index.html', 
-                           resumen_html_content=resumen_html_content,
-                           current_year=current_year) # <--- MODIFICA ESTA LÍNEA
+                           current_year=current_year,
+                           pagina_completa_html=pagina_completa_html)
 
 if __name__ == '__main__':
     app.run(debug=True)

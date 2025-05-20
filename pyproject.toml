@@ -7,7 +7,9 @@ requires-python = ">=3.12"
 dependencies = [
     "bs4>=0.0.2",
     "crewai>=0.120.1",
+    "frozen-flask>=1.0.2",
     "ipykernel>=6.29.5",
+    "markdown>=3.8",
     "nltk>=3.9.1",
     "pandas>=2.2.3",
     "requests>=2.32.3",
