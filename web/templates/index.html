@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Resumen Semanal - Igles-IA
+{% endblock %}
+
+{% block content %}
+    <h2>Resumen de la Semana</h2>
+    <div>
+        {{ resumen_html_content | safe }}
+    </div>
+
+    <hr>
+
+    <div class="newsletter-form">
+        <h3>Suscríbete a nuestra Newsletter Semanal</h3>
+        <p>Recibe cada semana un resumen con las palabras del Papa León XIV directamente en tu correo.</p>
+        
+        <p><em>(Aquí irá tu formulario de suscripción)</em></p>
+    </div>
+{% endblock %}
