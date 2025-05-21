@@ -44,6 +44,8 @@ jobs:
           echo "Folder: $SUMMARIES_FOLDER"
           echo "Running script..."
           uv run python main.py
+      - name: Freeze site and generate docs
+        run: make freeze
 
       # El paso de "Upload results" como artefacto sigue siendo útil para
       # acceder rápidamente a los archivos de una ejecución específica sin navegar por los commits.
@@ -63,6 +65,7 @@ jobs:
         run: |
           git pull # Asegura que la copia local esté actualizada antes de intentar hacer push
           git add summaries-remote/ # Añade todos los cambios en la carpeta summaries
+          git add docs/ # Añade todos los cambios en la carpeta summaries
           # Comprueba si hay algo para confirmar
           if git diff --staged --quiet; then
             echo "No changes to commit in summaries directory."

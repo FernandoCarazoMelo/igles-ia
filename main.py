@@ -30,7 +30,7 @@ def save_wordcloud(text, path_save="wordcloud.png"):
     wordcloud.to_file(path_save)
 
 
-def main(debug=False):
+def main(debug=False, calculate_wordcloud=False):
     load_dotenv()
     print(os.getcwd())
     LLM_used = LLM(
@@ -71,11 +71,13 @@ def main(debug=False):
     # por ejemplo, si hoy es lunes 18 de mayo, se filtran los df de lunes 11 de mayo
     # qué dias se incluesn: lunes 11, martes 12, miércoles 13, jueves 14, viernes 15, sábado 16 y domingo 17
     df = df.drop(columns=["fecha_dt"])
-    all_text = " ".join(df["texto"])
-    save_wordcloud(
-        all_text,
-        path_save=f"{os.environ.get('SUMMARIES_FOLDER')}/{fecha_de_hoy}/wordcloud.png",
-    )
+    
+    if calculate_wordcloud:
+        all_text = " ".join(df["texto"])
+        save_wordcloud(
+            all_text,
+            path_save=f"{os.environ.get('SUMMARIES_FOLDER')}/{fecha_de_hoy}/wordcloud.png",
+        )
     print(df)
     df.to_csv(
         f"{os.environ.get('SUMMARIES_FOLDER')}/{fecha_de_hoy}/iglesia.csv", index=False
