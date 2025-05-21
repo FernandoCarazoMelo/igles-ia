@@ -3,7 +3,7 @@ run:
 run-web:
 	uv run web/app.py
 freeze:
-        cp data_web/contenido_semanal.html web/data/contenido_semanal.html	
-        uv run web/freeze.py
+	cp data_web/contenido_semanal.html web/data/contenido_semanal.html	
+	uv run web/freeze.py
 	rm -rf docs
 	cp -r web/build docs
