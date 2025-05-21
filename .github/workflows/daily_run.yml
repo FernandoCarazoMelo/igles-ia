@@ -44,9 +44,7 @@ jobs:
           echo "Running script..."
           uv run python main.py
       - name: Freeze site and generate docs
-        run: |
-          cp data_web/contenido_semanal.html web/data/contenido_semanal.html
-          make freeze
+        run: make freeze
 
       # El paso de "Upload results" como artefacto sigue siendo útil para
       # acceder rápidamente a los archivos de una ejecución específica sin navegar por los commits.
