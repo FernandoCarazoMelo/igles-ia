@@ -93,7 +93,7 @@ def obtener_todos_los_textos(urls):
     all_homilias["fecha"] = pd.to_datetime(
         all_homilias["fecha"], format="%d de %B de %Y", errors="coerce"
     )
-    all_homilias = all_homilias.sort_values(by="fecha", ascending=False)
+    all_homilias = all_homilias.sort_values(by="fecha", ascending=True)
     all_homilias = all_homilias.reset_index(drop=True)
     # Convertir la fecha a string # Y-m-d
     all_homilias["fecha"] = all_homilias["fecha"].dt.strftime("%Y-%m-%d")
