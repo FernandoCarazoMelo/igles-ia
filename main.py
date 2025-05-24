@@ -30,7 +30,7 @@ def save_wordcloud(text, path_save="wordcloud.png"):
     wordcloud.to_file(path_save)
 
 
-def main(debug=True, calculate_wordcloud=False):
+def main(debug=False, calculate_wordcloud=False):
     load_dotenv()
     print(os.getcwd())
     LLM_used = LLM(
