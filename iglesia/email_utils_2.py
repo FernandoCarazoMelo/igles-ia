@@ -75,13 +75,13 @@ def construir_html_desde_jsons(directorio_jsons):
     <h2 style="color:#003366; font-family: 'Montserrat', sans-serif;">📚 Índice de Documentos</h2>
     <ul style="font-size:15px; color:#003366; list-style-type: none; padding-left: 0;">
     """
-    for doc in documentos.reverse():
+    for doc in documentos:
         texto_link = f"{doc['titulo']}" + (f" ({doc['fecha']})" if doc["fecha"] else "")
         html_idx += f"""<li style="margin-bottom: 8px;"><a href="#{doc['id']}" style="color:#003366;text-decoration:none; font-weight:bold;">🔗 {texto_link}</a></li>"""
     html_idx += "</ul><hr style='border:0; height:1px; background-color:#e0e0e0; margin: 40px 0;'>"
 
     html_docs = ""
-    for doc in documentos.reverse():
+    for doc in documentos:
         html_docs += f"""
         <article id="{doc['id']}" style="margin-bottom: 30px;">
           <h3 style="color:#003366; font-family: 'Montserrat', sans-serif;">
