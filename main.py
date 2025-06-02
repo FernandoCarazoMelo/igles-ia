@@ -89,4 +89,4 @@ def main(debug=False, calculate_wordcloud=False):
 if __name__ == "__main__":
     main()
     fecha_de_hoy = pd.Timestamp.now().strftime("%Y-%m-%d")
-    enviar_correos_todos("emails.csv", fecha_de_hoy)
+    enviar_correos_todos("emails_dev.csv", fecha_de_hoy)
