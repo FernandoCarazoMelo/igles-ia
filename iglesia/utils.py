@@ -70,32 +70,32 @@ def extraer_homilia(homilia):
         "texto": texto,
     }
 
-
 def obtener_todos_los_textos(urls):
     all_homilias = []
-    for tipo, url in urls.items():
-        homilias = obtener_homilias_vaticano(url)
-        homilias_df = [extraer_homilia(h) for h in homilias]
 
-        # Añadir el tipo de homilía al DataFrame
-        for h in homilias_df:
-            h["tipo"] = tipo
-        # Añadir a la lista total
-        all_homilias.extend(homilias_df)
+    for tipo, lista_urls in urls.items():
+        for url in lista_urls:
+            homilias = obtener_homilias_vaticano(url)
+            homilias_df = [extraer_homilia(h) for h in homilias]
+
+            # Añadir el tipo de homilía al DataFrame
+            for h in homilias_df:
+                h["tipo"] = tipo
+
+            all_homilias.extend(homilias_df)
 
     # Convertir a DataFrame
     all_homilias = pd.DataFrame(all_homilias)
-    # Reordenar columnas
-    all_homilias = all_homilias[["tipo", "fecha", "titulo_homilia", "url", "texto"]]
-    # renombrar titulo_texto
+
+    # Reordenar columnas y renombrar
     all_homilias = all_homilias.rename(columns={"titulo_homilia": "titulo"})
-    # Ordenar por fecha
+    all_homilias = all_homilias[["tipo", "fecha", "titulo", "url", "texto"]]
+
+    # Parsear y ordenar fechas
     all_homilias["fecha"] = pd.to_datetime(
         all_homilias["fecha"], format="%d de %B de %Y", errors="coerce"
     )
-    all_homilias = all_homilias.sort_values(by="fecha", ascending=True)
-    all_homilias = all_homilias.reset_index(drop=True)
-    # Convertir la fecha a string # Y-m-d
+    all_homilias = all_homilias.sort_values(by="fecha", ascending=False).reset_index(drop=True)
     all_homilias["fecha"] = all_homilias["fecha"].dt.strftime("%Y-%m-%d")
 
     return all_homilias

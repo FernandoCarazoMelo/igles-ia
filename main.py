@@ -3,10 +3,13 @@ import os
 import pandas as pd
 from crewai import LLM
 from dotenv import load_dotenv
+from typer import Typer
 
 from iglesia.agents import create_iglesia_content_crew
 from iglesia.email_utils_2 import enviar_correos_todos
 from iglesia.utils import obtener_todos_los_textos
+
+app = Typer()
 
 
 def save_wordcloud(text, path_save="wordcloud.png"):
@@ -30,7 +33,7 @@ def save_wordcloud(text, path_save="wordcloud.png"):
     wordcloud.to_file(path_save)
 
 
-def main(debug=False, calculate_wordcloud=False):
+def run_agents(debug=False, calculate_wordcloud=False):
     load_dotenv()
     print(os.getcwd())
     LLM_used = LLM(
@@ -39,9 +42,13 @@ def main(debug=False, calculate_wordcloud=False):
         max_tokens=2000,
     )
     urls = {
-        "Homilia": "https://www.vatican.va/content/leo-xiv/es/homilies/2025.html",
-        "Angelus": "https://www.vatican.va/content/leo-xiv/es/angelus/2025.html",
-        "Discurso": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/may.index.html",
+        "Homilia": ["https://www.vatican.va/content/leo-xiv/es/homilies/2025.html"],
+        "Angelus": ["https://www.vatican.va/content/leo-xiv/es/angelus/2025.html"],
+        "Discurso": [
+            "https://www.vatican.va/content/leo-xiv/es/speeches/2025/may.index.html",
+            "https://www.vatican.va/content/leo-xiv/es/speeches/2025/june.index.html",
+        ],
+        "Carta": ["https://www.vatican.va/content/leo-xiv/es/letters/2025.index.html"]
     }
     fecha_de_hoy = pd.Timestamp.now().strftime("%Y-%m-%d")
 
@@ -54,10 +61,21 @@ def main(debug=False, calculate_wordcloud=False):
     print(df)
     if debug:
         df = df[:2]
+
+    import re
+    import unicodedata
+
+    def limpiar_nombre_archivo(nombre):
+        nombre = unicodedata.normalize('NFKD', nombre).encode('ascii', 'ignore').decode('ascii')
+        nombre = re.sub(r'[^\w\s-]', '', nombre)  # Quita cualquier carácter que no sea letra/número/guion/bajo
+        nombre = re.sub(r'[-\s]+', '_', nombre)   # Reemplaza espacios y guiones por "_"
+        return nombre.strip('_').lower()
+
     df["filename"] = df.apply(
-        lambda x: f"{x['fecha']}_{x['tipo'].replace(' ', '_').lower()}_{x['titulo'].replace(' ', '_').lower()}",
+        lambda x: f"{x['fecha']}_{x['tipo'].replace(' ', '_').lower()}_{limpiar_nombre_archivo(x['titulo'])}",
         axis=1,
     )
+
     # filtrar los df de la última semana
     print(df)
 
@@ -68,10 +86,8 @@ def main(debug=False, calculate_wordcloud=False):
         & (df["fecha_dt"] < run_date)
     ]
 
-    # por ejemplo, si hoy es lunes 18 de mayo, se filtran los df de lunes 11 de mayo
-    # qué dias se incluesn: lunes 11, martes 12, miércoles 13, jueves 14, viernes 15, sábado 16 y domingo 17
     df = df.drop(columns=["fecha_dt"])
-    
+
     if calculate_wordcloud:
         all_text = " ".join(df["texto"])
         save_wordcloud(
@@ -86,7 +102,24 @@ def main(debug=False, calculate_wordcloud=False):
     _ = iglesia_content_crew.kickoff()
 
 
-if __name__ == "__main__":
-    main()
+@app.command()
+def enviar_correos_semanal_todos():
+    """
+    Enviar correos semanales a todos los usuarios.
+    """
     fecha_de_hoy = pd.Timestamp.now().strftime("%Y-%m-%d")
+    enviar_correos_todos("emails.csv", fecha_de_hoy)
+
+
+@app.command()
+def pipeline_diaria(debug: bool = False, calculate_wordcloud: bool = False):
+    """
+    Ejecutar el pipeline diario de la iglesia.
+    """
+    fecha_de_hoy = pd.Timestamp.now().strftime("%Y-%m-%d")
+    run_agents(debug=debug, calculate_wordcloud=calculate_wordcloud)
     enviar_correos_todos("emails_dev.csv", fecha_de_hoy)
+
+
+if __name__ == "__main__":
+    app()
