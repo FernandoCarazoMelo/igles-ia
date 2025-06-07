@@ -42,7 +42,7 @@ jobs:
         run: |
           echo "Folder: $SUMMARIES_FOLDER"
           echo "Running script..."
-          uv run python main.py
+          uv run python main.py pipeline-diaria
       - name: Freeze site and generate docs
         run: make freeze
 
@@ -59,7 +59,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: docs-html
-          path: docs # Sube toda la carpeta docs
+          path: docs 
       - name: Configure Git user
         run: |
           git config --global user.name "GitHub Actions Bot"
@@ -67,9 +67,9 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git pull # Asegura que la copia local esté actualizada antes de intentar hacer push
-          git add summaries-remote/ # Añade todos los cambios en la carpeta summaries
-          git add docs/ # Añade todos los cambios en la carpeta summaries
+          git pull 
+          git add summaries-remote/ 
+          git add docs/
           git add data_web/
           git add web/
           # Comprueba si hay algo para confirmar
