@@ -70,13 +70,15 @@ def construir_html_desde_jsons(directorio_jsons):
     
     if not documentos:
         return "<p>No se encontraron documentos JSON válidos para mostrar.</p>"
-
+    else:
+        documentos.reverse()
+    
     html_idx = """
     <h2 style="color:#003366; font-family: 'Montserrat', sans-serif;">📚 Índice de Documentos</h2>
     <ul style="font-size:15px; color:#003366; list-style-type: none; padding-left: 0;">
     """
     for doc in documentos:
-        texto_link = f"{doc['titulo']}" + (f" ({doc['fecha']})" if doc["fecha"] else "")
+        texto_link = f"{doc['tipo']}: {doc['titulo']}" + (f" ({doc['fecha']})" if doc["fecha"] else "")
         html_idx += f"""<li style="margin-bottom: 8px;"><a href="#{doc['id']}" style="color:#003366;text-decoration:none; font-weight:bold;">🔗 {texto_link}</a></li>"""
     html_idx += "</ul><hr style='border:0; height:1px; background-color:#e0e0e0; margin: 40px 0;'>"
 
@@ -88,7 +90,9 @@ def construir_html_desde_jsons(directorio_jsons):
             <a href="{doc['url']}" style="color:#003366; text-decoration:none;" target="_blank">📄 {doc['titulo']}</a>
           </h3>
           <p style="font-size:14px; color:#444;">
-            <strong>Tipo:</strong> {doc['tipo']}"""
+            <strong>Tipo:</strong> {doc['tipo']} |
+            <strong>Texto original:</strong> <a href="{doc['url']}" style="color:#003373; text-decoration:none;" target="_blank">Link</a>
+            """
         if doc["fecha"]:
             html_docs += f" | <strong>Fecha:</strong> {doc['fecha']}"
         html_docs += "</p>"
@@ -151,8 +155,11 @@ def generar_y_guardar_contenido_html_semanal(fecha_resumen, ruta_output_html):
     contenido_extra_html = construir_html_desde_jsons(resumen_path_especifico)
 
     # 3. Combinar todo
-    cuerpo_completo_html = resumen_principal_html + contenido_extra_html
 
+    # 3. Combinar todo
+    estilo_negrita = "<style> b { color: #003366; } </style>\n"
+    cuerpo_completo_html = estilo_negrita + resumen_principal_html + contenido_extra_html
+    
     # 4. Guardar en el archivo de salida
     try:
         # Asegurarse de que el directorio de salida exista
