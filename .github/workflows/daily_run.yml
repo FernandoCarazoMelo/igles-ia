@@ -3,7 +3,7 @@ name: Run Iglesia Content Script Daily and Commit Results
 on:
   schedule:
     # Ejecuta el script todos los lunes a las 6:30 AM UTC, hora España: 8:30 AM
-    - cron: '30 6 * * *'
+    - cron: "30 5 * * *"
   workflow_dispatch: # Permite ejecutar el workflow manualmente
 
 jobs:
@@ -12,7 +12,7 @@ jobs:
     # Necesitamos permisos para escribir en el repositorio
     permissions:
       contents: write # Permite a la acción hacer commit y push
-      
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -25,13 +25,13 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12' # O la versión que estés usando
+          python-version: "3.12" # O la versión que estés usando
 
       - name: Install uv
         run: curl -LsSf https://astral.sh/uv/install.sh | sh
 
       - name: Install dependencies with uv
-        run: uv pip install . --system  # Asumiendo que tu pyproject.toml está configurado
+        run: uv pip install . --system # Asumiendo que tu pyproject.toml está configurado
 
       - name: Run the script
         env:
@@ -59,7 +59,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: docs-html
-          path: docs 
+          path: docs
       - name: Configure Git user
         run: |
           git config --global user.name "GitHub Actions Bot"

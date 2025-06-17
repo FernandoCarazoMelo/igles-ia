@@ -8,7 +8,7 @@ from crewai import Agent, Crew, Task
 # text_summarizer = Agent(
 #     role='Text Summarizer',
 #     goal='Create concise and accurate summaries of individual texts',
-#     backstory="""You are an expert in text analysis and summarization. 
+#     backstory="""You are an expert in text analysis and summarization.
 #     You excel at extracting key information and creating clear summaries.""",
 #     verbose=True
 # )
@@ -16,7 +16,7 @@ from crewai import Agent, Crew, Task
 # summary_consolidator = Agent(
 #     role='Summary Consolidator',
 #     goal='Create a comprehensive summary that combines individual summaries while preserving source attribution',
-#     backstory="""You are skilled at synthesizing information from multiple sources 
+#     backstory="""You are skilled at synthesizing information from multiple sources
 #     and creating coherent consolidated summaries while maintaining source references.""",
 #     verbose=True
 # )
@@ -31,7 +31,7 @@ from crewai import Agent, Crew, Task
 #             agent=text_summarizer
 #         )
 #         summary_tasks.append(task)
-    
+
 #     # Create final consolidation task
 #     consolidation_task = Task(
 #         description='Create a comprehensive summary of all the previous summaries, including their sources',
@@ -39,15 +39,15 @@ from crewai import Agent, Crew, Task
 #         agent=summary_consolidator,
 #         context=summary_tasks  # This provides the results of previous tasks as context
 #     )
-    
+
 #     # Create and execute the crew
 #     crew = Crew(
 #         agents=[text_summarizer, summary_consolidator],
 #         tasks=summary_tasks + [consolidation_task],
 #         verbose=True
 #     )
-    
-    
+
+
 #     return crew
 
 
@@ -72,24 +72,24 @@ def create_iglesia_content_crew(df, llm_instance):
         backstory="Eres un periodista católico con profunda formación doctrinal y ojo crítico. Tu especialidad es desglosar textos del Papa (homilías, discursos, etc.) en componentes estructurados (JSON) que incluyan metadatos esenciales como tipo y fuente URL, para facilitar su posterior divulgación y referencia.",
         llm=llm_instance,
         verbose=True,
-        allow_delegation=False
+        allow_delegation=False,
     )
 
     # Agente 2: Redactor del Resumen Semanal
     # redactor_jefe_iglesia = Agent(
     #     role="Redactor Jefe del portal Igles-IA, con especial habilidad para la síntesis pastoral",
     #     goal="Elaborar un resumen semanal inspirador y pastoral para los subscriptores de Igles-IA, integrando los análisis de los textos de la semana, comenzando con un recuento de los tipos de documentos y enlazando a las fuentes originales.",
-    #     backstory="""Como corazón editorial de Igles-IA, tu pluma transforma análisis doctrinales en mensajes semanales que nutren la fe. 
+    #     backstory="""Como corazón editorial de Igles-IA, tu pluma transforma análisis doctrinales en mensajes semanales que nutren la fe.
     #     Eres experto en tejer una narrativa coherente a partir de múltiples fuentes, destacando los mensajes clave de la Iglesia de forma accesible, motivadora y digitalmente atractiva, incluyendo referencias claras a los textos completos para quien desee profundizar.""",
     #     llm=llm_instance,
     #     verbose=True,
     #     allow_delegation=False
     # )
-    
+
     # editor_html = Agent(
     #     role="Editor HTML",
     #     goal="Convertir el resumen semanal en un formato HTML básico, ya que será integrado en una plantilla.",
-    #     backstory="""Eres un experto en edición HTML, capaz de transformar textos en formatos visualmente atractivos y accesibles. 
+    #     backstory="""Eres un experto en edición HTML, capaz de transformar textos en formatos visualmente atractivos y accesibles.
     #     Tu tarea es asegurar que el contenido se presente de manera profesional sin cambiar nada del contenido.""",
     #     llm=llm_instance,
     #     verbose=True,
@@ -106,9 +106,11 @@ def create_iglesia_content_crew(df, llm_instance):
         tipo_doc = row["tipo"]
         url_doc = row["url"]
         filename = row["filename"]
-        
+
         fecha_de_hoy = pd.Timestamp.now().strftime("%Y-%m-%d")
-        output_filename_individual = f"{os.environ.get('SUMMARIES_FOLDER')}/{fecha_de_hoy}/{filename}.json"
+        output_filename_individual = (
+            f"{os.environ.get('SUMMARIES_FOLDER')}/{fecha_de_hoy}/{filename}.json"
+        )
 
         task_individual = Task(
             description=f"""Analiza en profundidad el siguiente texto eclesiástico.
@@ -147,89 +149,67 @@ def create_iglesia_content_crew(df, llm_instance):
             output_file=output_filename_individual,
         )
         analysis_tasks.append(task_individual)
-    
+
     # Preparar la introducción dinámica para el resumen semanal
-    doc_type_counts = Counter(df['tipo'])
+    doc_type_counts = Counter(df["tipo"])
     if not doc_type_counts:
-        intro_counts_sentence = "Esta semana, reflexionamos sobre importantes mensajes de la Iglesia." # Fallback
+        intro_counts_sentence = "Esta semana, reflexionamos sobre importantes mensajes de la Iglesia."  # Fallback
     else:
         parts = []
         # Ordenar por conteo o alfabéticamente para consistencia si se desea
-        # sorted_types = sorted(doc_type_counts.items(), key=lambda item: item[1], reverse=True) 
+        # sorted_types = sorted(doc_type_counts.items(), key=lambda item: item[1], reverse=True)
         for doc_type, count in doc_type_counts.items():
             plural = "s" if count > 1 else ""
             # Ajustar el nombre del tipo para que suene natural en plural si es necesario (ej. Ángelus no cambia)
             tipo_display = doc_type
-            if doc_type.lower() == "ángelus" and count > 1: # Ángelus es invariable en plural
+            if (
+                doc_type.lower() == "ángelus" and count > 1
+            ):  # Ángelus es invariable en plural
                 plural = ""
-            elif doc_type.lower().endswith("z") and count > 1: # Ej. voz -> voces (no aplica mucho aquí, pero como ejemplo)
-                 tipo_display = doc_type[:-1] + "ces"
-                 plural = "" # ya está en plural
-            elif not doc_type.lower().endswith("s"): # Para la mayoría: homilía -> homilías
-                 plural = "s" if count > 1 else ""
-                 tipo_display = doc_type + plural if count > 1 else doc_type
+            elif (
+                doc_type.lower().endswith("z") and count > 1
+            ):  # Ej. voz -> voces (no aplica mucho aquí, pero como ejemplo)
+                tipo_display = doc_type[:-1] + "ces"
+                plural = ""  # ya está en plural
+            elif not doc_type.lower().endswith(
+                "s"
+            ):  # Para la mayoría: homilía -> homilías
+                plural = "s" if count > 1 else ""
+                tipo_display = doc_type + plural if count > 1 else doc_type
 
-
-            parts.append(f"{count} {tipo_display.lower() if count > 1 else tipo_display.lower()}") # ej. "3 homilías", "1 ángelus"
+            parts.append(
+                f"{count} {tipo_display.lower() if count > 1 else tipo_display.lower()}"
+            )  # ej. "3 homilías", "1 ángelus"
 
         if len(parts) > 1:
-            intro_counts_sentence = f"Esta semana, el Papa (o la Iglesia, según corresponda) nos ha ofrecido reflexiones a través de {', '.join(parts[:-1])} y {parts[-1]}."
+            intro_counts_sentence = f"Esta semana, el Papa León XIV nos ha ofrecido reflexiones a través de {', '.join(parts[:-1])} y {parts[-1]}."
         elif parts:
-            intro_counts_sentence = f"Esta semana, el Papa (o la Iglesia, según corresponda) nos ha ofrecido reflexiones a través de {parts[0]}."
-        else: # Si el df estuviera vacío o sin tipos válidos
-            intro_counts_sentence = "Esta semana, reflexionamos sobre importantes mensajes de la Iglesia."
-
+            intro_counts_sentence = f"Esta semana, el Papa León XIV nos ha ofrecido reflexiones a través de {parts[0]}."
+        else:  # Si el df estuviera vacío o sin tipos válidos
+            intro_counts_sentence = (
+                "Esta semana, no ha habido discursos u homilías del Papa."
+            )
 
     # Fase 2: Tarea de Consolidación Semanal
     weekly_summary_task = Task(
-        description= "Resumen de los resumenes recibidos",
-        expected_output = "Genera un texto breve y atractivo para el Resumen Semanal de Igles-IA, con un tono cálido y directo. Resume los puntos clave de la semana en un texto claro, con una extensión entre 120 y 200 palabras. Usa saltos de línea para separar ideas e incluye etiquetas HTML en el texto simples como <b>negrita</b> o <i>cursiva</i>. Empieza con un saludo como: ¡Bienvenidos al Resumen Semanal del Papa León XIV! Luego redacta un resumen que destaque lo más relevante de forma clara y motivadora.",
-
-
-        # **Introducción Obligatoria (debes usarla textualmente después del saludo):**
-        # "{intro_counts_sentence}"
-
-        # Instrucciones Claras y Simples:
-        # 1.  Comienza con el saludo: "Querido subscriptor de Igles-IA,"
-        # 2.  En la línea siguiente, escribe la "Introducción Obligatoria".
-        # 3.  Luego, para cada análisis JSON que recibas del contexto:
-        #     a.  Menciona el tipo y título del documento. Ejemplo: "Sobre el tipo_documento 'fuente_documento'..."
-        #     b.  Presenta el "resumen_general" de ese texto.
-        #     c.  Añade el enlace al texto completo. Ejemplo: "(Texto completo aquí: url_original)".
-        # 4.  Puedes usar frases de transición muy simples como "Además...", "También se trató...", o simplemente presentar cada uno en un nuevo párrafo.
-        # 5.  Mantén un tono pastoral y directo.
-        # 6.  Concluye con: "Que estas ideas principales nos guíen durante la semana. Con afecto, El equipo de Igles-IA."
-
-        # El objetivo es un boletín breve, claro y fácil de leer. La respuesta final debe ser únicamente el texto del resumen.
-        # """,
-
-        # # Expected_output MUY SIMPLIFICADO para weekly_summary_task
-        # expected_output = """Un texto breve y directo para el 'Resumen Semanal de Igles-IA'.
-        # Debe seguir esta estructura básica:
-        # - Saludo.
-        # - Introducción obligatoria (frase sobre tipos de documentos).
-        # - Para cada texto analizado: mención de su tipo/título, el resumen general del mismo, y el enlace al texto completo.
-        # - Conclusión simple.
-
-        # Ejemplo de estructura (el contenido variará según los JSON de entrada):
-        # Querido subscriptor de Igles-IA,
-
-        # {intro_counts_sentence}
-
-        # Sobre el Discurso 'La Importancia de la Comunidad', el mensaje central fue la necesidad de apoyarnos mutuamente en la fe. (Texto completo aquí: [URL_DEL_DISCURSO]).
-
-        # Además, en la Homilía 'Vivir la Palabra', se nos animó a llevar el Evangelio a nuestra vida diaria. (Texto completo aquí: [URL_DE_LA_HOMILIA]).
-
-        # Que estas ideas principales nos guíen durante la semana.
-        # Con afecto,
-        # El equipo de Igles-IA.
-        # """,
+        description=f"""Resumen de los resumenes recibidos en estilo atractivo para la lectura. Quiero que sea un resumen integrado, no un simple parrafo para cada texto.
+        
+        FORMATO REQUERIDO: Markdown
+        - Usa **negrita** para destacar algunas frases o palabras importantes. No más de 2-3 por párrafo.
+        - Usa saltos de línea para separar ideas
+        - Máximo 150 palabras
+        
+        ESTRUCTURA:
+        1. Saludo: **¡Bienvenidos al Resumen Semanal del Papa León XIV!**
+        2. Incluir: '{intro_counts_sentence}'
+        3. Resumen con frases o palabras clave en **negrita** para facilitar la lectura.""",
+        expected_output="Texto en formato Markdown con negritas usando **texto** que será convertido a HTML posteriormente",
         agent=periodista_catolico,
         context=analysis_tasks,
-        output_file=f"{os.environ.get('SUMMARIES_FOLDER')}/{fecha_de_hoy}/resumen_semanal_igles-ia.txt"
-        
+        markdown=True,
+        output_file=f"{os.environ.get('SUMMARIES_FOLDER')}/{fecha_de_hoy}/resumen_semanal_igles-ia.txt",
     )
-    
+
     # task_format_html = Task(
     #     description="Convierte el resumen semanal en un formato HTML básico.",
     #     expected_output="Un archivo HTML básico. No cambies el contenido, solo el formato.",
@@ -240,7 +220,7 @@ def create_iglesia_content_crew(df, llm_instance):
     iglesia_content_crew = Crew(
         agents=[periodista_catolico],
         tasks=analysis_tasks + [weekly_summary_task],
-        verbose=True
+        verbose=True,
     )
-    
+
     return iglesia_content_crew

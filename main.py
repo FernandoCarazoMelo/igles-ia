@@ -43,12 +43,12 @@ def run_agents(debug=False, calculate_wordcloud=False):
     )
     urls = {
         "Homilia": ["https://www.vatican.va/content/leo-xiv/es/homilies/2025.html"],
-        "Angelus": ["https://www.vatican.va/content/leo-xiv/es/angelus/2025.html"],
+        "Ángelus": ["https://www.vatican.va/content/leo-xiv/es/angelus/2025.html"],
         "Discurso": [
             "https://www.vatican.va/content/leo-xiv/es/speeches/2025/may.index.html",
             "https://www.vatican.va/content/leo-xiv/es/speeches/2025/june.index.html",
         ],
-        "Carta": ["https://www.vatican.va/content/leo-xiv/es/letters/2025.index.html"]
+        "Carta": ["https://www.vatican.va/content/leo-xiv/es/letters/2025.index.html"],
     }
     fecha_de_hoy = pd.Timestamp.now().strftime("%Y-%m-%d")
 
@@ -66,10 +66,16 @@ def run_agents(debug=False, calculate_wordcloud=False):
     import unicodedata
 
     def limpiar_nombre_archivo(nombre):
-        nombre = unicodedata.normalize('NFKD', nombre).encode('ascii', 'ignore').decode('ascii')
-        nombre = re.sub(r'[^\w\s-]', '', nombre)  # Quita cualquier carácter que no sea letra/número/guion/bajo
-        nombre = re.sub(r'[-\s]+', '_', nombre)   # Reemplaza espacios y guiones por "_"
-        return nombre.strip('_').lower()
+        nombre = (
+            unicodedata.normalize("NFKD", nombre)
+            .encode("ascii", "ignore")
+            .decode("ascii")
+        )
+        nombre = re.sub(
+            r"[^\w\s-]", "", nombre
+        )  # Quita cualquier carácter que no sea letra/número/guion/bajo
+        nombre = re.sub(r"[-\s]+", "_", nombre)  # Reemplaza espacios y guiones por "_"
+        return nombre.strip("_").lower()
 
     df["filename"] = df.apply(
         lambda x: f"{x['fecha']}_{x['tipo'].replace(' ', '_').lower()}_{limpiar_nombre_archivo(x['titulo'])}",
@@ -103,7 +109,7 @@ def run_agents(debug=False, calculate_wordcloud=False):
 
 
 @app.command()
-def enviar_correos_semanal_todos():
+def pipeline_semanal():
     """
     Enviar correos semanales a todos los usuarios.
     """
