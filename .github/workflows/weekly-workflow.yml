@@ -5,7 +5,7 @@ on:
     # Ejecuta este script cada domingo a las 00:00 AM UTC.
     # Puedes ajustar el '0 0 * * 0' a la hora y día que prefieras (0 para domingo).
     # Ejemplo: '0 8 * * 0' sería cada domingo a las 8:00 AM UTC.
-    - cron: "30 6 * * 2"
+    - cron: "30 5 * * 2"
   workflow_dispatch: # Permite ejecutar el workflow manualmente
 
 jobs:
@@ -36,9 +36,9 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           # Incluye cualquier otra variable de entorno que tu función semanal necesite
           # Por ejemplo, si tu función semanal también maneja emails o carpetas de resúmenes diferentes
-          # EMAIL_USER: ${{ secrets.EMAIL_USER }}
-          # EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
-          # SUMMARIES_FOLDER: summaries-remote # O una carpeta diferente si esta función la usa
+          EMAIL_USER: ${{ secrets.EMAIL_USER }}
+          EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+          SUMMARIES_FOLDER: summaries-remote # O una carpeta diferente si esta función la usa
         run: |
           echo "Running weekly specific function..."
           uv run python main.py pipeline-semanal
