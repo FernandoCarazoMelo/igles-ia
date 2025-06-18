@@ -17,6 +17,8 @@ dependencies = [
     "click==8.1.7",
     "wordcloud>=1.9.4",
     "ruff>=0.11.13",
+    "yfinance>=0.2.63",
+    "brevo-python>=1.1.2",
 ]
 
 [tool.setuptools]

@@ -6,10 +6,13 @@ from dotenv import load_dotenv
 from typer import Typer
 
 from iglesia.agents import create_iglesia_content_crew
+from iglesia.brevo_utils import brevo_get_all_emails
 from iglesia.email_utils_2 import enviar_correos_todos
 from iglesia.utils import obtener_todos_los_textos
 
 app = Typer()
+
+load_dotenv()
 
 
 def save_wordcloud(text, path_save="wordcloud.png"):
@@ -34,7 +37,6 @@ def save_wordcloud(text, path_save="wordcloud.png"):
 
 
 def run_agents(debug=False, calculate_wordcloud=False):
-    load_dotenv()
     print(os.getcwd())
     LLM_used = LLM(
         model="gpt-4.1-nano",
@@ -109,12 +111,25 @@ def run_agents(debug=False, calculate_wordcloud=False):
 
 
 @app.command()
-def pipeline_semanal():
+def pipeline_semanal(debug: bool = True):
     """
     Enviar correos semanales a todos los usuarios.
     """
     fecha_de_hoy = pd.Timestamp.now().strftime("%Y-%m-%d")
-    enviar_correos_todos("emails.csv", fecha_de_hoy)
+
+    contacts = brevo_get_all_emails()
+    contacts.to_csv("brevo_contacts.csv", index=False)
+    print(f"Total de contactos obtenidos: {len(contacts)}")
+    print("Contactos obtenidos:")
+    print(contacts)
+    if debug:
+        print("Solo para pruebas, usar el último contacto\n")
+        print(contacts)
+        contacts = contacts[-1:]  # Solo para pruebas, usar el último contacto
+        contacts.to_csv("brevo_contacts_debug.csv", index=False)
+        enviar_correos_todos("brevo_contacts_debug.csv", fecha_de_hoy)
+    else:
+        enviar_correos_todos("brevo_contacts.csv", fecha_de_hoy)
 
 
 @app.command()
