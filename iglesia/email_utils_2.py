@@ -5,6 +5,7 @@ import smtplib
 from datetime import datetime
 from email.message import EmailMessage
 from email.utils import formataddr
+from typing import Union
 
 import markdown
 import pandas as pd
@@ -294,7 +295,7 @@ def _crear_mensaje_email(
 
 
 def enviar_correos_todos(
-    correos_path="emails.csv",
+    correos_path: Union[str, pd.DataFrame] = "emails.csv",
     fecha_resumen="2025-05-20",
     ruta_plantilla_email="plantilla.html",
     ruta_html_generado_para_web="data_web/contenido_semanal.html",
@@ -322,11 +323,15 @@ def enviar_correos_todos(
             "No se pudo generar el contenido HTML semanal. Abortando envío de correos."
         )
         return
-
-    try:
+    # si el correos_path es un Dataframe asignamos el DataFrame directamente
+    if isinstance(correos_path, pd.DataFrame):
+        df = correos_path
+    else:
+        # si es un path, leemos el CSV
         df = pd.read_csv(correos_path)
-    except FileNotFoundError:
-        print(f"Error: No se encontró el archivo de correos: {correos_path}")
+
+    if not os.path.exists(SUMMARIES_FOLDER):
+        print(f"Error: La carpeta de resúmenes no existe: {SUMMARIES_FOLDER}")
         return
 
     ruta_adjunto_wordcloud = os.path.join(

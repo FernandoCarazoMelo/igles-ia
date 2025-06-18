@@ -118,7 +118,7 @@ def pipeline_semanal(debug: bool = True):
     fecha_de_hoy = pd.Timestamp.now().strftime("%Y-%m-%d")
 
     contacts = brevo_get_all_emails()
-    contacts.to_csv("brevo_contacts.csv", index=False)
+    # contacts.to_csv("brevo_contacts.csv", index=False)
     print(f"Total de contactos obtenidos: {len(contacts)}")
     print("Contactos obtenidos:")
     print(contacts)
@@ -126,10 +126,8 @@ def pipeline_semanal(debug: bool = True):
         print("Solo para pruebas, usar el último contacto\n")
         print(contacts)
         contacts = contacts[-1:]  # Solo para pruebas, usar el último contacto
-        contacts.to_csv("brevo_contacts_debug.csv", index=False)
-        enviar_correos_todos("brevo_contacts_debug.csv", fecha_de_hoy)
-    else:
-        enviar_correos_todos("brevo_contacts.csv", fecha_de_hoy)
+    
+    enviar_correos_todos(contacts, fecha_de_hoy)
 
 
 @app.command()
