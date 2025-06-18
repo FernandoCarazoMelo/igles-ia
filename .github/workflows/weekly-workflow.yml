@@ -38,7 +38,25 @@ jobs:
           # Por ejemplo, si tu función semanal también maneja emails o carpetas de resúmenes diferentes
           EMAIL_USER: ${{ secrets.EMAIL_USER }}
           EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+          BREVO_TOKEN: ${{ secrets.BREVO_TOKEN }}
           SUMMARIES_FOLDER: summaries-remote # O una carpeta diferente si esta función la usa
         run: |
           echo "Running weekly specific function..."
           uv run python main.py pipeline-semanal
+      - name: Configure Git user
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions-bot@users.noreply.github.com" # Email válido para bots de GitHub
+
+      - name: Commit and push changes
+        run: |
+          git pull 
+          git add brevo_contacts.csv/ 
+          if git diff --staged --quiet; then
+            echo "No changes to commit in summaries directory."
+          else
+            COMMIT_DATE=$(date +'%Y-%m-%d %H:%M:%S')
+            git commit -m "📄 Brevo contacts updated: ${COMMIT_DATE}"
+            git push
+            echo "Changes committed and pushed."
+          fi
