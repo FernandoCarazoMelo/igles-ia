@@ -12,66 +12,14 @@
 
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
 
-    <!-- START - We recommend to place the below code in head tag of your website html  -->
-    <style>
-      @font-face {
-      font-display: block;
-      font-family: Roboto;
-      src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
-      }
-
-      @font-face {
-      font-display: fallback;
-      font-family: Roboto;
-      font-weight: 600;
-      src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff")
-      }
-
-      @font-face {
-      font-display: fallback;
-      font-family: Roboto;
-      font-weight: 700;
-      src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")
-      }
-
-      #sib-container input:-ms-input-placeholder {
-      text-align: left;
-      font-family: Helvetica, sans-serif;
-      color: #c0ccda;
-      }
-
-      #sib-container input::placeholder {
-      text-align: left;
-      font-family: Helvetica, sans-serif;
-      color: #c0ccda;
-      }
-
-      #sib-container textarea::placeholder {
-      text-align: left;
-      font-family: Helvetica, sans-serif;
-      color: #c0ccda;
-      }
-
-      #sib-container a {
-      text-decoration: underline;
-      color: #2BB2FC;
-      }
-
-      @media (max-width: 600px) {
-        /* Elimina o reduce el padding vertical */
-        .sib-form [style*="padding: 8px 0"] {
-          padding: 4px 0 !important;
-        }
-    
-        /* También puedes ajustar el max-width para que use todo el ancho disponible */
-        #sib-container {
-          max-width: 100% !important;
-          padding: 0 10px !important; /* opcional: margen lateral suave */
-        }
-      }
-    </style>
-    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
-    <!--  END - We recommend to place the above code in head tag of your website html -->
+    <!-- FontAwesome CDN para iconos modernos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-p6O8XRvuRQ9DbKIMSCQmcgWQn08J7x9xkXy9SNR5B0e2Gmjpu+Z8W8Hs1dz8FQQxXoX6O5kNtzB0Gij93S7glw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <meta property="og:title" content="Igles-IA: Palabras del Papa León XIV" />
     <meta property="og:description" content="León XIV - Resumen Semanal - AI Agents" />
@@ -81,14 +29,57 @@
 
     <!-- Open Graph / Facebook / WhatsApp -->
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://igles-ia.es/">
-  <meta name="twitter:title" content="Igles-IA: Palabras del Papa León XIV">
-  <meta name="twitter:description" content="León XIV - Resumen Semanal - AI Agents">
-  <meta name="twitter:image" content="https://igles-ia.es/static/Foto-Papa-Leone-XIV-300px.jpg">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://igles-ia.es/" />
+    <meta name="twitter:title" content="Igles-IA: Palabras del Papa León XIV" />
+    <meta name="twitter:description" content="León XIV - Resumen Semanal - AI Agents" />
+    <meta name="twitter:image" content="https://igles-ia.es/static/Foto-Papa-Leone-XIV-300px.jpg" />
+
+    <style>
+        /* Botón moderno para el signup */
+        .signup-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            font-size: 18px;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #3E4857;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .signup-button:hover {
+            background-color: #5a6475;
+            text-decoration: none;
+            color: white;
+        }
+
+        .signup-button i {
+            font-size: 22px;
+        }
+
+        /* Contenedor centrado */
+        .signup-container {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 40px;
+        }
+    </style>
 </head>
 <body>
+  <div class="top-right-signup">
+      <a href="https://eu-west-15yl5gwygk.auth.eu-west-1.amazoncognito.com/signup?client_id=2k4h09uokmn9kv815ed9up52r2&redirect_uri=https%3A%2F%2Figles-ia.es&response_type=code&scope=email+openid+phone"
+        class="signup-top-button" target="_blank" rel="noopener noreferrer">
+          Suscríbete a la Newsletter Semanal
+      </a>
+  </div>
     <header>
         <div class="container">
             <h1><a href="{{ url_for('index') }}">Igles-IA</a></h1>
@@ -103,33 +94,5 @@
     <footer>
         <p>&copy; {{ current_year }} Igles-IA. Desarrollado con inspiración.</p>
     </footer>
-
-    <!-- BEGIN Brevo JS -->
-    <script>
-      window.REQUIRED_CODE_ERROR_MESSAGE = "Elija un código de país";
-      window.LOCALE = "es";
-      window.EMAIL_INVALID_MESSAGE =
-        window.SMS_INVALID_MESSAGE =
-          "La información que ha proporcionado no es válida. Compruebe el formato del campo e inténtelo de nuevo.";
-
-      window.REQUIRED_ERROR_MESSAGE = "Este campo no puede quedarse vacío. ";
-
-      window.GENERIC_INVALID_MESSAGE =
-        "La información que ha proporcionado no es válida. Compruebe el formato del campo e inténtelo de nuevo.";
-
-      window.translation = {
-        common: {
-          selectedList: "{quantity} lista seleccionada",
-          selectedLists: "{quantity} listas seleccionadas",
-          selectedOption: "{quantity} seleccionado",
-          selectedOptions: "{quantity} seleccionados",
-        },
-      };
-
-      var AUTOHIDE = Boolean(0);
-    </script>
-
-    <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
-    <!-- END Brevo JS -->
 </body>
 </html>

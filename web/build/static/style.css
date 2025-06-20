@@ -171,3 +171,42 @@ footer {
     font-size: 14px;
     background-color: transparent; /* Sin fondo de color, para que se integre con el body */
 }
+
+.top-right-signup {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.signup-top-button {
+    background-color: #0052cc;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    display: inline-block;
+}
+
+.signup-top-button:hover {
+    background-color: #003d99;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+    .top-right-signup {
+        top: 10px;
+        right: 10px;
+    }
+
+    .signup-top-button {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+}
