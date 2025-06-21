@@ -6,7 +6,6 @@ from dotenv import load_dotenv
 from typer import Typer
 
 from iglesia.agents import create_iglesia_content_crew
-from iglesia.brevo_utils import brevo_get_all_emails
 from iglesia.email_utils_2 import enviar_correos_todos
 from iglesia.utils import obtener_todos_los_textos
 from iglesia.cognito_utils import cognito_get_verified_emails
@@ -51,7 +50,9 @@ def run_agents(debug=False, calculate_wordcloud=False):
             "https://www.vatican.va/content/leo-xiv/es/speeches/2025/may.index.html",
             "https://www.vatican.va/content/leo-xiv/es/speeches/2025/june.index.html",
         ],
-        "Audiencia": ["https://www.vatican.va/content/leo-xiv/es/audiences/2025.index.html"],
+        "Audiencia": [
+            "https://www.vatican.va/content/leo-xiv/es/audiences/2025.index.html"
+        ],
         "Carta": ["https://www.vatican.va/content/leo-xiv/es/letters/2025.index.html"],
     }
     fecha_de_hoy = pd.Timestamp.now().strftime("%Y-%m-%d")
@@ -126,8 +127,9 @@ def pipeline_semanal(debug: bool = True):
         print("Solo para pruebas, usar el último contacto\n")
         print(contacts)
         contacts = contacts[contacts["email"].str.contains("nando.carazom@gmai")]
-    
+
     enviar_correos_todos(contacts, fecha_de_hoy)
+
 
 @app.command()
 def pipeline_diaria(debug: bool = False, calculate_wordcloud: bool = False):
