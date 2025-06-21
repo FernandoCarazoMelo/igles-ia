@@ -44,7 +44,7 @@
             </a>
 
             <div class="nav-right">
-<!-- 
+                <!-- 
                 <div class="nav-menu-container" id="nav-menu">
                     <ul class="nav-menu">
                         <li class="dropdown">
@@ -61,9 +61,9 @@
                 <a href="https://eu-west-15yl5gwygk.auth.eu-west-1.amazoncognito.com/signup?client_id=2k4h09uokmn9kv815ed9up52r2&redirect_uri=https%3A%2F%2Figles-ia.es&response_type=code&scope=email+openid+phone"
                     class="nav-signup-button" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-envelope"></i>
-                    <span class="signup-text">Suscríbete al Resumen Semanal</span>
+                    <span class="signup-text">Suscríbete al Resumen Semanal del Papa</span>
                 </a>
-<!-- 
+                <!-- 
                 <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menú" aria-expanded="false">
                     <i class="fas fa-bars"></i>
                 </button> -->
@@ -77,16 +77,14 @@
     </div>
 
     <footer>
-        <p>&copy; {{ current_year }} Igles-IA. Desarrollado con 🤖 y 💙.</p>
+        <p>&copy; {{ current_year }} Igles-IA. Desarrollado con 🤖 y ❤️.</p>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const nav = document.getElementById('main-nav');
-            const mobileMenuButton = document.getElementById('mobile-menu');
-            const navMenu = document.getElementById('nav-menu');
 
-            // 1. Efecto de scroll en la barra de navegación
+            // Efecto de scroll en la barra de navegación
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 50) {
                     nav.classList.add('scrolled');
@@ -95,18 +93,7 @@
                 }
             });
 
-            // 2. Funcionalidad del menú hamburguesa
-            mobileMenuButton.addEventListener('click', () => {
-                navMenu.classList.toggle('is-active');
-                const isExpanded = navMenu.classList.contains('is-active');
-                mobileMenuButton.setAttribute('aria-expanded', isExpanded);
-                // Cambia el icono de hamburguesa a una "X" y viceversa
-                if (isExpanded) {
-                    mobileMenuButton.innerHTML = '<i class="fas fa-times"></i>';
-                } else {
-                    mobileMenuButton.innerHTML = '<i class="fas fa-bars"></i>';
-                }
-            });
+            // La funcionalidad de la hamburguesa ha sido eliminada
         });
     </script>
 
