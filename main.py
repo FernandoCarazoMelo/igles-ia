@@ -122,15 +122,12 @@ def pipeline_semanal(debug: bool = True):
     contacts = cognito_get_verified_emails()
     # contacts.to_csv("brevo_contacts.csv", index=False)
     print(f"Total de contactos obtenidos: {len(contacts)}")
-    print("Contactos obtenidos:")
-    print(contacts)
     if debug:
         print("Solo para pruebas, usar el último contacto\n")
         print(contacts)
         contacts = contacts[contacts["email"].str.contains("nando.carazom@gmai")]
     
     enviar_correos_todos(contacts, fecha_de_hoy)
-
 
 @app.command()
 def pipeline_diaria(debug: bool = False, calculate_wordcloud: bool = False):
@@ -139,7 +136,15 @@ def pipeline_diaria(debug: bool = False, calculate_wordcloud: bool = False):
     """
     fecha_de_hoy = pd.Timestamp.now().strftime("%Y-%m-%d")
     run_agents(debug=debug, calculate_wordcloud=calculate_wordcloud)
-    enviar_correos_todos("emails_dev.csv", fecha_de_hoy)
+
+    contacts = cognito_get_verified_emails()
+    # contacts.to_csv("brevo_contacts.csv", index=False)
+    print(f"Total de contactos obtenidos: {len(contacts)}")
+    print("Solo para pruebas, usar el último contacto\n")
+    print(contacts)
+    contacts = contacts[contacts["email"].str.contains("nando.carazom@gmai")]
+
+    enviar_correos_todos(contacts, fecha_de_hoy)
 
 
 if __name__ == "__main__":
