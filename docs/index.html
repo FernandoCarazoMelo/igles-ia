@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,19 +10,17 @@ Papa León XIV - Resumen Semanal - AI Agents
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
-    <link rel="icon" type="image/png" href="static/favicon.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
+        rel="stylesheet" />
+
+    <link rel="icon" type="image/png" href="static/logo.png">
 
     <link rel="stylesheet" href="static/style.css" />
 
-    <!-- FontAwesome CDN para iconos modernos -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-p6O8XRvuRQ9DbKIMSCQmcgWQn08J7x9xkXy9SNR5B0e2Gmjpu+Z8W8Hs1dz8FQQxXoX6O5kNtzB0Gij93S7glw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-p6O8XRvuRQ9DbKIMSCQmcgWQn08J7x9xkXy9SNR5B0e2Gmjpu+Z8W8Hs1dz8FQQxXoX6O5kNtzB0Gij93S7glw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <meta property="og:title" content="Igles-IA: Palabras del Papa León XIV" />
     <meta property="og:description" content="León XIV - Resumen Semanal - AI Agents" />
@@ -29,65 +28,51 @@ Papa León XIV - Resumen Semanal - AI Agents
     <meta property="og:url" content="https://igles-ia.es" />
     <meta property="og:type" content="website" />
 
-    <!-- Open Graph / Facebook / WhatsApp -->
-
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://igles-ia.es/" />
     <meta name="twitter:title" content="Igles-IA: Palabras del Papa León XIV" />
     <meta name="twitter:description" content="León XIV - Resumen Semanal - AI Agents" />
     <meta name="twitter:image" content="https://igles-ia.es/static/Foto-Papa-Leone-XIV-300px.jpg" />
-
-    <style>
-        /* Botón moderno para el signup */
-        .signup-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px 24px;
-            font-size: 18px;
-            font-weight: 700;
-            font-family: 'Montserrat', sans-serif;
-            background-color: #3E4857;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-
-        .signup-button:hover {
-            background-color: #5a6475;
-            text-decoration: none;
-            color: white;
-        }
-
-        .signup-button i {
-            font-size: 22px;
-        }
-
-        /* Contenedor centrado */
-        .signup-container {
-            text-align: center;
-            margin-top: 30px;
-            margin-bottom: 40px;
-        }
-    </style>
 </head>
+
 <body>
-  <div class="top-right-signup">
-      <a href="https://eu-west-15yl5gwygk.auth.eu-west-1.amazoncognito.com/signup?client_id=2k4h09uokmn9kv815ed9up52r2&redirect_uri=https%3A%2F%2Figles-ia.es&response_type=code&scope=email+openid+phone"
-        class="signup-top-button" target="_blank" rel="noopener noreferrer">
-          Suscríbete a la Newsletter Semanal
-      </a>
-  </div>
-    <header>
-        <div class="container">
-            <h1><a href="index.html">Igles-IA</a></h1>
-            <p class="site-description">Palabras del Papa León XIV: Resumen Semanal</p>
+
+    <nav id="main-nav">
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo-link">
+                <img src="static/logo.png" alt="Igles-IA Logo" class="logo">
+                <span class="logo-text">Igles-IA</span>
+            </a>
+
+            <div class="nav-right">
+
+                <div class="nav-menu-container" id="nav-menu">
+                    <ul class="nav-menu">
+                        <li class="dropdown">
+                            <a href="#" class="nav-link">Resúmenes Anteriores <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Resumen Semana 1</a></li>
+                                <li><a href="#">Resumen Semana 2</a></li>
+                                <li><a href="#">Resumen Semana 3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <a href="https://eu-west-15yl5gwygk.auth.eu-west-1.amazoncognito.com/signup?client_id=2k4h09uokmn9kv815ed9up52r2&redirect_uri=https%3A%2F%2Figles-ia.es&response_type=code&scope=email+openid+phone"
+                    class="nav-signup-button" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-envelope"></i>
+                    <span class="signup-text">Suscríbete</span>
+                </a>
+
+                <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menú" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+            </div>
         </div>
-    </header>
+    </nav>
 
     <div class="container main-container">
         
@@ -162,5 +147,37 @@ Papa León XIV - Resumen Semanal - AI Agents
     <footer>
         <p>&copy; 2025 Igles-IA. Desarrollado con inspiración.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const nav = document.getElementById('main-nav');
+            const mobileMenuButton = document.getElementById('mobile-menu');
+            const navMenu = document.getElementById('nav-menu');
+
+            // 1. Efecto de scroll en la barra de navegación
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+            });
+
+            // 2. Funcionalidad del menú hamburguesa
+            mobileMenuButton.addEventListener('click', () => {
+                navMenu.classList.toggle('is-active');
+                const isExpanded = navMenu.classList.contains('is-active');
+                mobileMenuButton.setAttribute('aria-expanded', isExpanded);
+                // Cambia el icono de hamburguesa a una "X" y viceversa
+                if (isExpanded) {
+                    mobileMenuButton.innerHTML = '<i class="fas fa-times"></i>';
+                } else {
+                    mobileMenuButton.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
+        });
+    </script>
+
 </body>
+
 </html>
