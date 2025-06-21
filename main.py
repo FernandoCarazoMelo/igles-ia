@@ -50,6 +50,7 @@ def run_agents(debug=False, calculate_wordcloud=False):
             "https://www.vatican.va/content/leo-xiv/es/speeches/2025/may.index.html",
             "https://www.vatican.va/content/leo-xiv/es/speeches/2025/june.index.html",
         ],
+        "Audiencia": ["https://www.vatican.va/content/leo-xiv/es/audiences/2025.index.html"],
         "Carta": ["https://www.vatican.va/content/leo-xiv/es/letters/2025.index.html"],
     }
     fecha_de_hoy = pd.Timestamp.now().strftime("%Y-%m-%d")
