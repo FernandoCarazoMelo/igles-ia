@@ -1,4 +1,4 @@
-/* static/style.css - Versión Moderna */
+/* static/style.css - Versión Moderna Completa */
 body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.7;
@@ -162,23 +162,52 @@ header .site-description {
     background: #002244; /* Azul más oscuro al pasar el ratón */
 }
 
-/* --- Footer --- */
-footer {
+/* --- Botón de Signup y Elementos Flotantes --- */
+
+/* Contenedor del botón de la página principal */
+.signup-container {
     text-align: center;
-    padding: 40px 20px;
-    margin-top: 40px;
-    color: #757575; /* Gris medio */
-    font-size: 14px;
-    background-color: transparent; /* Sin fondo de color, para que se integre con el body */
+    margin-top: 30px;
+    margin-bottom: 40px;
 }
 
+/* Botón grande de la página principal */
+.signup-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #3E4857;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.signup-button:hover {
+    background-color: #5a6475;
+    text-decoration: none;
+    color: white;
+}
+
+.signup-button i {
+    font-size: 22px;
+}
+
+/* Contenedor del botón flotante de suscripción */
 .top-right-signup {
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 20px;
     z-index: 1000;
 }
 
+/* Botón flotante de suscripción */
 .signup-top-button {
     background-color: #0052cc;
     color: white;
@@ -199,14 +228,45 @@ footer {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 40px;
+    color: #757575; /* Gris medio */
+    font-size: 14px;
+    background-color: transparent; /* Sin fondo de color, para que se integre con el body */
+}
+
+/* --- Media Queries para Responsividad --- */
 @media (max-width: 768px) {
     .top-right-signup {
         top: 10px;
-        right: 10px;
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 300px;
+    }
+
+    #greeting {
+        top: 10px;
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 300px;
+        text-align: center;
     }
 
     .signup-top-button {
-        padding: 8px 14px;
-        font-size: 14px;
+        width: 100%;
+        padding: 5px 0;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .content-card {
+        padding: 20px;
     }
 }
