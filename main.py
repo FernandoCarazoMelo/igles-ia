@@ -78,7 +78,7 @@ def run_agents(debug=False, calculate_wordcloud=False):
             r"[^\w\s-]", "", nombre
         )  # Quita cualquier carácter que no sea letra/número/guion/bajo
         nombre = re.sub(r"[-\s]+", "_", nombre)  # Reemplaza espacios y guiones por "_"
-        return nombre.strip("_").lower()
+        return nombre.strip("_").lower()[:100]
 
     df["filename"] = df.apply(
         lambda x: f"{x['fecha']}_{x['tipo'].replace(' ', '_').lower()}_{limpiar_nombre_archivo(x['titulo'])}",
