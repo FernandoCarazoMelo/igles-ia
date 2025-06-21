@@ -3,7 +3,7 @@ name: Run Iglesia Content Script Daily and Commit Results
 on:
   schedule:
     # Ejecuta el script todos los lunes a las 6:00 AM UTC, hora España: 8:00 AM
-    - cron: "30 6 * * *"
+    - cron: "30 5 * * 1"
   workflow_dispatch: # Permite ejecutar el workflow manualmente
 
 jobs:
