@@ -30,7 +30,6 @@ jobs:
 
       - name: Install dependencies with uv
         run: uv pip install . --system
-
       - name: Run the weekly specific function
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -40,6 +39,9 @@ jobs:
           EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
           BREVO_TOKEN: ${{ secrets.BREVO_TOKEN }}
           SUMMARIES_FOLDER: summaries-remote # O una carpeta diferente si esta función la usa
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
         run: |
           echo "Running weekly specific function..."
           uv run python main.py pipeline-semanal

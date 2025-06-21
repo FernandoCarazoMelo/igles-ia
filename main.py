@@ -9,6 +9,7 @@ from iglesia.agents import create_iglesia_content_crew
 from iglesia.brevo_utils import brevo_get_all_emails
 from iglesia.email_utils_2 import enviar_correos_todos
 from iglesia.utils import obtener_todos_los_textos
+from iglesia.cognito_utils import cognito_get_verified_emails
 
 app = Typer()
 
@@ -118,7 +119,7 @@ def pipeline_semanal(debug: bool = True):
     """
     fecha_de_hoy = pd.Timestamp.now().strftime("%Y-%m-%d")
 
-    contacts = brevo_get_all_emails()
+    contacts = cognito_get_verified_emails()
     # contacts.to_csv("brevo_contacts.csv", index=False)
     print(f"Total de contactos obtenidos: {len(contacts)}")
     print("Contactos obtenidos:")
@@ -126,7 +127,7 @@ def pipeline_semanal(debug: bool = True):
     if debug:
         print("Solo para pruebas, usar el último contacto\n")
         print(contacts)
-        contacts = contacts[-1:]  # Solo para pruebas, usar el último contacto
+        contacts = contacts[contacts["email"].str.contains("nando.carazom@gmai")]
     
     enviar_correos_todos(contacts, fecha_de_hoy)
 

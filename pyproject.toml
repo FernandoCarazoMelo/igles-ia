@@ -19,6 +19,7 @@ dependencies = [
     "ruff>=0.11.13",
     "yfinance>=0.2.63",
     "brevo-python>=1.1.2",
+    "boto3>=1.38.41",
 ]
 
 [tool.setuptools]
