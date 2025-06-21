@@ -195,130 +195,63 @@ body {
     z-index: 10;
 }
 
-
 /* ================================================= */
-/* ===== ESTILOS DE CONTENIDO (de tu archivo original) ===== */
-/* ================================================= */
-.main-container {
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-
-.content-card {
-    background: #ffffff;
-    padding: 30px 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
-    margin-bottom: 30px;
-}
-
-.content-card h2 {
-    font-family: 'Montserrat', sans-serif;
-    color: #003366;
-    font-size: 28px;
-    margin-top: 0;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #003366;
-    padding-bottom: 10px;
-}
-
-.content-card h3 {
-    font-family: 'Montserrat', sans-serif;
-    color: #222222;
-    font-size: 22px;
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-.content-card p {
-    font-size: 17px;
-    color: #4A4A4A;
-    margin-bottom: 18px;
-}
-
-.content-card ul {
-    font-size: 17px;
-    color: #4A4A4A;
-    list-style-position: outside;
-    padding-left: 25px;
-    margin-bottom: 18px;
-}
-
-.content-card li { margin-bottom: 10px; }
-.content-card a { color: #0056b3; text-decoration: none; font-weight: 700; }
-.content-card a:hover, .content-card a:focus { color: #003366; text-decoration: underline; }
-.content-card hr { border: 0; height: 1px; background-color: #e0e0e0; margin: 40px 0; }
-
-.newsletter-form {
-    background: #ffffff;
-    padding: 30px 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
-    text-align: center;
-}
-
-/* ... (resto de tus estilos de formulario y contenido que no cambian) ... */
-
-/* --- Footer --- */
-footer {
-    text-align: center;
-    padding: 40px 20px;
-    margin-top: 40px;
-    color: #757575;
-    font-size: 14px;
-    background-color: transparent;
-}
-
-/* ================================================= */
-/* ===== ESTILOS RESPONSIVE (ACTUALIZADO) ===== */
+/* ===== ESTILOS RESPONSIVE (VERSIÓN CORREGIDA) ===== */
 /* ================================================= */
 @media (max-width: 768px) {
+    /* El body necesita más padding superior porque el menú ahora es más alto */
     body {
-        padding-top: 67px; /* Ajuste para el nav en móvil */
+        padding-top: 130px; 
     }
 
-    /* Ocultar el menú de enlaces (ahora solo contiene "Resúmenes") */
+    /* Contenedor principal del menú en móvil */
+    .nav-container {
+        flex-direction: column;      /* ¡CLAVE! Apila los elementos verticalmente */
+        align-items: center;     /* Alinea todo a la izquierda */
+        gap: 15px;                   /* Espacio entre el logo y el bloque de botones */
+    }
+
+    /* Ocultamos el menú de "Resúmenes" como antes */
     .nav-menu-container {
-        display: none; /* Oculto por defecto */
+        display: none; 
         position: absolute;
-        top: 100%; /* Posicionar debajo del nav */
+        top: 100%;
         left: 0;
         width: 100%;
         background-color: #2c3e50;
     }
     
     .nav-menu-container.is-active {
-        display: block; /* Mostrar al hacer click */
+        display: block; 
+    }
+
+    /* El bloque de la derecha ahora ocupa todo el ancho */
+    .nav-right {
+        width: 100%;
+        justify-content: center; /* ¡CAMBIO HECHO AQUÍ! Centra los elementos internos */
+        gap: 20px;               /* Añadimos un gap para que no estén pegados */
+    }
+
+    /* El botón de suscripción ahora tiene espacio para crecer */
+    .nav-signup-button {
+        padding: 10px 15px; /* Un poco más de padding para que respire */
+        font-size: 15px;
+        white-space: normal; /* Permite que el texto se ajuste si es necesario */
     }
     
-    .nav-menu {
-        flex-direction: column;
-        width: 100%;
-        padding: 10px 0;
-        gap: 0;
-    }
-
-    .nav-menu li { width: 100%; text-align: center; }
-    .nav-link { display: block; padding: 15px 0; width: 100%; border-radius: 0; }
-    .dropdown:hover .dropdown-menu { display: none; }
-    .dropdown-menu { position: static; display: block; background-color: rgba(0,0,0,0.2); box-shadow: none; border-radius: 0; margin-top: 0; min-width: auto; opacity: 1; visibility: visible; transform: none; padding: 0; }
-    .dropdown-menu a { padding: 10px 20px; font-size: 14px; text-align: center; }
-
-    /* Mostrar botón hamburguesa */
     .menu-toggle {
-        display: block;
-        order: 2; /* Pone la hamburguesa al final */
-    }
-
-    /* Mantener el botón de Suscripción SIEMPRE visible */
-    .nav-signup-button {
-        display: inline-flex; /* Asegura que sea visible */
-        order: 1; /* Pone el botón antes de la hamburguesa */
-        padding: 8px 12px; /* Un poco más compacto */
-        font-size: 14px;
+        display: block; /* Mantenemos visible la hamburguesa */
     }
     
     .content-card {
         padding: 20px;
     }
+
+    /* Reglas para el menú desplegable (sin cambios) */
+    .nav-menu { flex-direction: column; width: 100%; padding: 10px 0; gap: 0; }
+    .nav-menu li { width: 100%; text-align: center; }
+    .nav-link { display: block; padding: 15px 0; width: 100%; border-radius: 0; }
+    .dropdown:hover .dropdown-menu { display: none; }
+    .dropdown-menu { position: static; display: block; background-color: rgba(0,0,0,0.2); box-shadow: none; border-radius: 0; margin-top: 0; min-width: auto; opacity: 1; visibility: visible; transform: none; padding: 0; }
+    .dropdown-menu a { padding: 10px 20px; font-size: 14px; text-align: center; }
 }
