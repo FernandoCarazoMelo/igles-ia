@@ -141,7 +141,7 @@ def pipeline_diaria(debug: bool = False, calculate_wordcloud: bool = False):
 
     contacts = cognito_get_verified_emails()
     # contacts.to_csv("brevo_contacts.csv", index=False)
-    print(f"Total de contactos obtenidos: {len(contacts)}")
+    print(f"COGNITO. Total de contactos obtenidos: {len(contacts)}")
     print("Solo para pruebas, usar el último contacto\n")
     print(contacts)
     contacts = contacts[contacts["email"].str.contains("nando.carazom@gmai")]
