@@ -199,17 +199,7 @@ body {
 /* ===== ESTILOS RESPONSIVE (VERSIÓN CORREGIDA) ===== */
 /* ================================================= */
 @media (max-width: 768px) {
-    /* El body necesita más padding superior porque el menú ahora es más alto */
-    body {
-        padding-top: 130px; 
-    }
 
-    /* Contenedor principal del menú en móvil */
-    .nav-container {
-        flex-direction: column;      /* ¡CLAVE! Apila los elementos verticalmente */
-        align-items: center;     /* Alinea todo a la izquierda */
-        gap: 15px;                   /* Espacio entre el logo y el bloque de botones */
-    }
 
     /* Ocultamos el menú de "Resúmenes" como antes */
     .nav-menu-container {
