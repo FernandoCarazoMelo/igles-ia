@@ -532,14 +532,27 @@ footer {
 }
 
 /* --- Responsive para la tarjeta de cita --- */
+/* --- Responsive para la tarjeta de cita (VERSIÓN CORREGIDA Y RE-ENCUADRADA) --- */
+/* --- Responsive para la tarjeta de cita (VERSIÓN "IMAGEN COMPLETA") --- */
 @media (max-width: 768px) {
     .pope-quote-card {
-        flex-direction: column; /* Apila la imagen sobre el texto */
+        flex-direction: column; 
     }
 
     .pope-image {
         width: 100%;
-        max-height: 300px; /* Limita la altura de la imagen en móvil */
+        /* Le damos un color de fondo por si la imagen no ocupa todo el ancho */
+        background-color: #f8f9fa;
+        padding: 20px 0; /* Añadimos un poco de aire arriba y abajo */
+    }
+
+    .pope-image img {
+        height: 400px; /* Le damos una altura máxima */
+        width: 100%;  /* La imagen usará el ancho completo de su contenedor */
+
+        /* ===== LA LÍNEA CLAVE DEL CAMBIO ===== */
+        object-fit: contain; /* Asegura que TODA la imagen sea visible, sin recortes */
+        /* Ya no necesitamos object-position, contain centra la imagen por defecto */
     }
 
     .pope-quote-content {
