@@ -1,11 +1,113 @@
-{% extends "layout.html" %}
-
-{% block title %}
-Papa León XIV - Resumen Semanal - AI Agents
-{% endblock %}
+{% extends 'layout.html' %}
 
 {% block content %}
-<div class="content-card">
-    {{ pagina_completa_html | safe }}
-</div>
+
+<header class="hero">
+    <div class="hero-content">
+        <h1 class="hero-title">Las palabras del Papa Leon XIV, directas a tu email.</h1>
+        <p class="hero-subtitle">
+            Recibe cada lunes un resumen claro y profundo de las homilías y mensajes del Papa Francisco.
+            Analizamos lo más importante con IA para que no te pierdas nada.
+        </p>
+        <a href="URL_DE_COGNITO" class="hero-cta-button" target="_blank" rel="noopener noreferrer">
+            ¡Suscríbeme ahora!
+        </a>
+    </div>
+</header>
+
+<section id="resumen-semanal" class="sample-summary">
+    <div class="container">
+        <h2 class="section-title">Resumen de esta semana</h2>
+
+        <div class="content-card">
+            {{ pagina_completa_html | safe }}
+        </div>
+
+    </div>
+</section>
+
+<section class="pope-quote-section">
+    <div class="container">
+        <div class="pope-quote-card">
+            
+            <div class="pope-image">
+                <img src="{{ url_for('static', filename='Foto-Papa-Leone-XIV-300px.jpg') }}" alt="Fotografía del Papa León XIV">
+            </div>
+
+            <div class="pope-quote-content">
+                <blockquote>
+                    "La Inteligencia Artificial nos abre nuevos horizontes y, al mismo tiempo, nos interpela sobre nuestra relación con la verdad y la belleza."
+                </blockquote>
+                <cite>
+                    <strong>Papa León XIV</strong><br>
+                    Mensaje en la II Conferencia sobre IA, Ética y Gobernanza Corporativa<br>
+                    (20 de junio de 2025)
+                </cite>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="sample-summary">
+    <div class="container">
+        <h2 class="section-title">Así se ve un resumen de Igles-IA</h2>
+        <div class="summary-card">
+            <h3>Resumen del Ángelus - 16 de Junio, 2025</h3>
+            <p>Esta semana, el Papa Francisco ha centrado su mensaje en la parábola del sembrador, recordándonos que el
+                Reino de Dios crece silenciosamente, incluso cuando no vemos resultados inmediatos. Ha invitado a los
+                fieles a tener paciencia y confianza.</p>
+            <h4>Temas Clave Analizados:</h4>
+            <ul>
+                <li><strong>La paciencia de Dios:</strong> El crecimiento es un proceso, no un evento instantáneo.</li>
+                <li><strong>La semilla de la fe:</strong> Cómo cultivar la palabra en nuestra vida cotidiana.</li>
+                <li><strong>Esperanza contra la inmediatez:</strong> Una crítica al deseo de resultados rápidos de la
+                    cultura moderna.</li>
+            </ul>
+            <!-- <blockquote class="summary-quote">
+                <p>"No nos cansemos de sembrar. Aunque no veamos los frutos enseguida, la semilla del bien siempre crece
+                    y prepara una cosecha abundante."</p>
+                <footer>- Cita destacada de la semana</footer>
+            </blockquote> -->
+        </div>
+    </div>
+</section>
+<section class="features">
+    <div class="container">
+        <h2 class="section-title">Tu dosis semanal de inspiración y reflexión</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <i class="fas fa-calendar-check fa-2x"></i>
+                <h3>Resumen Semanal</h3>
+                <p>Cada lunes, recibirás en tu correo un análisis conciso de la semana.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-brain fa-2x"></i>
+                <h3>Análisis con IA</h3>
+                <p>Identificamos los temas clave y las citas más potentes para ti.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-book-open-reader fa-2x"></i>
+                <h3>Lectura de 5 Minutos</h3>
+                <p>Perfecto para leer con el café y empezar la semana con otra perspectiva.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-lightbulb fa-2x"></i>
+                <h3>Ideas Clave</h3>
+                <p>Te ayudamos a entender y aplicar el mensaje en tu día a día.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="final-cta">
+    <div class="container">
+        <h2 class="section-title">¿Listo para empezar tu semana con inspiración?</h2>
+        <p>Únete a cientos de lectores que ya reciben su resumen semanal.</p>
+        <a href="URL_DE_COGNITO" class="hero-cta-button" target="_blank" rel="noopener noreferrer">
+            Sí, quiero suscribirme
+        </a>
+    </div>
+</section>
+
 {% endblock %}

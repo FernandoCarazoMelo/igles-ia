@@ -4,87 +4,66 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{% block title %}Igles-IA{% endblock %}</title>
+    <title>{% block title %}Igles-IA: Resúmenes del Papa Francisco{% endblock %}</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
         rel="stylesheet" />
-
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}">
-
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <meta property="og:title" content="Igles-IA: Palabras del Papa León XIV" />
-    <meta property="og:description" content="León XIV - Resumen Semanal - AI Agents" />
-    <meta property="og:image" content="https://igles-ia.es/static/Foto-Papa-Leone-XIV-300px.jpg" />
-    <meta property="og:url" content="https://igles-ia.es" />
-    <meta property="og:type" content="website" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://igles-ia.es/" />
-    <meta name="twitter:title" content="Igles-IA: Palabras del Papa León XIV" />
-    <meta name="twitter:description" content="León XIV - Resumen Semanal - AI Agents" />
-    <meta name="twitter:image" content="https://igles-ia.es/static/Foto-Papa-Leone-XIV-300px.jpg" />
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <meta name="description" content="Suscríbete para recibir un resumen semanal de las enseñanzas del Papa Francisco. Igles-IA utiliza la inteligencia artificial para ofrecerte las claves de su mensaje de forma clara y concisa." />
+    </head>
 
 <body>
-
     <nav id="main-nav">
         <div class="container nav-container">
-
             <a href="{{ url_for('index') }}" class="logo-link">
-                <img src="{{ url_for('static', filename='logo.png') }}" alt="Igles-IA Logo" class="logo">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo de Igles-IA" class="logo">
                 <span class="logo-text">Igles-IA</span>
             </a>
-
             <div class="nav-right">
-                <!-- 
-                <div class="nav-menu-container" id="nav-menu">
+                <!-- <div class="nav-menu-container" id="nav-menu">
                     <ul class="nav-menu">
                         <li class="dropdown">
                             <a href="#" class="nav-link">Resúmenes Anteriores <i class="fas fa-chevron-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Resumen Semana 1</a></li>
-                                <li><a href="#">Resumen Semana 2</a></li>
-                                <li><a href="#">Resumen Semana 3</a></li>
+                                <li><a href="#">Semana del 15 de Junio</a></li>
+                                <li><a href="#">Semana del 8 de Junio</a></li>
                             </ul>
                         </li>
                     </ul>
                 </div> -->
-
-                <a href="https://eu-west-15yl5gwygk.auth.eu-west-1.amazoncognito.com/signup?client_id=2k4h09uokmn9kv815ed9up52r2&redirect_uri=https%3A%2F%2Figles-ia.es&response_type=code&scope=email+openid+phone"
-                    class="nav-signup-button" target="_blank" rel="noopener noreferrer">
+                <a href="URL_DE_COGNITO" class="nav-signup-button" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-envelope"></i>
-                    <span class="signup-text">Suscríbete al Resumen Semanal del Papa</span>
+                    <span class="signup-text">Suscríbete al Resumen Semanal</span>
                 </a>
-                <!-- 
-                <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menú" aria-expanded="false">
-                    <i class="fas fa-bars"></i>
-                </button> -->
-
             </div>
         </div>
     </nav>
 
-    <div class="container main-container">
+    <main>
         {% block content %}{% endblock %}
-    </div>
+    </main>
 
     <footer>
-        <p>&copy; {{ current_year }} Igles-IA. Desarrollado con 🤖 y ❤️.</p>
+        <div class="footer-content">
+            <p>&copy; {{ current_year }} Igles-IA. Desarrollado con 🤖 y ❤️.</p>
+            <div class="footer-links">
+                <a href="#">Sobre nosotros</a>
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Contacto</a>
+            </div>
+        </div>
     </footer>
 
     <script>
+        // Tu script de Javascript para el nav
         document.addEventListener('DOMContentLoaded', () => {
             const nav = document.getElementById('main-nav');
-
-            // Efecto de scroll en la barra de navegación
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 50) {
                     nav.classList.add('scrolled');
@@ -92,11 +71,7 @@
                     nav.classList.remove('scrolled');
                 }
             });
-
-            // La funcionalidad de la hamburguesa ha sido eliminada
         });
     </script>
-
 </body>
-
 </html>
