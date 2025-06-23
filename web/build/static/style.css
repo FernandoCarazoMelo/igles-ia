@@ -627,3 +627,109 @@ footer {
         font-size: 1rem;
     }
 }
+
+
+
+/* ================================================= */
+/* ===== ESTILOS PARA PÁGINA "CONTACTO"         ===== */
+/* ================================================= */
+
+.contact-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.contact-container {
+    display: flex;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.contact-info, .contact-form {
+    flex: 1; /* Ambas columnas ocupan el mismo espacio */
+}
+
+.contact-info h3, .contact-form h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #003366;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+/* Estilos de la info directa (izquierda) */
+.contact-info p {
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: #d35400; /* Naranja corporativo */
+}
+
+.info-item a {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.info-item a:hover {
+    color: #d35400;
+    text-decoration: underline;
+}
+
+/* Estilos del formulario (derecha) */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #4A4A4A;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #003366; /* Azul corporativo */
+    box-shadow: 0 0 5px rgba(0, 51, 102, 0.2);
+}
+
+.contact-form button {
+    width: 100%;
+    border: none; /* El botón ya tiene estilos de .hero-cta-button */
+}
+
+/* --- Responsive para la página de Contacto --- */
+@media (max-width: 820px) {
+    .contact-container {
+        flex-direction: column;
+        gap: 60px;
+    }
+}

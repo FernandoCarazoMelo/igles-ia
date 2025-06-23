@@ -1,7 +1,7 @@
 import os
 from datetime import datetime  # Para el año en el footer
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request, flash, redirect, url_for
 
 # Inicializar la aplicación Flask
 app = Flask(__name__)
@@ -14,6 +14,36 @@ app.config['FREEZER_RELATIVE_URLS'] = True
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 PREGENERATED_HTML_PATH = os.path.join(BASE_DIR, 'data', 'contenido_semanal_para_web.html')
 
+@app.route('/contacto.html', methods=['GET', 'POST'])
+def contact():
+    if request.method == 'POST':
+        # 1. Recoger los datos del formulario
+        name = request.form.get('name')
+        email = request.form.get('email')
+        subject = request.form.get('subject')
+        message = request.form.get('message')
+
+        # 2. Aquí iría la lógica para enviar el email.
+        #    Necesitarás una librería como Flask-Mail y configurar tu servidor de correo.
+        #    Esta parte es un ejemplo y no funcionará sin esa configuración.
+        #    
+        #    send_email(
+        #        subject=f"Nuevo mensaje de {name}: {subject}",
+        #        sender=email,
+        #        recipients=['info@igles-ia.es'],
+        #        body=message
+        #    )
+        
+        print(f"EMAIL SIMULADO: De {name} <{email}>, Asunto: {subject}, Mensaje: {message}")
+
+        # 3. Mostrar un mensaje de éxito al usuario
+        flash('¡Gracias por tu mensaje! Te responderemos pronto.', 'success')
+
+        # 4. Redirigir a la misma página para evitar reenvío del formulario
+        return redirect(url_for('contact'))
+
+    # Si el método es GET, simplemente muestra la página
+    return render_template('contacto.html')
 
 @app.route('/sobre-nosotros.html')
 def about():
