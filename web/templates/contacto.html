@@ -21,10 +21,10 @@
                 
                 <div class="info-item">
                     <i class="fas fa-envelope"></i>
-                    <a href="mailto:info@igles-ia.es">igles.ia.newsletter@gmail.com</a>
+                    <span id="email-placeholder"></span>
                 </div>
                 
-                <p style="margin-top: 30px;">También puedes seguir nuestro proyecto y contactarnos a través de nuestras redes:</p>
+                <!-- <p style="margin-top: 30px;">También puedes seguir nuestro proyecto y contactarnos a través de nuestras redes:</p>
 
                 <div class="info-item">
                     <i class="fab fa-twitter"></i>
@@ -33,11 +33,11 @@
                 <div class="info-item">
                     <i class="fab fa-linkedin"></i>
                     <a href="#" target="_blank" rel="noopener noreferrer">Igles-IA en LinkedIn</a>
-                </div>
+                </div> -->
 
             </div>
 
-            <div class="contact-form">
+            <!-- <div class="contact-form">
                 <h3>O Rellena el Formulario</h3>
                 <form action="{{ url_for('contact') }}" method="POST">
                     <div class="form-group">
@@ -65,10 +65,29 @@
                     </div>
                     <button type="submit" class="hero-cta-button">Enviar Mensaje</button>
                 </form>
-            </div>
+            </div> -->
 
         </div>
     </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Partes del email para evitar que estén juntas en el código
+    const user = 'igles.ia.newsletter';
+    const domain = 'gmail.com';
+    
+    // Encuentra el marcador de posición
+    const emailPlaceholder = document.getElementById('email-placeholder');
+    
+    // Crea el enlace completo
+    const emailLink = document.createElement('a');
+    emailLink.href = 'mailto:' + user + '@' + domain;
+    emailLink.textContent = user + '@' + domain;
+    
+    // Reemplaza el marcador de posición con el enlace real
+    emailPlaceholder.parentNode.replaceChild(emailLink, emailPlaceholder);
+});
+</script>
 
 {% endblock %}
