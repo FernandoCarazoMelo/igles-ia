@@ -14,6 +14,13 @@ app.config['FREEZER_RELATIVE_URLS'] = True
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 PREGENERATED_HTML_PATH = os.path.join(BASE_DIR, 'data', 'contenido_semanal_para_web.html')
 
+
+@app.route('/sobre-nosotros.html')
+def about():
+    """Renderiza la página 'Sobre Nosotros'."""
+    return render_template('sobre_nosotros.html')
+
+
 @app.route('/')
 def index():
     """Ruta principal que muestra el contenido HTML pre-generado."""
