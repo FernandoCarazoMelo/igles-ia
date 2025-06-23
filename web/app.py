@@ -1,49 +1,85 @@
 import os
-from datetime import datetime  # Para el año en el footer
-
+from datetime import datetime
 from flask import Flask, render_template, request, flash, redirect, url_for
 
-# Inicializar la aplicación Flask
+# --------------------------------------------------------------------------
+# CONFIGURACIÓN DE LA APLICACIÓN
+# --------------------------------------------------------------------------
+
 app = Flask(__name__)
 
-# Configuración para Flask-Frozen
+# IMPORTANTE: Se necesita una SECRET_KEY para que los mensajes flash funcionen.
+# En producción, usa una cadena de caracteres larga y aleatoria.
+app.config['SECRET_KEY'] = 'cambia-esto-por-una-clave-secreta-real'
+
+# Configuración para generar el sitio estático con Flask-Frozen
 app.config['FREEZER_DESTINATION'] = 'build'
 app.config['FREEZER_RELATIVE_URLS'] = True
 
-# Ruta al archivo HTML pre-generado
+# Definición de rutas a los archivos de datos
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 PREGENERATED_HTML_PATH = os.path.join(BASE_DIR, 'data', 'contenido_semanal_para_web.html')
 
-@app.route('/contacto.html', methods=['GET', 'POST'])
-def contact():
-    if request.method == 'POST':
-        # 1. Recoger los datos del formulario
-        name = request.form.get('name')
-        email = request.form.get('email')
-        subject = request.form.get('subject')
-        message = request.form.get('message')
 
-        # 2. Aquí iría la lógica para enviar el email.
-        #    Necesitarás una librería como Flask-Mail y configurar tu servidor de correo.
-        #    Esta parte es un ejemplo y no funcionará sin esa configuración.
-        #    
-        #    send_email(
-        #        subject=f"Nuevo mensaje de {name}: {subject}",
-        #        sender=email,
-        #        recipients=['info@igles-ia.es'],
-        #        body=message
-        #    )
-        
-        print(f"EMAIL SIMULADO: De {name} <{email}>, Asunto: {subject}, Mensaje: {message}")
+# --------------------------------------------------------------------------
+# FUNCIONES DE AYUDA (HELPERS)
+# --------------------------------------------------------------------------
 
-        # 3. Mostrar un mensaje de éxito al usuario
-        flash('¡Gracias por tu mensaje! Te responderemos pronto.', 'success')
+def get_pregenerated_html():
+    """
+    Lee de forma segura el contenido del archivo HTML pre-generado.
+    Esta función centraliza la lógica para no repetirla en varias rutas.
+    Devuelve el contenido HTML como string o un mensaje de error formateado.
+    """
+    try:
+        if os.path.exists(PREGENERATED_HTML_PATH):
+            with open(PREGENERATED_HTML_PATH, 'r', encoding='utf-8') as f:
+                return f.read()
+        else:
+            error_msg = f"Error: No se encontró el archivo de contenido en <code>{PREGENERATED_HTML_PATH}</code>."
+            return f"<div class='content-card' style='color: red; text-align: center;'><p>{error_msg}</p></div>"
+    except Exception as e:
+        print(f"ERROR al leer el archivo HTML: {e}")  # Log para el desarrollador
+        error_msg = "Ocurrió un problema al cargar el contenido. Por favor, inténtalo más tarde."
+        return f"<div class='content-card' style='color: red; text-align: center;'><p><strong>Error:</strong> {error_msg}</p></div>"
 
-        # 4. Redirigir a la misma página para evitar reenvío del formulario
-        return redirect(url_for('contact'))
 
-    # Si el método es GET, simplemente muestra la página
-    return render_template('contacto.html')
+# --------------------------------------------------------------------------
+# PROCESADOR DE CONTEXTO (VARIABLES GLOBALES PARA PLANTILLAS)
+# --------------------------------------------------------------------------
+
+@app.context_processor
+def inject_global_vars():
+    """
+    Inyecta variables en el contexto de todas las plantillas.
+    Así no tenemos que pasar 'current_year' en cada 'render_template'.
+    """
+    return {
+        'current_year': datetime.now().year
+    }
+
+
+# --------------------------------------------------------------------------
+# RUTAS DE LA APLICACIÓN
+# --------------------------------------------------------------------------
+
+@app.route('/')
+def index():
+    """
+    Ruta principal. Ahora solo muestra la página de inicio.
+    El contenido del resumen ya no se carga aquí.
+    """
+    return render_template('index.html')
+
+
+@app.route('/resumen-semanal.html')
+def latest_summary():
+    """
+    Nueva ruta dedicada a mostrar el resumen semanal completo.
+    """
+    pagina_completa_html = get_pregenerated_html()
+    return render_template('resumen_semanal.html', pagina_completa_html=pagina_completa_html)
+
 
 @app.route('/sobre-nosotros.html')
 def about():
@@ -51,27 +87,15 @@ def about():
     return render_template('sobre_nosotros.html')
 
 
-@app.route('/')
-def index():
-    """Ruta principal que muestra el contenido HTML pre-generado."""
-    
-    pagina_completa_html = "<p>Contenido no disponible. Por favor, genera el archivo <code>contenido_semanal_para_web.html</code>.</p>"
-    try:
-        if os.path.exists(PREGENERATED_HTML_PATH):
-            with open(PREGENERATED_HTML_PATH, 'r', encoding='utf-8') as f:
-                pagina_completa_html = f.read()
-        else:
-            pagina_completa_html = f"<p>Error: No se encontró el archivo de contenido pre-generado en <code>{PREGENERATED_HTML_PATH}</code>.</p>"
-    except Exception as e:
-        pagina_completa_html = f"<p>Ocurrió un error al leer el contenido pre-generado: {e}</p>"
-        # Podrías añadir un logging más detallado aquí para el servidor
-        # print(f"Error leyendo HTML pre-generado: {e}")
+@app.route('/contacto.html', methods=['GET', 'POST'])
+def contact():
+    """Gestiona la página de contacto y el envío del formulario."""
+    return render_template('contacto.html')
 
-    current_year = datetime.now().year
-    
-    return render_template('index.html', 
-                           current_year=current_year,
-                           pagina_completa_html=pagina_completa_html)
+
+# --------------------------------------------------------------------------
+# INICIAR SERVIDOR DE DESARROLLO
+# --------------------------------------------------------------------------
 
 if __name__ == '__main__':
     app.run(debug=True)

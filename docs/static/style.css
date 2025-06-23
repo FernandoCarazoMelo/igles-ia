@@ -197,36 +197,106 @@ body {
 }
 
 /* ================================================= */
-/* ===== ESTILOS RESPONSIVE (VERSIÓN CORREGIDA) ===== */
+/* ===== ESTILOS RESPONSIVE Y MENÚ MÓVIL ===== */
 /* ================================================= */
-@media (max-width: 768px) {
 
+/* --- Estilo del botón "Leer Resumen Semanal" --- */
+.nav-summary-button {
+    padding: 8px 18px;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    background-color: transparent;
+    color: #003366; /* Azul oscuro por defecto */
+    border: 2px solid #003366;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    white-space: nowrap; /* Evita que el texto se parta */
+}
+
+#main-nav.scrolled .nav-summary-button {
+    color: white; /* Color blanco al hacer scroll */
+    border-color: white;
+}
+
+.nav-summary-button:hover {
+    background-color: #003366;
+    color: white;
+}
+
+#main-nav.scrolled .nav-summary-button:hover {
+    background-color: white;
+    color: #2c3e50;
+}
+
+/* --- Estilos del Menú Hamburguesa --- */
+.menu-toggle {
+    display: none; /* Oculto en escritorio por defecto */
+    background: none;
+    border: none;
+    color: #003366; /* Color por defecto */
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001; /* Asegura que esté por encima de otros elementos */
+}
+
+#main-nav.scrolled .menu-toggle {
+    color: white; /* Color al hacer scroll */
+}
+
+/* --- Media Query para Móviles --- */
+@media (max-width: 768px) {
     .nav-container {
-        width: 95%; /* Ocupa el 95% del ancho de la pantalla */
+        width: 95%;
     }
-    /* Ocultamos el menú de "Resúmenes" como antes */
-    .nav-menu-container {
-        display: none; 
+
+    .menu-toggle {
+        display: block; /* Hacemos visible el botón de hamburguesa */
+    }
+
+    .nav-links-container {
+        display: none; /* Ocultamos los enlaces por defecto */
         position: absolute;
-        top: 100%;
+        top: 100%; /* Justo debajo de la barra de nav */
         left: 0;
         width: 100%;
         background-color: #2c3e50;
+        flex-direction: column;
+        padding: 20px 0;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
     
+    .nav-links-container.is-active {
+        display: flex; /* Mostramos el menú cuando está activo */
+    }
 
-    
+    /* Estilos para los enlaces dentro del menú móvil */
+    .nav-links-container .nav-summary-button,
+    .nav-links-container .nav-signup-button {
+        width: 90%;
+        margin: 10px auto;
+        text-align: center;
+        justify-content: center; /* Centra el icono y texto del botón */
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    /* Ajustar colores del botón de resumen para el menú oscuro */
+    .nav-links-container .nav-summary-button {
+        color: white;
+        border-color: white;
+    }
+    .nav-links-container .nav-summary-button:hover {
+        background-color: white;
+        color: #2c3e50;
+    }
+
+    /* Adaptar otras secciones si es necesario */
     .content-card {
         padding: 20px;
     }
-
-    /* Reglas para el menú desplegable (sin cambios) */
-    .nav-menu { flex-direction: column; width: 100%; padding: 10px 0; gap: 0; }
-    .nav-menu li { width: 100%; text-align: center; }
-    .nav-link { display: block; padding: 15px 0; width: 100%; border-radius: 0; }
-    .dropdown:hover .dropdown-menu { display: none; }
-    .dropdown-menu { position: static; display: block; background-color: rgba(0,0,0,0.2); box-shadow: none; border-radius: 0; margin-top: 0; min-width: auto; opacity: 1; visibility: visible; transform: none; padding: 0; }
-    .dropdown-menu a { padding: 10px 20px; font-size: 14px; text-align: center; }
 }
 
 /* ================================================= */
@@ -731,5 +801,42 @@ footer {
     .contact-container {
         flex-direction: column;
         gap: 60px;
+    }
+}
+
+/* Estilo para el nuevo botón de resumen en el nav */
+.nav-summary-button {
+    padding: 8px 18px;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    background-color: transparent;
+    color: #003366; /* Azul oscuro por defecto */
+    border: 2px solid #003366;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+#main-nav.scrolled .nav-summary-button {
+    color: white; /* Color blanco al hacer scroll */
+    border-color: white;
+}
+
+.nav-summary-button:hover {
+    background-color: #003366;
+    color: white;
+}
+
+#main-nav.scrolled .nav-summary-button:hover {
+    background-color: white;
+    color: #2c3e50;
+}
+
+/* Ocultar en móvil si se ve muy apretado */
+@media (max-width: 768px) {
+    .nav-summary-button {
+        display: none;
     }
 }
