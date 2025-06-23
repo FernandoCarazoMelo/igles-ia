@@ -114,11 +114,19 @@ def run_agents(debug=False, calculate_wordcloud=False):
 
 
 @app.command()
-def pipeline_semanal(debug: bool = True):
+def pipeline_semanal(debug: bool = True, envio_fecha_ayer: bool = False):
     """
     Enviar correos semanales a todos los usuarios.
     """
     fecha_de_hoy = pd.Timestamp.now().strftime("%Y-%m-%d")
+
+    # fecha de ayer
+    fecha_de_ayer = pd.Timestamp.now() - pd.Timedelta(days=1)
+    fecha_de_ayer = fecha_de_ayer.strftime("%Y-%m-%d")
+
+    if envio_fecha_ayer:
+        print(f"Enviando correos con fecha de ayer: {fecha_de_ayer}")
+        fecha_de_hoy = fecha_de_ayer
 
     contacts = cognito_get_verified_emails()
     # contacts.to_csv("brevo_contacts.csv", index=False)
