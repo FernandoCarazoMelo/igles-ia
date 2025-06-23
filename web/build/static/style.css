@@ -363,6 +363,28 @@ main {
     color: white;
 }
 
+/* Contenedor para los botones del hero */
+.hero-cta-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Para que se apilen en pantallas pequeñas */
+}
+
+/* Estilo para el botón secundario */
+.hero-cta-button.secondary {
+    background-color: transparent;
+    color: #d35400; /* Naranja corporativo */
+    border: 2px solid #d35400;
+}
+
+.hero-cta-button.secondary:hover {
+    background-color: #e67e22;
+    color: white;
+    border-color: #e67e22;
+}
+
 /* --- Features Section --- */
 .features {
     padding: 80px 0;
@@ -832,11 +854,4 @@ footer {
 #main-nav.scrolled .nav-summary-button:hover {
     background-color: white;
     color: #2c3e50;
-}
-
-/* Ocultar en móvil si se ve muy apretado */
-@media (max-width: 768px) {
-    .nav-summary-button {
-        display: none;
-    }
 }

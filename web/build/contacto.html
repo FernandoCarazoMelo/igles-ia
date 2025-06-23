@@ -5,11 +5,11 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-C541G55YMY"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-C541G55YMY');
+        gtag('config', 'G-C541G55YMY');
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,9 +22,12 @@
         rel="stylesheet" />
     <link rel="icon" type="image/png" href="static/logo.svg">
     <link rel="stylesheet" href="static/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    <meta name="description" content="Suscríbete para recibir un resumen semanal de las enseñanzas del Papa León XIV. Igles-IA utiliza la inteligencia artificial para ofrecerte las claves de su mensaje de forma clara y concisa." />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <meta name="description"
+        content="Suscríbete para recibir un resumen semanal de las enseñanzas del Papa León XIV. Igles-IA utiliza la inteligencia artificial para ofrecerte las claves de su mensaje de forma clara y concisa." />
 
     <meta property="og:title" content="Igles-IA: Palabras del Papa León XIV" />
     <meta property="og:description" content="León XIV - Resumen Semanal - AI Agents" />
@@ -37,7 +40,7 @@
     <meta name="twitter:title" content="Igles-IA: Palabras del Papa León XIV" />
     <meta name="twitter:description" content="León XIV - Resumen Semanal - AI Agents" />
     <meta name="twitter:image" content="https://igles-ia.es/static/Foto-Papa-Leone-XIV-300px.jpg" />
-    </head>
+</head>
 
 <body>
     <nav id="main-nav">
@@ -50,7 +53,8 @@
             <div class="nav-right">
                 <div class="nav-links-container" id="nav-links-container">
                     <a href="resumen-semanal.html" class="nav-summary-button">Leer Resumen Semanal</a>
-                    <a href="https://eu-west-15yl5gwygk.auth.eu-west-1.amazoncognito.com/signup?client_id=2k4h09uokmn9kv815ed9up52r2&redirect_uri=https%3A%2F%2Figles-ia.es&response_type=code&scope=email+openid+phone" class="nav-signup-button" target="_blank" rel="noopener noreferrer">
+                    <a href="https://eu-west-15yl5gwygk.auth.eu-west-1.amazoncognito.com/signup?client_id=2k4h09uokmn9kv815ed9up52r2&redirect_uri=https%3A%2F%2Figles-ia.es&response_type=code&scope=email+openid+phone"
+                        class="nav-signup-button" target="_blank" rel="noopener noreferrer">
                         <i class="fas fa-envelope"></i>
                         <span class="signup-text">Suscríbete</span>
                     </a>
@@ -167,7 +171,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </footer>
 
     <script>
-        // Tu script de Javascript para el nav
+        // Tu script de Javascript para el nav (SCROLL)
         document.addEventListener('DOMContentLoaded', () => {
             const nav = document.getElementById('main-nav');
             window.addEventListener('scroll', () => {
@@ -177,7 +181,18 @@ document.addEventListener('DOMContentLoaded', function() {
                     nav.classList.remove('scrolled');
                 }
             });
+
+            // ===== CÓDIGO PARA EL MENÚ MÓVIL (ASEGÚRATE DE QUE ESTÁ AQUÍ) =====
+            const menuToggle = document.getElementById('menu-toggle');
+            const navLinksContainer = document.getElementById('nav-links-container');
+
+            if (menuToggle && navLinksContainer) {
+                menuToggle.addEventListener('click', () => {
+                    navLinksContainer.classList.toggle('is-active');
+                });
+            }
         });
     </script>
 </body>
+
 </html>
