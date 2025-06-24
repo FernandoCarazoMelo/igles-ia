@@ -134,7 +134,7 @@ def pipeline_semanal(debug: bool = True, envio_fecha_ayer: bool = False):
     if debug:
         print("Solo para pruebas, usar el último contacto\n")
         print(contacts)
-        contacts = contacts[contacts["email"].str.contains("mbrice")]
+        contacts = contacts[contacts["email"].str.contains("carazom@gmail")]
 
     enviar_correos_todos(contacts, fecha_de_hoy)
 
