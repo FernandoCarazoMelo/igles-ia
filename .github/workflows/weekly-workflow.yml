@@ -2,11 +2,7 @@ name: Run Iglesia Weekly Function
 
 on:
   schedule:
-    # Ejecuta este script cada domingo a las 00:00 AM UTC.
-    # Puedes ajustar el '0 0 * * 0' a la hora y día que prefieras (0 para domingo).
-    # Ejemplo: '0 8 * * 0' sería cada domingo a las 8:00 AM UTC.
-    # Ejemplo: "30 5 * * 2" sería cada martes a las 5:30 AM UTC, 7:30 AM hora España.
-    - cron: "30 5 * * 2"
+    - cron: "30 5 * * 1" # Cada lunes a las 5:30 AM UTC, 7:30 AM hora España
   workflow_dispatch: # Permite ejecutar el workflow manualmente
 
 jobs:
