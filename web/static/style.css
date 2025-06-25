@@ -273,7 +273,6 @@ body {
     }
 
     /* Estilos para los enlaces dentro del menú móvil */
-    .nav-links-container .nav-link, 
     .nav-links-container .nav-summary-button,
     .nav-links-container .nav-signup-button {
         width: 90%;
@@ -856,4 +855,3 @@ footer {
     background-color: white;
     color: #2c3e50;
 }
-
