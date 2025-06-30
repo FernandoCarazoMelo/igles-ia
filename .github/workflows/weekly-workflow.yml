@@ -42,4 +42,4 @@ jobs:
           USER_POOL_ID: ${{ secrets.USER_POOL_ID }}
         run: |
           echo "Running weekly specific function..."
-          uv run python main.py pipeline-semanal --no-debug --envio-fecha-ayer
+          uv run python main.py pipeline-semanal --no-debug
