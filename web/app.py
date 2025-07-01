@@ -93,6 +93,11 @@ def contact():
     return render_template('contacto.html')
 
 
+@app.route('/politica-de-privacidad.html')
+def privacy_policy():
+    """Renderiza la página de Política de Privacidad."""
+    return render_template('politica_privacidad.html')
+
 # --------------------------------------------------------------------------
 # INICIAR SERVIDOR DE DESARROLLO
 # --------------------------------------------------------------------------

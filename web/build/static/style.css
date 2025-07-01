@@ -855,3 +855,78 @@ footer {
     background-color: white;
     color: #2c3e50;
 }
+
+/* =================================================== */
+/* ===== ESTILOS PARA LA SECCIÓN DE WHATSAPP CTA ===== */
+/* =================================================== */
+
+.whatsapp-cta-section {
+    padding: 80px 0;
+    background-color: #ffffff; /* Fondo blanco para que destaque la tarjeta */
+}
+
+.whatsapp-card {
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: #f4f7f6; /* Un gris muy claro, como el fondo del body */
+    border-radius: 16px;
+    border: 1px solid #e9ecef;
+    padding: 50px 40px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.whatsapp-card .fa-whatsapp {
+    font-size: 4.5rem; /* Icono grande y llamativo */
+    color: #25D366; /* Verde oficial de WhatsApp */
+    margin-bottom: 20px;
+}
+
+.whatsapp-card h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.whatsapp-card p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #4A4A4A;
+    margin-bottom: 30px;
+    max-width: 600px; /* Evita que el texto sea demasiado ancho */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.whatsapp-button {
+    display: inline-block;
+    background-color: #25D366; /* Verde WhatsApp */
+    color: white;
+    padding: 15px 35px;
+    border-radius: 50px; /* Botón con bordes redondeados */
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E; /* Un verde más oscuro de WhatsApp */
+    transform: translateY(-3px);
+    color: white;
+    box-shadow: 0 6px 20px rgba(18, 140, 126, 0.4);
+}
+
+/* --- Responsive para la sección de WhatsApp --- */
+@media (max-width: 768px) {
+    .whatsapp-card h2 {
+        font-size: 1.8rem;
+    }
+    .whatsapp-card {
+        padding: 40px 25px;
+    }
+}
