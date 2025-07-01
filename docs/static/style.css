@@ -930,3 +930,155 @@ footer {
         padding: 40px 25px;
     }
 }
+
+/* --- Estilos para la sección de detalles de documentos --- */
+.document-details-section {
+    padding: 60px 0;
+}
+.document-detail-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    padding: 30px 40px;
+    margin-bottom: 30px;
+    border-left: 5px solid #d35400; /* Borde naranja para diferenciar */
+}
+.document-detail-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    margin: 0 0 5px 0;
+}
+.document-detail-card h3 a {
+    color: #003366;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.document-detail-card h3 a:hover {
+    color: #d35400;
+}
+.doc-meta {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+.doc-content h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: #2c3e50;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 5px;
+}
+.doc-content ul {
+    list-style-position: outside;
+    padding-left: 20px;
+}
+.doc-content ul li {
+    margin-bottom: 10px;
+}
+.tags-container {
+    margin-top: 20px;
+}
+.tag-item {
+    display: inline-block;
+    background-color: #eaf2f8;
+    color: #003366;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+/* =================================================== */
+/* ===== ESTILOS PARA LA PÁGINA DE ARCHIVO       ===== */
+/* =================================================== */
+
+.archive-section {
+    padding: 80px 0;
+    background-color: #f4f7f6; /* Un fondo suave para la sección */
+}
+
+.archive-grid {
+    display: grid;
+    /* Crea columnas que se ajustan automáticamente. Cada una tendrá un mínimo
+       de 320px y ocupará el espacio disponible. */
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px; /* Espacio entre las tarjetas */
+}
+
+.summary-archive-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.summary-archive-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+.card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px; /* Más espacio */
+    gap: 10px;
+}
+
+.card-date {
+    font-size: 0.85rem;
+    color: #6c757d;
+    white-space: nowrap; /* Evita que la fecha se parta */
+}
+
+.card-week-number {
+    background-color: #003366;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 50px; /* Píldora redondeada */
+    font-size: 0.75rem;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    flex-shrink: 0; /* Evita que se encoja */
+}
+
+.card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    color: #003366;
+    margin: 0 0 15px 0;
+    line-height: 1.4;
+}
+
+.card-excerpt {
+    color: #4A4A4A;
+    line-height: 1.7;
+    flex-grow: 1; /* Esto es clave: empuja el botón hacia abajo */
+    margin-bottom: 25px;
+}
+
+.card-button {
+    display: inline-block;
+    background-color: #d35400; /* Botón principal para más visibilidad */
+    color: white;
+    border: 2px solid #d35400;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    transition: all 0.3s ease;
+    align-self: flex-start; /* Alinea el botón a la izquierda de la tarjeta */
+}
+
+.card-button:hover {
+    background-color: #e67e22;
+    border-color: #e67e22;
+    transform: scale(1.05);
+}

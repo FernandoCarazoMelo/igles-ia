@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block title %}{{ summary.title }} - Igles-IA{% endblock %}
+{% block content %}
+<header class="page-header">
+    <div class="container">
+        <h1 class="page-title">{{ summary.title }}</h1>
+        <p class="page-subtitle">{{ summary.week_of }}</p>
+    </div>
+</header>
+
+<section class="sample-summary" style="padding-top: 50px; padding-bottom: 20px;">
+    <div class="container">
+        <div class="content-card">
+            {{ summary.main_content | safe }}
+        </div>
+    </div>
+</section>
+
+<section class="document-details-section">
+    <div class="container">
+        <h2 class="section-title" style="margin-top: 60px;">Documentos Analizados esta Semana</h2>
+        
+        {% for doc in summary.documents %}
+        <div class="document-detail-card">
+            <h3><a href="{{ doc.url_original }}" target="_blank" rel="noopener noreferrer">📄 {{ doc.fuente_documento }}</a></h3>
+            <p class="doc-meta"><strong>Tipo:</strong> {{ doc.tipo_documento }} | <strong>Texto original: </strong> <a href="{{ doc.url_original }}">Link</a> </p>
+            
+            <div class="doc-content">
+                <h4>Resumen</h4>
+                {{ doc.resumen_general | safe }}
+
+                <h4>Ideas Clave</h4>
+                <ul>
+                    {% for idea in doc.ideas_clave %}
+                    <li>{{ idea | safe }}</li>
+                    {% endfor %}
+                </ul>
+
+                {% if doc.tags_sugeridos %}
+                <div class="tags-container">
+                    {% for tag in doc.tags_sugeridos %}
+                    <span class="tag-item">#{{ tag }}</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        {% else %}
+        <p style="text-align: center;">No hay documentos detallados para esta semana.</p>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock %}

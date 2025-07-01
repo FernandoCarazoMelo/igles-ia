@@ -4,6 +4,31 @@ from collections import Counter
 import pandas as pd
 from crewai import Agent, Crew, Task
 
+from datetime import datetime, timedelta
+
+# La fecha de inicio del pontificado que nos servirá de referencia
+PONTIFICATE_START_DATE = datetime(2025, 5, 8)
+
+def calculate_pontificate_week(run_date_str):
+    """Calcula el número de semana del pontificado basado en la fecha de ejecución."""
+    run_date = datetime.strptime(run_date_str, "%Y-%m-%d")
+    delta = run_date - PONTIFICATE_START_DATE
+    # Sumamos 1 porque la primera semana (días 0-6) es la semana 1.
+    return (delta.days // 7) + 1
+
+def get_week_of_string(run_date_str):
+    """Genera la cadena de texto 'Semana del DD/MM al DD/MM de YYYY'."""
+    run_date = datetime.strptime(run_date_str, "%Y-%m-%d")
+    end_of_week = run_date - timedelta(days=1)  # Domingo anterior
+    start_of_week = end_of_week - timedelta(days=6)  # Lunes anterior
+
+    if start_of_week.year == end_of_week.year:
+        result = f"Semana del {start_of_week.strftime('%d/%m')} al {end_of_week.strftime('%d/%m de %Y')}"
+    else:
+        result = f"Semana del {start_of_week.strftime('%d/%m/%Y')} al {end_of_week.strftime('%d/%m/%Y')}"
+
+    return result
+
 # # Create agents
 # text_summarizer = Agent(
 #     role='Text Summarizer',
@@ -191,26 +216,77 @@ def create_iglesia_content_crew(df, llm_instance, run_date=None):
             intro_counts_sentence = (
                 "Esta semana, no ha habido discursos u homilías del Papa."
             )
+    pontificate_week_number = calculate_pontificate_week(run_date)
+    week_of_string = get_week_of_string(run_date)
 
-    # Fase 2: Tarea de Consolidación Semanal
+    # ... (tu código anterior para preparar 'intro_counts_sentence') ...
+
+    # --- TAREA SEMANAL CON PROMPT MEJORADO ---
     weekly_summary_task = Task(
-        description=f"""Resumen de los resumenes recibidos en estilo atractivo para la lectura. Quiero que sea un resumen integrado, no un simple parrafo para cada texto.
+        description=f"""Tu tarea es generar el contenido COMPLETO para el archivo de resumen semanal.
+        El archivo debe tener DOS partes: un encabezado YAML Frontmatter y el cuerpo del resumen en Markdown.
+
+        Usa la siguiente información para rellenar el encabezado YAML:
+        - Para 'date', usa esta fecha: {run_date}
+        - Para 'week_of', usa este texto: "{week_of_string}"
+        - Para 'pontificate_week', usa este número: {pontificate_week_number}
+
+        Basándote en el contexto de los documentos analizados esta semana, debes:
+        1. Inventar un 'title' atractivo y descriptivo para el resumen de esta semana. No incluyas generalizaded como 'Reflexiones del Papa León XIV'. Solo aspectos diferenciales de la semana en cuestión. no inlcuyas el año, ni la fecha en el title.
+        2. Escribir un 'excerpt' (resumen corto de 1-2 frases) que invite a la lectura. No incluyas generalidades como 'Una semana marcada por discursos, homilías y encuentros'. En su lugar, enfócate en un aspecto específico del mensaje del Papa esta semana, como 'El Papa León XIV nos invita a cultivar la paciencia y la esperanza, virtudes que contrastan con el deseo de resultados rápidos de la cultura moderna, recordándonos que el Reino de Dios crece a su propio ritmo.'.
+        3. Crear un 'slug' para la URL usando el formato: 'semana-N-palabra-clave'. Reemplaza N con el número de semana y usa 2-3 palabras clave del título.
+
+        Después del encabezado YAML, escribe el cuerpo del resumen en Markdown siguiendo estas reglas:
+        - Empieza con el saludo: "Esta semana, el Papa León XIV nos ha ofrecido reflexiones a través de..." (usa la frase que ya hemos calculado: '{intro_counts_sentence}').
+        - Escribe un resumen pastoral integrado de unas 150 palabras.
+        - Usa **negrita** para destacar 2-3 frases o conceptos clave.
+        - Incluye una sección final titulada "#### Temas Clave Analizados:" con una lista de 3-4 puntos importantes.
+        """,
+        expected_output=f"""Un archivo de texto plano que contenga un encabezado YAML válido seguido del contenido en Markdown. No incluyas explicaciones, solo el contenido del archivo.
+
+        EJEMPLO PERFECTO DEL FORMATO DE SALIDA ESPERADO:
+        ---
+        title: "La Esperanza Cristiana Frente a la Cultura de la Inmediatez"
+        week_of: "{week_of_string}"
+        date: "{run_date}"
+        pontificate_week: {pontificate_week_number}
+        excerpt: "El Papa León XIV nos invita a cultivar la paciencia y la esperanza, virtudes que contrastan con el deseo de resultados rápidos de la cultura moderna, recordándonos que el Reino de Dios crece a su propio ritmo."
+        slug: "semana-{pontificate_week_number}-esperanza-paciencia"
+        ---
         
-        FORMATO REQUERIDO: Markdown
-        - Usa **negrita** para destacar algunas frases o palabras importantes. No más de 2-3 por párrafo.
-        - Usa saltos de línea para separar ideas
-        - Máximo 150 palabras
-        
-        ESTRUCTURA:
-        1. Saludo: **¡Bienvenidos al Resumen Semanal del Papa León XIV!**
-        2. Incluir: '{intro_counts_sentence}'
-        3. Resumen con frases o palabras clave en **negrita** para facilitar la lectura.""",
-        expected_output="Texto en formato Markdown con negritas usando **texto** que será convertido a HTML posteriormente",
+        {intro_counts_sentence}
+
+        El Santo Padre ha centrado su mensaje en la **necesidad de redescubrir la esperanza** como un pilar fundamental de la vida cristiana. En un mundo que exige resultados inmediatos, la fe nos enseña la virtud de la paciencia, recordándonos que los frutos más importantes a menudo maduran lentamente, bajo la mirada amorosa de Dios. La verdadera transformación, tanto personal como social, no proviene de la prisa, sino de la **confianza perseverante en la Providencia Divina**.
+
+        #### Temas Clave Analizados:
+        * La esperanza como ancla del alma en medio de las tormentas.
+        * Crítica a la cultura de la inmediatez y sus efectos en la vida espiritual.
+        * La paciencia como una forma de imitar el actuar de Dios en la historia.
+        * El rol de la comunidad en el sostenimiento de la esperanza.
+        """,
         agent=periodista_catolico,
         context=analysis_tasks,
-        markdown=True,
         output_file=f"{os.environ.get('SUMMARIES_FOLDER')}/{run_date}/resumen_semanal_igles-ia.txt",
     )
+    # Fase 2: Tarea de Consolidación Semanal
+    # weekly_summary_task = Task(
+    #     description=f"""Resumen de los resumenes recibidos en estilo atractivo para la lectura. Quiero que sea un resumen integrado, no un simple parrafo para cada texto.
+        
+    #     FORMATO REQUERIDO: Markdown
+    #     - Usa **negrita** para destacar algunas frases o palabras importantes. No más de 2-3 por párrafo.
+    #     - Usa saltos de línea para separar ideas
+    #     - Máximo 150 palabras
+        
+    #     ESTRUCTURA:
+    #     1. Saludo: **¡Bienvenidos al Resumen Semanal del Papa León XIV!**
+    #     2. Incluir: '{intro_counts_sentence}'
+    #     3. Resumen con frases o palabras clave en **negrita** para facilitar la lectura.""",
+    #     expected_output="Texto en formato Markdown con negritas usando **texto** que será convertido a HTML posteriormente",
+    #     agent=periodista_catolico,
+    #     context=analysis_tasks,
+    #     markdown=True,
+    #     output_file=f"{os.environ.get('SUMMARIES_FOLDER')}/{run_date}/resumen_semanal_igles-ia.txt",
+    # )
 
     # task_format_html = Task(
     #     description="Convierte el resumen semanal en un formato HTML básico.",

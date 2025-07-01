@@ -6,7 +6,7 @@ from dotenv import load_dotenv, find_dotenv
 from typer import Typer
 
 from iglesia.agents import create_iglesia_content_crew
-from iglesia.email_utils_2 import enviar_correos_todos
+from iglesia.email_utils_3 import enviar_correos_todos
 from iglesia.utils import obtener_todos_los_textos
 from iglesia.cognito_utils import cognito_get_verified_emails
 
