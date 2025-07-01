@@ -299,6 +299,7 @@ def enviar_correos_todos(
     fecha_resumen="2025-05-20",
     ruta_plantilla_email="plantilla.html",
     ruta_html_generado_para_web="data_web/contenido_semanal.html",
+    send_emails=True,
 ):
     """
     Función principal para generar el contenido una vez y luego enviar todos los correos.
@@ -323,12 +324,6 @@ def enviar_correos_todos(
             "No se pudo generar el contenido HTML semanal. Abortando envío de correos."
         )
         return
-    # si el correos_path es un Dataframe asignamos el DataFrame directamente
-    if isinstance(correos_path, pd.DataFrame):
-        df = correos_path
-    else:
-        # si es un path, leemos el CSV
-        df = pd.read_csv(correos_path)
 
     if not os.path.exists(SUMMARIES_FOLDER):
         print(f"Error: La carpeta de resúmenes no existe: {SUMMARIES_FOLDER}")
@@ -338,34 +333,46 @@ def enviar_correos_todos(
         SUMMARIES_FOLDER, fecha_resumen, "wordcloud.png"
     )
 
-    print(f"\nIniciando envío de correos para la fecha: {fecha_resumen}")
-    try:
-        with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
-            smtp.login(EMAIL_USER, EMAIL_PASS)
-            for _, row in df.iterrows():
-                correo = row["email"]
-                nombre = row.get("nombre", "amigo")
+    if send_emails:
+        # si el correos_path es un Dataframe asignamos el DataFrame directamente
+        if isinstance(correos_path, pd.DataFrame):
+            df = correos_path
+        else:
+            # si es un path, leemos el CSV
+            df = pd.read_csv(correos_path)
 
-                print(f"Preparando email para: {correo} con nombre: {nombre}")
-                msg = _crear_mensaje_email(
-                    correo,
-                    nombre,
-                    fecha_resumen,
-                    cuerpo_html_semanal,
-                    ruta_plantilla_email,
-                    ruta_adjunto_wordcloud,
-                )
+        print(f"\nIniciando envío de correos para la fecha: {fecha_resumen}")
+        try:
+            with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
+                smtp.login(EMAIL_USER, EMAIL_PASS)
+                for _, row in df.iterrows():
+                    correo = row["email"]
+                    nombre = row.get("nombre", "amigo")
 
-                if msg:
-                    smtp.send_message(msg)
-                    print(f"Correo enviado a {correo}")
-                else:
-                    print(f"No se pudo crear el mensaje para {correo}. Saltando.")
-        print("\nTodos los correos procesados.")
-    except smtplib.SMTPAuthenticationError:
-        print("Error de autenticación SMTP. Verifica EMAIL_USER y EMAIL_PASS.")
-    except Exception as e:
-        print(f"Ocurrió un error durante el envío de correos: {e}")
+                    print(f"Preparando email para: {correo} con nombre: {nombre}")
+                    msg = _crear_mensaje_email(
+                        correo,
+                        nombre,
+                        fecha_resumen,
+                        cuerpo_html_semanal,
+                        ruta_plantilla_email,
+                        ruta_adjunto_wordcloud,
+                    )
+
+                    if msg:
+                        smtp.send_message(msg)
+                        print(f"Correo enviado a {correo}")
+                    else:
+                        print(f"No se pudo crear el mensaje para {correo}. Saltando.")
+            print("\nTodos los correos procesados.")
+        except smtplib.SMTPAuthenticationError:
+            print("Error de autenticación SMTP. Verifica EMAIL_USER y EMAIL_PASS.")
+        except Exception as e:
+            print(f"Ocurrió un error durante el envío de correos: {e}")
+    else:
+        print(
+            "Modo de prueba: No se enviarán correos, pero el contenido HTML se ha generado correctamente."
+        )
 
 
 if __name__ == "__main__":

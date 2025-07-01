@@ -51,7 +51,7 @@ from crewai import Agent, Crew, Task
 #     return crew
 
 
-def create_iglesia_content_crew(df, llm_instance):
+def create_iglesia_content_crew(df, llm_instance, run_date=None):
     """
     Crea un Crew para analizar textos eclesiásticos individualmente (incluyendo tipo y URL)
     y luego generar un resumen semanal consolidado para el portal "igles-ia"
@@ -95,9 +95,12 @@ def create_iglesia_content_crew(df, llm_instance):
     #     verbose=True,
     #     allow_delegation=False
     # )
-    fecha_de_hoy = pd.Timestamp.now().strftime("%Y-%m-%d")
+    if run_date is None:
+        run_date = pd.Timestamp.now().strftime("%Y-%m-%d")
+        
 
-    print(f"Agents: {os.environ.get('SUMMARIES_FOLDER')}/{fecha_de_hoy}")
+
+    print(f"Agents: {os.environ.get('SUMMARIES_FOLDER')}/{run_date}")
     # Fase 1: Tareas de Análisis Individual
     analysis_tasks = []
     for idx, row in df.iterrows():
@@ -107,9 +110,8 @@ def create_iglesia_content_crew(df, llm_instance):
         url_doc = row["url"]
         filename = row["filename"]
 
-        fecha_de_hoy = pd.Timestamp.now().strftime("%Y-%m-%d")
         output_filename_individual = (
-            f"{os.environ.get('SUMMARIES_FOLDER')}/{fecha_de_hoy}/{filename}.json"
+            f"{os.environ.get('SUMMARIES_FOLDER')}/{run_date}/{filename}.json"
         )
 
         task_individual = Task(
@@ -207,7 +209,7 @@ def create_iglesia_content_crew(df, llm_instance):
         agent=periodista_catolico,
         context=analysis_tasks,
         markdown=True,
-        output_file=f"{os.environ.get('SUMMARIES_FOLDER')}/{fecha_de_hoy}/resumen_semanal_igles-ia.txt",
+        output_file=f"{os.environ.get('SUMMARIES_FOLDER')}/{run_date}/resumen_semanal_igles-ia.txt",
     )
 
     # task_format_html = Task(
@@ -215,7 +217,7 @@ def create_iglesia_content_crew(df, llm_instance):
     #     expected_output="Un archivo HTML básico. No cambies el contenido, solo el formato.",
     #     agent=editor_html,
     #     context=[weekly_summary_task],
-    #     output_file=f"{os.environ.get('SUMMARIES_FOLDER')}/{fecha_de_hoy}/resumen_semanal_igles-ia.html"
+    #     output_file=f"{os.environ.get('SUMMARIES_FOLDER')}/{run_date}/resumen_semanal_igles-ia.html"
     # )
     iglesia_content_crew = Crew(
         agents=[periodista_catolico],

@@ -2,7 +2,7 @@ import os
 
 import pandas as pd
 from crewai import LLM
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
 from typer import Typer
 
 from iglesia.agents import create_iglesia_content_crew
@@ -12,8 +12,7 @@ from iglesia.cognito_utils import cognito_get_verified_emails
 
 app = Typer()
 
-load_dotenv()
-
+load_dotenv(find_dotenv())
 
 def save_wordcloud(text, path_save="wordcloud.png"):
     from collections import Counter
@@ -36,7 +35,7 @@ def save_wordcloud(text, path_save="wordcloud.png"):
     wordcloud.to_file(path_save)
 
 
-def run_agents(debug=False, calculate_wordcloud=False):
+def run_agents(debug=False, calculate_wordcloud=False, run_domingo: bool = False, run_date: str = None):
     print(os.getcwd())
     LLM_used = LLM(
         model="gpt-4.1-nano",
@@ -55,11 +54,15 @@ def run_agents(debug=False, calculate_wordcloud=False):
         ],
         "Carta": ["https://www.vatican.va/content/leo-xiv/es/letters/2025.index.html"],
     }
-    fecha_de_hoy = pd.Timestamp.now().strftime("%Y-%m-%d")
+    if run_date:
+        run_date = pd.to_datetime(run_date)
+        run_date = run_date.strftime("%Y-%m-%d")
+    else:
+        run_date = pd.Timestamp.now().strftime("%Y-%m-%d")
 
     # crear carpeta dentro de summaries con la fecha de hoy
-    os.makedirs(f"{os.environ.get('SUMMARIES_FOLDER')}/{fecha_de_hoy}", exist_ok=True)
-    print(f"{os.environ.get('SUMMARIES_FOLDER')}/{fecha_de_hoy}")
+    os.makedirs(f"{os.environ.get('SUMMARIES_FOLDER')}/{run_date}", exist_ok=True)
+    print(f"{os.environ.get('SUMMARIES_FOLDER')}/{run_date}")
     df = obtener_todos_los_textos(urls)
     df = df[df["titulo"].str.len() > 10]
     df = df.reset_index(drop=True)
@@ -90,12 +93,19 @@ def run_agents(debug=False, calculate_wordcloud=False):
     # filtrar los df de la última semana
     print(df)
 
-    run_date = pd.Timestamp("today").normalize()
     df["fecha_dt"] = pd.to_datetime(df["fecha"])
-    df = df[
-        (df["fecha_dt"] >= (run_date - pd.Timedelta(days=7)))
-        & (df["fecha_dt"] < run_date)
-    ]
+
+    run_date_dt = pd.to_datetime(run_date)
+    if run_domingo:
+        # incluir los textos del mismo día
+        df = df[(df["fecha_dt"] >= (run_date_dt - pd.Timedelta(days=6))) & (df["fecha_dt"] <= run_date_dt)]
+        # incluir los textos del domingo
+    
+    else:
+        df = df[
+            (df["fecha_dt"] >= (run_date_dt - pd.Timedelta(days=7)))
+            & (df["fecha_dt"] < run_date_dt)
+        ]
 
     df = df.drop(columns=["fecha_dt"])
 
@@ -103,13 +113,13 @@ def run_agents(debug=False, calculate_wordcloud=False):
         all_text = " ".join(df["texto"])
         save_wordcloud(
             all_text,
-            path_save=f"{os.environ.get('SUMMARIES_FOLDER')}/{fecha_de_hoy}/wordcloud.png",
+            path_save=f"{os.environ.get('SUMMARIES_FOLDER')}/{run_date}/wordcloud.png",
         )
     print(df)
     df.to_csv(
-        f"{os.environ.get('SUMMARIES_FOLDER')}/{fecha_de_hoy}/iglesia.csv", index=False
+        f"{os.environ.get('SUMMARIES_FOLDER')}/{run_date}/iglesia.csv", index=False
     )
-    iglesia_content_crew = create_iglesia_content_crew(df, LLM_used)
+    iglesia_content_crew = create_iglesia_content_crew(df, LLM_used, run_date)
     _ = iglesia_content_crew.kickoff()
 
 
@@ -140,12 +150,12 @@ def pipeline_semanal(debug: bool = True, envio_fecha_ayer: bool = False):
 
 
 @app.command()
-def pipeline_diaria(debug: bool = False, calculate_wordcloud: bool = False):
+def pipeline_diaria(debug: bool = False, calculate_wordcloud: bool = False, run_domingo: bool = False):
     """
     Ejecutar el pipeline diario de la iglesia.
     """
     fecha_de_hoy = pd.Timestamp.now().strftime("%Y-%m-%d")
-    run_agents(debug=debug, calculate_wordcloud=calculate_wordcloud)
+    run_agents(debug=debug, calculate_wordcloud=calculate_wordcloud, run_domingo=run_domingo)
 
     contacts = cognito_get_verified_emails()
     # contacts.to_csv("brevo_contacts.csv", index=False)
@@ -155,6 +165,22 @@ def pipeline_diaria(debug: bool = False, calculate_wordcloud: bool = False):
     contacts = contacts[contacts["email"].str.contains("nando.carazom@gmai")]
 
     enviar_correos_todos(contacts, fecha_de_hoy)
+
+@app.command()
+def pipeline_date(
+    run_date: str = None,
+    debug: bool = False,
+    calculate_wordcloud: bool = False,
+    run_domingo: bool = False,
+):
+    """
+    Ejecutar el pipeline para una fecha específica.
+    """
+    if run_date is None:
+        run_date = pd.Timestamp.now().strftime("%Y-%m-%d")
+    print(f"Ejecutando pipeline para la fecha: {run_date}")
+    run_agents(debug=debug, calculate_wordcloud=calculate_wordcloud, run_domingo=run_domingo, run_date=run_date)
+    enviar_correos_todos("", run_date, send_emails=False)
 
 
 if __name__ == "__main__":
