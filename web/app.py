@@ -10,6 +10,7 @@ from datetime import datetime
 from flask import Flask, render_template, abort, redirect, url_for
 from flask_frozen import Freezer
 from dotenv import load_dotenv
+import re
 load_dotenv()
 
 # ==========================================================================
@@ -32,7 +33,14 @@ freezer = Freezer(app)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 SUMMARIES_DIR = os.environ.get('SUMMARIES_FOLDER')
 
-
+def slugify(text):
+    """
+    Convierte un texto en un 'slug' amigable para URLs o IDs.
+    Ej: "Un Título Genial!" -> "un-titulo-genial"
+    """
+    text = text.lower()
+    text = re.sub(r'[^a-z0-9]+', '-', text) # Reemplaza todo lo que no sea letra o número por un guion
+    return text.strip('-')
 
 # ==========================================================================
 # 3. LÓGICA DE CARGA DE DATOS
@@ -84,6 +92,8 @@ def load_all_summaries():
                         doc_path = os.path.join(week_path, doc_file)
                         with open(doc_path, 'r', encoding='utf-8') as f:
                             doc_data = json.load(f)
+                            doc_title = doc_data.get('fuente_documento', doc_file)
+                            doc_data['doc_slug'] = f"{week_folder}-{slugify(doc_title)}"
                             doc_data['resumen_general'] = markdown.markdown(doc_data.get('resumen_general', ''))
                             doc_data['ideas_clave'] = [markdown.markdown(idea) for idea in doc_data.get('ideas_clave', [])]
                             summary_obj['documents'].append(doc_data)
