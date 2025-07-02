@@ -1,5 +1,5 @@
 ---
-title: "El Buen Pastor y la Vocación en la Vida de la Iglesia"
+title: "Inicio del Pontificado: El Buen Pastor y la Vocación en la Vida de la Iglesia"
 week_of: "Semana del 05/05 al 11/05 de 2025"
 date: "2025-05-12"
 pontificate_week: 1
