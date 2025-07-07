@@ -56,7 +56,7 @@
                     <a href="resumenes.html" class="nav-summary-button">Archivo</a>
                     <a href="resumen-semanal.html" class="nav-summary-button">Leer Último Resumen Semanal</a>
                 </div>
-                    <a href="https://eu-west-15yl5gwygk.auth.eu-west-1.amazoncognito.com/signup?client_id=2k4h09uokmn9kv815ed9up52r2&response_type=code&scope=email+openid+phone&redirect_uri=https%3A%2F%2Figles-ia.es%2Fresumen-semanal&lang=es"
+                    <a href="https://eu-west-15yl5gwygk.auth.eu-west-1.amazoncognito.com/signup?client_id=2k4h09uokmn9kv815ed9up52r2&redirect_uri=https%3A%2F%2Figles-ia.es%2Fcallback.html&response_type=code&scope=email+openid+phone"
                         class="nav-signup-button" target="_blank" rel="noopener noreferrer">
                         <i class="fas fa-envelope"></i>
                         <span class="signup-text">Suscríbete</span>
@@ -228,8 +228,33 @@
                     navLinksContainer.classList.toggle('is-active');
                 });
             }
+            // ===== CÓDIGO NUEVO PARA MOSTRAR LA NOTIFICACIÓN =====
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('registro') === 'exitoso') {
+                const toast = document.getElementById('toast-notification');
+                const message = document.getElementById('toast-message');
+
+                if (toast && message) {
+                    // Ponemos el mensaje que queramos
+                    message.textContent = '✅ ¡Gracias por registrarte! El próximo lunes recibirás tu primer resumen.';
+                    
+                    // Mostramos la notificación
+                    toast.classList.add('show');
+
+                    // La ocultamos después de 5 segundos
+                    setTimeout(() => {
+                        toast.classList.remove('show');
+                    }, 5000); // 5000 milisegundos = 5 segundos
+
+                    // Limpiamos la URL para que el mensaje no vuelva a aparecer si se recarga la página
+                    history.replaceState(null, '', window.location.pathname);
+                }
+            }
         });
     </script>
+    <div id="toast-notification" class="toast">
+        <div id="toast-message"></div>
+    </div>
 </body>
 
 </html>

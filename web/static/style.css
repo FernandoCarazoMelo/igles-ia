@@ -1122,3 +1122,32 @@ footer {
     color: #d35400; /* Naranja corporativo */
     text-decoration: underline;
 }
+
+/* =================================================== */
+/* ===== ESTILOS PARA LA NOTIFICACIÓN (TOAST)    ===== */
+/* =================================================== */
+
+.toast {
+    visibility: hidden; /* Oculto por defecto */
+    opacity: 0;
+    min-width: 280px;
+    background-color: #28a745; /* Un verde de éxito */
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 16px;
+    position: fixed; /* Se queda fijo en la pantalla */
+    z-index: 2000; /* Asegura que esté por encima de todo */
+    bottom: 30px; /* Posición en la parte inferior */
+    left: 50%;
+    transform: translateX(-50%); /* Truco para centrarlo horizontalmente */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: opacity 0.5s, visibility 0.5s, bottom 0.5s; /* Animación suave */
+}
+
+/* Clase que se añade con JavaScript para mostrar la notificación */
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+    bottom: 50px; /* Sube un poco al aparecer */
+}

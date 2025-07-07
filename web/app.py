@@ -33,6 +33,14 @@ freezer = Freezer(app)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 SUMMARIES_DIR = os.environ.get('SUMMARIES_FOLDER')
 
+
+@app.route('/callback.html')
+def callback():
+    # Esta ruta simplemente le dice a Flask-Frozen que este archivo existe.
+    # Usamos send_from_directory para servir el archivo estático directamente.
+    return app.send_static_file('callback.html')
+
+
 def slugify(text):
     """
     Convierte un texto en un 'slug' amigable para URLs o IDs.
