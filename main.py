@@ -48,6 +48,12 @@ def run_agents(debug=False, calculate_wordcloud=False, run_domingo: bool = False
         "Discurso": [
             "https://www.vatican.va/content/leo-xiv/es/speeches/2025/may.index.html",
             "https://www.vatican.va/content/leo-xiv/es/speeches/2025/june.index.html",
+            "https://www.vatican.va/content/leo-xiv/es/speeches/2025/july.index.html",
+            "https://www.vatican.va/content/leo-xiv/es/speeches/2025/august.index.html",
+            "https://www.vatican.va/content/leo-xiv/es/speeches/2025/september.index.html",
+            "https://www.vatican.va/content/leo-xiv/es/speeches/2025/october.index.html",
+            "https://www.vatican.va/content/leo-xiv/es/speeches/2025/november.index.html",
+            "https://www.vatican.va/content/leo-xiv/es/speeches/2025/december.index.html",
         ],
         "Audiencia": [
             "https://www.vatican.va/content/leo-xiv/es/audiences/2025.index.html"
@@ -124,19 +130,11 @@ def run_agents(debug=False, calculate_wordcloud=False, run_domingo: bool = False
 
 
 @app.command()
-def pipeline_semanal(debug: bool = True, envio_fecha_ayer: bool = False):
+def pipeline_semanal(debug: bool = True):
     """
     Enviar correos semanales a todos los usuarios.
     """
     fecha_de_hoy = pd.Timestamp.now().strftime("%Y-%m-%d")
-
-    # fecha de ayer
-    fecha_de_ayer = pd.Timestamp.now() - pd.Timedelta(days=1)
-    fecha_de_ayer = fecha_de_ayer.strftime("%Y-%m-%d")
-
-    if envio_fecha_ayer:
-        print(f"Enviando correos con fecha de ayer: {fecha_de_ayer}")
-        fecha_de_hoy = fecha_de_ayer
 
     contacts = cognito_get_verified_emails()
     # contacts.to_csv("brevo_contacts.csv", index=False)
@@ -152,7 +150,7 @@ def pipeline_semanal(debug: bool = True, envio_fecha_ayer: bool = False):
 @app.command()
 def pipeline_diaria(debug: bool = False, calculate_wordcloud: bool = False, run_domingo: bool = False):
     """
-    Ejecutar el pipeline diario de la iglesia.
+    Ejecutar el pipeline diario de la iglesia. Generar web y enviar correo prueba.
     """
     fecha_de_hoy = pd.Timestamp.now().strftime("%Y-%m-%d")
     run_agents(debug=debug, calculate_wordcloud=calculate_wordcloud, run_domingo=run_domingo)
@@ -174,7 +172,7 @@ def pipeline_date(
     run_domingo: bool = False,
 ):
     """
-    Ejecutar el pipeline para una fecha específica.
+    Ejecutar el pipeline para una fecha específica y generar web. No enviar correos.
     """
     if run_date is None:
         run_date = pd.Timestamp.now().strftime("%Y-%m-%d")

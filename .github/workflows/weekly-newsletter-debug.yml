@@ -1,6 +1,8 @@
-name: Debug Weekly Function
+name: Weekly Newsletter Pipeline PROD. Lunes 12PM
 
 on:
+  schedule:
+    - cron: "00 10 * * 1" # Cada lunes a las 10:00 UTC, 12:00 hora española
   workflow_dispatch: # Permite ejecutar el workflow manualmente
 
 jobs:
@@ -8,7 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write # Necesitas permisos para escribir si esta función también genera archivos que debas commitear
-
+      env:
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        EMAIL_USER: ${{ secrets.EMAIL_USER }}
+        EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+        AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        USER_POOL_ID: ${{ secrets.USER_POOL_ID }}
+        SUMMARIES_FOLDER: web/data/summaries
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -26,18 +36,6 @@ jobs:
       - name: Install dependencies with uv
         run: uv pip install . --system
       - name: Run the weekly specific function
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          # Incluye cualquier otra variable de entorno que tu función semanal necesite
-          # Por ejemplo, si tu función semanal también maneja emails o carpetas de resúmenes diferentes
-          EMAIL_USER: ${{ secrets.EMAIL_USER }}
-          EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
-          BREVO_TOKEN: ${{ secrets.BREVO_TOKEN }}
-          SUMMARIES_FOLDER: summaries-remote # O una carpeta diferente si esta función la usa
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
-          USER_POOL_ID: ${{ secrets.USER_POOL_ID }}
         run: |
           echo "Running weekly specific function..."
           uv run python main.py pipeline-semanal --debug

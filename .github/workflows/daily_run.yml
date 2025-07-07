@@ -1,4 +1,4 @@
-name: Run Iglesia Content Script Daily and Commit Results
+name: Pipeline y correo carazom. Lunes 7AM
 
 on:
   schedule:
@@ -12,7 +12,15 @@ jobs:
     # Necesitamos permisos para escribir en el repositorio
     permissions:
       contents: write # Permite a la acción hacer commit y push
-
+      env:
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        EMAIL_USER: ${{ secrets.EMAIL_USER }}
+        EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+        AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        USER_POOL_ID: ${{ secrets.USER_POOL_ID }}
+        SUMMARIES_FOLDER: web/data/summaries
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -33,15 +41,6 @@ jobs:
       - name: Install dependencies with uv
         run: uv pip install . --system # Asumiendo que tu pyproject.toml está configurado
       - name: Run the script
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          EMAIL_USER: ${{ secrets.EMAIL_USER }}
-          EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
-          AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          USER_POOL_ID: ${{ secrets.USER_POOL_ID }}
-          SUMMARIES_FOLDER: summaries-remote
         run: |
           echo "Folder: $SUMMARIES_FOLDER"
           echo "Running script..."
@@ -71,7 +70,6 @@ jobs:
       - name: Commit and push changes
         run: |
           git pull 
-          git add summaries-remote/ 
           git add docs/
           git add data_web/
           git add web/

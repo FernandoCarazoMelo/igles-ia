@@ -14,3 +14,6 @@ freeze:
 	uv run web/app.py
 	rm -rf docs
 	cp -r web/build docs
+
+zip:
+	zip deployment_package.zip lambda_function.py welcome.html
