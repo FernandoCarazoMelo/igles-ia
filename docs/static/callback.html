@@ -29,7 +29,7 @@
 
             if (!authCode) {
                 console.error("Error: No se encontró el código de autorización en la URL.");
-                window.location.replace('/index.html'); // Redirigir a inicio si hay error
+                window.location.replace('/resumenes.html'); // Redirigir a inicio si hay error
                 return;
             }
 
@@ -60,13 +60,13 @@
                 localStorage.setItem('access_token', tokens.access_token);
 
                 // ¡Éxito! Redirigir a la página de inicio con el mensaje de bienvenida
-                window.location.replace('/index.html?registro=exitoso');
+                window.location.replace('/resumenes.html?registro=exitoso');
 
             } catch (error) {
                 console.error('Error en el flujo de callback:', error);
                 debugger; 
                 // En caso de error, redirigir a la página de inicio
-                window.location.replace('/index.html');
+                window.location.replace('/resumenes.html');
             }
         }
 
