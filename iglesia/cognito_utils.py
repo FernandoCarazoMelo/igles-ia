@@ -39,7 +39,7 @@ def extract_first_name(full_name):
 
     return parts[0].capitalize()
 
-def cognito_get_verified_emails(only_verified: bool = False):
+def cognito_get_verified_emails(only_verified: bool = True):
     """
     Fetches all Cognito users with verified email addresses,
     and returns a DataFrame with columns ['nombre', 'email'].
