@@ -1,6 +1,8 @@
-name: Dispatch debug - Weekly Newsletter Function
+name: Lunes 12PM. Weekly Newsletter Function
 
 on:
+  schedule:
+    - cron: "00 10 * * 1" # Cada lunes a las 10:00 UTC, 12:00 hora española
   workflow_dispatch: # Permite ejecutar el workflow manualmente
 
 jobs:

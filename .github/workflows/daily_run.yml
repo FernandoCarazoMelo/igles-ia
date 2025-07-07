@@ -1,4 +1,4 @@
-name: Pipeline y correo carazom. Lunes 7AM
+name: Lunes 7AM. Agents, web, git y correo carazom.
 
 on:
   schedule:
