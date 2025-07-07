@@ -254,15 +254,22 @@ def create_iglesia_content_crew(df, llm_instance, run_date=None):
         slug: "semana-{pontificate_week_number}-esperanza-paciencia"
         ---
         
+        #### **Resumen 16 de Junio, 2025**
+
         {intro_counts_sentence}
 
-        El Santo Padre ha centrado su mensaje en la **necesidad de redescubrir la esperanza** como un pilar fundamental de la vida cristiana. En un mundo que exige resultados inmediatos, la fe nos enseña la virtud de la paciencia, recordándonos que los frutos más importantes a menudo maduran lentamente, bajo la mirada amorosa de Dios. La verdadera transformación, tanto personal como social, no proviene de la prisa, sino de la **confianza perseverante en la Providencia Divina**.
+        
+        Esta semana, el Papa León XIV nos ha ofrecido una reflexión profunda a partir de la **parábola del sembrador**, una imagen sencilla pero poderosa. Nos ha recordado que el **Reino de Dios crece en silencio**, a menudo lejos de nuestra vista y comprensión. Aunque no siempre veamos frutos inmediatos, la semilla ya está actuando en lo oculto.
+
+        Su mensaje es una invitación a vivir con **paciencia y confianza**, sabiendo que lo que hoy parece pequeño o invisible puede transformarse en algo fecundo con el tiempo.
 
         #### Temas Clave Analizados:
-        * La esperanza como ancla del alma en medio de las tormentas.
-        * Crítica a la cultura de la inmediatez y sus efectos en la vida espiritual.
-        * La paciencia como una forma de imitar el actuar de Dios en la historia.
-        * El rol de la comunidad en el sostenimiento de la esperanza.
+        * **La paciencia de Dios:** El crecimiento espiritual no es automático ni espectacular. Dios respeta nuestros ritmos y nos acompaña con paciencia, sin imponer.
+        * **La semilla de la fe:** Se nos llama a **cultivar la Palabra** en nuestra vida diaria, con gestos concretos de amor, oración y apertura al prójimo.
+        * **Esperanza frente a la inmediatez:** En una cultura que exige resultados instantáneos, el Papa nos invita a **redescubrir la fuerza de lo lento**, lo humilde, lo que crece en silencio.
+
+        Es un mensaje sencillo, pero muy necesario: confiar, sembrar con fe… y dejar que Dios haga crecer.
+
         """,
         agent=periodista_catolico,
         context=analysis_tasks,

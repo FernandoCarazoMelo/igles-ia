@@ -39,7 +39,7 @@ def extract_first_name(full_name):
 
     return parts[0].capitalize()
 
-def cognito_get_verified_emails():
+def cognito_get_verified_emails(only_verified: bool = False):
     """
     Fetches all Cognito users with verified email addresses,
     and returns a DataFrame with columns ['nombre', 'email'].
@@ -64,8 +64,8 @@ def cognito_get_verified_emails():
     for page in page_iterator:
         for user in page["Users"]:
             attrs = {attr["Name"]: attr["Value"] for attr in user["Attributes"]}
-
-            if attrs.get("email_verified") == "true":
+            
+            if only_verified and attrs.get("email_verified") == "true":
                 email = attrs.get("email")
                 full_name = attrs.get("name", "")
                 first_name = extract_first_name(full_name)
@@ -73,6 +73,16 @@ def cognito_get_verified_emails():
                 if email:
                     names.append(first_name)
                     emails.append(email)
+            elif not only_verified:
+                email = attrs.get("email")
+                full_name = attrs.get("name", "")
+                first_name = extract_first_name(full_name)
+
+                if email:
+                    names.append(first_name)
+                    emails.append(email)
+            else:
+                print(f"Skipping user {user['Username']} due to unverified email.")
 
     df = pd.DataFrame({"nombre": names, "email": emails})
     return df
