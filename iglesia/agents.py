@@ -29,52 +29,6 @@ def get_week_of_string(run_date_str):
 
     return result
 
-# # Create agents
-# text_summarizer = Agent(
-#     role='Text Summarizer',
-#     goal='Create concise and accurate summaries of individual texts',
-#     backstory="""You are an expert in text analysis and summarization.
-#     You excel at extracting key information and creating clear summaries.""",
-#     verbose=True
-# )
-
-# summary_consolidator = Agent(
-#     role='Summary Consolidator',
-#     goal='Create a comprehensive summary that combines individual summaries while preserving source attribution',
-#     backstory="""You are skilled at synthesizing information from multiple sources
-#     and creating coherent consolidated summaries while maintaining source references.""",
-#     verbose=True
-# )
-
-# def create_crew_summary(df):
-#     # Create individual summary tasks
-#     summary_tasks = []
-#     for idx, row in df.iterrows():
-#         task = Task(
-#             description=f'Create a summary of the following text: {row["texto"]}. Source: {row["titulo"]}',
-#             expected_output='A concise summary of the provided text with its source',
-#             agent=text_summarizer
-#         )
-#         summary_tasks.append(task)
-
-#     # Create final consolidation task
-#     consolidation_task = Task(
-#         description='Create a comprehensive summary of all the previous summaries, including their sources',
-#         expected_output='A consolidated summary with source attributions',
-#         agent=summary_consolidator,
-#         context=summary_tasks  # This provides the results of previous tasks as context
-#     )
-
-#     # Create and execute the crew
-#     crew = Crew(
-#         agents=[text_summarizer, summary_consolidator],
-#         tasks=summary_tasks + [consolidation_task],
-#         verbose=True
-#     )
-
-
-#     return crew
-
 
 def create_iglesia_content_crew(df, llm_instance, run_date=None):
     """
@@ -100,26 +54,6 @@ def create_iglesia_content_crew(df, llm_instance, run_date=None):
         allow_delegation=False,
     )
 
-    # Agente 2: Redactor del Resumen Semanal
-    # redactor_jefe_iglesia = Agent(
-    #     role="Redactor Jefe del portal Igles-IA, con especial habilidad para la síntesis pastoral",
-    #     goal="Elaborar un resumen semanal inspirador y pastoral para los subscriptores de Igles-IA, integrando los análisis de los textos de la semana, comenzando con un recuento de los tipos de documentos y enlazando a las fuentes originales.",
-    #     backstory="""Como corazón editorial de Igles-IA, tu pluma transforma análisis doctrinales en mensajes semanales que nutren la fe.
-    #     Eres experto en tejer una narrativa coherente a partir de múltiples fuentes, destacando los mensajes clave de la Iglesia de forma accesible, motivadora y digitalmente atractiva, incluyendo referencias claras a los textos completos para quien desee profundizar.""",
-    #     llm=llm_instance,
-    #     verbose=True,
-    #     allow_delegation=False
-    # )
-
-    # editor_html = Agent(
-    #     role="Editor HTML",
-    #     goal="Convertir el resumen semanal en un formato HTML básico, ya que será integrado en una plantilla.",
-    #     backstory="""Eres un experto en edición HTML, capaz de transformar textos en formatos visualmente atractivos y accesibles.
-    #     Tu tarea es asegurar que el contenido se presente de manera profesional sin cambiar nada del contenido.""",
-    #     llm=llm_instance,
-    #     verbose=True,
-    #     allow_delegation=False
-    # )
     if run_date is None:
         run_date = pd.Timestamp.now().strftime("%Y-%m-%d")
         
@@ -183,8 +117,6 @@ def create_iglesia_content_crew(df, llm_instance, run_date=None):
         intro_counts_sentence = "Esta semana, reflexionamos sobre importantes mensajes de la Iglesia."  # Fallback
     else:
         parts = []
-        # Ordenar por conteo o alfabéticamente para consistencia si se desea
-        # sorted_types = sorted(doc_type_counts.items(), key=lambda item: item[1], reverse=True)
         for doc_type, count in doc_type_counts.items():
             plural = "s" if count > 1 else ""
             # Ajustar el nombre del tipo para que suene natural en plural si es necesario (ej. Ángelus no cambia)
@@ -254,11 +186,8 @@ def create_iglesia_content_crew(df, llm_instance, run_date=None):
         slug: "semana-{pontificate_week_number}-esperanza-paciencia"
         ---
         
-        #### **Resumen 16 de Junio, 2025**
-
         {intro_counts_sentence}
 
-        
         Esta semana, el Papa León XIV nos ha ofrecido una reflexión profunda a partir de la **parábola del sembrador**, una imagen sencilla pero poderosa. Nos ha recordado que el **Reino de Dios crece en silencio**, a menudo lejos de nuestra vista y comprensión. Aunque no siempre veamos frutos inmediatos, la semilla ya está actuando en lo oculto.
 
         Su mensaje es una invitación a vivir con **paciencia y confianza**, sabiendo que lo que hoy parece pequeño o invisible puede transformarse en algo fecundo con el tiempo.
@@ -275,33 +204,7 @@ def create_iglesia_content_crew(df, llm_instance, run_date=None):
         context=analysis_tasks,
         output_file=f"{os.environ.get('SUMMARIES_FOLDER')}/{run_date}/resumen_semanal_igles-ia.txt",
     )
-    # Fase 2: Tarea de Consolidación Semanal
-    # weekly_summary_task = Task(
-    #     description=f"""Resumen de los resumenes recibidos en estilo atractivo para la lectura. Quiero que sea un resumen integrado, no un simple parrafo para cada texto.
-        
-    #     FORMATO REQUERIDO: Markdown
-    #     - Usa **negrita** para destacar algunas frases o palabras importantes. No más de 2-3 por párrafo.
-    #     - Usa saltos de línea para separar ideas
-    #     - Máximo 150 palabras
-        
-    #     ESTRUCTURA:
-    #     1. Saludo: **¡Bienvenidos al Resumen Semanal del Papa León XIV!**
-    #     2. Incluir: '{intro_counts_sentence}'
-    #     3. Resumen con frases o palabras clave en **negrita** para facilitar la lectura.""",
-    #     expected_output="Texto en formato Markdown con negritas usando **texto** que será convertido a HTML posteriormente",
-    #     agent=periodista_catolico,
-    #     context=analysis_tasks,
-    #     markdown=True,
-    #     output_file=f"{os.environ.get('SUMMARIES_FOLDER')}/{run_date}/resumen_semanal_igles-ia.txt",
-    # )
-
-    # task_format_html = Task(
-    #     description="Convierte el resumen semanal en un formato HTML básico.",
-    #     expected_output="Un archivo HTML básico. No cambies el contenido, solo el formato.",
-    #     agent=editor_html,
-    #     context=[weekly_summary_task],
-    #     output_file=f"{os.environ.get('SUMMARIES_FOLDER')}/{run_date}/resumen_semanal_igles-ia.html"
-    # )
+    
     iglesia_content_crew = Crew(
         agents=[periodista_catolico],
         tasks=analysis_tasks + [weekly_summary_task],
