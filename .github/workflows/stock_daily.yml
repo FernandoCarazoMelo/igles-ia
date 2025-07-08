@@ -12,6 +12,7 @@ jobs:
     env:
       EMAIL_USER: ${{ secrets.EMAIL_USER }}
       EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+      EMAIL_TO: ${{ secrets.EMAIL_TO }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4

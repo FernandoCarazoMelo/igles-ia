@@ -210,7 +210,7 @@ def crear_mensaje_alerta(
     return msg
 
 
-def enviar_alerta_inversion(df_alertas, correo="fernando.carazom@gmail.com"):
+def enviar_alerta_inversion(df_alertas):
     """
     Envía un correo si hay nuevas alertas de drawdown detectadas.
     """
@@ -223,6 +223,7 @@ def enviar_alerta_inversion(df_alertas, correo="fernando.carazom@gmail.com"):
     df_alertas.sort_values(by="Date", ascending=False, inplace=True)
     EMAIL_USER = os.getenv("EMAIL_USER")
     EMAIL_PASS = os.getenv("EMAIL_PASS")
+    EMAIL_TO = os.getenv("EMAIL_TO")
     if not all([EMAIL_USER, EMAIL_PASS]):
         print("❌ Faltan variables de entorno necesarias.")
         return
@@ -246,9 +247,9 @@ def enviar_alerta_inversion(df_alertas, correo="fernando.carazom@gmail.com"):
     try:
         with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
             smtp.login(EMAIL_USER, EMAIL_PASS)
-            msg = crear_mensaje_alerta(correo, cuerpo_html, asunto)
+            msg = crear_mensaje_alerta(EMAIL_TO, cuerpo_html, asunto)
             smtp.send_message(msg)
-            print(f"✅ Alerta enviada a {correo}")
+            print("✅ Alerta enviada")
     except Exception as e:
         print(f"❌ Error al enviar correos: {e}")
 
