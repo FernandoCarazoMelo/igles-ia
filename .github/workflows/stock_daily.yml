@@ -1,12 +1,11 @@
 name: Daily Stock Tracker Function
-
 on:
   schedule:
     - cron: "30 08 * * *" # Cada día a las 9:30 hora española, UT 08:30
   workflow_dispatch: 
 
 jobs:
-  run_weekly_function:
+  run_stock_tracker:
     runs-on: ubuntu-latest
     permissions:
       contents: write # Necesitas permisos para escribir si esta función también genera archivos que debas commitear

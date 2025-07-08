@@ -267,4 +267,4 @@ if __name__ == "__main__":
     if not eventos_hoy.empty:
         print("🚨 NUEVAS OPORTUNIDADES")
         print(eventos_hoy)
-    enviar_alerta_inversion(eventos)
+    enviar_alerta_inversion(eventos_hoy)
