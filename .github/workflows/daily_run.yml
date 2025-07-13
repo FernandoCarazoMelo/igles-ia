@@ -1,9 +1,9 @@
-name: Lunes 7AM. Agents, web, git y correo carazom.
+name: Domingo 3PM. Agents, web, git y correo carazom.
 
 on:
   schedule:
-    # Ejecuta el script todos los lunes a las 7 de la mañana
-    - cron: "0 5 * * 1"
+    # Ejecuta el script todos los domingos a las 15h CEST, UTC = 13h
+    - cron: '0 13 * * 0' # Cada domingo a las 13:00 UTC (15:00 CEST)
   workflow_dispatch: # Permite ejecutar el workflow manualmente
 
 jobs:
@@ -44,7 +44,7 @@ jobs:
         run: |
           echo "Folder: $SUMMARIES_FOLDER"
           echo "Running script..."
-          uv run python main.py pipeline-diaria
+          uv run python main.py pipeline-date
       - name: Freeze site and generate docs
         run: make freeze
 

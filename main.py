@@ -166,7 +166,7 @@ def pipeline_diaria(debug: bool = False, calculate_wordcloud: bool = False, run_
 
 @app.command()
 def pipeline_date(
-    run_date: str = None,
+    run_date: str = None, # fecha en formato YYYY-MM-DD, si no se especifica, se usa mañana
     debug: bool = False,
     calculate_wordcloud: bool = False,
     run_domingo: bool = False,
@@ -175,11 +175,18 @@ def pipeline_date(
     Ejecutar el pipeline para una fecha específica y generar web. No enviar correos.
     """
     if run_date is None:
-        run_date = pd.Timestamp.now().strftime("%Y-%m-%d")
+        tomorrow = pd.Timestamp.now() + pd.Timedelta(days=1)
+        run_date = tomorrow.strftime("%Y-%m-%d")
+
     print(f"Ejecutando pipeline para la fecha: {run_date}")
     run_agents(debug=debug, calculate_wordcloud=calculate_wordcloud, run_domingo=run_domingo, run_date=run_date)
-    enviar_correos_todos("", run_date, send_emails=False)
 
+    contacts = cognito_get_verified_emails()
+    print(f"COGNITO. Total de contactos obtenidos: {len(contacts)}")
+    print("Solo para pruebas, usar el último contacto\n")
+    contacts = contacts[contacts["email"].str.contains("nando.carazom@gmai")]
+    print(contacts)
+    enviar_correos_todos(contacts, run_date)
 
 if __name__ == "__main__":
     app()
