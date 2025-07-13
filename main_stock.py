@@ -260,7 +260,7 @@ if __name__ == "__main__":
         inicio="2020-01-01",
         fin="2025-07-08",
         ventana_dias=60,
-        umbral_drawdown=-0.3,
+        umbral_drawdown=-0.2,
     )
 
     hoy = pd.Timestamp(datetime.today().date())  # Solo fecha, sin hora
