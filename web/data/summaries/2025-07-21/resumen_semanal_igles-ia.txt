@@ -1,9 +1,9 @@
 ---
-title: "Hospitalidad, Escucha y Unidad: Reflexiones Semanales sobre la Vida Cristiana"
+title: "Hospitalidad, Escucha y Unidad. Consejos para el Verano."
 week_of: "Semana del 14/07 al 20/07 de 2025"
 date: "2025-07-21"
 pontificate_week: 11
-excerpt: "El Papa León XIV nos invita a vivir la hospitalidad y la escucha como caminos esenciales para fortalecer nuestra relación con Dios y con los demás, promoviendo la paz, la fraternidad y la unidad en un mundo marcado por conflictos y desconexión."
+excerpt: "El Papa León XIV nos invita a vivir la hospitalidad y la escucha como caminos esenciales para fortalecer nuestra relación con Dios y con los demás. También nos da algunos consejos para cuidar el trato con Dios en el verano."
 slug: "semana-11-hospitalidad-unidad"
 ---
 
