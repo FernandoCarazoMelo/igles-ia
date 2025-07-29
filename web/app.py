@@ -165,6 +165,10 @@ def about():
 def contact():
     """Página de contacto."""
     return render_template('contacto.html')
+@app.route('/robots.txt')
+def robots_txt():
+    """Sirve el archivo robots.txt desde la carpeta estática."""
+    return app.send_static_file('robots.txt')
 
 @app.route('/politica-de-privacidad.html')
 def privacy_policy():
