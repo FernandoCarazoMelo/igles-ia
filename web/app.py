@@ -7,7 +7,7 @@ import markdown
 import locale
 import yaml  # Necesitarás PyYAML: pip install PyYAML
 from datetime import datetime
-from flask import Flask, render_template, abort, redirect, url_for
+from flask import Flask, render_template, abort, redirect, url_for, Response
 from flask_frozen import Freezer
 from dotenv import load_dotenv
 import re
@@ -28,6 +28,8 @@ app = Flask(__name__)
 app.config['FREEZER_DESTINATION'] = 'build'
 app.config['FREEZER_RELATIVE_URLS'] = True
 freezer = Freezer(app)
+# Debajo de la configuración de Freezer
+BASE_URL = "https://igles-ia.es" # URL base de tu sitio web
 
 # Definición de la ruta donde se guardan los datos
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -174,6 +176,40 @@ def robots_txt():
 def privacy_policy():
     """Página de Política de Privacidad."""
     return render_template('politica_de-privacidad.html')
+
+
+# En la sección 6. RUTAS DE LA APLICACIÓN
+
+@app.route('/sitemap.xml')
+def sitemap():
+    """Genera el sitemap.xml dinámicamente con todas las URLs del sitio."""
+    pages = []
+    
+    # Añadir URLs estáticas
+    static_urls = [
+        {'loc': url_for('index', _external=True), 'priority': '1.0', 'changefreq': 'weekly'},
+        {'loc': url_for('archive', _external=True), 'priority': '0.9', 'changefreq': 'weekly'},
+        {'loc': url_for('about', _external=True), 'priority': '0.5', 'changefreq': 'monthly'},
+        {'loc': url_for('contact', _external=True), 'priority': '0.5', 'changefreq': 'yearly'},
+    ]
+    for url_info in static_urls:
+        url_info['loc'] = url_info['loc'].replace('http://localhost', BASE_URL)
+        pages.append(url_info)
+
+    # Añadir URLs dinámicas de los resúmenes
+    for summary in ALL_SUMMARIES:
+        url_info = {
+            'loc': url_for('summary_detail', slug=summary['slug'], _external=True),
+            'lastmod': summary['date'].strftime('%Y-%m-%d'),
+            'changefreq': 'yearly',
+            'priority': '0.8'
+        }
+        url_info['loc'] = url_info['loc'].replace('http://localhost', BASE_URL)
+        pages.append(url_info)
+
+    sitemap_xml = render_template('sitemap.xml', pages=pages)
+    return Response(sitemap_xml, mimetype='application/xml')
+
 
 # ==========================================================================
 # 7. GENERADOR DE URLS PARA FLASK-FROZEN
