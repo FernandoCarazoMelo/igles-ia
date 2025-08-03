@@ -22,6 +22,26 @@ body {
 
 /* El estilo del <header> original ya no se usa, ha sido reemplazado por #main-nav */
 
+/* para el jubileo */
+.announcement-link {
+display: block;
+text-decoration: none;
+color: inherit;
+border-radius: 15px;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.announcement-link .pope-quote-card {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.announcement-link:hover .pope-quote-card {
+transform: translateY(-5px);
+box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+.pope-quote-content h3 {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+    font-family: 'Merriweather', serif;
+}
 /* ================================================= */
 /* ===== BARRA DE NAVEGACIÓN (NUEVO) ===== */
 /* ================================================= */
