@@ -1,11 +1,13 @@
 ---
-title: "Jóvenes y Esperanza: La Llamada a Transformar el Mundo con Fe y Valentía"
+title: "Jubileo de los Jóvenes: La Llamada a Transformar el Mundo con Fe y Valentía"
 week_of: "Semana del 28/07 al 03/08 de 2025"
 date: "2025-08-04"
 pontificate_week: 13
 excerpt: "El Papa León XIV nos invita a que los jóvenes sean semillas de esperanza y paz en el mundo, promoviendo la fe, la oración y el compromiso social, en un tiempo de desafíos y oportunidades para la juventud cristiana."
 slug: "semana-13-juventud-esperanza"
 ---
+
+Nos alegra contarte que tenemos un regalo para tí: un número especial en igles-ia: 
 
 Esta semana, el Papa León XIV nos ha ofrecido reflexiones a través de 1 homilía, 1 ángelus, 4 discursos y 1 audiencia.
 
