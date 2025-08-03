@@ -2,17 +2,18 @@ import os
 
 import pandas as pd
 from crewai import LLM
-from dotenv import load_dotenv, find_dotenv
+from dotenv import find_dotenv, load_dotenv
 from typer import Typer
 
 from iglesia.agents import create_iglesia_content_crew
+from iglesia.cognito_utils import cognito_get_verified_emails
 from iglesia.email_utils_3 import enviar_correos_todos
 from iglesia.utils import obtener_todos_los_textos
-from iglesia.cognito_utils import cognito_get_verified_emails
 
 app = Typer()
 
 load_dotenv(find_dotenv())
+
 
 def save_wordcloud(text, path_save="wordcloud.png"):
     from collections import Counter
@@ -35,7 +36,12 @@ def save_wordcloud(text, path_save="wordcloud.png"):
     wordcloud.to_file(path_save)
 
 
-def run_agents(debug=False, calculate_wordcloud=False, run_domingo: bool = False, run_date: str = None):
+def run_agents(
+    debug=False,
+    calculate_wordcloud=False,
+    run_domingo: bool = False,
+    run_date: str = None,
+):
     print(os.getcwd())
     LLM_used = LLM(
         model="gpt-4.1-nano",
@@ -104,9 +110,12 @@ def run_agents(debug=False, calculate_wordcloud=False, run_domingo: bool = False
     run_date_dt = pd.to_datetime(run_date)
     if run_domingo:
         # incluir los textos del mismo día
-        df = df[(df["fecha_dt"] >= (run_date_dt - pd.Timedelta(days=6))) & (df["fecha_dt"] <= run_date_dt)]
+        df = df[
+            (df["fecha_dt"] >= (run_date_dt - pd.Timedelta(days=6)))
+            & (df["fecha_dt"] <= run_date_dt)
+        ]
         # incluir los textos del domingo
-    
+
     else:
         df = df[
             (df["fecha_dt"] >= (run_date_dt - pd.Timedelta(days=7)))
@@ -148,12 +157,16 @@ def pipeline_semanal(debug: bool = True):
 
 
 @app.command()
-def pipeline_diaria(debug: bool = False, calculate_wordcloud: bool = False, run_domingo: bool = False):
+def pipeline_diaria(
+    debug: bool = False, calculate_wordcloud: bool = False, run_domingo: bool = False
+):
     """
     Ejecutar el pipeline diario de la iglesia. Generar web y enviar correo prueba.
     """
     fecha_de_hoy = pd.Timestamp.now().strftime("%Y-%m-%d")
-    run_agents(debug=debug, calculate_wordcloud=calculate_wordcloud, run_domingo=run_domingo)
+    run_agents(
+        debug=debug, calculate_wordcloud=calculate_wordcloud, run_domingo=run_domingo
+    )
 
     contacts = cognito_get_verified_emails()
     # contacts.to_csv("brevo_contacts.csv", index=False)
@@ -164,9 +177,10 @@ def pipeline_diaria(debug: bool = False, calculate_wordcloud: bool = False, run_
 
     enviar_correos_todos(contacts, fecha_de_hoy)
 
+
 @app.command()
 def pipeline_date(
-    run_date: str = None, # fecha en formato YYYY-MM-DD, si no se especifica, se usa mañana
+    run_date: str = None,  # fecha en formato YYYY-MM-DD, si no se especifica, se usa mañana
     debug: bool = False,
     calculate_wordcloud: bool = False,
     run_domingo: bool = False,
@@ -179,7 +193,12 @@ def pipeline_date(
         run_date = tomorrow.strftime("%Y-%m-%d")
 
     print(f"Ejecutando pipeline para la fecha: {run_date}")
-    run_agents(debug=debug, calculate_wordcloud=calculate_wordcloud, run_domingo=run_domingo, run_date=run_date)
+    run_agents(
+        debug=debug,
+        calculate_wordcloud=calculate_wordcloud,
+        run_domingo=run_domingo,
+        run_date=run_date,
+    )
 
     contacts = cognito_get_verified_emails()
     print(f"COGNITO. Total de contactos obtenidos: {len(contacts)}")
@@ -187,6 +206,7 @@ def pipeline_date(
     contacts = contacts[contacts["email"].str.contains("nando.carazom@gmai")]
     print(contacts)
     enviar_correos_todos(contacts, run_date)
+
 
 if __name__ == "__main__":
     app()
