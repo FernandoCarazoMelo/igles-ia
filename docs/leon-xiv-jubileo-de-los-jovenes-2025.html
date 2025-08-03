@@ -94,7 +94,7 @@
       href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Lato:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <style>
+<style>
       body {
         font-family: "Lato", sans-serif;
         background-color: #f1f5f9;
@@ -167,7 +167,7 @@
         background-size: cover;
         background-position: center;
       }
-      /* CORRECCIÓN: Estilo aplicado a CUALQUIER botón de pestaña activo */
+      /* Tabs for Documents and Summaries */
       .tab-button.active {
         border-color: #f59e0b;
         background-color: #f59e0b;
@@ -179,6 +179,15 @@
       .tab-content.active {
         display: block;
       }
+
+      /* ===== INICIO DE LA CORRECCIÓN ===== */
+      /* Media Query para corregir el fondo en móviles */
+      @media (max-width: 768px) {
+        .hero-bg {
+          background-attachment: scroll;
+        }
+      }
+      /* ===== FIN DE LA CORRECCIÓN ===== */
     </style>
   </head>
   <body class="text-slate-700">
