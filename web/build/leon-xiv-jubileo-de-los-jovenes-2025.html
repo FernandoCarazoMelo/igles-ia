@@ -167,7 +167,7 @@
         background-size: cover;
         background-position: center;
       }
-      /* Tabs for Documents */
+      /* CORRECCIÓN: Estilo aplicado a CUALQUIER botón de pestaña activo */
       .tab-button.active {
         border-color: #f59e0b;
         background-color: #f59e0b;
@@ -201,301 +201,144 @@
       </div>
     </section>
 
+    <section id="claves-jubileo" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-slate-900">
+                    Las Claves del Jubileo: Un Mensaje para Ti
+                </h2>
+                <p class="text-lg mt-4 max-w-3xl mx-auto">
+                    Explora las ideas centrales de cada encuentro del Papa con los jóvenes. Haz clic en cada pestaña para descubrir un mensaje.
+                </p>
+            </div>
 
-    <section id="acogida" class="py-20 bg-slate-50">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold text-slate-900">
-            "Ustedes son la Luz del Mundo"
-          </h2>
-          <p class="text-lg mt-4 max-w-3xl mx-auto">
-            Las primeras palabras del Papa a los jóvenes fueron una declaración
-            de confianza y una misión universal: ser portadores de esperanza y
-            paz.
-          </p>
+            <div class="max-w-5xl mx-auto">
+                <div class="mb-4 flex flex-wrap space-x-1 sm:space-x-2 p-1 bg-slate-200 rounded-lg">
+                    <button class="tab-button flex-1 py-2 px-4 rounded-md text-sm font-medium transition active" data-tab="resumen-acogida">Acogida</button>
+                    <button class="tab-button flex-1 py-2 px-4 rounded-md text-sm font-medium transition" data-tab="resumen-mision">M. Digital</button>
+                    <button class="tab-button flex-1 py-2 px-4 rounded-md text-sm font-medium transition" data-tab="resumen-catequesis">Catequesis</button>
+                    <button class="tab-button flex-1 py-2 px-4 rounded-md text-sm font-medium transition" data-tab="resumen-vigilia">Vigilia</button>
+                    <button class="tab-button flex-1 py-2 px-4 rounded-md text-sm font-medium transition" data-tab="resumen-homilia">Homilía</button>
+                </div>
+            </div>
+
+            <div class="bg-white p-4 sm:p-8 rounded-lg shadow-inner min-h-[300px]">
+                
+                <div id="resumen-acogida" class="tab-content active">
+                    <div class="text-center mb-10">
+                        <h2 class="text-3xl font-bold text-slate-900">"Ustedes son la Luz del Mundo"</h2>
+                        <p class="text-md mt-3 max-w-3xl mx-auto">Las primeras palabras del Papa a los jóvenes fueron una declaración de confianza y una misión universal: ser portadores de esperanza y paz.</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-center gap-12 bg-slate-50 p-8 rounded-xl shadow-xl">
+                        <img src="static/jubileo/papa-leon-xiv-jubileo-2025_7.jpeg" class="w-full md:w-1/2 h-96 object-cover rounded-lg" alt="Cúpula de San Pedro" />
+                        <div class="flex-1">
+                            <h4 class="text-2xl font-bold mb-4">Un Grito por la Esperanza</h4>
+                            <blockquote class="text-lg">«Hoy están empezando unos días, un camino, el jubileo de la esperanza, y <strong>el mundo necesita mensajes de esperanza</strong>; ustedes son este mensaje, y tienen que seguir dando esperanza a todos. [...] Y nuestro grito debe ser también por la paz en el mundo».</blockquote>
+                            <p class="text-sm text-gray-500 mt-4">- Discurso de Bienvenida, 29 de julio</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="resumen-mision" class="tab-content">
+                    <div class="text-center mb-10">
+                        <h2 class="text-3xl font-bold text-slate-900">La Misión en el Continente Digital</h2>
+                        <p class="text-md mt-3 max-w-3xl mx-auto">En un encuentro especial, el Papa confió a los influencers y misioneros digitales tres tareas fundamentales para evangelizar en la cultura actual.</p>
+                    </div>
+                    <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-10">
+                        <div class="bg-slate-50 p-8 rounded-xl shadow-lg transition hover:shadow-2xl hover:scale-105">
+                            <h3 class="text-2xl font-bold mb-4">1. Anunciar la Paz del Resucitado</h3>
+                            <p class="mb-6">La primera misión es llevar la paz de Cristo a un mundo digital a menudo desgarrado por la enemistad. Es una llamada a dar voz a la esperanza en los "confines existenciales" de la red.</p>
+                            <blockquote>«La paz necesita ser buscada, anunciada, compartida en todos los lugares; [...] que lleguen a dondequiera que haya un corazón que espera, <strong>un corazón que busca, un corazón que necesita.</strong>»</blockquote>
+                        </div>
+                        <div class="bg-slate-50 p-8 rounded-xl shadow-lg transition hover:shadow-2xl hover:scale-105">
+                            <h3 class="text-2xl font-bold mb-4">2. Una Cultura que sea Humana</h3>
+                            <p class="mb-6">Frente al avance de la tecnología y la IA, el reto es garantizar que la cultura digital no socave la dignidad, sino que fomente un humanismo cristiano basado en la escucha y el encuentro.</p>
+                            <blockquote>«Depende de cada uno de ustedes, garantizar que esta cultura siga siendo humana. [...] Tenemos el deber de trabajar juntos para desarrollar una forma de pensar y un lenguaje... que <strong>dé voz al Amor.</strong>»</blockquote>
+                        </div>
+                        <div class="bg-slate-50 p-8 rounded-xl shadow-lg transition hover:shadow-2xl hover:scale-105">
+                            <h3 class="text-2xl font-bold mb-4">3. "Vayan a Reparar las Redes"</h3>
+                            <p class="mb-6">El Papa hace un llamado final y contundente: pasar de reparar "redes de pesca" a reparar las "redes sociales", construyendo lazos de amor y verdad que liberen y salven.</p>
+                            <blockquote>«Les hago un llamado a todos ustedes: “que vayan a reparar las redes”. [...] Construir otras redes: redes de relaciones, redes de amor [...]. <strong>Redes que liberen, redes que salven.</strong> Redes de verdad.»</blockquote>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="resumen-catequesis" class="tab-content">
+                    <div class="text-center mb-10">
+                        <h2 class="text-3xl font-bold text-slate-900">Catequesis del Miércoles: "Efatá, ¡Ábrete!"</h2>
+                        <p class="text-md mt-3 max-w-3xl mx-auto">En la Audiencia General, el Papa usó la curación del sordomudo para hablarnos de la soledad en un mundo hiperconectado y de la cercanía sanadora de Cristo.</p>
+                    </div>
+                    <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-10">
+                        <div class="bg-slate-50 p-8 rounded-xl shadow-lg transition hover:shadow-2xl hover:scale-105">
+                            <h3 class="text-2xl font-bold mb-4">1. La Sordera Moderna</h3>
+                            <p class="mb-6">El Papa diagnostica una enfermedad actual: la "bulimia de conexiones" que nos aísla y nos tienta a encerrarnos en el silencio por miedo a ser malinterpretados.</p>
+                            <blockquote>«Vivimos en una sociedad que se está enfermando... bombardeados por imágenes... podemos sentir la tentación de <strong>encerrarnos en el silencio, en una incomunicación.</strong>»</blockquote>
+                        </div>
+                        <div class="bg-slate-50 p-8 rounded-xl shadow-lg transition hover:shadow-2xl hover:scale-105">
+                            <h3 class="text-2xl font-bold mb-4">2. La Cercanía que Sana</h3>
+                            <p class="mb-6">Jesús no empieza con un mandato, sino con un gesto de intimidad. Lo lleva aparte, lo toca, reconociendo su necesidad de una cercanía silenciosa antes que de palabras.</p>
+                            <blockquote>«Jesús le ofrece ante todo una proximidad silenciosa, a través de gestos que hablan de un encuentro profundo... como si hubiera captado su <strong>necesidad de intimidad y cercanía.</strong>»</blockquote>
+                        </div>
+                        <div class="bg-slate-50 p-8 rounded-xl shadow-lg transition hover:shadow-2xl hover:scale-105">
+                            <h3 class="text-2xl font-bold mb-4">3. La Invitación: ¡Ábrete!</h3>
+                            <p class="mb-6">La palabra "Efatá" es la clave. Es la invitación de Cristo a no tener miedo, a abrirnos al mundo, a las relaciones y a la vida que Él nos ofrece, porque cerrarse nunca es la solución.</p>
+                            <blockquote>«Es como si Jesús le dijera: “<strong>¡Ábrete a este mundo que te asusta! ¡Ábrete a las relaciones que te han decepcionado! ¡Ábrete a la vida!</strong>”. Cerrarse, de hecho, nunca es una solución.»</blockquote>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="resumen-vigilia" class="tab-content">
+                    <div class="text-center mb-10">
+                        <h2 class="text-3xl font-bold text-slate-900">Corazón a Corazón: La Vigilia en Tor Vergata</h2>
+                        <p class="text-md mt-3 max-w-3xl mx-auto">En un diálogo íntimo, el Papa respondió a las inquietudes más profundas de la juventud: la amistad, las decisiones y la búsqueda de sentido en un mundo complejo.</p>
+                    </div>
+                    <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-10">
+                        <div class="bg-slate-50 p-8 rounded-xl shadow-lg transition hover:shadow-2xl hover:scale-105">
+                            <h3 class="text-2xl font-bold mb-4">1. La Amistad Sincera</h3>
+                            <p class="mb-6">Frente a la ilusión de las redes, el Papa propuso un camino de autenticidad en Cristo.</p>
+                            <blockquote>«Ninguna amistad es fiel sino en Cristo. Y la verdadera amistad es siempre en Jesucristo con verdad, amor y respeto. [...] Ama verdaderamente al amigo quien ama a Dios en el amigo. La amistad puede cambiar verdaderamente el mundo. <strong>La amistad es el camino por la paz</strong>».</blockquote>
+                        </div>
+                        <div class="bg-slate-50 p-8 rounded-xl shadow-lg transition hover:shadow-2xl hover:scale-105">
+                            <h3 class="text-2xl font-bold mb-4">2. El Valor de Decidir</h3>
+                            <p class="mb-6">Para el miedo que paraliza, una invitación a fundar la vida en el amor de Dios que nunca falla.</p>
+                            <blockquote>«Es a Jesús a quien buscáis cuando soñáis la felicidad; es Él quien os provoca con esa sed de radicalidad que no os permite dejaros llevar del conformismo. <strong>El miedo deja entonces espacio a la esperanza</strong>, porque estamos seguros de que Dios lleva a término lo que comienza».</blockquote>
+                        </div>
+                        <div class="bg-slate-50 p-8 rounded-xl shadow-lg transition hover:shadow-2xl hover:scale-105">
+                            <h3 class="text-2xl font-bold mb-4">3. La Búsqueda de Dios</h3>
+                            <p class="mb-6">A la inquietud del corazón, la certeza de que no estamos solos en nuestro anhelo de infinito.</p>
+                            <blockquote>«Tú mismo lo mueves a ello, haciendo que se deleite en alabarte, porque nos has hecho para ti y <strong>nuestro corazón está inquieto hasta que descanse en ti.</strong> Quienes creen nunca están solos. Encontramos a Cristo en la Iglesia».</blockquote>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="resumen-homilia" class="tab-content">
+                    <div class="text-center mb-10">
+                        <h2 class="text-3xl font-bold text-slate-900">Las Claves de la Homilía: Un Envío a la Santidad</h2>
+                        <p class="text-md mt-3 max-w-3xl mx-auto">En su mensaje final, el Papa León XIV ofreció un camino profundo para la vida, invitando a los jóvenes a abrazar su realidad, a escuchar su corazón y a apuntar a lo más alto.</p>
+                    </div>
+                    <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-10">
+                        <div class="bg-slate-50 p-8 rounded-xl shadow-lg transition hover:shadow-2xl hover:scale-105">
+                            <h3 class="text-2xl font-bold mb-4">1. La Belleza de lo Efímero</h3>
+                            <p class="mb-6">La homilía nos invita a no temer nuestra finitud. Como la hierba que se marchita para dar vida nueva, nuestra fragilidad es parte de la maravilla que somos y nos abre a una vida que se renueva en el don.</p>
+                            <blockquote>«La fragilidad de la que hablan, en efecto, forma parte de la maravilla que somos. [...] No [estamos hechos] para una vida donde todo es firme y seguro, sino para <strong>una existencia que se regenera constantemente en el don, en el amor.</strong>»</blockquote>
+                        </div>
+                        <div class="bg-slate-50 p-8 rounded-xl shadow-lg transition hover:shadow-2xl hover:scale-105">
+                            <h3 class="text-2xl font-bold mb-4">2. La Sed de Infinito</h3>
+                            <p class="mb-6">Esa inquietud y ese deseo de "algo más" no son una enfermedad, ¡son un signo de que estamos vivos! Es la llamada de Dios en nuestro interior que nos impulsa a buscarlo sin descanso.</p>
+                            <blockquote>«No engañemos nuestro corazón ante esta sed, buscando satisfacerla con sucedáneos ineficaces. Más bien, escuchémosla. [...] Busca a quien las hizo: <strong>él es tu esperanza.</strong>»</blockquote>
+                        </div>
+                        <div class="bg-slate-50 p-8 rounded-xl shadow-lg transition hover:shadow-2xl hover:scale-105">
+                            <h3 class="text-2xl font-bold mb-4">3. Aspirar a lo Grande</h3>
+                            <p class="mb-6">La verdadera felicidad no está en acumular, sino en compartir. La homilía concluye con un envío contundente: vivir para la santidad en lo cotidiano, sin conformarse con menos.</p>
+                            <blockquote>«La plenitud de nuestra existencia no depende de lo que acumulamos [...] más bien, está unida a aquello que sabemos acoger y compartir con alegría. [...] <strong>Aspiren a cosas grandes, a la santidad, allí donde estén. No se conformen con menos.</strong>»</blockquote>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <div
-          class="flex flex-col md:flex-row items-center gap-12 bg-white p-8 rounded-xl shadow-xl"
-        >
-          <img
-            src="static/jubileo/papa-leon-xiv-jubileo-2025_7.jpeg"
-            class="w-full md:w-1/2 h-96 object-cover rounded-lg"
-            alt="Cúpula de San Pedro"
-          />
-          <div class="flex-1">
-            <h4 class="text-2xl font-bold mb-4">Un Grito por la Esperanza</h4>
-            <blockquote class="text-lg">
-              «Hoy están empezando unos días, un camino, el jubileo de la
-              esperanza, y
-              <strong>el mundo necesita mensajes de esperanza</strong>; ustedes
-              son este mensaje, y tienen que seguir dando esperanza a todos.
-              [...] Y nuestro grito debe ser también por la paz en el mundo».
-            </blockquote>
-            <p class="text-sm text-gray-500 mt-4">
-              - Discurso de Bienvenida, 29 de julio
-            </p>
-          </div>
-        </div>
-      </div>
     </section>
-<section id="mision-digital" class="py-20 bg-slate-50">
-  <div class="container mx-auto px-6">
-    <div class="text-center mb-16">
-      <h2 class="text-4xl font-bold text-slate-900">
-        La Misión en el Continente Digital
-      </h2>
-      <p class="text-lg mt-4 max-w-3xl mx-auto">
-        En un encuentro especial, el Papa confió a los influencers y misioneros digitales tres tareas fundamentales para evangelizar en la cultura actual.
-      </p>
-    </div>
-
-    <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-10">
-      <div
-        class="bg-white p-8 rounded-xl shadow-lg transition hover:shadow-2xl hover:scale-105"
-      >
-        <h3 class="text-2xl font-bold mb-4">1. Anunciar la Paz del Resucitado</h3>
-        <p class="mb-6">
-          La primera misión es llevar la paz de Cristo a un mundo digital a menudo desgarrado por la enemistad. Es una llamada a dar voz a la esperanza en los "confines existenciales" de la red.
-        </p>
-        <blockquote>
-          «La paz necesita ser buscada, anunciada, compartida en todos los lugares; [...] que lleguen a dondequiera que haya un corazón que espera, <strong>un corazón que busca, un corazón que necesita.</strong>»
-        </blockquote>
-      </div>
-
-      <div
-        class="bg-white p-8 rounded-xl shadow-lg transition hover:shadow-2xl hover:scale-105"
-      >
-        <h3 class="text-2xl font-bold mb-4">2. Una Cultura que sea Humana</h3>
-        <p class="mb-6">
-          Frente al avance de la tecnología y la IA, el reto es garantizar que la cultura digital no socave la dignidad, sino que fomente un humanismo cristiano basado en la escucha y el encuentro.
-        </p>
-        <blockquote>
-          «Depende de cada uno de ustedes, garantizar que esta cultura siga siendo humana. [...] Tenemos el deber de trabajar juntos para desarrollar una forma de pensar y un lenguaje... que <strong>dé voz al Amor.</strong>»
-        </blockquote>
-      </div>
-
-      <div
-        class="bg-white p-8 rounded-xl shadow-lg transition hover:shadow-2xl hover:scale-105"
-      >
-        <h3 class="text-2xl font-bold mb-4">3. "Vayan a Reparar las Redes"</h3>
-        <p class="mb-6">
-          El Papa hace un llamado final y contundente: pasar de reparar "redes de pesca" a reparar las "redes sociales", construyendo lazos de amor y verdad que liberen y salven.
-        </p>
-        <blockquote>
-          «Les hago un llamado a todos ustedes: “que vayan a reparar las redes”. [...] Construir otras redes: redes de relaciones, redes de amor [...]. <strong>Redes que liberen, redes que salven.</strong> Redes de verdad.»
-        </blockquote>
-      </div>
-    </div>
-  </div>
-</section>
-
-    <section id="catequesis-efata" class="py-20 bg-slate-50">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold text-slate-900">
-            Catequesis del Miércoles: "Efatá, ¡Ábrete!"
-          </h2>
-          <p class="text-lg mt-4 max-w-3xl mx-auto">
-            En la Audiencia General, el Papa usó la curación del sordomudo para
-            hablarnos de la soledad en un mundo hiperconectado y de la cercanía
-            sanadora de Cristo.
-          </p>
-        </div>
-        <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-10">
-          <div
-            class="bg-white p-8 rounded-xl shadow-lg transition hover:shadow-2xl hover:scale-105"
-          >
-            <h3 class="text-2xl font-bold mb-4">1. La Sordera Moderna</h3>
-            <p class="mb-6">
-              El Papa diagnostica una enfermedad actual: la "bulimia de
-              conexiones" que nos aísla y nos tienta a encerrarnos en el
-              silencio por miedo a ser malinterpretados.
-            </p>
-            <blockquote>
-              «Vivimos en una sociedad que se está enfermando... bombardeados
-              por imágenes... podemos sentir la tentación de
-              <strong>encerrarnos en el silencio, en una incomunicación.</strong
-              >»
-            </blockquote>
-          </div>
-          <div
-            class="bg-white p-8 rounded-xl shadow-lg transition hover:shadow-2xl hover:scale-105"
-          >
-            <h3 class="text-2xl font-bold mb-4">2. La Cercanía que Sana</h3>
-            <p class="mb-6">
-              Jesús no empieza con un mandato, sino con un gesto de intimidad.
-              Lo lleva aparte, lo toca, reconociendo su necesidad de una
-              cercanía silenciosa antes que de palabras.
-            </p>
-            <blockquote>
-              «Jesús le ofrece ante todo una proximidad silenciosa, a través de
-              gestos que hablan de un encuentro profundo... como si hubiera
-              captado su <strong>necesidad de intimidad y cercanía.</strong>»
-            </blockquote>
-          </div>
-          <div
-            class="bg-white p-8 rounded-xl shadow-lg transition hover:shadow-2xl hover:scale-105"
-          >
-            <h3 class="text-2xl font-bold mb-4">3. La Invitación: ¡Ábrete!</h3>
-            <p class="mb-6">
-              La palabra "Efatá" es la clave. Es la invitación de Cristo a no
-              tener miedo, a abrirnos al mundo, a las relaciones y a la vida que
-              Él nos ofrece, porque cerrarse nunca es la solución.
-            </p>
-            <blockquote>
-              «Es como si Jesús le dijera: “<strong
-                >¡Ábrete a este mundo que te asusta! ¡Ábrete a las relaciones
-                que te han decepcionado! ¡Ábrete a la vida!</strong
-              >”. Cerrarse, de hecho, nunca es una solución.»
-            </blockquote>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="vigilia" class="py-20 bg-white">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold text-slate-900">
-            Corazón a Corazón: La Vigilia en Tor Vergata
-          </h2>
-          <p class="text-lg mt-4 max-w-3xl mx-auto">
-            En un diálogo íntimo, el Papa respondió a las inquietudes más
-            profundas de la juventud: la amistad, las decisiones y la búsqueda
-            de sentido en un mundo complejo.
-          </p>
-        </div>
-
-        <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-10">
-          <div
-            class="bg-slate-50 p-8 rounded-xl shadow-lg transition hover:shadow-2xl hover:scale-105"
-          >
-            <h3 class="text-2xl font-bold mb-4">1. La Amistad Sincera</h3>
-            <p class="mb-6">
-              Frente a la ilusión de las redes, el Papa propuso un camino de
-              autenticidad en Cristo.
-            </p>
-            <blockquote>
-              «Ninguna amistad es fiel sino en Cristo. Y la verdadera amistad es
-              siempre en Jesucristo con verdad, amor y respeto. [...] Ama
-              verdaderamente al amigo quien ama a Dios en el amigo. La amistad
-              puede cambiar verdaderamente el mundo.
-              <strong>La amistad es el camino por la paz</strong>».
-            </blockquote>
-          </div>
-          <div
-            class="bg-slate-50 p-8 rounded-xl shadow-lg transition hover:shadow-2xl hover:scale-105"
-          >
-            <h3 class="text-2xl font-bold mb-4">2. El Valor de Decidir</h3>
-            <p class="mb-6">
-              Para el miedo que paraliza, una invitación a fundar la vida en el
-              amor de Dios que nunca falla.
-            </p>
-            <blockquote>
-              «Es a Jesús a quien buscáis cuando soñáis la felicidad; es Él
-              quien os provoca con esa sed de radicalidad que no os permite
-              dejaros llevar del conformismo.
-              <strong>El miedo deja entonces espacio a la esperanza</strong>,
-              porque estamos seguros de que Dios lleva a término lo que
-              comienza».
-            </blockquote>
-          </div>
-          <div
-            class="bg-slate-50 p-8 rounded-xl shadow-lg transition hover:shadow-2xl hover:scale-105"
-          >
-            <h3 class="text-2xl font-bold mb-4">3. La Búsqueda de Dios</h3>
-            <p class="mb-6">
-              A la inquietud del corazón, la certeza de que no estamos solos en
-              nuestro anhelo de infinito.
-            </p>
-            <blockquote>
-              «Tú mismo lo mueves a ello, haciendo que se deleite en alabarte,
-              porque nos has hecho para ti y
-              <strong
-                >nuestro corazón está inquieto hasta que descanse en ti.</strong
-              >
-              Quienes creen nunca están solos. Encontramos a Cristo en la
-              Iglesia».
-            </blockquote>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="homilia-claves" class="py-20 bg-white">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold text-slate-900">
-            Las Claves de la Homilía: Un Envío a la Santidad
-          </h2>
-          <p class="text-lg mt-4 max-w-3xl mx-auto">
-            En su mensaje final, el Papa León XIV ofreció un camino profundo
-            para la vida, invitando a los jóvenes a abrazar su realidad, a
-            escuchar su corazón y a apuntar a lo más alto.
-          </p>
-        </div>
-
-        <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-10">
-          <div
-            class="bg-slate-50 p-8 rounded-xl shadow-lg transition hover:shadow-2xl hover:scale-105"
-          >
-            <h3 class="text-2xl font-bold mb-4">1. La Belleza de lo Efímero</h3>
-            <p class="mb-6">
-              La homilía nos invita a no temer nuestra finitud. Como la hierba
-              que se marchita para dar vida nueva, nuestra fragilidad es parte
-              de la maravilla que somos y nos abre a una vida que se renueva en
-              el don.
-            </p>
-            <blockquote>
-              «La fragilidad de la que hablan, en efecto, forma parte de la
-              maravilla que somos. [...] No [estamos hechos] para una vida donde
-              todo es firme y seguro, sino para
-              <strong
-                >una existencia que se regenera constantemente en el don, en el
-                amor.</strong
-              >»
-            </blockquote>
-          </div>
-
-          <div
-            class="bg-slate-50 p-8 rounded-xl shadow-lg transition hover:shadow-2xl hover:scale-105"
-          >
-            <h3 class="text-2xl font-bold mb-4">2. La Sed de Infinito</h3>
-            <p class="mb-6">
-              Esa inquietud y ese deseo de "algo más" no son una enfermedad,
-              ¡son un signo de que estamos vivos! Es la llamada de Dios en
-              nuestro interior que nos impulsa a buscarlo sin descanso.
-            </p>
-            <blockquote>
-              «No engañemos nuestro corazón ante esta sed, buscando satisfacerla
-              con sucedáneos ineficaces. Más bien, escuchémosla. [...] Busca a
-              quien las hizo:
-              <strong>él es tu esperanza.</strong>»
-            </blockquote>
-          </div>
-
-          <div
-            class="bg-slate-50 p-8 rounded-xl shadow-lg transition hover:shadow-2xl hover:scale-105"
-          >
-            <h3 class="text-2xl font-bold mb-4">3. Aspirar a lo Grande</h3>
-            <p class="mb-6">
-              La verdadera felicidad no está en acumular, sino en compartir. La
-              homilía concluye con un envío contundente: vivir para la santidad
-              en lo cotidiano, sin conformarse con menos.
-            </p>
-            <blockquote>
-              «La plenitud de nuestra existencia no depende de lo que acumulamos
-              [...] más bien, está unida a aquello que sabemos acoger y
-              compartir con alegría. [...]
-              <strong
-                >Aspiren a cosas grandes, a la santidad, allí donde estén. No se
-                conformen con menos.</strong
-              >»
-            </blockquote>
-          </div>
-        </div>
-      </div>
-    </section>
-
+    
     <section id="homilia" class="py-20 vatican-bg text-white">
       <div class="container mx-auto px-6 text-center">
         <h2 class="text-4xl font-bold mb-6">
@@ -536,99 +379,24 @@
       </div>
       <div class="relative">
         <div id="slider" class="slider-container">
-          <div
-            class="slider-item"
-            style="
-              background-image: url('static/jubileo/papa-leon-xiv-jubileo-2025_1.jpeg');
-            "
-          ></div>
-          <div
-            class="slider-item"
-            style="
-              background-image: url('static/jubileo/papa-leon-xiv-jubileo-2025_2.jpeg');
-            "
-          ></div>
-          <div
-            class="slider-item"
-            style="
-              background-image: url('static/jubileo/papa-leon-xiv-jubileo-2025_3.jpeg');
-            "
-          ></div>
-          <div
-            class="slider-item"
-            style="
-              background-image: url('static/jubileo/papa-leon-xiv-jubileo-2025_4.jpeg');
-            "
-          ></div>
-          <div
-            class="slider-item"
-            style="
-              background-image: url('static/jubileo/papa-leon-xiv-jubileo-2025_5.jpeg');
-            "
-          ></div>
-          <div
-            class="slider-item"
-            style="
-              background-image: url('static/jubileo/papa-leon-xiv-jubileo-2025_6.jpeg');
-            "
-          ></div>
-          <div
-            class="slider-item"
-            style="
-              background-image: url('static/jubileo/papa-leon-xiv-jubileo-2025_7.jpeg');
-            "
-          ></div>
-          <div
-            class="slider-item"
-            style="
-              background-image: url('static/jubileo/papa-leon-xiv-jubileo-2025_8.jpeg');
-            "
-          ></div>
-          <div
-            class="slider-item"
-            style="
-              background-image: url('static/jubileo/papa-leon-xiv-jubileo-2025_9.jpeg');
-            "
-          ></div>
-
-
+          <div class="slider-item" style="background-image: url('static/jubileo/papa-leon-xiv-jubileo-2025_1.jpeg');"></div>
+          <div class="slider-item" style="background-image: url('static/jubileo/papa-leon-xiv-jubileo-2025_2.jpeg');"></div>
+          <div class="slider-item" style="background-image: url('static/jubileo/papa-leon-xiv-jubileo-2025_3.jpeg');"></div>
+          <div class="slider-item" style="background-image: url('static/jubileo/papa-leon-xiv-jubileo-2025_4.jpeg');"></div>
+          <div class="slider-item" style="background-image: url('static/jubileo/papa-leon-xiv-jubileo-2025_5.jpeg');"></div>
+          <div class="slider-item" style="background-image: url('static/jubileo/papa-leon-xiv-jubileo-2025_6.jpeg');"></div>
+          <div class="slider-item" style="background-image: url('static/jubileo/papa-leon-xiv-jubileo-2025_7.jpeg');"></div>
+          <div class="slider-item" style="background-image: url('static/jubileo/papa-leon-xiv-jubileo-2025_8.jpeg');"></div>
+          <div class="slider-item" style="background-image: url('static/jubileo/papa-leon-xiv-jubileo-2025_9.jpeg');"></div>
         </div>
-        <button
-          id="prevBtn"
-          class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/50 hover:bg-white text-slate-800 p-3 rounded-full shadow-lg transition"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M15 19l-7-7 7-7"
-            />
+        <button id="prevBtn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/50 hover:bg-white text-slate-800 p-3 rounded-full shadow-lg transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
           </svg>
         </button>
-        <button
-          id="nextBtn"
-          class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/50 hover:bg-white text-slate-800 p-3 rounded-full shadow-lg transition"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M9 5l7 7-7 7"
-            />
+        <button id="nextBtn" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/50 hover:bg-white text-slate-800 p-3 rounded-full shadow-lg transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
           </svg>
         </button>
       </div>
@@ -646,88 +414,35 @@
           </p>
         </div>
         <div class="max-w-4xl mx-auto">
-          <div
-            class="mb-4 flex flex-wrap space-x-2 p-1 bg-slate-200 rounded-lg"
-          >
-            <button
-              class="tab-button flex-1 py-2 px-4 rounded-md text-sm font-medium transition active"
-              data-tab="homilia-doc"
-            >
-              Homilía
-            </button>
-            <button
-              class="tab-button flex-1 py-2 px-4 rounded-md text-sm font-medium transition"
-              data-tab="vigilia-doc"
-            >
-              Vigilia
-            </button>
-            <button
-              class="tab-button flex-1 py-2 px-4 rounded-md text-sm font-medium transition"
-              data-tab="angelus-doc"
-            >
-              Ángelus
-            </button>
-            <button
-              class="tab-button flex-1 py-2 px-4 rounded-md text-sm font-medium transition"
-              data-tab="digital-doc"
-            >
-              M. Digitales
-            </button>
+          <div class="mb-4 flex flex-wrap space-x-2 p-1 bg-slate-200 rounded-lg">
+            <button class="tab-button flex-1 py-2 px-4 rounded-md text-sm font-medium transition active" data-tab="homilia-doc">Homilía</button>
+            <button class="tab-button flex-1 py-2 px-4 rounded-md text-sm font-medium transition" data-tab="vigilia-doc">Vigilia</button>
+            <button class="tab-button flex-1 py-2 px-4 rounded-md text-sm font-medium transition" data-tab="angelus-doc">Ángelus</button>
+            <button class="tab-button flex-1 py-2 px-4 rounded-md text-sm font-medium transition" data-tab="digital-doc">M. Digitales</button>
           </div>
           <div class="bg-white p-8 rounded-lg shadow-inner min-h-[300px]">
             <div id="homilia-doc" class="tab-content active">
-              <h4 class="font-bold text-xl mb-3">
-                Homilía de la Misa Final (3 de agosto)
-              </h4>
-              <div
-                class="prose max-w-none text-slate-600 text-sm h-64 overflow-y-auto pr-4"
-              >
-                <p>
-                  <strong>JUBILEO DE LOS JÓVENES, SANTA MISA...</strong
-                  ><br />(Pega aquí el texto completo de la homilía para que
-                  aparezca en esta sección).
-                </p>
+              <h4 class="font-bold text-xl mb-3">Homilía de la Misa Final (3 de agosto)</h4>
+              <div class="prose max-w-none text-slate-600 text-sm h-64 overflow-y-auto pr-4">
+                <p><strong>JUBILEO DE LOS JÓVENES, SANTA MISA...</strong><br />(Pega aquí el texto completo de la homilía para que aparezca en esta sección).</p>
               </div>
             </div>
             <div id="vigilia-doc" class="tab-content">
-              <h4 class="font-bold text-xl mb-3">
-                Discurso de la Vigilia (2 de agosto)
-              </h4>
-              <div
-                class="prose max-w-none text-slate-600 text-sm h-64 overflow-y-auto pr-4"
-              >
-                <p>
-                  <strong
-                    >VIGILIA CON LOS JÓVENES, DIÁLOGO DEL SANTO PADRE...</strong
-                  ><br />(Pega aquí el texto completo del discurso de la
-                  vigilia).
-                </p>
+              <h4 class="font-bold text-xl mb-3">Discurso de la Vigilia (2 de agosto)</h4>
+              <div class="prose max-w-none text-slate-600 text-sm h-64 overflow-y-auto pr-4">
+                <p><strong>VIGILIA CON LOS JÓVENES, DIÁLOGO DEL SANTO PADRE...</strong><br />(Pega aquí el texto completo del discurso de la vigilia).</p>
               </div>
             </div>
             <div id="angelus-doc" class="tab-content">
               <h4 class="font-bold text-xl mb-3">Ángelus (3 de agosto)</h4>
-              <div
-                class="prose max-w-none text-slate-600 text-sm h-64 overflow-y-auto pr-4"
-              >
-                <p>
-                  <strong>PAPA LEÓN XIV, ÁNGELUS...</strong><br />(Pega aquí el
-                  texto completo del Ángelus).
-                </p>
+              <div class="prose max-w-none text-slate-600 text-sm h-64 overflow-y-auto pr-4">
+                <p><strong>PAPA LEÓN XIV, ÁNGELUS...</strong><br />(Pega aquí el texto completo del Ángelus).</p>
               </div>
             </div>
             <div id="digital-doc" class="tab-content">
-              <h4 class="font-bold text-xl mb-3">
-                Discurso a Misioneros Digitales (29 de julio)
-              </h4>
-              <div
-                class="prose max-w-none text-slate-600 text-sm h-64 overflow-y-auto pr-4"
-              >
-                <p>
-                  <strong
-                    >SALUDO DEL SANTO PADRE LEÓN XIV A INFLUENCERS Y MISIONEROS
-                    DIGITALES...</strong
-                  ><br />(Pega aquí el texto completo del discurso).
-                </p>
+              <h4 class="font-bold text-xl mb-3">Discurso a Misioneros Digitales (29 de julio)</h4>
+              <div class="prose max-w-none text-slate-600 text-sm h-64 overflow-y-auto pr-4">
+                <p><strong>SALUDO DEL SANTO PADRE LEÓN XIV A INFLUENCERS Y MISIONEROS DIGITALES...</strong><br />(Pega aquí el texto completo del discurso).</p>
               </div>
             </div>
           </div>
@@ -738,13 +453,8 @@
     <section id="mision" class="py-20 bg-blue-900 text-white">
       <div class="container mx-auto px-6 text-center">
         <h2 class="text-4xl font-bold mb-6">El Envío: La Misión Continúa</h2>
-        <blockquote
-          class="text-2xl leading-relaxed bg-white/10 p-8 rounded-lg border-l-4 border-yellow-400 max-w-3xl mx-auto font-light"
-        >
-          «Ustedes son el signo de que
-          <strong>un mundo distinto es posible</strong>, un mundo de fraternidad
-          y amistad, donde los conflictos se afrontan no con las armas sino con
-          el diálogo. ¡Sí, con Cristo es posible!».
+        <blockquote class="text-2xl leading-relaxed bg-white/10 p-8 rounded-lg border-l-4 border-yellow-400 max-w-3xl mx-auto font-light">
+          «Ustedes son el signo de que <strong>un mundo distinto es posible</strong>, un mundo de fraternidad y amistad, donde los conflictos se afrontan no con las armas sino con el diálogo. ¡Sí, con Cristo es posible!».
         </blockquote>
       </div>
     </section>
@@ -752,40 +462,58 @@
     <footer class="bg-slate-900 text-white py-12">
       <div class="container mx-auto px-6 text-center">
         <p class="font-bold text-2xl mb-2">Próxima Parada: Seúl 2027</p>
-        <p class="text-lg text-slate-300">
-          ¡Continuemos a soñar y a esperar juntos!
-        </p>
+        <p class="text-lg text-slate-300">¡Continuemos a soñar y a esperar juntos!</p>
       </div>
     </footer>
 
     <script>
-      // Script for Document Tabs
-      const tabButtons = document.querySelectorAll(".tab-button");
-      const tabContents = document.querySelectorAll(".tab-content");
+      // CORRECCIÓN: Script mejorado para manejar múltiples sistemas de pestañas
 
-      tabButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          tabButtons.forEach((btn) => btn.classList.remove("active"));
-          tabContents.forEach((content) => content.classList.remove("active"));
-          button.classList.add("active");
-          document.getElementById(button.dataset.tab).classList.add("active");
+      // Función genérica para activar pestañas
+      function setupTabs(containerId, buttonClass, contentClass) {
+        const container = document.getElementById(containerId);
+        if (!container) return;
+
+        const tabButtons = container.querySelectorAll('.' + buttonClass);
+        const tabContents = container.querySelectorAll('.' + contentClass);
+
+        tabButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            tabButtons.forEach((btn) => btn.classList.remove("active"));
+            tabContents.forEach((content) => content.classList.remove("active"));
+            
+            button.classList.add("active");
+            const targetContent = container.querySelector('#' + button.dataset.tab);
+            if(targetContent) {
+              targetContent.classList.add("active");
+            }
+          });
         });
-      });
+      }
 
-      // Script for Gallery Slider
+      // Inicializar las pestañas de Resúmenes
+      setupTabs('claves-jubileo', 'tab-button', 'tab-content');
+      
+      // Inicializar las pestañas de Documentos
+      setupTabs('documentos', 'tab-button', 'tab-content');
+
+
+      // Script para el SLIDER DE LA GALERÍA
       const slider = document.getElementById("slider");
       const prevBtn = document.getElementById("prevBtn");
       const nextBtn = document.getElementById("nextBtn");
 
-      nextBtn.addEventListener("click", () => {
-        const slideWidth = slider.clientWidth;
-        slider.scrollLeft += slideWidth;
-      });
+      if (slider) {
+        nextBtn.addEventListener("click", () => {
+          const slideWidth = slider.clientWidth;
+          slider.scrollBy({ left: slideWidth, behavior: 'smooth' });
+        });
 
-      prevBtn.addEventListener("click", () => {
-        const slideWidth = slider.clientWidth;
-        slider.scrollLeft -= slideWidth;
-      });
+        prevBtn.addEventListener("click", () => {
+          const slideWidth = slider.clientWidth;
+          slider.scrollBy({ left: -slideWidth, behavior: 'smooth' });
+        });
+      }
     </script>
   </body>
 </html>
