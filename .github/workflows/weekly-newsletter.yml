@@ -2,7 +2,7 @@ name: Lunes 12PM. Weekly Newsletter Function
 
 on:
   schedule:
-    - cron: "50 6 * * 1" # Cada lunes a las 11:30 UTC, 13:30 hora española
+    - cron: "00 6 * * 1" # Cada lunes a las 11:30 UTC, 13:30 hora española
   workflow_dispatch: # Permite ejecutar el workflow manualmente
 
 jobs:
