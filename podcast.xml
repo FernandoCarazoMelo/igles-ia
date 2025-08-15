@@ -1,40 +1,55 @@
-<?xml version='1.0' encoding='utf-8'?>
-<rss version="2.0"
-    xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
-    <channel>
-        <title>Homilías Papa León XIV</title>
-        <link>https://igles-ia.es/podcast</link>
-        <language>es</language>
-        <description>Podcast con los discursos y homilías del Santo Padre íntegras. Leídos con locutor profesional gracias a la IA.</description>
-        <itunes:author>igles-ia.es</itunes:author>
-        <itunes:image href="https://igles-ia.es/images/podcast-cover.jpg" />
-        <item>
-            <title>Audiencia general del 13 de agosto de 2025 Ciclo de catequesis - Jubileo 2025. Jesucristo, nuestra esperanza. III. La Pascua de Jesús. 2. La traición. «¿Seré yo?» (Mc 14,19)</title>
-            <description>LEÓN XIV...</description>
-            <pubDate>Wed, 13 Aug 2025 12:00:00 GMT</pubDate>
-            <enclosure url="https://igles-ia.es/audio/2025-08-13_audiencia_audiencia_general_del_13_de_agosto_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_esper.mp3" type="audio/mpeg" length="0" />
-            <itunes:image href="https://igles-ia.es/images/episodios/2025-08-13_audiencia_audiencia_general_del_13_de_agosto_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_esper.jpg" />
-        </item>
-        <item>
-            <title>Audiencia general del 13 de agosto de 2025 Ciclo de catequesis - Jubileo 2025. Jesucristo, nuestra esperanza. III. La Pascua de Jesús. 2. La traición. «¿Seré yo?» (Mc 14,19)</title>
-            <description>LEÓN XIV...</description>
-            <pubDate>Wed, 13 Aug 2025 12:00:00 GMT</pubDate>
-            <enclosure url="https://igles-ia.es/audio/2025-08-13_audiencia_audiencia_general_del_13_de_agosto_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_esper.mp3" type="audio/mpeg" length="0" />
-            <itunes:image href="https://igles-ia.es/images/episodios/2025-08-13_audiencia_audiencia_general_del_13_de_agosto_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_esper.jpg" />
-        </item>
-        <item>
-            <title>Ángelus, 10 de agosto de 2025</title>
-            <description>PAPA LEÓN XIV...</description>
-            <pubDate>Sun, 10 Aug 2025 12:00:00 GMT</pubDate>
-            <enclosure url="https://igles-ia.es/audio/2025-08-10_ángelus_angelus_10_de_agosto_de_2025.mp3" type="audio/mpeg" length="0" />
-            <itunes:image href="https://igles-ia.es/images/episodios/2025-08-10_ángelus_angelus_10_de_agosto_de_2025.jpg" />
-        </item>
-        <item>
-            <title>Ángelus, 10 de agosto de 2025</title>
-            <description>PAPA LEÓN XIV...</description>
-            <pubDate>Sun, 10 Aug 2025 12:00:00 GMT</pubDate>
-            <enclosure url="https://igles-ia.es/audio/2025-08-10_ángelus_angelus_10_de_agosto_de_2025.mp3" type="audio/mpeg" length="0" />
-            <itunes:image href="https://igles-ia.es/images/episodios/2025-08-10_ángelus_angelus_10_de_agosto_de_2025.jpg" />
-        </item>
-    </channel>
+<?xml version="1.0" ?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+  <channel>
+    <title>Homilías Papa León XIV</title>
+    <link>https://igles-ia.es</link>
+    <language>es-ES</language>
+    <description>Podcast con los discursos y homilías del Santo Padre íntegras. Leídos con locutor profesional gracias a la IA.</description>
+    <itunes:author>igles-ia.es</itunes:author>
+    <itunes:image href="https://igles-ia.es/images/podcast-cover.jpg"/>
+    <itunes:owner>
+      <itunes:name>igles-ia.es</itunes:name>
+      <itunes:email>tu-email@ejemplo.com</itunes:email>
+    </itunes:owner> 
+    <item>
+      <title>[15.2] Ángelus 15/08 | Virgen María y Esperanza</title>
+      <description>&lt;![CDATA[En este Ángelus, el Papa León XIV nos invita a reflexionar sobre la Virgen María como fuente de esperanza y ejemplo de fe en nuestro peregrinar. Nos recuerda que, como María, podemos confiar en la gracia de Dios y mantener viva la esperanza en medio de las dificultades. La Virgen, imagen de la Iglesia y signo de esperanza, nos acompaña en nuestro camino hacia la plenitud en Dios. Podcast creado por igles-ia.es]]&gt;</description>
+      <pubDate>Fri, 15 Aug 2025 12:00:00 GMT</pubDate>
+      <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-15_ángelus_angelus_15_de_agosto_de_2025_santa_misa_en_la_solemnidad_de_la_asuncion_de_la_bienaventurada_virgen_.mp3" type="audio/mpeg" length="0"/>
+      <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-15_ángelus_angelus_15_de_agosto_de_2025_santa_misa_en_la_solemnidad_de_la_asuncion_de_la_bienaventurada_virgen_.mp3</guid>
+      <itunes:author>igles-ia.es</itunes:author>
+      <itunes:image href="https://igles-ia.es/images/episodios/2025-08-15_ángelus_angelus_15_de_agosto_de_2025_santa_misa_en_la_solemnidad_de_la_asuncion_de_la_bienaventurada_virgen_.jpg"/>
+      <itunes:episode>15.2</itunes:episode>
+    </item>
+    <item>
+      <title>[15.1] Homilia 15/08 | La victoria de la vida</title>
+      <description>&lt;![CDATA[En esta homilía, el Papa León XIV nos invita a reflexionar sobre cómo la Pascua de Jesús transforma nuestra historia y nos llama a responder con nuestro 'sí' de amor y fe. Nos recuerda que, a través de la confianza, el perdón y la fraternidad, la resurrección entra en nuestro mundo y nos llena de esperanza. La celebración de la Asunción nos invita a vivir con valentía y compromiso, confiando en la fuerza de Dios para vencer la muerte. Podcast creado por igles-ia.es]]&gt;</description>
+      <pubDate>Fri, 15 Aug 2025 12:00:00 GMT</pubDate>
+      <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-15_homilia_santa_misa_en_la_solemnidad_de_la_asuncion_de_la_bienaventurada_virgen_maria_castel_gandolfo_15_de_a.mp3" type="audio/mpeg" length="0"/>
+      <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-15_homilia_santa_misa_en_la_solemnidad_de_la_asuncion_de_la_bienaventurada_virgen_maria_castel_gandolfo_15_de_a.mp3</guid>
+      <itunes:author>igles-ia.es</itunes:author>
+      <itunes:image href="https://igles-ia.es/images/episodios/2025-08-15_homilia_santa_misa_en_la_solemnidad_de_la_asuncion_de_la_bienaventurada_virgen_maria_castel_gandolfo_15_de_a.jpg"/>
+      <itunes:episode>15.1</itunes:episode>
+    </item>
+    <item>
+      <title>[14.2] Audiencia 13/08 | Amor y Traición</title>
+      <description>&lt;![CDATA[En esta audiencia, el Papa León XIV nos invita a reflexionar sobre la escena íntima en la Última Cena, donde Jesús revela la traición inminente de Judas. Nos muestra que el amor verdadero implica sinceridad y misericordia, incluso en los momentos más dolorosos. La enseñanza central es que la verdad y la misericordia nos abren caminos de salvación, recordándonos que Dios nunca abandona su mesa de amor. Podcast creado por igles-ia.es]]&gt;</description>
+      <pubDate>Wed, 13 Aug 2025 12:00:00 GMT</pubDate>
+      <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-13_audiencia_audiencia_general_del_13_de_agosto_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_esper.mp3" type="audio/mpeg" length="0"/>
+      <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-13_audiencia_audiencia_general_del_13_de_agosto_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_esper.mp3</guid>
+      <itunes:author>igles-ia.es</itunes:author>
+      <itunes:image href="https://igles-ia.es/images/episodios/2025-08-13_audiencia_audiencia_general_del_13_de_agosto_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_esper.jpg"/>
+      <itunes:episode>14.2</itunes:episode>
+    </item>
+    <item>
+      <title>[14.1] Ángelus 10/08 | La importancia de la misericordia</title>
+      <description>&lt;![CDATA[En este Ángelus, el Papa León XIV nos invita a reflexionar sobre cómo invertir el tesoro de nuestra vida a través de la generosidad y la misericordia. Nos anima a compartir nuestros dones y capacidades para transformar nuestras vidas y las de los demás, siguiendo el ejemplo de Jesús. Confiemos en María para ser centinelas de paz y misericordia en un mundo dividido. Podcast creado por igles-ia.es]]&gt;</description>
+      <pubDate>Sun, 10 Aug 2025 12:00:00 GMT</pubDate>
+      <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-10_ángelus_angelus_10_de_agosto_de_2025.mp3" type="audio/mpeg" length="0"/>
+      <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-10_ángelus_angelus_10_de_agosto_de_2025.mp3</guid>
+      <itunes:author>igles-ia.es</itunes:author>
+      <itunes:image href="https://igles-ia.es/images/episodios/2025-08-10_ángelus_angelus_10_de_agosto_de_2025.jpg"/>
+      <itunes:episode>14.1</itunes:episode>
+    </item>
+  </channel>
 </rss>

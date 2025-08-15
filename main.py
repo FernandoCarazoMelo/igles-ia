@@ -1,3 +1,4 @@
+import json
 import os
 
 import pandas as pd
@@ -6,6 +7,7 @@ from dotenv import find_dotenv, load_dotenv
 from typer import Typer
 
 from iglesia.agents import create_iglesia_content_crew
+from iglesia.audio_utils import procesar_y_generar_episodios
 from iglesia.cognito_utils import cognito_get_verified_emails
 from iglesia.email_utils_3 import enviar_correos_todos
 from iglesia.utils import obtener_todos_los_textos
@@ -74,6 +76,7 @@ def run_agents(
 
     # crear carpeta dentro de summaries con la fecha de hoy
     os.makedirs(f"{os.environ.get('SUMMARIES_FOLDER')}/{run_date}", exist_ok=True)
+    os.makedirs(f"json-rss/{run_date}", exist_ok=True)
     print(f"{os.environ.get('SUMMARIES_FOLDER')}/{run_date}")
     df = obtener_todos_los_textos(urls)
     df = df[df["titulo"].str.len() > 10]
@@ -131,7 +134,7 @@ def run_agents(
             path_save=f"{os.environ.get('SUMMARIES_FOLDER')}/{run_date}/wordcloud.png",
         )
     print(df)
-    df.to_json(f"json-rss/{run_date}/episodes.json")
+    df.to_json(f"json-rss/{run_date}/episodes.json", orient="index")
     df.to_csv(
         f"{os.environ.get('SUMMARIES_FOLDER')}/{run_date}/iglesia.csv", index=False
     )
@@ -207,6 +210,49 @@ def pipeline_date(
     contacts = contacts[contacts["email"].str.contains("nando.carazom@gmai")]
     print(contacts)
     enviar_correos_todos(contacts, run_date)
+
+
+@app.command()
+def generar_audios(run_date: str = None):
+    """
+    Genera los archivos de audio para una fecha específica y los sube a S3.
+    """
+    if run_date is None:
+        run_date = pd.Timestamp.now().strftime("%Y-%m-%d")
+    else:
+        run_date = pd.to_datetime(run_date).strftime("%Y-%m-%d")
+
+    print(f"Iniciando la generación de audios para la fecha: {run_date}")
+
+    # Construir la ruta al archivo JSON que creó 'run_agents'
+    json_path = f"json-rss/{run_date}/episodes.json"
+
+    if not os.path.exists(json_path):
+        print(
+            f"❌ Error: No se encontró el archivo JSON de episodios en '{json_path}'."
+        )
+        print(
+            "Asegúrate de haber ejecutado 'pipeline-date' o 'pipeline-diaria' para esa fecha primero."
+        )
+        return
+
+    # Llamar a la función que hace todo el trabajo
+    llm_real = LLM(
+        model="gpt-4.1-nano",
+        temperature=0.2,
+    )
+    resultados = procesar_y_generar_episodios(json_path, llm_real)
+
+    print("\n\n--- RESULTADOS DEL LLM ---")
+    print(json.dumps(resultados, indent=4, ensure_ascii=False))
+    print("---------------------------")
+
+    # Guardar los metadatos en el archivo correspondiente
+    output_metadata_path = f"json-rss/{run_date}/episodes_metadata.json"
+    print(f"Guardando metadatos en: {output_metadata_path}")
+    with open(output_metadata_path, "w", encoding="utf-8") as f:
+        json.dump(resultados, f, ensure_ascii=False, indent=4)
+    print("✅ Metadatos guardados.")
 
 
 if __name__ == "__main__":
