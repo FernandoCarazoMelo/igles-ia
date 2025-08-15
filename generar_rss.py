@@ -6,19 +6,20 @@ import xml.etree.ElementTree as ET
 # --- Configuración General del Podcast ---
 PODCAST_TITLE = "Homilías Papa León XIV"
 PODCAST_LINK = "https://igles-ia.es"
-PODCAST_DESCRIPTION = "Podcast con los discursos y homilías del Santo Padre íntegras. Leídos con locutor profesional gracias a la IA."
+PODCAST_DESCRIPTION = "Podcast con los discursos y homilías del Papa León XIV. Leídos con locutor profesional gracias a la IA."
 PODCAST_LANGUAGE = "es-ES"
 PODCAST_AUTHOR = "igles-ia.es"
-PODCAST_OWNER_EMAIL = "igles-ia@igles-ia.es" 
+PODCAST_OWNER_EMAIL = "igles-ia@igles-ia.es"
 
 # --- CAMBIO IMPORTANTE AQUÍ ---
 # Reemplaza esta URL por la URL pública y real de tu única imagen de portada.
 # Puede estar alojada en tu web, en S3, o donde prefieras.
-PODCAST_IMAGE = "https://URL-REAL-DE-TU-IMAGEN-DE-PORTADA.jpg" 
+PODCAST_IMAGE = "https://igles-ia.es/static/papa-leon-xiv-spotify.png"
 
 # --- Rutas ---
 JSON_BASE_DIR = "json-rss/"
 OUTPUT_RSS_FILE = "podcast.xml"
+
 
 # --- Lógica de Carga de Episodios ---
 def cargar_todos_los_episodios_metadata():
@@ -28,7 +29,7 @@ def cargar_todos_los_episodios_metadata():
     """
     todos_los_episodios = []
     print(f"Buscando metadatos de episodios en: '{JSON_BASE_DIR}'...")
-    
+
     for root, _, files in os.walk(JSON_BASE_DIR):
         for file in files:
             if file == "episodes_metadata.json":
@@ -41,12 +42,13 @@ def cargar_todos_los_episodios_metadata():
                     print(f"Error al leer el archivo {file_path}: {e}")
 
     todos_los_episodios.sort(
-        key=lambda x: tuple(map(int, x.get("numero_episodio", "0.0").split('.'))),
-        reverse=True
+        key=lambda x: tuple(map(int, x.get("numero_episodio", "0.0").split("."))),
+        reverse=True,
     )
-    
+
     print(f"Se encontraron y ordenaron {len(todos_los_episodios)} episodios.")
     return todos_los_episodios
+
 
 # --- Creación de la Estructura RSS ---
 ITUNES_NS = "http://www.itunes.com/dtds/podcast-1.0.dtd"
@@ -75,18 +77,22 @@ for episodio in episodios:
     descripcion = episodio["descripcion_spotify"]
     audio_url = episodio["url_audio"]
     fecha_pub = episodio["fecha"]
-    
+
     ET.SubElement(item, "title").text = titulo
     description_element = ET.SubElement(item, "description")
     description_element.text = f"<![CDATA[{descripcion}]]>"
-    
+
     pub_date_dt = datetime.datetime.strptime(fecha_pub, "%Y-%m-%d")
-    ET.SubElement(item, "pubDate").text = pub_date_dt.strftime("%a, %d %b %Y 12:00:00 GMT")
-    
-    ET.SubElement(item, "enclosure", {"url": audio_url, "type": "audio/mpeg", "length": "0"})
+    ET.SubElement(item, "pubDate").text = pub_date_dt.strftime(
+        "%a, %d %b %Y 12:00:00 GMT"
+    )
+
+    ET.SubElement(
+        item, "enclosure", {"url": audio_url, "type": "audio/mpeg", "length": "0"}
+    )
     ET.SubElement(item, "guid").text = audio_url
     ET.SubElement(item, "itunes:author").text = PODCAST_AUTHOR
-    
+
     # --- CAMBIO AQUÍ ---
     # Usar la misma imagen de portada para todos los episodios
     ET.SubElement(item, "itunes:image", {"href": PODCAST_IMAGE})
@@ -94,12 +100,15 @@ for episodio in episodios:
 
 # --- Guardar el Archivo XML ---
 tree = ET.ElementTree(rss)
-xml_str = ET.tostring(rss, encoding='unicode', method='xml')
+xml_str = ET.tostring(rss, encoding="unicode", method="xml")
 
 import xml.dom.minidom
+
 dom = xml.dom.minidom.parseString(xml_str)
 pretty_xml_as_string = dom.toprettyxml(indent="  ")
-pretty_xml_as_string = "\n".join([line for line in pretty_xml_as_string.split('\n') if line.strip()])
+pretty_xml_as_string = "\n".join(
+    [line for line in pretty_xml_as_string.split("\n") if line.strip()]
+)
 
 with open(OUTPUT_RSS_FILE, "w", encoding="utf-8") as f:
     f.write(pretty_xml_as_string)

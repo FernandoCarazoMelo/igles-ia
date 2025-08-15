@@ -5,12 +5,21 @@ import json
 import locale
 import os
 import re
+import shutil
 from datetime import datetime
 
 import markdown
 import yaml  # Necesitarás PyYAML: pip install PyYAML
 from dotenv import load_dotenv
-from flask import Flask, Response, abort, redirect, render_template, url_for
+from flask import (
+    Flask,
+    Response,
+    abort,
+    redirect,
+    render_template,
+    send_from_directory,
+    url_for,
+)
 from flask_frozen import Freezer
 
 load_dotenv()
@@ -37,6 +46,7 @@ BASE_URL = "https://igles-ia.es"  # URL base de tu sitio web
 
 # Definición de la ruta donde se guardan los datos
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(BASE_DIR)
 SUMMARIES_DIR = os.environ.get("SUMMARIES_FOLDER")
 
 
@@ -263,6 +273,16 @@ def sitemap():
     return Response(sitemap_xml, mimetype="application/xml")
 
 
+# --- AÑADE ESTA RUTA ---
+@app.route("/podcast.xml")
+def podcast_feed():
+    """
+    Sirve el archivo podcast.xml desde la carpeta raíz del proyecto.
+    """
+    # Esto soluciona el error durante el 'freeze'
+    return send_from_directory(PROJECT_ROOT, "podcast.xml")
+
+
 # ==========================================================================
 # 7. GENERADOR DE URLS PARA FLASK-FROZEN
 # ==========================================================================
@@ -278,18 +298,24 @@ def summary_detail():
 # ==========================================================================
 # 8. BLOQUE DE EJECUCIÓN PRINCIPAL
 # ==========================================================================
-
 if __name__ == "__main__":
-    # --- Opción A: Para generar el sitio estático (lo que necesitas para producción) ---
     print("Congelando el sitio...")
     freezer.freeze()
-    print(
-        f"Sitio estático generado con éxito en la carpeta: {app.config.get('FREEZER_DESTINATION', 'build')}"
-    )
+    build_dir = app.config.get("FREEZER_DESTINATION", "build")
+    print(f"Sitio estático generado con éxito en: {build_dir}")
 
-    # --- Opción B: Para desarrollo local (ver cambios en tiempo real) ---
-    # Si quieres trabajar en el diseño, comenta el bloque de arriba y descomenta el de abajo.
-    # Luego, abre http://127.0.0.1:5000 en tu navegador.
-    #
-    # print("Iniciando servidor de desarrollo en http://127.0.0.1:5000")
-    # app.run(debug=True)
+    print("\nIniciando proceso de post-build...")
+
+    # --- CORRECCIÓN ---
+    # Asegurarse de que la carpeta 'build' existe antes de intentar copiar en ella.
+    os.makedirs(build_dir, exist_ok=True)
+
+    rss_origen = os.path.join(PROJECT_ROOT, "podcast.xml")
+    rss_destino = os.path.join(build_dir, "podcast.xml")
+
+    if os.path.exists(rss_origen):
+        print(f"Copiando '{rss_origen}' a '{rss_destino}'...")
+        shutil.copy2(rss_origen, rss_destino)
+        print("✅ RSS copiado con éxito.")
+    else:
+        print(f"⚠️  ADVERTENCIA: No se encontró 'podcast.xml' en '{PROJECT_ROOT}'.")
