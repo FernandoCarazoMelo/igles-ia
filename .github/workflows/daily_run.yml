@@ -3,7 +3,7 @@ name: Domingo 3PM. Agents, web, git y correo carazom.
 on:
   schedule:
     # Ejecuta el script todos los domingos a las 15h CEST, UTC = 13h
-    - cron: '0 13 * * 0' # Cada domingo a las 13:00 UTC (15:00 CEST)
+    - cron: "0 13 * * 0" # Cada domingo a las 13:00 UTC (15:00 CEST)
   workflow_dispatch: # Permite ejecutar el workflow manualmente
 
 jobs:
@@ -73,6 +73,7 @@ jobs:
           git add docs/
           git add data_web/
           git add web/
+          git add json-rss/
           # Comprueba si hay algo para confirmar
           if git diff --staged --quiet; then
             echo "No changes to commit in summaries directory."

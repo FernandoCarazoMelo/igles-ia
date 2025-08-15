@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss version="2.0"
+    xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+    <channel>
+        <title>Homilías Papa León XIV</title>
+        <link>https://igles-ia.es/podcast</link>
+        <language>es</language>
+        <description>Podcast con los discursos y homilías del Santo Padre íntegras. Leídos con locutor profesional gracias a la IA.</description>
+        <itunes:author>igles-ia.es</itunes:author>
+        <itunes:image href="https://igles-ia.es/images/podcast-cover.jpg" />
+        <item>
+            <title>Audiencia general del 13 de agosto de 2025 Ciclo de catequesis - Jubileo 2025. Jesucristo, nuestra esperanza. III. La Pascua de Jesús. 2. La traición. «¿Seré yo?» (Mc 14,19)</title>
+            <description>LEÓN XIV...</description>
+            <pubDate>Wed, 13 Aug 2025 12:00:00 GMT</pubDate>
+            <enclosure url="https://igles-ia.es/audio/2025-08-13_audiencia_audiencia_general_del_13_de_agosto_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_esper.mp3" type="audio/mpeg" length="0" />
+            <itunes:image href="https://igles-ia.es/images/episodios/2025-08-13_audiencia_audiencia_general_del_13_de_agosto_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_esper.jpg" />
+        </item>
+        <item>
+            <title>Audiencia general del 13 de agosto de 2025 Ciclo de catequesis - Jubileo 2025. Jesucristo, nuestra esperanza. III. La Pascua de Jesús. 2. La traición. «¿Seré yo?» (Mc 14,19)</title>
+            <description>LEÓN XIV...</description>
+            <pubDate>Wed, 13 Aug 2025 12:00:00 GMT</pubDate>
+            <enclosure url="https://igles-ia.es/audio/2025-08-13_audiencia_audiencia_general_del_13_de_agosto_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_esper.mp3" type="audio/mpeg" length="0" />
+            <itunes:image href="https://igles-ia.es/images/episodios/2025-08-13_audiencia_audiencia_general_del_13_de_agosto_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_esper.jpg" />
+        </item>
+        <item>
+            <title>Ángelus, 10 de agosto de 2025</title>
+            <description>PAPA LEÓN XIV...</description>
+            <pubDate>Sun, 10 Aug 2025 12:00:00 GMT</pubDate>
+            <enclosure url="https://igles-ia.es/audio/2025-08-10_ángelus_angelus_10_de_agosto_de_2025.mp3" type="audio/mpeg" length="0" />
+            <itunes:image href="https://igles-ia.es/images/episodios/2025-08-10_ángelus_angelus_10_de_agosto_de_2025.jpg" />
+        </item>
+        <item>
+            <title>Ángelus, 10 de agosto de 2025</title>
+            <description>PAPA LEÓN XIV...</description>
+            <pubDate>Sun, 10 Aug 2025 12:00:00 GMT</pubDate>
+            <enclosure url="https://igles-ia.es/audio/2025-08-10_ángelus_angelus_10_de_agosto_de_2025.mp3" type="audio/mpeg" length="0" />
+            <itunes:image href="https://igles-ia.es/images/episodios/2025-08-10_ángelus_angelus_10_de_agosto_de_2025.jpg" />
+        </item>
+    </channel>
+</rss>

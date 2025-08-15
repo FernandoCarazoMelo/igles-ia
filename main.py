@@ -131,6 +131,7 @@ def run_agents(
             path_save=f"{os.environ.get('SUMMARIES_FOLDER')}/{run_date}/wordcloud.png",
         )
     print(df)
+    df.to_json(f"json-rss/{run_date}/episodes.json")
     df.to_csv(
         f"{os.environ.get('SUMMARIES_FOLDER')}/{run_date}/iglesia.csv", index=False
     )

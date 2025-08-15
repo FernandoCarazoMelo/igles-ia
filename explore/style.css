@@ -1,0 +1,277 @@
+/* =================================================== */
+/* ===== THEME ADAPTADO A IGLES-IA.ES (Barra Lateral) ===== */
+/* =================================================== */
+
+:root {
+    --azul-principal: #003366;
+    --naranja-acento: #d35400;
+    --fondo-claro: #f4f7f6;
+    --fondo-tarjeta: #ffffff;
+    --texto-principal: #4A4A4A;
+    --texto-claro: #6c757d;
+    --fondo-pildora: #eaf2f8;
+    --font-titulos: 'Montserrat', sans-serif;
+    --font-cuerpo: 'Open Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-cuerpo);
+    line-height: 1.7;
+    margin: 0;
+    padding-top: 75px;
+    background-color: var(--fondo-claro);
+    color: var(--texto-principal);
+}
+
+/* Placeholder nav */
+#main-nav-placeholder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 15px 5%;
+    background-color: var(--azul-secundario, #2c3e50);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo-text-placeholder {
+    font-family: var(--font-titulos);
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+}
+
+/* Layout con barra lateral */
+.page-container {
+    display: flex;
+    width: 95%;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+/* --- Barra Lateral de Filtros --- */
+#sidebar {
+    width: 320px;
+    flex-shrink: 0;
+    height: calc(100vh - 75px);
+    position: sticky;
+    top: 75px;
+    overflow-y: auto;
+    padding: 2rem 1rem 2rem 0;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 0 0.5rem;
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    font-family: var(--font-titulos);
+    font-size: 1.1rem;
+    color: var(--azul-principal);
+}
+
+#clear-filters {
+    background: none;
+    border: none;
+    color: var(--naranja-acento);
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+#clear-filters:hover {
+    text-decoration: underline;
+}
+
+.filter-group {
+    margin-bottom: 1.5rem;
+}
+
+.filter-group h4 {
+    font-family: var(--font-titulos);
+    font-size: 0.9rem;
+    color: var(--texto-claro);
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Buscador de temáticas */
+.theme-search-container {
+    margin-bottom: 1rem;
+}
+
+#theme-search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: var(--font-cuerpo);
+    font-size: 0.9rem;
+}
+
+#theme-search-input:focus {
+    outline: none;
+    border-color: var(--azul-principal);
+    box-shadow: 0 0 5px rgba(0, 51, 102, 0.2);
+}
+
+/* Estilo de Píldoras */
+.filter-pills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.filter-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--fondo-pildora);
+    border: 1px solid var(--fondo-pildora);
+    color: var(--azul-principal);
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.filter-pill:hover {
+    background-color: #d1e3f0;
+}
+
+.filter-pill .item-count {
+    opacity: 0.7;
+}
+
+.filter-pill.selected {
+    background-color: var(--naranja-acento);
+    border-color: var(--naranja-acento);
+    color: white;
+}
+
+.filter-pill.selected:hover {
+    background-color: #e67e22;
+}
+
+.filter-pill.selected .item-count,
+.filter-pill.selected .remove-btn {
+    color: white;
+}
+
+.filter-pill .remove-btn {
+    background: none;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 0.25rem;
+    font-size: 1.1em;
+    line-height: 1;
+    color: inherit;
+}
+
+#temas-activos {
+    margin-bottom: 1rem;
+}
+
+#temas-divider {
+    margin: 1rem 0;
+    border: none;
+    border-top: 1px solid #e0e0e0;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Contenido Principal y Tarjetas */
+#content {
+    flex-grow: 1;
+    padding: 2rem 0 2rem 1rem;
+}
+
+.content-header {
+    margin-bottom: 1rem;
+}
+
+.content-header h1 {
+    font-family: var(--font-titulos);
+    color: var(--azul-principal);
+    margin: 0 0 10px 0;
+    font-size: 2.2rem;
+}
+
+.results-header {
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.results-header h2 {
+    font-family: var(--font-titulos);
+    color: var(--azul-principal);
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+#document-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.doc-card {
+    background-color: var(--fondo-tarjeta);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.doc-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+.doc-card h2 {
+    font-family: var(--font-titulos);
+    font-size: 1.4rem;
+    color: var(--azul-principal);
+    margin: 0 0 10px 0;
+}
+
+.doc-meta {
+    font-size: 0.9rem;
+    color: var(--texto-claro);
+    margin-bottom: 20px;
+}
+
+.doc-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.doc-tag-item {
+    background-color: var(--fondo-pildora);
+    color: var(--azul-principal);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}

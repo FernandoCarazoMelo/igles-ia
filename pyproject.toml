@@ -4,6 +4,7 @@ version = "0.1.0"
 description = "Weekly newsletter about the Pope Leon XIV"
 readme = "README.md"
 requires-python = ">=3.12"
+
 dependencies = [
     "bs4>=0.0.2",
     "crewai>=0.120.1",
@@ -21,7 +22,11 @@ dependencies = [
     "brevo-python>=1.1.2",
     "boto3>=1.38.41",
     "premailer>=3.10.0",
+    "html2text>=2025.4.15",
+    "markdownify>=1.1.0",
+    "fpdf2>=2.8.3",
+    "azure-cognitiveservices-speech>=1.45.0",
 ]
 
-[tool.setuptools]
-packages = ["iglesia"]
+[tool.setuptools.packages]
+find = {}

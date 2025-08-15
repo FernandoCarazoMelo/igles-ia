@@ -4,6 +4,7 @@ from datetime import datetime
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
+from tqdm import tqdm
 
 
 def obtener_homilias_vaticano(url):
@@ -70,10 +71,11 @@ def extraer_homilia(homilia):
         "texto": texto,
     }
 
+
 def obtener_todos_los_textos(urls):
     all_homilias = []
 
-    for tipo, lista_urls in urls.items():
+    for tipo, lista_urls in tqdm(urls.items()):
         for url in lista_urls:
             homilias = obtener_homilias_vaticano(url)
             homilias_df = [extraer_homilia(h) for h in homilias]
@@ -95,7 +97,9 @@ def obtener_todos_los_textos(urls):
     all_homilias["fecha"] = pd.to_datetime(
         all_homilias["fecha"], format="%d de %B de %Y", errors="coerce"
     )
-    all_homilias = all_homilias.sort_values(by="fecha", ascending=False).reset_index(drop=True)
+    all_homilias = all_homilias.sort_values(by="fecha", ascending=False).reset_index(
+        drop=True
+    )
     all_homilias["fecha"] = all_homilias["fecha"].dt.strftime("%Y-%m-%d")
 
     return all_homilias

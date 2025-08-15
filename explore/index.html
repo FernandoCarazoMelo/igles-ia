@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archivo del Magisterio - igles-ia.es</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="main-nav-placeholder">
+        <div class="logo-text-placeholder">igles-ia.es</div>
+    </header>
+
+    <div class="page-container">
+        <aside id="sidebar">
+            <header class="sidebar-header">
+                <h3>Filtrar Documentos</h3>
+                <button id="clear-filters">Limpiar Filtros</button>
+            </header>
+
+            <div class="filter-group">
+                <h4>Pontificado</h4>
+                <div id="filtro-pontificado" class="filter-pills-container"></div>
+            </div>
+
+            <div class="filter-group">
+                <h4>Tipo de Documento</h4>
+                <div id="filtro-tipo" class="filter-pills-container"></div>
+            </div>
+
+            <div class="filter-group">
+                <h4>Temáticas</h4>
+                <div class="theme-search-container">
+                    <input type="search" id="theme-search-input" placeholder="Buscar temática...">
+                </div>
+                
+                <div id="temas-activos" class="filter-pills-container"></div>
+                <hr id="temas-divider" class="hidden">
+                <div id="filtro-tematicas" class="filter-pills-container"></div>
+            </div>
+        </aside>
+
+        <main id="content">
+            <header class="content-header">
+                <h1>Archivo del Magisterio</h1>
+                <p>Utiliza los filtros de la izquierda para encontrar un documento.</p>
+            </header>
+            <div class="results-header">
+                <h2>Resultados (<span id="doc-count">0</span>)</h2>
+            </div>
+            <div id="document-list"></div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
