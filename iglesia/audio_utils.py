@@ -2,7 +2,7 @@ import json
 import os
 import re
 from collections import defaultdict
-from datetime import datetime
+from datetime import datetime, timedelta
 from math import ceil
 
 import boto3
@@ -13,10 +13,13 @@ PONTIFICATE_START_DATE = datetime(2025, 5, 8)
 
 
 def calculate_pontificate_week(run_date_str):
-    """Calcula el número de semana del pontificado a partir de una fecha."""
-    run_date = datetime.strptime(run_date_str, "%Y-%m-%d")
-    delta = run_date - PONTIFICATE_START_DATE
-    return (delta.days // 7) + 1
+    """Número de semana del pontificado, alineado a semanas lunes–domingo."""
+    run_date = datetime.strptime(run_date_str, "%Y-%m-%d").date()
+    start_date = PONTIFICATE_START_DATE.date()
+    # Lunes de la semana que contiene la fecha de inicio
+    start_week_monday = start_date - timedelta(days=start_date.weekday())
+    # Índice de semana (1-based)
+    return ((run_date - start_week_monday).days // 7) + 1
 
 
 # --- FUNCIÓN 1: Generación de Metadatos con IA ---
@@ -37,9 +40,11 @@ def generar_metadatos_episodio(texto_limpio, episodio_info, llm_client):
         Basado en el siguiente texto, genera un título y una descripción optimizados para Spotify.
         El formato de salida DEBE ser un JSON válido con las claves "titulo_spotify" y "descripcion_spotify".
         REGLAS DEL TÍTULO:
-        - El formato exacto debe ser: "{numero_formateado} {episodio_info["tipo"]} {fecha_simple} | [Tema principal en 3-5 palabras]"
+        - El formato exacto debe ser: "{numero_formateado} {episodio_info["tipo"]} {fecha_simple} | [TITULO ORIGINAL resumido] | [Tema principal en 3-5 palabras]"
+        - El [TITULO ORIGINAL resumido] tienes que generarlo únicamente con el título original << {episodio_info["titulo"]}>>. no incluyas la fecha en esta parte.
         REGLAS DE LA DESCRIPCIÓN:
         - Debe ser un párrafo de 2-4 frases que resuma el mensaje central del Papa León XIV. Empieza diciendo en este/a {episodio_info["tipo"]} el Papa León XIV... Termina diciendo \n\n'Podcast creado por igles-ia.es'
+        ----
         TEXTO DEL DOCUMENTO:
         ---
         {texto_limpio[:4000]}
@@ -66,7 +71,12 @@ def generar_metadatos_episodio(texto_limpio, episodio_info, llm_client):
 
 # --- FUNCIÓN 2: Síntesis y Subida de Audio ---
 def sintetizar_y_subir_audio(
-    texto_limpio, filename_base, s3_client, polly_client, bucket_name
+    texto_limpio,
+    filename_base,
+    s3_client,
+    polly_client,
+    bucket_name,
+    only_metadata=False,
 ):
     def synthesize_speech(text):
         def split_text(t, max_length=3000):
@@ -92,32 +102,34 @@ def sintetizar_y_subir_audio(
         return b"".join(audio_streams)
 
     print("🔊 Generando audio con Polly...")
-    audio_data = synthesize_speech(texto_limpio)
-    if not audio_data:
-        return None
-    try:
-        filename_mp3 = filename_base + ".mp3"
-        print(f"☁️  Subiendo '{filename_mp3}' a S3...")
-        s3_client.put_object(
-            Bucket=bucket_name,
-            Key=filename_mp3,
-            Body=audio_data,
-            ContentType="audio/mpeg",
-        )
-        region = (
-            s3_client.get_bucket_location(Bucket=bucket_name)["LocationConstraint"]
-            or "us-east-1"
-        )
-        url = f"https://{bucket_name}.s3.{region}.amazonaws.com/{filename_mp3}"
-        print(f"  -> Audio disponible en: {url}")
-        return url
-    except Exception as e:
-        print(f"❌ Error al subir a S3: {e}")
-        return None
+    filename_mp3 = filename_base + ".mp3"
+
+    if not only_metadata:
+        audio_data = synthesize_speech(texto_limpio)
+        if not audio_data:
+            return None
+        try:
+            print(f"☁️  Subiendo '{filename_mp3}' a S3...")
+            s3_client.put_object(
+                Bucket=bucket_name,
+                Key=filename_mp3,
+                Body=audio_data,
+                ContentType="audio/mpeg",
+            )
+        except Exception as e:
+            print(f"❌ Error al subir a S3: {e}")
+            return None
+    region = (
+        s3_client.get_bucket_location(Bucket=bucket_name)["LocationConstraint"]
+        or "us-east-1"
+    )
+    url = f"https://{bucket_name}.s3.{region}.amazonaws.com/{filename_mp3}"
+    print(f"  -> Audio disponible en: {url}")
+    return url
 
 
 # --- FUNCIÓN PRINCIPAL ORQUESTADORA ---
-def procesar_y_generar_episodios(json_file_path, llm_client):
+def procesar_y_generar_episodios(json_file_path, llm_client, only_metadata=False):
     print("Iniciando proceso de generación de episodios...")
     try:
         S3_BUCKET_NAME = os.environ["S3_BUCKET_NAME"]
@@ -166,22 +178,21 @@ def procesar_y_generar_episodios(json_file_path, llm_client):
 
         metadata = generar_metadatos_episodio(texto_limpio, episodio, llm_client)
         url_audio = sintetizar_y_subir_audio(
-            texto_limpio, episodio["filename"], s3, polly, S3_BUCKET_NAME
+            texto_limpio, episodio["filename"], s3, polly, S3_BUCKET_NAME, only_metadata
         )
 
-        if url_audio:
-            episodios_procesados.append(
-                {
-                    "titulo_original": episodio["titulo"],
-                    "titulo_spotify": metadata["titulo_spotify"],
-                    "descripcion_spotify": metadata["descripcion_spotify"],
-                    "url_audio": url_audio,
-                    "fecha": episodio["fecha"],
-                    "filename": episodio["filename"],
-                    "tipo": episodio["tipo"],
-                    "numero_episodio": f"{episodio['pontificate_week']}.{episodio['sub_index']}",
-                }
-            )
+        episodios_procesados.append(
+            {
+                "titulo_original": episodio["titulo"],
+                "titulo_spotify": metadata["titulo_spotify"],
+                "descripcion_spotify": metadata["descripcion_spotify"],
+                "url_audio": url_audio,
+                "fecha": episodio["fecha"],
+                "filename": episodio["filename"],
+                "tipo": episodio["tipo"],
+                "numero_episodio": f"{episodio['pontificate_week']}.{episodio['sub_index']}",
+            }
+        )
 
     print("\nProceso finalizado.")
     return episodios_procesados
@@ -202,7 +213,7 @@ if __name__ == "__main__":
     load_dotenv(find_dotenv())
 
     # 2. Definir la fecha para la prueba
-    FECHA_TEST = "2025-08-16"
+    FECHA_TEST = "2025-08-04"
 
     # 3. Construir la ruta al archivo JSON que debería haber generado el pipeline principal
     # Asegúrate de que este archivo exista antes de ejecutar el test.

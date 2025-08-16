@@ -17,3 +17,9 @@ freeze:
 
 zip:
 	zip deployment_package.zip lambda_function.py welcome.html
+
+create_audio:
+	uv run main.py pipeline-date --run-date "2025-08-04"
+	uv run main.py generar-audios --run-date "2025-08-04" --only-metadata
+	uv run generar_rss.py
+	make freeze

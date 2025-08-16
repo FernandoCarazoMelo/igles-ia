@@ -213,7 +213,7 @@ def pipeline_date(
 
 
 @app.command()
-def generar_audios(run_date: str = None):
+def generar_audios(run_date: str = None, only_metadata: bool = False):
     """
     Genera los archivos de audio para una fecha específica y los sube a S3.
     """
@@ -241,7 +241,7 @@ def generar_audios(run_date: str = None):
         model="gpt-4.1-nano",
         temperature=0.2,
     )
-    resultados = procesar_y_generar_episodios(json_path, llm_real)
+    resultados = procesar_y_generar_episodios(json_path, llm_real, only_metadata)
 
     print("\n\n--- RESULTADOS DEL LLM ---")
     print(json.dumps(resultados, indent=4, ensure_ascii=False))
