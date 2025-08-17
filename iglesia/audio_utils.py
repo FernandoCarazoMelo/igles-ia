@@ -176,10 +176,36 @@ def procesar_y_generar_episodios(json_file_path, llm_client, only_metadata=False
             r"Saludos|Después del Ángelus", texto_limpio, flags=re.IGNORECASE
         )[0]
 
+        # ✅ Regla 2: Saltar episodios demasiado largos (>10k caracteres)
+        if len(texto_limpio) > 10000:
+            print(
+                f"⚠️ Episodio demasiado largo ({len(texto_limpio)} caracteres). Saltando..."
+            )
+            continue
+
         metadata = generar_metadatos_episodio(texto_limpio, episodio, llm_client)
-        url_audio = sintetizar_y_subir_audio(
-            texto_limpio, episodio["filename"], s3, polly, S3_BUCKET_NAME, only_metadata
-        )
+
+        filename_mp3 = episodio["filename"] + ".mp3"
+
+        # ✅ Regla 1: Saltar si el archivo ya está en S3
+        try:
+            s3.head_object(Bucket=S3_BUCKET_NAME, Key=filename_mp3)
+            print(f"☁️ Episodio ya existe en S3: {filename_mp3}. Saltando...")
+            url_audio = f"https://{S3_BUCKET_NAME}.s3.{s3.get_bucket_location(Bucket=S3_BUCKET_NAME)['LocationConstraint'] or 'us-east-1'}.amazonaws.com/{filename_mp3}"
+        except s3.exceptions.ClientError as e:
+            if e.response["Error"]["Code"] == "404":
+                # No existe → generamos audio
+                url_audio = sintetizar_y_subir_audio(
+                    texto_limpio,
+                    episodio["filename"],
+                    s3,
+                    polly,
+                    S3_BUCKET_NAME,
+                    only_metadata,
+                )
+            else:
+                print(f"❌ Error al comprobar S3: {e}")
+                continue
 
         episodios_procesados.append(
             {

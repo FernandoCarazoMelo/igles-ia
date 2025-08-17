@@ -218,7 +218,8 @@ def generar_audios(run_date: str = None, only_metadata: bool = False):
     Genera los archivos de audio para una fecha específica y los sube a S3.
     """
     if run_date is None:
-        run_date = pd.Timestamp.now().strftime("%Y-%m-%d")
+        tomorrow = pd.Timestamp.now() + pd.Timedelta(days=1)
+        run_date = tomorrow.strftime("%Y-%m-%d")
     else:
         run_date = pd.to_datetime(run_date).strftime("%Y-%m-%d")
 

@@ -1,9 +1,9 @@
 ---
-title: "La Esperanza en la Asunción y la Fidelidad en la Traición"
+title: "La Esperanza en la Asunción y la Intercesión Materna de la Virgen"
 week_of: "Semana del 11/08 al 17/08 de 2025"
 date: "2025-08-18"
 pontificate_week: 15
-excerpt: "Esta semana, el Papa León XIV nos invita a confiar en la esperanza que nos ofrece María en su Asunción y a fortalecer nuestra fidelidad en medio de las contradicciones y traiciones, siguiendo el ejemplo de Cristo y la Virgen María en nuestro camino de fe."
+excerpt: "Esta semana, el Papa León XIV nos invita a confiar en la esperanza que nos ofrece María en su Asunción y a fortalecer nuestra fidelidad en medio de las contradicciones, siguiendo el ejemplo de Cristo y la Virgen María en nuestro camino de fe."
 slug: "semana-15-esperanza-fidelidad"
 ---
 
