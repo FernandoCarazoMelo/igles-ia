@@ -2,6 +2,10 @@ import datetime
 import json
 import os
 import xml.etree.ElementTree as ET
+from urllib.parse import urlparse
+
+import boto3
+import requests
 
 # --- Configuración General del Podcast ---
 PODCAST_TITLE = "Homilías Papa León XIV"
@@ -11,14 +15,42 @@ PODCAST_LANGUAGE = "es-ES"
 PODCAST_AUTHOR = "igles-ia.es"
 PODCAST_OWNER_EMAIL = "igles-ia@igles-ia.es"
 
-# --- CAMBIO IMPORTANTE AQUÍ ---
-# Reemplaza esta URL por la URL pública y real de tu única imagen de portada.
-# Puede estar alojada en tu web, en S3, o donde prefieras.
+# --- Imagen de portada ---
 PODCAST_IMAGE = "https://igles-ia.es/static/papa-leon-xiv-spotify.png"
 
 # --- Rutas ---
 JSON_BASE_DIR = "json-rss/"
 OUTPUT_RSS_FILE = "podcast.xml"
+
+# --- S3 client ---
+s3 = boto3.client("s3")
+
+
+def get_s3_file_size(url: str) -> str:
+    """Devuelve el tamaño en bytes de un objeto en S3, o hace fallback a HTTP HEAD."""
+    parsed = urlparse(url)
+    bucket = parsed.netloc.split(".")[
+        0
+    ]  # ej: igles-ia-spotify.s3.us-east-1.amazonaws.com
+    key = parsed.path.lstrip("/")
+
+    # 1. Intentar con boto3
+    try:
+        head = s3.head_object(Bucket=bucket, Key=key)
+        return str(head["ContentLength"])
+    except Exception as e:
+        print(f"⚠️ No se pudo obtener tamaño de {url} con boto3: {e}")
+
+    # 2. Intentar con HTTP HEAD
+    try:
+        r = requests.head(url, allow_redirects=True, timeout=10)
+        if "Content-Length" in r.headers:
+            return r.headers["Content-Length"]
+    except Exception as e:
+        print(f"⚠️ No se pudo obtener tamaño HTTP de {url}: {e}")
+
+    # 3. Fallback mínimo
+    return "1"
 
 
 # --- Lógica de Carga de Episodios ---
@@ -87,13 +119,15 @@ for episodio in episodios:
         "%a, %d %b %Y 12:00:00 GMT"
     )
 
+    # Obtener tamaño del archivo
+    file_size = get_s3_file_size(audio_url)
+
     ET.SubElement(
-        item, "enclosure", {"url": audio_url, "type": "audio/mpeg", "length": "0"}
+        item, "enclosure", {"url": audio_url, "type": "audio/mpeg", "length": file_size}
     )
     ET.SubElement(item, "guid").text = audio_url
     ET.SubElement(item, "itunes:author").text = PODCAST_AUTHOR
 
-    # --- CAMBIO AQUÍ ---
     # Usar la misma imagen de portada para todos los episodios
     ET.SubElement(item, "itunes:image", {"href": PODCAST_IMAGE})
     ET.SubElement(item, "itunes:episode").text = episodio["numero_episodio"]
