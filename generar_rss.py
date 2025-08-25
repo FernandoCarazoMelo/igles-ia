@@ -1,6 +1,7 @@
 import datetime
 import json
 import os
+import xml.dom.minidom
 import xml.etree.ElementTree as ET
 from urllib.parse import urlparse
 
@@ -55,10 +56,6 @@ def get_s3_file_size(url: str) -> str:
 
 # --- Lógica de Carga de Episodios ---
 def cargar_todos_los_episodios_metadata():
-    """
-    Busca en todas las subcarpetas de JSON_BASE_DIR y carga los datos
-    de los archivos 'episodes_metadata.json'.
-    """
     todos_los_episodios = []
     print(f"Buscando metadatos de episodios en: '{JSON_BASE_DIR}'...")
 
@@ -100,6 +97,13 @@ itunes_owner = ET.SubElement(channel, "itunes:owner")
 ET.SubElement(itunes_owner, "itunes:name").text = PODCAST_AUTHOR
 ET.SubElement(itunes_owner, "itunes:email").text = PODCAST_OWNER_EMAIL
 
+# --- Categoría principal ---
+primary_cat = ET.SubElement(
+    channel, "itunes:category", {"text": "Religion & Spirituality"}
+)
+# Subcategoría opcional (Apple Podcasts)
+ET.SubElement(primary_cat, "itunes:category", {"text": "Christianity"})
+
 # --- Añadir los Episodios (Items) ---
 episodios = cargar_todos_los_episodios_metadata()
 for episodio in episodios:
@@ -128,7 +132,7 @@ for episodio in episodios:
     ET.SubElement(item, "guid").text = audio_url
     ET.SubElement(item, "itunes:author").text = PODCAST_AUTHOR
 
-    # Usar la misma imagen de portada para todos los episodios
+    # Imagen de portada para cada episodio
     ET.SubElement(item, "itunes:image", {"href": PODCAST_IMAGE})
     ET.SubElement(item, "itunes:episode").text = episodio["numero_episodio"]
 
@@ -136,7 +140,6 @@ for episodio in episodios:
 tree = ET.ElementTree(rss)
 xml_str = ET.tostring(rss, encoding="unicode", method="xml")
 
-import xml.dom.minidom
 
 dom = xml.dom.minidom.parseString(xml_str)
 pretty_xml_as_string = dom.toprettyxml(indent="  ")
