@@ -20,6 +20,6 @@ zip:
 
 create_audio:
 	uv run main.py pipeline-date --run-date "2025-08-11"
-	uv run main.py generar-audios --run-date "2025-08-11" --only-metadata
+	uv run main.py generar-audios --run-date "2025-08-25" --only-metadata
 	uv run generar_rss.py
 	make freeze
