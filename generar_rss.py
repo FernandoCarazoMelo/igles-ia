@@ -11,7 +11,7 @@ import requests
 # --- Configuración General del Podcast ---
 PODCAST_TITLE = "Homilías Papa León XIV"
 PODCAST_LINK = "https://igles-ia.es"
-PODCAST_DESCRIPTION = "Textos originales de discursos y homilías del Papa León XIV. Leídos con locutor profesional gracias a la IA. Creados por http://igles-ia.es"
+PODCAST_DESCRIPTION = "Textos originales de discursos y homilías del Papa León XIV. Leídos con locutor profesional gracias a la IA. Creado por http://igles-ia.es. Síguenos 👉 Whatsapp: https://bit.ly/iglesiawp"
 PODCAST_LANGUAGE = "es-ES"
 PODCAST_AUTHOR = "igles-ia.es"
 PODCAST_OWNER_EMAIL = "igles-ia@igles-ia.es"
