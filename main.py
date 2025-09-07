@@ -143,11 +143,12 @@ def run_agents(
 
 
 @app.command()
-def pipeline_semanal(debug: bool = True):
+def pipeline_semanal(debug: bool = True, fecha_de_hoy: str = None):
     """
     Enviar correos semanales a todos los usuarios.
     """
-    fecha_de_hoy = pd.Timestamp.now().strftime("%Y-%m-%d")
+    if fecha_de_hoy is None:
+        fecha_de_hoy = pd.Timestamp.now().strftime("%Y-%m-%d")
 
     contacts = cognito_get_verified_emails()
     # contacts.to_csv("brevo_contacts.csv", index=False)
