@@ -1,78 +1,97 @@
-{% extends 'base.html' %}
-
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 
 <header class="hero">
   <div class="hero-content">
     <h1 class="hero-title">
-      Las palabras del Papa León XIV, directas a tu 
+      Las palabras del Papa León XIV, directas a tu
       <span class="typed-text"></span><span class="cursor"></span>
     </h1>
     <p class="hero-subtitle">
-      Recibe cada lunes un resumen claro y profundo de las homilías y discursos del Papa León XIV.
-      Analizamos lo más importante con IA para que no te pierdas nada.
+      Recibe cada lunes un resumen claro y profundo de las homilías y discursos
+      del Papa León XIV. Analizamos lo más importante con IA para que no te
+      pierdas nada.
     </p>
-    <a href="https://eu-west-15yl5gwygk.auth.eu-west-1.amazoncognito.com/signup?client_id=7capb584va4pdmme83bjgh4c2q&redirect_uri=https%3A%2F%2Figles-ia.es%2Fcallback.html&response_type=code&scope=email+openid+phone&lang=es" 
-       class="hero-cta-button" target="_blank" rel="noopener noreferrer">
+    <a
+      href="https://eu-west-15yl5gwygk.auth.eu-west-1.amazoncognito.com/signup?client_id=7capb584va4pdmme83bjgh4c2q&redirect_uri=https%3A%2F%2Figles-ia.es%2Fcallback.html&response_type=code&scope=email+openid+phone&lang=es"
+      class="hero-cta-button"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       ¡Suscríbete ahora!
     </a>
-    <br><br>
+    <br /><br />
     <a href="{{ url_for('archive') }}" class="hero-cta-button">
       Leer Resumen Semanal
     </a>
   </div>
 </header>
 
-
 <section class="whatsapp-cta-section">
-    <div class="container">
-        <div class="whatsapp-card">
-            <i class="fab fa-whatsapp"></i>
-            <h2>Únete a nuestro canal de WhatsApp</h2>
-            <p>Recibe el resumen semanal directamente en tu móvil. Cómodo, rápido y sin distracciones. Pulsa el botón para seguir nuestro canal oficial y no perderte ninguna reflexión.</p>
-            <a href="https://chat.whatsapp.com/HZyFhZXMNI3GeF4jOK6OGN?mode=r_c" target="_blank" rel="noopener noreferrer" class="whatsapp-button">
-                Seguir en WhatsApp
-            </a>
-        </div>
+  <div class="container">
+    <div class="whatsapp-card">
+      <i class="fab fa-whatsapp"></i>
+      <h2>Únete a nuestro canal de WhatsApp</h2>
+      <p>
+        Recibe el resumen semanal directamente en tu móvil. Cómodo, rápido y sin
+        distracciones. Pulsa el botón para seguir nuestro canal oficial y no
+        perderte ninguna reflexión.
+      </p>
+      <a
+        href="https://chat.whatsapp.com/HZyFhZXMNI3GeF4jOK6OGN?mode=r_c"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="whatsapp-button"
+      >
+        Seguir en WhatsApp
+      </a>
     </div>
+  </div>
 </section>
 
 <section class="spotify-cta-section">
-    <div class="container">
-        <div class="spotify-card">
-            <i class="fab fa-spotify"></i>
-            <h2>Escúchanos en Spotify</h2>
-            <p>Accede a nuestro podcast con los textos originales del Papa. Ideal para escuchar mientras viajas, trabajas o descansas.</p>
-            <a href="https://open.spotify.com/show/1zR5ODOgjx1lGObG2gJvox" 
-               target="_blank" rel="noopener noreferrer" class="spotify-button">
-                Abrir en Spotify
-            </a>
-        </div>
+  <div class="container">
+    <div class="spotify-card">
+      <i class="fab fa-spotify"></i>
+      <h2>Escúchanos en Spotify</h2>
+      <p>
+        Accede a nuestro podcast con los textos originales del Papa. Ideal para
+        escuchar mientras viajas, trabajas o descansas.
+      </p>
+      <a
+        href="https://open.spotify.com/show/1zR5ODOgjx1lGObG2gJvox"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="spotify-button"
+      >
+        Abrir en Spotify
+      </a>
     </div>
+  </div>
 </section>
 
 <section class="pope-quote-section">
-    <div class="container">
-        <div class="pope-quote-card">
-            
-            <div class="pope-image">
-                <img src="{{ url_for('static', filename='Foto-Papa-Leone-XIV-300px.jpg') }}" alt="Fotografía del Papa León XIV">
-            </div>
+  <div class="container">
+    <div class="pope-quote-card">
+      <div class="pope-image">
+        <img
+          src="{{ url_for('static', filename='Foto-Papa-Leone-XIV-300px.jpg') }}"
+          alt="Fotografía del Papa León XIV"
+        />
+      </div>
 
-            <div class="pope-quote-content">
-                <blockquote>
-                    ”La inteligencia artificial impulsará una nueva revolución industrial.”
-                </blockquote>
-                <cite>
-                    <strong>Papa León XIV</strong><br>
-                    Discurso al Colegio Cardenalicio<br>
-                    (Sábado, 10 de mayo de 2025)
-
-                </cite>
-            </div>
-
-        </div>
+      <div class="pope-quote-content">
+        <blockquote>
+          ”La inteligencia artificial impulsará una nueva revolución
+          industrial.”
+        </blockquote>
+        <cite>
+          <strong>Papa León XIV</strong><br />
+          Discurso al Colegio Cardenalicio<br />
+          (Sábado, 10 de mayo de 2025)
+        </cite>
+      </div>
     </div>
+  </div>
 </section>
 
 <!-- <section id="resumen-semanal" class="sample-summary">
@@ -86,85 +105,121 @@
     </div>
 </section> -->
 
-
-
 <section class="sample-summary">
-    <div class="container">
-        <h2 class="section-title">Así se ve un resumen de Igles-IA</h2>
-        <div class="summary-card">
-            <h3>Resumen - Semana del 01/09 al 07/09 de 2025</h3>
-            <p>Esta semana, el Papa León XIV nos ha ofrecido reflexiones a través de 1 homilia, 1 ángelus, 2 audiencias y 1 discurso.</p>
-            <p>La homilía sobre la canonización de jóvenes santos como Pier Giorgio Frassati y Carlo Acutis nos recuerda que la <strong>santidad comienza en la juventud</strong>, viviendo con alegría, amor y compromiso. La vida cristiana se expresa en gestos sencillos de amor.</p>
-            <p>La audiencia jubilar destaca que la verdadera esperanza se encuentra en la búsqueda sincera de Dios, más allá de las apariencias materiales, como ejemplifica Santa Elena. Además, en su discurso a los jóvenes del Mediterráneo, el Papa los llama a ser agentes de paz y diálogo intercultural, promoviendo la fraternidad en una región marcada por conflictos. </p>
-            <p>Finalmente, la reflexión sobre las palabras de Jesús en la cruz, «Tengo sed», revela que <strong>la verdadera fuerza reside en la humildad y la confianza en el amor de Dios</strong>, invitándonos a reconocer nuestra sed de amor y perdón.</p>
-            <h4>Temas Clave Analizados:</h4>
-            <ul>
-            <li>La santidad juvenil como ejemplo de compromiso y alegría en la fe.</li>
-            <li>La resistencia y fortaleza en la persecución y el martirio, fortaleciendo la esperanza.</li>
-            <li>La búsqueda sincera de Dios más allá de las apariencias materiales, ejemplificada en Santa Elena.</li>
-            <li>El papel de los jóvenes en la promoción de la paz y la fraternidad en el Mediterráneo.</li>
-            <li>La humildad y la confianza en Dios reflejadas en las palabras de Jesús en la cruz, «Tengo sed».</li>
-            </ul>
-            <!-- <blockquote class="summary-quote">
+  <div class="container">
+    <h2 class="section-title">Así se ve un resumen de Igles-IA</h2>
+    <div class="summary-card">
+        <h3>Resumen - Semana del 08/09 al 14/09 de 2025</h3>
+
+      <p>
+        Esta semana, el Papa León XIV nos ha ofrecido reflexiones a través de 1
+        ángelus y 1 audiencia.
+      </p>
+      <p>
+        El Papa León XIV nos invita a profundizar en el significado de la
+        <strong>Santa Cruz y la muerte de Jesús</strong>, símbolos de redención
+        y amor divino que transforman nuestro sufrimiento en esperanza. La
+        exaltación de la Cruz no solo representa la victoria de Cristo, sino
+        también su entrega total por amor a la humanidad. La Cruz, que en su
+        momento fue símbolo de muerte, se convierte en instrumento de vida y
+        sanación, como prefigura la serpiente de bronce en el desierto.
+      </p>
+      <p>
+        En su catequesis, el Papa reflexiona sobre el
+        <strong>grito de Jesús en la Cruz</strong>, un acto que expresa dolor,
+        pero también fe y confianza en el Padre.
+        <strong
+          >Este grito revela que Dios no está distante en el sufrimiento, sino
+          que lo atraviesa con amor</strong
+        >, enseñándonos que en las pruebas también podemos encontrar esperanza y
+        cercanía divina. La proclamación de fe del centurión y la actitud de
+        Jesús nos llaman a confiar en Dios en cada momento de nuestra vida.
+      </p>
+      <!-- <blockquote class="summary-quote">
                 <p>"No nos cansemos de sembrar. Aunque no veamos los frutos enseguida, la semilla del bien siempre crece
                     y prepara una cosecha abundante."</p>
                 <footer>- Cita destacada de la semana</footer>
             </blockquote> -->
+    </div>
+  </div>
+</section>
+
+<section class="features" style="padding-top: 0">
+  <div class="container">
+    <h2 class="section-title">Especial: Jubileo de los Jóvenes 2025</h2>
+
+    <a
+      href="https://igles-ia.es/leon-xiv-jubileo-de-los-jovenes-2025.html"
+      class="announcement-link"
+    >
+      <div class="pope-quote-card">
+        <div class="pope-image">
+          <img
+            src="{{ url_for('static', filename='jubileo/papa-leon-xiv-jubileo-2025_1.jpeg') }}"
+            alt="El Papa León XIV durante el Jubileo de los Jóvenes 2025"
+          />
         </div>
-    </div>
+        <div class="summary-card">
+          <h3>Un Mensaje de Esperanza para el Mundo</h3>
+          <p>
+            Accede a nuestro análisis completo de todos los discursos y homilías
+            del Papa durante el Jubileo. Descubre las claves de su mensaje a los
+            jóvenes peregrinos de la esperanza.
+          </p>
+          <span
+            class="hero-cta-button secondary"
+            style="margin-top: 1rem; display: inline-block"
+            >Leer el especial →</span
+          >
+        </div>
+      </div>
+    </a>
+  </div>
 </section>
-
-<section class="features" style="padding-top: 0;">
-    <div class="container">
-        <h2 class="section-title">Especial: Jubileo de los Jóvenes 2025</h2>
-        
-        <a href="https://igles-ia.es/leon-xiv-jubileo-de-los-jovenes-2025.html" class="announcement-link">
-            <div class="pope-quote-card">
-                <div class="pope-image">
-                    <img src="{{ url_for('static', filename='jubileo/papa-leon-xiv-jubileo-2025_1.jpeg') }}" alt="El Papa León XIV durante el Jubileo de los Jóvenes 2025">
-                </div>
-                <div class="summary-card">
-                    <h3>Un Mensaje de Esperanza para el Mundo</h3>
-                    <p>Accede a nuestro análisis completo de todos los discursos y homilías del Papa durante el Jubileo. Descubre las claves de su mensaje a los jóvenes peregrinos de la esperanza.</p>
-                    <span class="hero-cta-button secondary" style="margin-top: 1rem; display: inline-block;">Leer el especial →</span>
-                </div>
-            </div>
-        </a>
-    </div>
-</section>
-
 
 <section class="features">
-    <div class="container">
-        <h2 class="section-title">Tu dosis semanal de inspiración y reflexión</h2>
-        <div class="features-grid">
-            <div class="feature-item">
-                <i class="fas fa-calendar-check fa-2x"></i>
-                <h3>Resumen Semanal</h3>
-                <p>Cada lunes, recibirás en tu correo un análisis conciso de la semana.</p>
-            </div>
-            <div class="feature-item">
-                <i class="fas fa-brain fa-2x"></i>
-                <h3>Análisis con IA</h3>
-                <p>Identificamos los temas clave y las citas más potentes para ti.</p>
-            </div>
-            <div class="feature-item">
-                <i class="fas fa-book-open-reader fa-2x"></i>
-                <h3>Lectura de 5 Minutos</h3>
-                <p>Perfecto para leer con el café y empezar la semana con otra perspectiva.</p>
-            </div>
-        </div>
+  <div class="container">
+    <h2 class="section-title">Tu dosis semanal de inspiración y reflexión</h2>
+    <div class="features-grid">
+      <div class="feature-item">
+        <i class="fas fa-calendar-check fa-2x"></i>
+        <h3>Resumen Semanal</h3>
+        <p>
+          Cada lunes, recibirás en tu correo un análisis conciso de la semana.
+        </p>
+      </div>
+      <div class="feature-item">
+        <i class="fas fa-brain fa-2x"></i>
+        <h3>Análisis con IA</h3>
+        <p>Identificamos los temas clave y las citas más potentes para ti.</p>
+      </div>
+      <div class="feature-item">
+        <i class="fas fa-book-open-reader fa-2x"></i>
+        <h3>Lectura de 5 Minutos</h3>
+        <p>
+          Perfecto para leer con el café y empezar la semana con otra
+          perspectiva.
+        </p>
+      </div>
     </div>
+  </div>
 </section>
 
 <section class="final-cta">
-    <div class="container">
-        <h2 class="section-title">¿Listo para empezar tu semana con inspiración?</h2>
-        <p>Únete a cientos de lectores que ya reciben su resumen semanal.</p>
-        <a href="https://eu-west-15yl5gwygk.auth.eu-west-1.amazoncognito.com/signup?client_id=7capb584va4pdmme83bjgh4c2q&redirect_uri=https%3A%2F%2Figles-ia.es%2Fcallback.html&response_type=code&scope=email+openid+phone&lang=es" class="hero-cta-button" target="_blank" rel="noopener noreferrer">
-            Sí, quiero suscribirme
-        </a>
-    </div>
+  <div class="container">
+    <h2 class="section-title">
+      ¿Listo para empezar tu semana con inspiración?
+    </h2>
+    <p>Únete a cientos de lectores que ya reciben su resumen semanal.</p>
+    <a
+      href="https://eu-west-15yl5gwygk.auth.eu-west-1.amazoncognito.com/signup?client_id=7capb584va4pdmme83bjgh4c2q&redirect_uri=https%3A%2F%2Figles-ia.es%2Fcallback.html&response_type=code&scope=email+openid+phone&lang=es"
+      class="hero-cta-button"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Sí, quiero suscribirme
+    </a>
+  </div>
 </section>
 
 {% endblock %}
