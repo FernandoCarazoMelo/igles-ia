@@ -3,22 +3,53 @@
 {% block content %}
 
 <header class="hero">
-    <div class="hero-content">
-        <h1 class="hero-title">Las palabras del Papa León XIV, directas a tu email.</h1>
-        <p class="hero-subtitle">
-            Recibe cada lunes un resumen claro y profundo de las homilías y discursos del Papa León XIV.
-            Analizamos lo más importante con IA para que no te pierdas nada.
-        </p>
-        <a href="https://eu-west-15yl5gwygk.auth.eu-west-1.amazoncognito.com/signup?client_id=7capb584va4pdmme83bjgh4c2q&redirect_uri=https%3A%2F%2Figles-ia.es%2Fcallback.html&response_type=code&scope=email+openid+phone&lang=es" class="hero-cta-button" target="_blank" rel="noopener noreferrer">
-            ¡Suscríbete ahora!
-        </a>
-        <br>
-        <br>
-        <a href="{{ url_for('archive') }}" class="hero-cta-button">
-            Leer Resumen Semanal
-        </a>
-    </div>
+  <div class="hero-content">
+    <h1 class="hero-title">
+      Las palabras del Papa León XIV, directas a tu 
+      <span class="typed-text"></span><span class="cursor"></span>
+    </h1>
+    <p class="hero-subtitle">
+      Recibe cada lunes un resumen claro y profundo de las homilías y discursos del Papa León XIV.
+      Analizamos lo más importante con IA para que no te pierdas nada.
+    </p>
+    <a href="https://eu-west-15yl5gwygk.auth.eu-west-1.amazoncognito.com/signup?client_id=7capb584va4pdmme83bjgh4c2q&redirect_uri=https%3A%2F%2Figles-ia.es%2Fcallback.html&response_type=code&scope=email+openid+phone&lang=es" 
+       class="hero-cta-button" target="_blank" rel="noopener noreferrer">
+      ¡Suscríbete ahora!
+    </a>
+    <br><br>
+    <a href="{{ url_for('archive') }}" class="hero-cta-button">
+      Leer Resumen Semanal
+    </a>
+  </div>
 </header>
+
+
+<section class="whatsapp-cta-section">
+    <div class="container">
+        <div class="whatsapp-card">
+            <i class="fab fa-whatsapp"></i>
+            <h2>Únete a nuestro canal de WhatsApp</h2>
+            <p>Recibe el resumen semanal directamente en tu móvil. Cómodo, rápido y sin distracciones. Pulsa el botón para seguir nuestro canal oficial y no perderte ninguna reflexión.</p>
+            <a href="https://chat.whatsapp.com/HZyFhZXMNI3GeF4jOK6OGN?mode=r_c" target="_blank" rel="noopener noreferrer" class="whatsapp-button">
+                Seguir en WhatsApp
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="spotify-cta-section">
+    <div class="container">
+        <div class="spotify-card">
+            <i class="fab fa-spotify"></i>
+            <h2>Escúchanos en Spotify</h2>
+            <p>Accede a nuestro podcast con los textos originales del Papa. Ideal para escuchar mientras viajas, trabajas o descansas.</p>
+            <a href="https://open.spotify.com/show/1zR5ODOgjx1lGObG2gJvox" 
+               target="_blank" rel="noopener noreferrer" class="spotify-button">
+                Abrir en Spotify
+            </a>
+        </div>
+    </div>
+</section>
 
 <section class="pope-quote-section">
     <div class="container">
@@ -122,19 +153,6 @@
                 <h3>Lectura de 5 Minutos</h3>
                 <p>Perfecto para leer con el café y empezar la semana con otra perspectiva.</p>
             </div>
-        </div>
-    </div>
-</section>
-
-<section class="whatsapp-cta-section">
-    <div class="container">
-        <div class="whatsapp-card">
-            <i class="fab fa-whatsapp"></i>
-            <h2>Únete a nuestro canal de WhatsApp</h2>
-            <p>Recibe el resumen semanal directamente en tu móvil. Cómodo, rápido y sin distracciones. Pulsa el botón para seguir nuestro canal oficial y no perderte ninguna reflexión.</p>
-            <a href="https://chat.whatsapp.com/HZyFhZXMNI3GeF4jOK6OGN?mode=r_c" target="_blank" rel="noopener noreferrer" class="whatsapp-button">
-                Seguir en WhatsApp
-            </a>
         </div>
     </div>
 </section>

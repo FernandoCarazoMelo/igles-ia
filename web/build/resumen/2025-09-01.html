@@ -270,6 +270,37 @@
     </footer>
 
     <script>
+        const words = ["email", "Whatsapp", "Spotify"];
+        let i = 0;
+        let j = 0;
+        let currentWord = "";
+        let isDeleting = false;
+        const speed = 120;
+        const target = document.querySelector(".typed-text");
+
+        function type() {
+            currentWord = words[i];
+            if (!isDeleting) {
+            target.textContent = currentWord.substring(0, j + 1);
+            j++;
+            if (j === currentWord.length) {
+                isDeleting = true;
+                setTimeout(type, 1500); // pausa antes de borrar
+                return;
+            }
+            } else {
+            target.textContent = currentWord.substring(0, j - 1);
+            j--;
+            if (j === 0) {
+                isDeleting = false;
+                i = (i + 1) % words.length;
+            }
+            }
+            setTimeout(type, isDeleting ? speed / 2 : speed);
+        }
+
+  document.addEventListener("DOMContentLoaded", type);
+
         // Tu script de Javascript para el nav (SCROLL)
         document.addEventListener('DOMContentLoaded', () => {
             const nav = document.getElementById('main-nav');

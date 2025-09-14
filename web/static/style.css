@@ -1171,3 +1171,55 @@ footer {
     opacity: 1;
     bottom: 50px; /* Sube un poco al aparecer */
 }
+
+.cursor {
+  display: inline-block;
+  margin-left: 2px;
+  width: 2px;
+  background-color: #003366;
+  animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    background-color: transparent;
+  }
+}
+
+.spotify-card {
+  background: #1DB954; /* color oficial de Spotify */
+  color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.spotify-card i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.spotify-card h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.spotify-card p {
+  margin-bottom: 1.5rem;
+}
+
+.spotify-button {
+  background: white;
+  color: #1DB954;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.spotify-button:hover {
+  background: #191414; /* fondo negro spotify */
+  color: #1DB954;
+}
