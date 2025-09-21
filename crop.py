@@ -25,4 +25,4 @@ def crop_to_square(input_path, output_path):
 
 
 if __name__ == "__main__":
-    crop_to_square("./web/static/papa-leon-xiv-spotify.png", "papa-leon-xiv-square.png")
+    crop_to_square("pope.png", "papa-leon-xiv-square.png")
