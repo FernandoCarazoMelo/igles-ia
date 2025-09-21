@@ -1,0 +1,68 @@
+name: 🎤 Generación Diaria de Audios
+
+on:
+  schedule:
+    # Se ejecuta todos los días a las 5:00 UTC (7:00 en España)
+    - cron: "0 5 * * *"
+  workflow_dispatch: # Permite ejecutarlo manualmente desde GitHub
+
+jobs:
+  generate_daily_audio:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      S3_BUCKET_NAME: igles-ia-spotify
+      # Variables no necesarias para esta tarea, pero se pueden dejar por consistencia
+      EMAIL_USER: ${{ secrets.EMAIL_USER }}
+      EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+      USER_POOL_ID: ${{ secrets.USER_POOL_ID }}
+      SUMMARIES_FOLDER: web/data/summaries
+
+    steps:
+      - name: ⬇️ Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: ⚡ Install uv (Python package installer)
+        run: curl -LsSf https://astral.sh/uv/install.sh | sh
+
+      - name: 📦 Install dependencies
+        run: uv pip install . --system
+
+      - name: 🗓️ Calculate yesterday's date
+        id: get_date
+        run: echo "YESTERDAY_DATE=$(date -d 'yesterday' +'%Y-%m-%d')" >> $GITHUB_ENV
+
+      - name: 🚀 Run daily audio pipeline
+        run: |
+          echo "Ejecutando para la fecha: ${{ env.YESTERDAY_DATE }}"
+
+          # 1. Prepara solo los datos necesarios para el audio. Rápido y no crea carpetas extra.
+          uv run main.py preparar-datos-audio --run-date ${{ env.YESTERDAY_DATE }}
+
+          # 2. Genera los audios a partir del archivo episodes.json creado en el paso anterior.
+          uv run main.py generar-audios --run-date ${{ env.YESTERDAY_DATE }}
+
+      - name: 💾 Commit and push new audio files
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions-bot@users.noreply.github.com"
+          git pull
+          git add json-rss/${{ env.YESTERDAY_DATE }}/
+
+          if git diff --staged --quiet; then
+            echo "No hay contenido nuevo para la fecha ${{ env.YESTERDAY_DATE }}."
+          else
+            git commit -m "🎤 Audios diarios para ${{ env.YESTERDAY_DATE }}"
+            git push
+            echo "Nuevos audios y metadatos guardados en el repositorio."
+          fi
