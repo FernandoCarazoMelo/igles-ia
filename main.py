@@ -178,7 +178,7 @@ def pipeline_diaria(
     print(f"COGNITO. Total de contactos obtenidos: {len(contacts)}")
     print("Solo para pruebas, usar el último contacto\n")
     print(contacts)
-    contacts = contacts[contacts["email"].str.contains("nando.carazom@gmai")]
+    contacts = contacts[contacts["email"].str.contains("nando.carazom@gmai|droaguilor@")]
 
     enviar_correos_todos(contacts, fecha_de_hoy)
 
