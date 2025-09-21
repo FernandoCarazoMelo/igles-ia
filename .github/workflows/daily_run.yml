@@ -21,6 +21,7 @@ jobs:
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       USER_POOL_ID: ${{ secrets.USER_POOL_ID }}
       SUMMARIES_FOLDER: web/data/summaries
+      S3_BUCKET_NAME: igles-ia-spotify
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
