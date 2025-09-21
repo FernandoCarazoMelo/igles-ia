@@ -6,7 +6,7 @@
     <language>es-ES</language>
     <description>Textos originales de discursos y homilías del Papa León XIV. Leídos con locutor profesional gracias a la IA. Creado por http://igles-ia.es. Síguenos 👉 Whatsapp: https://bit.ly/iglesiawp</description>
     <itunes:author>igles-ia.es</itunes:author>
-    <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_2.png"/>
+    <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
     <itunes:owner>
       <itunes:name>igles-ia.es</itunes:name>
       <itunes:email>igles-ia@igles-ia.es</itunes:email>
@@ -15,13 +15,73 @@
       <itunes:category text="Christianity"/>
     </itunes:category>
     <item>
+      <title>[20.6] Ángelus 21/09 | Ángelus, 21 de septiembre de 2025 | Administración de bienes</title>
+      <description>&lt;![CDATA[En este Ángelus, el Papa León XIV nos invita a reflexionar sobre cómo gestionamos los bienes materiales y nuestra vida, recordándonos que todo es un don de Dios. Nos exhorta a usar nuestros recursos para construir amistad, solidaridad y un mundo más justo, en lugar de acumular solo para nosotros. Pidamos a la Virgen Santa que nos ayude a administrar con justicia y responsabilidad. Podcast creado por igles-ia.es]]&gt;</description>
+      <pubDate>Sun, 21 Sep 2025 12:00:00 GMT</pubDate>
+      <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-21_ángelus_angelus_21_de_septiembre_de_2025.mp3" type="audio/mpeg" length="1826440"/>
+      <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-21_ángelus_angelus_21_de_septiembre_de_2025.mp3</guid>
+      <itunes:author>igles-ia.es</itunes:author>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
+      <itunes:episode>20.6</itunes:episode>
+    </item>
+    <item>
+      <title>[20.5] Discurso 20/09 | Jubileo de los Trabajadores por la Justicia | Justicia y Misericordia</title>
+      <description>&lt;![CDATA[En este discurso, el Papa León XIV reflexiona sobre la importancia de la justicia como virtud fundamental para la convivencia social y el bien común. Destaca que la justicia debe ir más allá de la ley, promoviendo la misericordia y el perdón como elementos esenciales para construir relaciones humanas armoniosas. Un llamado a vivir la justicia desde el amor y la reconciliación. Podcast creado por igles-ia.es]]&gt;</description>
+      <pubDate>Sat, 20 Sep 2025 12:00:00 GMT</pubDate>
+      <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-20_discurso_jubileo_de_los_trabajadores_por_la_justicia_audiencia_con_el_santo_padre_20_de_septiembre_de_2025.mp3" type="audio/mpeg" length="3432228"/>
+      <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-20_discurso_jubileo_de_los_trabajadores_por_la_justicia_audiencia_con_el_santo_padre_20_de_septiembre_de_2025.mp3</guid>
+      <itunes:author>igles-ia.es</itunes:author>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
+      <itunes:episode>20.5</itunes:episode>
+    </item>
+    <item>
+      <title>[20.4] Discurso 19/09 | Participantes en encuentro promovido por CELAM, Pontificia Academia y Juan Pablo II | Unidad y esperanza</title>
+      <description>&lt;![CDATA[En este Discurso el Papa León XIV comparte un mensaje de alegría, esperanza y compromiso, invitando a las familias a ser testigos vivos de la luz de Cristo en sus hogares. Destaca la importancia de la alegría del Evangelio y la intercesión de la Sagrada Familia como ejemplo de fe y amor. Podcast creado por igles-ia.es]]&gt;</description>
+      <pubDate>Fri, 19 Sep 2025 12:00:00 GMT</pubDate>
+      <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-19_discurso_a_los_participantes_en_el_encuentro_promovido_por_el_consejo_episcopal_latinoamericano_celam_la_pont.mp3" type="audio/mpeg" length="485612"/>
+      <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-19_discurso_a_los_participantes_en_el_encuentro_promovido_por_el_consejo_episcopal_latinoamericano_celam_la_pont.mp3</guid>
+      <itunes:author>igles-ia.es</itunes:author>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
+      <itunes:episode>20.4</itunes:episode>
+    </item>
+    <item>
+      <title>[20.3] Discurso 18/09 | Participantes en Capítulos Generales | Vocación y Obediencia</title>
+      <description>&lt;![CDATA[En este discurso, el Papa León XIV destaca la importancia de la vocación religiosa como testimonio de la multiplicidad de dones del Espíritu Santo y la relevancia de la vida en comunidad como fuente de santificación y apostolado. Resalta también que la obediencia, lejos de ser una renuncia, es un acto de amor que fortalece las relaciones y fomenta la madurez en la fe. Podcast creado por igles-ia.es]]&gt;</description>
+      <pubDate>Thu, 18 Sep 2025 12:00:00 GMT</pubDate>
+      <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-18_discurso_a_los_participantes_en_los_capitulos_generales_de_misioneros_de_la_preciosisima_sangre_sociedad_de_m.mp3" type="audio/mpeg" length="2142808"/>
+      <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-18_discurso_a_los_participantes_en_los_capitulos_generales_de_misioneros_de_la_preciosisima_sangre_sociedad_de_m.mp3</guid>
+      <itunes:author>igles-ia.es</itunes:author>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
+      <itunes:episode>20.3</itunes:episode>
+    </item>
+    <item>
+      <title>[20.2] Audiencia 17/09 | La esperanza en el silencio del Sábado Santo | Esperanza y espera</title>
+      <description>&lt;![CDATA[El Papa León XIV en esta audiencia nos invita a reflexionar sobre el misterio del Sábado Santo, un día de silencio y descanso en el que Dios trabaja en lo profundo de nuestro corazón. Nos enseña que en la pausa y la espera también se revela la presencia de Dios, quien prepara la resurrección y la vida nueva. Aprendamos a confiar en el tiempo de Dios, incluso en los momentos de silencio y límite. Podcast creado por igles-ia.es]]&gt;</description>
+      <pubDate>Wed, 17 Sep 2025 12:00:00 GMT</pubDate>
+      <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-17_audiencia_audiencia_general_del_17_de_septiembre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_e.mp3" type="audio/mpeg" length="1814920"/>
+      <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-17_audiencia_audiencia_general_del_17_de_septiembre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_e.mp3</guid>
+      <itunes:author>igles-ia.es</itunes:author>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
+      <itunes:episode>20.2</itunes:episode>
+    </item>
+    <item>
+      <title>[20.1] Homilia 15/09 | Vigilia del Jubileo de la Consolación | Paz y Esperanza</title>
+      <description>&lt;![CDATA[En esta homilía, el Papa León XIV reflexiona sobre el dolor colectivo y la importancia de buscar la paz en medio de la violencia y la injusticia. Nos invita a ser constructores de paz y a confiar en la misericordia de Dios, quien siempre escucha nuestro clamor. Podcast creado por igles-ia.es]]&gt;</description>
+      <pubDate>Mon, 15 Sep 2025 12:00:00 GMT</pubDate>
+      <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-15_homilia_vigilia_del_jubileo_de_la_consolacion_15_de_septiembre_de_2025.mp3" type="audio/mpeg" length="495692"/>
+      <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-15_homilia_vigilia_del_jubileo_de_la_consolacion_15_de_septiembre_de_2025.mp3</guid>
+      <itunes:author>igles-ia.es</itunes:author>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
+      <itunes:episode>20.1</itunes:episode>
+    </item>
+    <item>
       <title>[19.2] Ángelus 14/09 | Exaltación de la Santa Cruz | Fe y Salvación</title>
       <description>&lt;![CDATA[En este Ángelus, el Papa León XIV nos invita a reflexionar sobre la fiesta de la Exaltación de la Santa Cruz, símbolo del amor divino y la redención. Nos recuerda que la cruz, instrumento de muerte, se convirtió en un signo de vida y esperanza gracias al amor inmenso de Dios. Pidamos la intercesión de María para que su amor nos transforme y nos impulse a donarnos a los demás. Podcast creado por igles-ia.es]]&gt;</description>
       <pubDate>Sun, 14 Sep 2025 12:00:00 GMT</pubDate>
       <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-14_ángelus_angelus_14_de_septiembre_de_2025.mp3" type="audio/mpeg" length="1024028"/>
       <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-14_ángelus_angelus_14_de_septiembre_de_2025.mp3</guid>
       <itunes:author>igles-ia.es</itunes:author>
-      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_2.png"/>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
       <itunes:episode>19.2</itunes:episode>
     </item>
     <item>
@@ -31,7 +91,7 @@
       <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-10_audiencia_audiencia_general_del_10_de_septiembre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_e.mp3" type="audio/mpeg" length="1868200"/>
       <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-10_audiencia_audiencia_general_del_10_de_septiembre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_e.mp3</guid>
       <itunes:author>igles-ia.es</itunes:author>
-      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_2.png"/>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
       <itunes:episode>19.1</itunes:episode>
     </item>
     <item>
@@ -41,7 +101,7 @@
       <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-07_ángelus_angelus_7_de_septiembre_de_2025.mp3" type="audio/mpeg" length="595916"/>
       <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-07_ángelus_angelus_7_de_septiembre_de_2025.mp3</guid>
       <itunes:author>igles-ia.es</itunes:author>
-      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_2.png"/>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
       <itunes:episode>18.5</itunes:episode>
     </item>
     <item>
@@ -51,7 +111,7 @@
       <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-07_homilia_santa_misa_y_canonizacion_7_de_septiembre_de_2025.mp3?year=2025" type="audio/mpeg" length="2959044"/>
       <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-07_homilia_santa_misa_y_canonizacion_7_de_septiembre_de_2025.mp3?year=2025</guid>
       <itunes:author>igles-ia.es</itunes:author>
-      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_2.png"/>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
       <itunes:episode>18.4</itunes:episode>
     </item>
     <item>
@@ -61,7 +121,7 @@
       <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-06_audiencia_audiencia_jubilar_6_settembre_2025.mp3" type="audio/mpeg" length="385532"/>
       <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-06_audiencia_audiencia_jubilar_6_settembre_2025.mp3</guid>
       <itunes:author>igles-ia.es</itunes:author>
-      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_2.png"/>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
       <itunes:episode>18.3</itunes:episode>
     </item>
     <item>
@@ -71,7 +131,7 @@
       <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-05_discurso_al_consejo_de_jovenes_del_mediterraneo_5_de_septiembre_de_2025.mp3" type="audio/mpeg" length="1144412"/>
       <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-05_discurso_al_consejo_de_jovenes_del_mediterraneo_5_de_septiembre_de_2025.mp3</guid>
       <itunes:author>igles-ia.es</itunes:author>
-      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_2.png"/>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
       <itunes:episode>18.2</itunes:episode>
     </item>
     <item>
@@ -81,7 +141,7 @@
       <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-03_audiencia_audiencia_general_del_3_de_septiembre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_es.mp3" type="audio/mpeg" length="1766824"/>
       <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-03_audiencia_audiencia_general_del_3_de_septiembre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_es.mp3</guid>
       <itunes:author>igles-ia.es</itunes:author>
-      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_2.png"/>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
       <itunes:episode>18.1</itunes:episode>
     </item>
     <item>
@@ -91,7 +151,7 @@
       <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-31_ángelus_angelus_31_de_agosto_de_2025.mp3" type="audio/mpeg" length="1250152"/>
       <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-31_ángelus_angelus_31_de_agosto_de_2025.mp3</guid>
       <itunes:author>igles-ia.es</itunes:author>
-      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_2.png"/>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
       <itunes:episode>17.3</itunes:episode>
     </item>
     <item>
@@ -101,7 +161,7 @@
       <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-29_discurso_a_los_miembros_de_las_escuelas_de_evangelizacion_san_andres_29_de_agosto_de_2025.mp3" type="audio/mpeg" length="806300"/>
       <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-29_discurso_a_los_miembros_de_las_escuelas_de_evangelizacion_san_andres_29_de_agosto_de_2025.mp3</guid>
       <itunes:author>igles-ia.es</itunes:author>
-      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_2.png"/>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
       <itunes:episode>17.2</itunes:episode>
     </item>
     <item>
@@ -111,7 +171,7 @@
       <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-27_audiencia_audiencia_general_del_27_de_agosto_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_esper.mp3" type="audio/mpeg" length="2277448"/>
       <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-27_audiencia_audiencia_general_del_27_de_agosto_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_esper.mp3</guid>
       <itunes:author>igles-ia.es</itunes:author>
-      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_2.png"/>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
       <itunes:episode>17.1</itunes:episode>
     </item>
     <item>
@@ -121,7 +181,7 @@
       <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-24_ángelus_angelus_24_de_agosto_de_2025.mp3" type="audio/mpeg" length="1180556"/>
       <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-24_ángelus_angelus_24_de_agosto_de_2025.mp3</guid>
       <itunes:author>igles-ia.es</itunes:author>
-      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_2.png"/>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
       <itunes:episode>16.3</itunes:episode>
     </item>
     <item>
@@ -131,7 +191,7 @@
       <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-23_discurso_a_las_participantes_en_los_capitulos_generales_de_cuatro_institutos_misioneras_hijas_de_la_sagrada_f.mp3" type="audio/mpeg" length="1796776"/>
       <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-23_discurso_a_las_participantes_en_los_capitulos_generales_de_cuatro_institutos_misioneras_hijas_de_la_sagrada_f.mp3</guid>
       <itunes:author>igles-ia.es</itunes:author>
-      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_2.png"/>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
       <itunes:episode>16.2</itunes:episode>
     </item>
     <item>
@@ -141,7 +201,7 @@
       <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-20_audiencia_audiencia_general_del_20_de_agosto_de_2025_ciclo_de_catequesis_ciclo_de_catequesis_jubileo_2025_jesu.mp3" type="audio/mpeg" length="2254984"/>
       <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-20_audiencia_audiencia_general_del_20_de_agosto_de_2025_ciclo_de_catequesis_ciclo_de_catequesis_jubileo_2025_jesu.mp3</guid>
       <itunes:author>igles-ia.es</itunes:author>
-      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_2.png"/>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
       <itunes:episode>16.1</itunes:episode>
     </item>
     <item>
@@ -151,7 +211,7 @@
       <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-17_ángelus_angelus_17_de_agosto_de_2025.mp3" type="audio/mpeg" length="1190924"/>
       <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-17_ángelus_angelus_17_de_agosto_de_2025.mp3</guid>
       <itunes:author>igles-ia.es</itunes:author>
-      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_2.png"/>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
       <itunes:episode>15.5</itunes:episode>
     </item>
     <item>
@@ -161,7 +221,7 @@
       <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-17_homilia_santuario_de_santa_maria_della_rotonda_albano_celebracion_de_la_santa_misa_17_de_agosto_de_2025.mp3" type="audio/mpeg" length="2342680"/>
       <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-17_homilia_santuario_de_santa_maria_della_rotonda_albano_celebracion_de_la_santa_misa_17_de_agosto_de_2025.mp3</guid>
       <itunes:author>igles-ia.es</itunes:author>
-      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_2.png"/>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
       <itunes:episode>15.4</itunes:episode>
     </item>
     <item>
@@ -171,7 +231,7 @@
       <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-15_homilia_santa_misa_en_la_solemnidad_de_la_asuncion_de_la_bienaventurada_virgen_maria_castel_gandolfo_15_de_a.mp3" type="audio/mpeg" length="2469688"/>
       <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-15_homilia_santa_misa_en_la_solemnidad_de_la_asuncion_de_la_bienaventurada_virgen_maria_castel_gandolfo_15_de_a.mp3</guid>
       <itunes:author>igles-ia.es</itunes:author>
-      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_2.png"/>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
       <itunes:episode>15.3</itunes:episode>
     </item>
     <item>
@@ -181,7 +241,7 @@
       <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-15_ángelus_angelus_15_de_agosto_de_2025_santa_misa_en_la_solemnidad_de_la_asuncion_de_la_bienaventurada_virgen_.mp3" type="audio/mpeg" length="1229804"/>
       <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-15_ángelus_angelus_15_de_agosto_de_2025_santa_misa_en_la_solemnidad_de_la_asuncion_de_la_bienaventurada_virgen_.mp3</guid>
       <itunes:author>igles-ia.es</itunes:author>
-      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_2.png"/>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
       <itunes:episode>15.2</itunes:episode>
     </item>
     <item>
@@ -191,7 +251,7 @@
       <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-13_audiencia_audiencia_general_del_13_de_agosto_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_esper.mp3" type="audio/mpeg" length="2395384"/>
       <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-13_audiencia_audiencia_general_del_13_de_agosto_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_esper.mp3</guid>
       <itunes:author>igles-ia.es</itunes:author>
-      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_2.png"/>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
       <itunes:episode>15.1</itunes:episode>
     </item>
     <item>
@@ -201,7 +261,7 @@
       <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-10_ángelus_angelus_10_de_agosto_de_2025.mp3" type="audio/mpeg" length="1241468"/>
       <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-10_ángelus_angelus_10_de_agosto_de_2025.mp3</guid>
       <itunes:author>igles-ia.es</itunes:author>
-      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_2.png"/>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
       <itunes:episode>14.2</itunes:episode>
     </item>
     <item>
@@ -211,7 +271,7 @@
       <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-06_audiencia_audiencia_general_del_6_de_agosto_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_espera.mp3" type="audio/mpeg" length="1954024"/>
       <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-06_audiencia_audiencia_general_del_6_de_agosto_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_espera.mp3</guid>
       <itunes:author>igles-ia.es</itunes:author>
-      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_2.png"/>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
       <itunes:episode>14.1</itunes:episode>
     </item>
     <item>
@@ -221,7 +281,7 @@
       <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-03_homilia_santa_misa_por_el_jubileo_de_los_jovenes_3_de_agosto_de_2025.mp3" type="audio/mpeg" length="3079140"/>
       <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-03_homilia_santa_misa_por_el_jubileo_de_los_jovenes_3_de_agosto_de_2025.mp3</guid>
       <itunes:author>igles-ia.es</itunes:author>
-      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_2.png"/>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
       <itunes:episode>13.8</itunes:episode>
     </item>
     <item>
@@ -231,7 +291,7 @@
       <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-03_ángelus_angelus_3_de_agosto_de_2025.mp3" type="audio/mpeg" length="1430152"/>
       <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-03_ángelus_angelus_3_de_agosto_de_2025.mp3</guid>
       <itunes:author>igles-ia.es</itunes:author>
-      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_2.png"/>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
       <itunes:episode>13.7</itunes:episode>
     </item>
     <item>
@@ -241,7 +301,7 @@
       <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-02_discurso_a_los_jovenes_peregrinos_egipcios_companeros_de_la_joven_pascale_2_de_agosto_de_2025.mp3" type="audio/mpeg" length="1271464"/>
       <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-02_discurso_a_los_jovenes_peregrinos_egipcios_companeros_de_la_joven_pascale_2_de_agosto_de_2025.mp3</guid>
       <itunes:author>igles-ia.es</itunes:author>
-      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_2.png"/>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
       <itunes:episode>13.6</itunes:episode>
     </item>
     <item>
@@ -251,7 +311,7 @@
       <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-02_discurso_vigilia_de_oracion_con_los_jovenes_tor_vergata_2_de_agosto_de_2025.mp3" type="audio/mpeg" length="5545228"/>
       <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-02_discurso_vigilia_de_oracion_con_los_jovenes_tor_vergata_2_de_agosto_de_2025.mp3</guid>
       <itunes:author>igles-ia.es</itunes:author>
-      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_2.png"/>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
       <itunes:episode>13.5</itunes:episode>
     </item>
     <item>
@@ -261,7 +321,7 @@
       <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-07-30_audiencia_audiencia_general_del_30_de_julio_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_espera.mp3" type="audio/mpeg" length="2156200"/>
       <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-07-30_audiencia_audiencia_general_del_30_de_julio_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_espera.mp3</guid>
       <itunes:author>igles-ia.es</itunes:author>
-      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_2.png"/>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
       <itunes:episode>13.4</itunes:episode>
     </item>
     <item>
@@ -271,7 +331,7 @@
       <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-07-29_discurso_a_los_influencers_y_misioneros_digitales_29_de_julio_de_2025.mp3" type="audio/mpeg" length="2167576"/>
       <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-07-29_discurso_a_los_influencers_y_misioneros_digitales_29_de_julio_de_2025.mp3</guid>
       <itunes:author>igles-ia.es</itunes:author>
-      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_2.png"/>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
       <itunes:episode>13.3</itunes:episode>
     </item>
     <item>
@@ -281,7 +341,7 @@
       <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-07-29_discurso_a_los_jovenes_reunidos_en_la_plaza_de_san_pedro_para_la_santa_misa_de_bienvenida_al_jubileo_de_los_j.mp3" type="audio/mpeg" length="621836"/>
       <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-07-29_discurso_a_los_jovenes_reunidos_en_la_plaza_de_san_pedro_para_la_santa_misa_de_bienvenida_al_jubileo_de_los_j.mp3</guid>
       <itunes:author>igles-ia.es</itunes:author>
-      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_2.png"/>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
       <itunes:episode>13.2</itunes:episode>
     </item>
     <item>
@@ -291,7 +351,7 @@
       <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-07-28_discurso_a_un_grupo_de_jovenes_de_peru_28_de_julio_de_2025.mp3" type="audio/mpeg" length="1334536"/>
       <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-07-28_discurso_a_un_grupo_de_jovenes_de_peru_28_de_julio_de_2025.mp3</guid>
       <itunes:author>igles-ia.es</itunes:author>
-      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_2.png"/>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
       <itunes:episode>13.1</itunes:episode>
     </item>
   </channel>

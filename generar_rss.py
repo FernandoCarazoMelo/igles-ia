@@ -17,7 +17,7 @@ PODCAST_AUTHOR = "igles-ia.es"
 PODCAST_OWNER_EMAIL = "igles-ia@igles-ia.es"
 
 # --- Imagen de portada ---
-PODCAST_IMAGE = "https://igles-ia.es/static/papa-leon-xiv-spotify_2.png"
+PODCAST_IMAGE = "https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"
 
 # --- Rutas ---
 JSON_BASE_DIR = "json-rss/"
