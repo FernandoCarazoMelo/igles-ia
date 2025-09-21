@@ -208,7 +208,7 @@ def pipeline_date(
     contacts = cognito_get_verified_emails()
     print(f"COGNITO. Total de contactos obtenidos: {len(contacts)}")
     print("Solo para pruebas, usar el último contacto\n")
-    contacts = contacts[contacts["email"].str.contains("nando.carazom@gmai")]
+    contacts = contacts[contacts["email"].str.contains("nando.carazom@gmai|droaguilor")]
     print(contacts)
     enviar_correos_todos(contacts, run_date)
 
