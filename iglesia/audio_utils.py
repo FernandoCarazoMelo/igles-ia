@@ -8,6 +8,8 @@ from math import ceil
 import boto3
 from botocore.exceptions import NoCredentialsError
 
+from web.app import index
+
 # --- Lógica de cálculo de la semana de pontificado ---
 PONTIFICATE_START_DATE = datetime(2025, 5, 8)
 
@@ -40,7 +42,7 @@ def generar_metadatos_episodio(texto_limpio, episodio_info, llm_client):
         Basado en el siguiente texto, genera un título y una descripción optimizados para Spotify.
         El formato de salida DEBE ser un JSON válido con las claves "titulo_spotify" y "descripcion_spotify".
         REGLAS DEL TÍTULO:
-        - El formato exacto debe ser: "{numero_formateado} {episodio_info["tipo"]} {fecha_simple} | [TITULO ORIGINAL resumido] | [Tema principal en 3-5 palabras]"
+        - El formato exacto debe ser: "{numero_formateado} {episodio_info["tipo"]} {fecha_simple} | [TITULO ORIGINAL resumido] | [Tema principal en 3-5 palabras]", si es de tipo "Angelus" no incluyas el [TITULO ORIGINAL resumido] (solo tendrá dos partes).
         - El [TITULO ORIGINAL resumido] tienes que generarlo únicamente con el título original << {episodio_info["titulo"]}>>. no incluyas la fecha en esta parte.
         REGLAS DE LA DESCRIPCIÓN:
         - Debe ser un párrafo de 2-4 frases que resuma el mensaje central del Papa León XIV. Empieza diciendo en este/a {episodio_info["tipo"]} el Papa León XIV... Termina diciendo \n\n'Podcast creado por igles-ia.es'
@@ -129,7 +131,13 @@ def sintetizar_y_subir_audio(
 
 
 # --- FUNCIÓN PRINCIPAL ORQUESTADORA ---
-def procesar_y_generar_episodios(json_file_path, llm_client, only_metadata=False):
+def procesar_y_generar_episodios(
+    json_file_path,
+    llm_client,
+    only_metadata=False,
+    force_create_audio=False,
+    index_files: list = None,
+):
     print("Iniciando proceso de generación de episodios...")
     try:
         S3_BUCKET_NAME = os.environ["S3_BUCKET_NAME"]
@@ -162,19 +170,51 @@ def procesar_y_generar_episodios(json_file_path, llm_client, only_metadata=False
     ]
     todos_los_episodios.sort(key=lambda x: (x["pontificate_week"], x["sub_index"]))
 
+    # index_files es una lista con los índices de los elementos a procesar
+    if index_files is not None:
+        print(f"Procesando solo los índices especificados: {index_files}")
+        todos_los_episodios = [
+            ep for i, ep in enumerate(todos_los_episodios) if i in index_files
+        ]
+
     for episodio in todos_los_episodios:
         print(
             f"\n--- Procesando episodio {episodio['pontificate_week']}.{episodio['sub_index']}: {episodio['filename']} ---"
         )
+
         texto_original = episodio["texto"]
-        match = re.search(
-            r"(queridos.*)", texto_original, flags=re.IGNORECASE | re.DOTALL
-        )
-        texto_limpio = match.group(1) if match else texto_original
-        texto_limpio = re.sub(r"\([^)]*\)|_|\s+", " ", texto_limpio).strip()
+
+        # print texto original for debugging
+        print(f"Texto original:\n{texto_original}\n--- Fin del texto original ---\n")
+
+        # Buscar todas las posiciones de posibles inicios
+        posibles_inicios = []
+        for pattern in [
+            r"Queridos[\w\s,]*",
+            r"Queridísimos",
+            r"En el nombre del Padre, del Hijo y del Espíritu Santo",
+            r"En el nombre del Padre",
+            r"«Consuelen, consuelen a mi pueblo»",
+        ]:
+            match = re.search(pattern, texto_original, flags=re.IGNORECASE)
+            if match:
+                posibles_inicios.append(match.start())
+
+        # Elegir la posición más avanzada (la que normalmente marca el inicio real)
+        if posibles_inicios:
+            inicio_real = min(posibles_inicios)
+            texto_limpio = texto_original[inicio_real:]
+        else:
+            texto_limpio = texto_original
+
+        # Limpiar saludos o finales innecesarios
         texto_limpio = re.split(
-            r"Saludos|Después del Ángelus", texto_limpio, flags=re.IGNORECASE
+            r"Saludos|Después del Ángelus|_______", texto_limpio, flags=re.IGNORECASE
         )[0]
+
+        # Limpiar paréntesis, guiones bajos y exceso de espacios
+        texto_limpio = re.sub(r"\([^)]*\)|_|\s+", " ", texto_limpio).strip()
+        print(f"Texto limpio:\n{texto_limpio}\n--- Fin del texto limpio ---\n")
 
         # ✅ Regla 2: Saltar episodios demasiado largos (>10k caracteres)
         if len(texto_limpio) > 10000:
@@ -188,24 +228,36 @@ def procesar_y_generar_episodios(json_file_path, llm_client, only_metadata=False
         filename_mp3 = episodio["filename"] + ".mp3"
 
         # ✅ Regla 1: Saltar si el archivo ya está en S3
-        try:
-            s3.head_object(Bucket=S3_BUCKET_NAME, Key=filename_mp3)
-            print(f"☁️ Episodio ya existe en S3: {filename_mp3}. Saltando...")
-            url_audio = f"https://{S3_BUCKET_NAME}.s3.{s3.get_bucket_location(Bucket=S3_BUCKET_NAME)['LocationConstraint'] or 'us-east-1'}.amazonaws.com/{filename_mp3}"
-        except s3.exceptions.ClientError as e:
-            if e.response["Error"]["Code"] == "404":
-                # No existe → generamos audio
-                url_audio = sintetizar_y_subir_audio(
-                    texto_limpio,
-                    episodio["filename"],
-                    s3,
-                    polly,
-                    S3_BUCKET_NAME,
-                    only_metadata,
-                )
-            else:
-                print(f"❌ Error al comprobar S3: {e}")
-                continue
+        if force_create_audio:
+            # Forzar generación de audio aunque ya exista en S3
+            url_audio = sintetizar_y_subir_audio(
+                texto_limpio,
+                episodio["filename"],
+                s3,
+                polly,
+                S3_BUCKET_NAME,
+                only_metadata,
+            )
+        else:
+            # Comprobar si el archivo ya existe en S3
+            try:
+                s3.head_object(Bucket=S3_BUCKET_NAME, Key=filename_mp3)
+                print(f"☁️ Episodio ya existe en S3: {filename_mp3}. Saltando...")
+                url_audio = f"https://{S3_BUCKET_NAME}.s3.{s3.get_bucket_location(Bucket=S3_BUCKET_NAME)['LocationConstraint'] or 'us-east-1'}.amazonaws.com/{filename_mp3}"
+            except s3.exceptions.ClientError as e:
+                if e.response["Error"]["Code"] == "404":
+                    # No existe → generamos audio
+                    url_audio = sintetizar_y_subir_audio(
+                        texto_limpio,
+                        episodio["filename"],
+                        s3,
+                        polly,
+                        S3_BUCKET_NAME,
+                        only_metadata,
+                    )
+                else:
+                    print(f"❌ Error al comprobar S3: {e}")
+                    continue
 
         episodios_procesados.append(
             {

@@ -1,7 +1,9 @@
 import json
 import os
+from typing import List, Optional
 
 import pandas as pd
+import typer
 from crewai import LLM
 from dotenv import find_dotenv, load_dotenv
 from typer import Typer
@@ -20,7 +22,6 @@ load_dotenv(find_dotenv())
 def save_wordcloud(text, path_save="wordcloud.png"):
     from collections import Counter
 
-    import matplotlib.pyplot as plt
     from nltk.corpus import stopwords
     from wordcloud import WordCloud
 
@@ -156,7 +157,9 @@ def pipeline_semanal(debug: bool = True, fecha_de_hoy: str = None):
     if debug:
         print("Solo para pruebas, usar el último contacto\n")
         print(contacts)
-        contacts = contacts[contacts["email"].str.contains("carazom@gmail|droaguilor@gm")]
+        contacts = contacts[
+            contacts["email"].str.contains("carazom@gmail|droaguilor@gm")
+        ]
 
     enviar_correos_todos(contacts, fecha_de_hoy)
 
@@ -178,7 +181,9 @@ def pipeline_diaria(
     print(f"COGNITO. Total de contactos obtenidos: {len(contacts)}")
     print("Solo para pruebas, usar el último contacto\n")
     print(contacts)
-    contacts = contacts[contacts["email"].str.contains("nando.carazom@gmai|droaguilor@")]
+    contacts = contacts[
+        contacts["email"].str.contains("nando.carazom@gmai|droaguilor@")
+    ]
 
     enviar_correos_todos(contacts, fecha_de_hoy)
 
@@ -214,7 +219,14 @@ def pipeline_date(
 
 
 @app.command()
-def generar_audios(run_date: str = None, only_metadata: bool = False):
+def generar_audios(
+    run_date: Optional[str] = None,
+    only_metadata: bool = False,
+    force_create_audio: bool = False,
+    index_files: Optional[List[int]] = typer.Option(
+        None, help="Lista de índices de archivos"
+    ),
+):
     """
     Genera los archivos de audio para una fecha específica y los sube a S3.
     """
@@ -243,7 +255,9 @@ def generar_audios(run_date: str = None, only_metadata: bool = False):
         model="gpt-4.1-nano",
         temperature=0.2,
     )
-    resultados = procesar_y_generar_episodios(json_path, llm_real, only_metadata)
+    resultados = procesar_y_generar_episodios(
+        json_path, llm_real, only_metadata, force_create_audio, index_files
+    )
 
     print("\n\n--- RESULTADOS DEL LLM ---")
     print(json.dumps(resultados, indent=4, ensure_ascii=False))
