@@ -24,3 +24,8 @@ create_audio:
 	uv run main.py generar-audios --run-date "2025-09-22" --force-create-audio
 	uv run generar_rss.py
 	make freeze
+create_audios_new:
+	uv run main.py preparar-datos-audio --run-date="2025-09-30"
+	uv run main.py generar-audios 
+	uv run generar_rss.py
+	make freeze

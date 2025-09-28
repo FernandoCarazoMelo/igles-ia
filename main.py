@@ -1,5 +1,7 @@
 import json
 import os
+import re
+import unicodedata
 from typing import List, Optional
 
 import pandas as pd
@@ -54,10 +56,25 @@ def limpiar_nombre_archivo(nombre):
 
 
 @app.command()
-def preparar_datos_audio(run_date: str):
+def preparar_datos_audio(run_date: str = None):
     """
     Scrapea textos para una fecha y crea el 'episodes.json' para los audios. No ejecuta agentes de IA.
     """
+    if run_date is None:
+        run_date = pd.Timestamp.now()
+    else:
+        run_date = pd.to_datetime(run_date)
+
+    run_date = run_date.strftime("%Y-%m-%d")
+    dia_semana_actual = pd.Timestamp(run_date).dayofweek  # Lunes=0, Domingo=6
+    fecha_siguiente_lunes = pd.Timestamp(run_date)
+    if dia_semana_actual != 0:  # Si no es lunes
+        fecha_siguiente_lunes += pd.Timedelta(days=(7 - dia_semana_actual))
+        run_date = fecha_siguiente_lunes.strftime("%Y-%m-%d")
+        print(f"Ajustando la fecha al siguiente lunes: {run_date}")
+    else:
+        print(f"La fecha es lunes: {run_date}")
+
     print(f"Preparando datos de audio para la fecha: {run_date}")
     os.makedirs(f"json-rss/{run_date}", exist_ok=True)
 
