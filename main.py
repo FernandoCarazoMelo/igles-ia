@@ -1,5 +1,7 @@
 import json
 import os
+import re
+import unicodedata
 from typing import List, Optional
 
 import pandas as pd
@@ -17,6 +19,90 @@ from iglesia.utils import obtener_todos_los_textos
 app = Typer()
 
 load_dotenv(find_dotenv())
+
+
+# ==========================================================================
+# 1. URLs DEFINIDAS UNA SOLA VEZ
+# ==========================================================================
+URLS_VATICANO = {
+    "Homilia": ["https://www.vatican.va/content/leo-xiv/es/homilies/2025.html"],
+    "Ángelus": ["https://www.vatican.va/content/leo-xiv/es/angelus/2025.html"],
+    "Discurso": [
+        "https://www.vatican.va/content/leo-xiv/es/speeches/2025/may.index.html",
+        "https://www.vatican.va/content/leo-xiv/es/speeches/2025/june.index.html",
+        "https://www.vatican.va/content/leo-xiv/es/speeches/2025/july.index.html",
+        "https://www.vatican.va/content/leo-xiv/es/speeches/2025/august.index.html",
+        "https://www.vatican.va/content/leo-xiv/es/speeches/2025/september.index.html",
+        "https://www.vatican.va/content/leo-xiv/es/speeches/2025/october.index.html",
+        "https://www.vatican.va/content/leo-xiv/es/speeches/2025/november.index.html",
+        "https://www.vatican.va/content/leo-xiv/es/speeches/2025/december.index.html",
+    ],
+    "Audiencia": [
+        "https://www.vatican.va/content/leo-xiv/es/audiences/2025.index.html"
+    ],
+    "Carta": ["https://www.vatican.va/content/leo-xiv/es/letters/2025.index.html"],
+}
+
+
+def limpiar_nombre_archivo(nombre):
+    nombre = (
+        unicodedata.normalize("NFKD", nombre).encode("ascii", "ignore").decode("ascii")
+    )
+    nombre = re.sub(
+        r"[^\w\s-]", "", nombre
+    )  # Quita cualquier carácter que no sea letra/número/guion/bajo
+    nombre = re.sub(r"[-\s]+", "_", nombre)  # Reemplaza espacios y guiones por "_"
+    return nombre.strip("_").lower()[:100]
+
+
+@app.command()
+def preparar_datos_audio(run_date: str = None):
+    """
+    Scrapea textos para una fecha y crea el 'episodes.json' para los audios. No ejecuta agentes de IA.
+    """
+    if run_date is None:
+        run_date = pd.Timestamp.now()
+    else:
+        run_date = pd.to_datetime(run_date)
+
+    run_date = run_date.strftime("%Y-%m-%d")
+    dia_semana_actual = pd.Timestamp(run_date).dayofweek  # Lunes=0, Domingo=6
+    fecha_siguiente_lunes = pd.Timestamp(run_date)
+    if dia_semana_actual != 0:  # Si no es lunes
+        fecha_siguiente_lunes += pd.Timedelta(days=(7 - dia_semana_actual))
+        run_date = fecha_siguiente_lunes.strftime("%Y-%m-%d")
+        print(f"Ajustando la fecha al siguiente lunes: {run_date}")
+    else:
+        print(f"La fecha es lunes: {run_date}")
+
+    print(f"Preparando datos de audio para la fecha: {run_date}")
+    os.makedirs(f"json-rss/{run_date}", exist_ok=True)
+
+    # Asegúrate de que URLS_VATICANO esté definida fuera de esta función
+    df = obtener_todos_los_textos(URLS_VATICANO)
+    df = df[df["titulo"].str.len() > 10].reset_index(drop=True)
+
+    df["fecha_dt"] = pd.to_datetime(df["fecha"])
+    run_date_dt = pd.to_datetime(run_date)
+    df = df[df["fecha_dt"] == run_date_dt]
+    df = df.drop(columns=["fecha_dt"])
+
+    if df.empty:
+        print(
+            f"No se encontraron textos para la fecha {run_date}. No se generará 'episodes.json'."
+        )
+        with open(f"json-rss/{run_date}/episodes.json", "w") as f:
+            json.dump({}, f)
+        return
+
+    df["filename"] = df.apply(
+        lambda x: f"{x['fecha']}_{x['tipo'].replace(' ', '_').lower()}_{limpiar_nombre_archivo(x['titulo'])}",
+        axis=1,
+    )
+
+    print(f"Guardando {len(df)} episodios en json-rss/{run_date}/episodes.json")
+    df.to_json(f"json-rss/{run_date}/episodes.json", orient="index")
+    print("Datos de audio preparados con éxito.")
 
 
 def save_wordcloud(text, path_save="wordcloud.png"):
@@ -51,24 +137,7 @@ def run_agents(
         temperature=0.2,
         max_tokens=2000,
     )
-    urls = {
-        "Homilia": ["https://www.vatican.va/content/leo-xiv/es/homilies/2025.html"],
-        "Ángelus": ["https://www.vatican.va/content/leo-xiv/es/angelus/2025.html"],
-        "Discurso": [
-            "https://www.vatican.va/content/leo-xiv/es/speeches/2025/may.index.html",
-            "https://www.vatican.va/content/leo-xiv/es/speeches/2025/june.index.html",
-            "https://www.vatican.va/content/leo-xiv/es/speeches/2025/july.index.html",
-            "https://www.vatican.va/content/leo-xiv/es/speeches/2025/august.index.html",
-            "https://www.vatican.va/content/leo-xiv/es/speeches/2025/september.index.html",
-            "https://www.vatican.va/content/leo-xiv/es/speeches/2025/october.index.html",
-            "https://www.vatican.va/content/leo-xiv/es/speeches/2025/november.index.html",
-            "https://www.vatican.va/content/leo-xiv/es/speeches/2025/december.index.html",
-        ],
-        "Audiencia": [
-            "https://www.vatican.va/content/leo-xiv/es/audiences/2025.index.html"
-        ],
-        "Carta": ["https://www.vatican.va/content/leo-xiv/es/letters/2025.index.html"],
-    }
+
     if run_date:
         run_date = pd.to_datetime(run_date)
         run_date = run_date.strftime("%Y-%m-%d")
@@ -79,27 +148,12 @@ def run_agents(
     os.makedirs(f"{os.environ.get('SUMMARIES_FOLDER')}/{run_date}", exist_ok=True)
     os.makedirs(f"json-rss/{run_date}", exist_ok=True)
     print(f"{os.environ.get('SUMMARIES_FOLDER')}/{run_date}")
-    df = obtener_todos_los_textos(urls)
+    df = obtener_todos_los_textos(URLS_VATICANO)
     df = df[df["titulo"].str.len() > 10]
     df = df.reset_index(drop=True)
     print(df)
     if debug:
         df = df[:2]
-
-    import re
-    import unicodedata
-
-    def limpiar_nombre_archivo(nombre):
-        nombre = (
-            unicodedata.normalize("NFKD", nombre)
-            .encode("ascii", "ignore")
-            .decode("ascii")
-        )
-        nombre = re.sub(
-            r"[^\w\s-]", "", nombre
-        )  # Quita cualquier carácter que no sea letra/número/guion/bajo
-        nombre = re.sub(r"[-\s]+", "_", nombre)  # Reemplaza espacios y guiones por "_"
-        return nombre.strip("_").lower()[:100]
 
     df["filename"] = df.apply(
         lambda x: f"{x['fecha']}_{x['tipo'].replace(' ', '_').lower()}_{limpiar_nombre_archivo(x['titulo'])}",
@@ -135,7 +189,7 @@ def run_agents(
             path_save=f"{os.environ.get('SUMMARIES_FOLDER')}/{run_date}/wordcloud.png",
         )
     print(df)
-    df.to_json(f"json-rss/{run_date}/episodes.json", orient="index")
+    # df.to_json(f"json-rss/{run_date}/episodes.json", orient="index")
     df.to_csv(
         f"{os.environ.get('SUMMARIES_FOLDER')}/{run_date}/iglesia.csv", index=False
     )
