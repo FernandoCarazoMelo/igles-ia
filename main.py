@@ -85,6 +85,10 @@ def preparar_datos_audio(run_date: str = None):
     df["fecha_dt"] = pd.to_datetime(df["fecha"])
     run_date_dt = pd.to_datetime(run_date)
     df = df[df["fecha_dt"] == run_date_dt]
+    df = df[
+        (df["fecha_dt"] >= (run_date_dt - pd.Timedelta(days=7)))
+        & (df["fecha_dt"] < run_date_dt)
+    ]
     df = df.drop(columns=["fecha_dt"])
 
     if df.empty:
