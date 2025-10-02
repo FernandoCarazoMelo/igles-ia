@@ -1,5 +1,4 @@
 import json
-import locale
 import os
 import re
 import unicodedata
@@ -16,13 +15,6 @@ from iglesia.audio_utils import procesar_y_generar_episodios
 from iglesia.cognito_utils import cognito_get_verified_emails
 from iglesia.email_utils_3 import enviar_correos_todos
 from iglesia.utils import obtener_todos_los_textos
-
-try:
-    locale.setlocale(locale.LC_TIME, "es_ES.UTF-8")
-except locale.Error:
-    print(
-        "Locale 'es_ES.UTF-8' no encontrado. Usando el locale por defecto del sistema."
-    )
 
 app = Typer()
 
@@ -64,7 +56,7 @@ def limpiar_nombre_archivo(nombre):
 
 
 @app.command()
-def preparar_datos_audio(run_date: str = None):
+def generar_audios_diarios(run_date: str = None):
     """
     Scrapea textos para una fecha y crea el 'episodes.json' para los audios. No ejecuta agentes de IA.
     """
@@ -114,6 +106,8 @@ def preparar_datos_audio(run_date: str = None):
     print(f"Guardando {len(df)} episodios en json-rss/{run_date}/episodes.json")
     df.to_json(f"json-rss/{run_date}/episodes.json", orient="index")
     print("Datos de audio preparados con éxito.")
+    print("Generando audios:")
+    generar_audios(run_date=run_date)
 
 
 def save_wordcloud(text, path_save="wordcloud.png"):

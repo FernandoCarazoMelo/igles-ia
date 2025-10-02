@@ -3,7 +3,7 @@ name: Todos los días, 18h CEST
 on:
   schedule:
     # Ejecuta el script todos los días a las 18h CEST, UTC = 16h
-    - cron: "0 16 * * *" # Cada día a las 16:00 UTC (18:00 CEST)
+    - cron: "0 12 * * *" # Cada día a las 15:00 UTC (18:00 CEST)
   workflow_dispatch: # Permite ejecutar el workflow manualmente
 
 jobs:
@@ -45,8 +45,7 @@ jobs:
         run: |
           echo "Folder: $SUMMARIES_FOLDER"
           echo "Running script..."
-          uv run main.py preparar-datos-audio
-          uv run main.py generar-audios
+          uv run main.py generar_audios_diarios
           uv run generar_rss.py
       - name: Freeze site and generate docs
         run: make freeze
