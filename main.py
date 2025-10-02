@@ -107,7 +107,7 @@ def generar_audios_diarios(run_date: str = None):
     df.to_json(f"json-rss/{run_date}/episodes.json", orient="index")
     print("Datos de audio preparados con éxito.")
     print("Generando audios:")
-    generar_audios(run_date=run_date)
+    generar_audios(run_date=run_date, index_files=None)
 
 
 def save_wordcloud(text, path_save="wordcloud.png"):
