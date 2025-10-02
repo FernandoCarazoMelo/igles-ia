@@ -45,7 +45,7 @@ jobs:
         run: |
           echo "Folder: $SUMMARIES_FOLDER"
           echo "Running script..."
-          uv run main.py generar_audios_diarios
+          uv run main.py generar-audios-diarios
           uv run generar_rss.py
       - name: Freeze site and generate docs
         run: make freeze
