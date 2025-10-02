@@ -91,7 +91,7 @@ def obtener_todos_los_textos(urls):
 
     # Reordenar columnas y renombrar
     all_homilias = all_homilias.rename(columns={"titulo_homilia": "titulo"})
-    all_homilias = all_homilias[["tipo", "fecha", "titulo", "url", "texto"]]
+    all_homilias = all_homilias[["tipo", "fecha", "titulo", "url", "texto"]].copy()
 
     # Parsear y ordenar fechas
     all_homilias["fecha"] = pd.to_datetime(

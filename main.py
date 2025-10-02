@@ -1,4 +1,5 @@
 import json
+import locale
 import os
 import re
 import unicodedata
@@ -15,6 +16,13 @@ from iglesia.audio_utils import procesar_y_generar_episodios
 from iglesia.cognito_utils import cognito_get_verified_emails
 from iglesia.email_utils_3 import enviar_correos_todos
 from iglesia.utils import obtener_todos_los_textos
+
+try:
+    locale.setlocale(locale.LC_TIME, "es_ES.UTF-8")
+except locale.Error:
+    print(
+        "Locale 'es_ES.UTF-8' no encontrado. Usando el locale por defecto del sistema."
+    )
 
 app = Typer()
 
@@ -84,7 +92,6 @@ def preparar_datos_audio(run_date: str = None):
 
     df["fecha_dt"] = pd.to_datetime(df["fecha"])
     run_date_dt = pd.to_datetime(run_date)
-    df = df[df["fecha_dt"] == run_date_dt]
     df = df[
         (df["fecha_dt"] >= (run_date_dt - pd.Timedelta(days=7)))
         & (df["fecha_dt"] < run_date_dt)
