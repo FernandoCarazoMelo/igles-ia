@@ -1,162 +1,107 @@
+import json
 import logging
 import os
+import random
 import time
-from urllib.parse import urljoin, urlparse
+from urllib.parse import urljoin
 
-import html2text
 import requests
 from bs4 import BeautifulSoup
+from config import LANGUAGES, POPE_MAP
+from tqdm import tqdm
 
-# --- Configuración ---
-
-BASE_URL = "https://www.vatican.va/"
-START_PAGE_URL = "https://www.vatican.va/content/vatican/es/holy-father.html"  # URL actualizada, la original daba problemas
-OUTPUT_DIR = "archivo_papal"
-LOG_FILE = "archiver.log"
-REQUEST_DELAY_SECONDS = 1
-REQUEST_TIMEOUT_SECONDS = 30
-
-# Mapeo de nombres de Papas a sus slugs en la URL
-POPE_MAP = {
-    "León XIV": "leo-xiv",
-    "Francisco": "francesco",
-    "Benedicto XVI": "benedict-xvi",
-    "Juan Pablo II": "john-paul-ii",
-    "Juan Pablo I": "john-paul-i",
-    "Pablo VI": "paul-vi",
-    "Juan XXIII": "john-xxiii",
-    "Pío XII": "pius-xii",
-    "Pío XI": "pius-xi",
-    "Benedicto XV": "benedict-xv",
-    "Pío X": "pius-x",
-    "León XIII": "leo-xiii",
-}
-
-# Configuración del logging
 logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s",
+    level=logging.INFO,  # nivel mínimo de log que quieres ver
+    format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
-# --- Funciones de Red y Extracción ---
+BASE_URL = "https://www.vatican.va/"   # ajusta si es distinto
+CACHE_DIR = "cache"
 
 
-def get_soup(url):
+# ------------------------
+# Helpers: cache + requests
+# ------------------------
+
+def safe_filename(url: str) -> str:
+    """Convert a URL into a safe filename for local cache."""
+    return url.replace("https://", "").replace("http://", "").replace("/", "_")
+
+
+def get_cached_page(url: str, pope_slug: str, language: str, force_refresh: bool = False) -> str | None:
     """
-    Realiza una solicitud GET a una URL, maneja errores y devuelve un objeto BeautifulSoup.
+    Retrieve a page from cache if available, otherwise download with rate limiting.
     """
+    pope_cache_dir = os.path.join(CACHE_DIR, pope_slug, language)
+    os.makedirs(pope_cache_dir, exist_ok=True)
+
+    filename = os.path.join(pope_cache_dir, safe_filename(url) + ".html")
+
+    # Cached version available
+    if not force_refresh and os.path.exists(filename):
+        with open(filename, "r", encoding="utf-8") as f:
+            return f.read()
+
+    # Rate limiting
+    time.sleep(random.uniform(1, 3))
+
+    headers = {
+        "User-Agent": "AcademicResearchBot/1.0 (contact: your_email@example.com)"
+    }
+
     try:
-        time.sleep(REQUEST_DELAY_SECONDS)
-        headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
-        }
-        response = requests.get(url, headers=headers, timeout=REQUEST_TIMEOUT_SECONDS)
-        response.raise_for_status()  # Lanza una excepción para códigos de error HTTP
-        # Usar 'html.parser' para compatibilidad, aunque 'lxml' es más rápido
-        return BeautifulSoup(response.content, "html.parser")
-    except requests.exceptions.RequestException as e:
-        logging.error(f"Error al acceder a la URL {url}: {e}")
-        return None
-
-
-def get_pope_main_page_url(pope_slug):
-    """Construye la URL de la página principal de un Papa."""
-    return urljoin(BASE_URL, f"content/{pope_slug}/es.html")
-
-
-def scrape_document(doc_url):
-    """
-    Extrae el título y el contenido de una página de documento y lo convierte a Markdown.
-    """
-    logging.info(f"Procesando documento: {doc_url}")
-    soup = get_soup(doc_url)
-    if not soup:
-        return None
-
-    title_tag = soup.find("h3", class_="title")
-    title = title_tag.get_text(strip=True) if title_tag else "Sin Título"
-
-    content_div = soup.find("div", class_="text")
-    if not content_div:
-        logging.warning(
-            f"No se encontró el div 'text' en {doc_url}. Saltando documento."
-        )
-        return None
-
-    # Convertir el contenido HTML a Markdown
-    converter = html2text.HTML2Text()
-    converter.ignore_links = False
-    markdown_content = converter.handle(str(content_div))
-
-    # Combinar título y contenido
-    full_markdown = f"# {title}\n\n{markdown_content}"
-    return full_markdown
-
-
-def save_as_markdown(pope_name, doc_url, markdown_content):
-    """
-    Guarda el contenido de un documento como un archivo Markdown, preservando la estructura de carpetas.
-    """
-    try:
-        # Parseamos la URL para obtener la ruta y crear la estructura de carpetas
-        url_parts = urlparse(doc_url)
-        path_parts = url_parts.path.strip("/").split("/")
-
-        # Estructura: 'es/nombre-del-papa/categoria/nombre_archivo.md'
-        # El código de idioma es path_parts[1], el slug del papa es path_parts[2], la categoría es path_parts[3]
-        lang_code = path_parts[1]
-        pope_slug = path_parts[2]  # El slug se usa para la carpeta del papa
-        category = path_parts[3]
-
-        # Crear la ruta del directorio
-        dir_path = os.path.join(lang_code, pope_slug, category)
-        os.makedirs(dir_path, exist_ok=True)
-
-        # Crear el nombre del archivo, corrigiendo el error
-        # CORRECCIÓN AQUÍ: Accedemos al primer elemento (índice [0]) de la tupla.
-        file_name = os.path.splitext(path_parts[-1])[0] + ".md"
-
-        file_path = os.path.join(dir_path, file_name)
-
-        # Guardar el contenido en el archivo
-        with open(file_path, "w", encoding="utf-8") as f:
-            f.write(markdown_content)
-
-        # Opcional: registrar el éxito del guardado
-        # logging.info(f"Guardado exitosamente: {file_path}")
-
+        resp = requests.get(url, headers=headers, timeout=10)
+        resp.raise_for_status()
     except Exception as e:
-        logging.error(f"No se pudo guardar el documento {doc_url}: {e}")
+        logging.error(f"Failed to fetch {url}: {e}")
+        return None
+
+    # Save in cache
+    with open(filename, "w", encoding="utf-8") as f:
+        f.write(resp.text)
+
+    return resp.text
 
 
-def process_pope(pope_name, pope_slug):
-    """
-    Procesa todos los documentos de un Papa específico.
-    """
-    logging.info(f"--- Iniciando procesamiento para el Papa: {pope_name} ---")
-    pope_main_page_url = get_pope_main_page_url(pope_slug)
+def get_soup(url: str, pope_slug: str, language: str, force_refresh: bool = False) -> BeautifulSoup | None:
+    """Wrapper to return BeautifulSoup object from cached page or download."""
+    html = get_cached_page(url, pope_slug, language, force_refresh)
+    if not html:
+        return None
+    return BeautifulSoup(html, "html.parser")
 
-    soup = get_soup(pope_main_page_url)
+
+# ------------------------
+# Scraper logic
+# ------------------------
+
+def get_pope_main_page_url(pope_slug: str, language: str = "es") -> str:
+    """Build the main page URL for a given pope and language."""
+    return urljoin(BASE_URL, f"content/{pope_slug}/{language}.html")
+
+
+def process_pope_index_pages(pope_name: str, pope_slug: str, language: str) -> set[str]:
+    """Retrieve all index or category pages for a given pope."""
+    logging.info(f"--- Processing main page for Pope {pope_name} ---")
+
+    pope_main_page_url = get_pope_main_page_url(pope_slug, language)
+    soup = get_soup(pope_main_page_url, pope_slug, language)
+
     if not soup:
-        logging.error(
-            f"No se pudo acceder a la página principal de {pope_name}. Saltando."
-        )
-        return
+        logging.error(f"Could not access the main page for {pope_name}. Skipping.")
+        return set()
 
-    # Usar un conjunto para evitar procesar URLs duplicadas
-    urls_to_visit = set()
-    document_urls = set()
+    urls_to_visit: set[str] = set()
 
-    # Encontrar enlaces a categorías de documentos en la página principal del Papa
-    # La estructura puede variar, buscamos enlaces dentro del contenido principal
     content_area = (
         soup.find("div", class_="document-container")
         or soup.find("div", id="main-container")
         or soup.body
     )
+
     for link in content_area.find_all("a", href=True):
         href = link["href"]
-        # Filtrar enlaces que parecen ser categorías o índices
+
         if (
             pope_slug in href
             and ".html" in href
@@ -165,63 +110,93 @@ def process_pope(pope_name, pope_slug):
             full_url = urljoin(pope_main_page_url, href)
             urls_to_visit.add(full_url)
 
-    # Proceso de descubrimiento recursivo o por cola
-    processed_urls = set()
-    while urls_to_visit:
-        current_url = urls_to_visit.pop()
-        if current_url in processed_urls:
-            continue
+    return urls_to_visit
 
-        processed_urls.add(current_url)
-        logging.info(f"Explorando índice: {current_url}")
 
-        index_soup = get_soup(current_url)
-        if not index_soup:
-            continue
+def extract_document_links(index_url: str, pope_slug: str, language: str) -> set[str]:
+    """Extract all document links from a specific index page."""
+    full_slug = f"{pope_slug}/{language}"
+    pope_main_page_url = get_pope_main_page_url(full_slug, language)
 
-        # Buscar enlaces en la página de índice
-        index_content_area = (
-            index_soup.find("div", class_="document-container") or index_soup.body
+    soup = get_soup(index_url, pope_slug, language)
+    if not soup:
+        logging.error(f"Could not access page {index_url}. Skipping.")
+        return set()
+
+    urls_to_visit: set[str] = set()
+
+    url_without_index = index_url.replace(".index.html", "") + "/documents"
+    try:
+        url_without_index = url_without_index.split(full_slug)[1]
+
+        content_area = (
+            soup.find("div", class_="document-container")
+            or soup.find("div", id="main-container")
+            or soup.body
         )
-        for link in index_content_area.find_all("a", href=True):
+        for link in content_area.find_all("a", href=True):
             href = link["href"]
-            full_url = urljoin(current_url, href)
 
-            if pope_slug not in full_url:
-                continue
-
-            # Decidir si es un documento final o otro índice
-            if "/documents/" in full_url:
-                document_urls.add(full_url)
-            elif "index.html" in full_url and full_url not in processed_urls:
+            if (
+                full_slug in href
+                and url_without_index in href
+                and ".html" in href
+                and not href.startswith(("http", "#", "javascript"))
+            ):
+                full_url = urljoin(pope_main_page_url, href)
                 urls_to_visit.add(full_url)
-
-    logging.info(f"Se encontraron {len(document_urls)} documentos para {pope_name}.")
-    
-    # Descargar y guardar cada documento
-    for doc_url in document_urls:
-        markdown_content = scrape_document(doc_url)
-        if markdown_content:
-            save_as_markdown(pope_name, doc_url, markdown_content)
+    except Exception as E:
+        urls_to_visit = []
+        logging.warning(f"error: {E}")
 
 
-# --- Función Principal ---
+    return urls_to_visit
 
 
-def main():
-    """
-    Función principal que orquesta el proceso de archivado.
-    """
-    logging.info("Iniciando el Archivador Papal.")
-    if not os.path.exists(OUTPUT_DIR):
-        os.makedirs(OUTPUT_DIR)
-        logging.info(f"Directorio de salida creado: {OUTPUT_DIR}")
+def get_all_pope_documents(pope_name: str, pope_slug: str, language: str) -> list[str]:
+    """Retrieve all available document links for a given pope and language."""
+    all_document_urls: set[str] = set()
 
-    for pope_name, pope_slug in POPE_MAP.items():
-        process_pope(pope_name, pope_slug)
+    index_urls = process_pope_index_pages(pope_name, pope_slug, language)
+    if not index_urls:
+        logging.warning(f"No index pages found for {pope_name}")
+        return []
 
-    logging.info("Proceso de archivado completado.")
+    for url in tqdm(index_urls):
+        document_urls = extract_document_links(url, pope_slug, language)
+        all_document_urls.update(document_urls)
+
+    logging.info(
+        f"Total documents found for {pope_name} [{language}]: {len(all_document_urls)}"
+    )
+    return sorted(all_document_urls)
+
+
+def save_links(pope_name: str, pope_slug: str, languages: list[str], output_dir: str = "links"):
+    """Generate and save all document links for a pope in multiple languages."""
+    pope_dir = os.path.join(output_dir, pope_slug)
+    os.makedirs(pope_dir, exist_ok=True)
+
+    all_links = {}
+    for lang in languages:
+        logging.info(f"Fetching links for {pope_name} [{lang}]...")
+        links = get_all_pope_documents(pope_name, pope_slug, lang)
+        all_links[lang] = links
+
+        output_path = os.path.join(pope_dir, f"{lang}.json")
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump(links, f, indent=2, ensure_ascii=False)
+
+        logging.info(f"Saved {len(links)} links for {pope_name} [{lang}] -> {output_path}")
+
+    # combined_path = os.path.join(pope_dir, "all.json")
+    # with open(combined_path, "w", encoding="utf-8") as f:
+    #     json.dump(all_links, f, indent=2, ensure_ascii=False)
+
+    # logging.info(f"Saved combined links -> {combined_path}")
+    return all_links
 
 
 if __name__ == "__main__":
-    main()
+    for pope_name, pope_slug in POPE_MAP.items():
+        save_links(pope_name,pope_slug, LANGUAGES)
