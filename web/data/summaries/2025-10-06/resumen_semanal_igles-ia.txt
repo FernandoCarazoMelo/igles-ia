@@ -1,5 +1,5 @@
 ---
-title: "Los Santos Ángeles Custodios: La Relación Médico-Paciente y el Jubileo del Mundo Misionero y de los Migrantes"
+title: "Los Ángeles Custodios: La Relación Médico-Paciente y el Jubileo del Mundo Misionero y de los Migrantes"
 week_of: "Semana del 29/09 al 05/10 de 2025"
 date: "2025-10-06"
 pontificate_week: 22
