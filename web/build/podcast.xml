@@ -15,8 +15,18 @@
       <itunes:category text="Christianity"/>
     </itunes:category>
     <item>
-      <title>[23.1] Discurso 06/10 | A los Caballeros de Colón | Fe y esperanza</title>
-      <description>&lt;![CDATA[El Papa León XIV en este discurso destaca la importancia de la esperanza y la fe en la vida de los creyentes. Resalta el valor de la devoción, la solidaridad y el apoyo a la Iglesia, invitando a fortalecer la fe y el amor en comunidad. Podcast creado por igles-ia.es]]&gt;</description>
+      <title>[23.2] Audiencia 08/10 | La humildad de la Resurrección | Esperanza y normalidad</title>
+      <description>&lt;![CDATA[El Papa León XIV en esta Audiencia nos invita a reflexionar sobre la humildad de la Resurrección de Cristo. Nos enseña que la presencia de Jesús no se revela con signos espectaculares, sino en la cercanía cotidiana, en gestos simples como compartir una comida. La Resurrección transforma cada acto ordinario en gracia y esperanza, incluso en medio del dolor y las dificultades. Jesús está presente en nuestros fracasos, en nuestras heridas y en los momentos más oscuros, invitándonos a abrir los ojos y reconocer su rostro amigo. Podcast creado por igles-ia.es]]&gt;</description>
+      <pubDate>Wed, 08 Oct 2025 12:00:00 GMT</pubDate>
+      <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-08_audiencia_audiencia_general_del_8_de_octubre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_esper.mp3" type="audio/mpeg" length="1979800"/>
+      <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-08_audiencia_audiencia_general_del_8_de_octubre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_esper.mp3</guid>
+      <itunes:author>igles-ia.es</itunes:author>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
+      <itunes:episode>23.2</itunes:episode>
+    </item>
+    <item>
+      <title>[23.1] Discurso 06/10 | A los Caballeros de Colón | Fe y Esperanza</title>
+      <description>&lt;![CDATA[En este Discurso el Papa León XIV destaca la importancia de la esperanza y la fe en la vida de los creyentes. Resalta el valor de las obras de arte y la presencia de Jesús en la Eucaristía como pilares de la fe, agradeciendo a los Caballeros de Colón por su apoyo y dedicación a la Iglesia y a los más vulnerables. Podcast creado por igles-ia.es]]&gt;</description>
       <pubDate>Mon, 06 Oct 2025 12:00:00 GMT</pubDate>
       <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-06_discurso_a_los_caballeros_de_colon_6_de_octubre_de_2025.mp3" type="audio/mpeg" length="1106108"/>
       <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-06_discurso_a_los_caballeros_de_colon_6_de_octubre_de_2025.mp3</guid>

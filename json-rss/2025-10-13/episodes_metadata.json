@@ -1,12 +1,22 @@
 [
     {
         "titulo_original": "A los Caballeros de Colón (6 de octubre de 2025)",
-        "titulo_spotify": "[23.1] Discurso 06/10 | A los Caballeros de Colón | Fe y esperanza",
-        "descripcion_spotify": "El Papa León XIV en este discurso destaca la importancia de la esperanza y la fe en la vida de los creyentes. Resalta el valor de la devoción, la solidaridad y el apoyo a la Iglesia, invitando a fortalecer la fe y el amor en comunidad. Podcast creado por igles-ia.es",
+        "titulo_spotify": "[23.1] Discurso 06/10 | A los Caballeros de Colón | Fe y Esperanza",
+        "descripcion_spotify": "En este Discurso el Papa León XIV destaca la importancia de la esperanza y la fe en la vida de los creyentes. Resalta el valor de las obras de arte y la presencia de Jesús en la Eucaristía como pilares de la fe, agradeciendo a los Caballeros de Colón por su apoyo y dedicación a la Iglesia y a los más vulnerables. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-06_discurso_a_los_caballeros_de_colon_6_de_octubre_de_2025.mp3",
         "fecha": "2025-10-06",
         "filename": "2025-10-06_discurso_a_los_caballeros_de_colon_6_de_octubre_de_2025",
         "tipo": "Discurso",
         "numero_episodio": "23.1"
+    },
+    {
+        "titulo_original": "Audiencia general del 8 de octubre de 2025 Ciclo de catequesis - Jubileo 2025. Jesucristo, nuestra esperanza. III. La Pascua de Jesús. 10. Volver a encender. «¿No ardía acaso nuestro corazón, mientras nos hablaba en el camino y nos explicaba las Escrituras?». (Lc 24, 32)",
+        "titulo_spotify": "[23.2] Audiencia 08/10 | La humildad de la Resurrección | Esperanza y normalidad",
+        "descripcion_spotify": "El Papa León XIV en esta Audiencia nos invita a reflexionar sobre la humildad de la Resurrección de Cristo. Nos enseña que la presencia de Jesús no se revela con signos espectaculares, sino en la cercanía cotidiana, en gestos simples como compartir una comida. La Resurrección transforma cada acto ordinario en gracia y esperanza, incluso en medio del dolor y las dificultades. Jesús está presente en nuestros fracasos, en nuestras heridas y en los momentos más oscuros, invitándonos a abrir los ojos y reconocer su rostro amigo. Podcast creado por igles-ia.es",
+        "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-08_audiencia_audiencia_general_del_8_de_octubre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_esper.mp3",
+        "fecha": "2025-10-08",
+        "filename": "2025-10-08_audiencia_audiencia_general_del_8_de_octubre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_esper",
+        "tipo": "Audiencia",
+        "numero_episodio": "23.2"
     }
 ]
