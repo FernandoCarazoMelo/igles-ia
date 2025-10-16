@@ -72,6 +72,10 @@ def generar_metadatos_episodio(texto_limpio, episodio_info, llm_client):
 
 
 # --- FUNCIÓN 2: Síntesis y Subida de Audio ---
+
+MIN_CHARS_FOR_AUDIO = 750
+
+
 def sintetizar_y_subir_audio(
     texto_limpio,
     filename_base,
@@ -80,7 +84,15 @@ def sintetizar_y_subir_audio(
     bucket_name,
     only_metadata=False,
 ):
+    # 🆕 Comprobación de la longitud del texto
+    if len(texto_limpio) < MIN_CHARS_FOR_AUDIO:
+        print(
+            f"⚠️ El texto es muy corto ({len(texto_limpio)} caracteres). Mínimo requerido: {MIN_CHARS_FOR_AUDIO}. Saltando síntesis y subida de audio."
+        )
+        return None  # Devuelve None, indicando que no hay audio generado/subido
+
     def synthesize_speech(text):
+        # ... (código interno de synthesize_speech se mantiene igual)
         def split_text(t, max_length=3000):
             return [
                 t[i * max_length : (i + 1) * max_length]
@@ -121,6 +133,7 @@ def sintetizar_y_subir_audio(
         except Exception as e:
             print(f"❌ Error al subir a S3: {e}")
             return None
+
     region = (
         s3_client.get_bucket_location(Bucket=bucket_name)["LocationConstraint"]
         or "us-east-1"
