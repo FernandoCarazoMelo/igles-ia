@@ -326,4 +326,4 @@ if __name__ == "__main__":
         shutil.copy2(redirects_origen, redirects_destino)
         print("✅ Archivo _redirects copiado con éxito.")
     else:
-        print(f"⚠️  No se encontró '{redirects_origen}
+        print(f"⚠️  No se encontró '{redirects_origen}'.")
