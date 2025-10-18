@@ -26,6 +26,7 @@ dependencies = [
     "markdownify>=1.1.0",
     "fpdf2>=2.8.3",
     "azure-cognitiveservices-speech>=1.45.0",
+    "pytest>=8.4.2",
 ]
 
 [tool.setuptools.packages]

@@ -8,7 +8,7 @@ from math import ceil
 import boto3
 from botocore.exceptions import NoCredentialsError
 
-from web.app import index
+from iglesia.clean_text import extract_clean_text
 
 # --- Lógica de cálculo de la semana de pontificado ---
 PONTIFICATE_START_DATE = datetime(2025, 5, 8)
@@ -200,39 +200,46 @@ def procesar_y_generar_episodios(
         # print texto original for debugging
         print(f"Texto original:\n{texto_original}\n--- Fin del texto original ---\n")
 
-        # Buscar todas las posiciones de posibles inicios
-        posibles_inicios = []
-        for pattern in [
-            r"Queridos[\w\s,]*",
-            r"Queridísimos",
-            r"En el nombre del Padre, del Hijo y del Espíritu Santo",
-            r"En el nombre del Padre",
-            r"«Consuelen, consuelen a mi pueblo»",
-        ]:
-            match = re.search(pattern, texto_original, flags=re.IGNORECASE)
-            if match:
-                posibles_inicios.append(match.start())
+        texto_limpio = extract_clean_text(texto_original)
+        # # Buscar todas las posiciones de posibles inicios
+        # posibles_inicios = []
+        # for pattern in [
+        #     r"Queridos[\w\s,]*",
+        #     r"Queridísimos",
+        #     r"En el nombre del Padre, del Hijo y del Espíritu Santo",
+        #     r"En el nombre del Padre",
+        #     r"«Consuelen, consuelen a mi pueblo»",
+        # ]:
+        #     match = re.search(pattern, texto_original, flags=re.IGNORECASE)
+        #     if match:
+        #         posibles_inicios.append(match.start())
 
-        # Elegir la posición más avanzada (la que normalmente marca el inicio real)
-        if posibles_inicios:
-            inicio_real = min(posibles_inicios)
-            texto_limpio = texto_original[inicio_real:]
-        else:
-            texto_limpio = texto_original
+        # # Elegir la posición más avanzada (la que normalmente marca el inicio real)
+        # if posibles_inicios:
+        #     inicio_real = min(posibles_inicios)
+        #     texto_limpio = texto_original[inicio_real:]
+        # else:
+        #     texto_limpio = texto_original
 
-        # Limpiar saludos o finales innecesarios
-        texto_limpio = re.split(
-            r"Saludos|Después del Ángelus|_______", texto_limpio, flags=re.IGNORECASE
-        )[0]
+        # # Limpiar saludos o finales innecesarios
+        # texto_limpio = re.split(
+        #     r"Saludos|Después del Ángelus|_______", texto_limpio, flags=re.IGNORECASE
+        # )[0]
 
-        # Limpiar paréntesis, guiones bajos y exceso de espacios
-        texto_limpio = re.sub(r"\([^)]*\)|_|\s+", " ", texto_limpio).strip()
+        # # Limpiar paréntesis, guiones bajos y exceso de espacios
+        # texto_limpio = re.sub(r"\([^)]*\)|_|\s+", " ", texto_limpio).strip()
         print(f"Texto limpio:\n{texto_limpio}\n--- Fin del texto limpio ---\n")
 
         # ✅ Regla 2: Saltar episodios demasiado largos (>10k caracteres)
         if len(texto_limpio) > 10000:
             print(
                 f"⚠️ Episodio demasiado largo ({len(texto_limpio)} caracteres). Saltando..."
+            )
+            continue
+
+        if len(texto_limpio) < 900:
+            print(
+                f"⚠️ Episodio demasiado corto ({len(texto_limpio)} caracteres). Saltando..."
             )
             continue
 
