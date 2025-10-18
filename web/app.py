@@ -6,6 +6,7 @@ import locale
 import os
 import re
 import shutil
+from pathlib import Path
 from datetime import datetime
 
 import markdown
