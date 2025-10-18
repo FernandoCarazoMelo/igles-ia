@@ -319,3 +319,11 @@ if __name__ == "__main__":
         print("✅ RSS copiado con éxito.")
     else:
         print(f"⚠️  ADVERTENCIA: No se encontró 'podcast.xml' en '{PROJECT_ROOT}'.")
+    redirects_origen = Path(PROJECT_ROOT) / "_redirects"
+    redirects_destino = Path(build_dir) / "_redirects"
+    if redirects_origen.exists():
+        print(f"📂 Copiando '{redirects_origen}' → '{redirects_destino}'...")
+        shutil.copy2(redirects_origen, redirects_destino)
+        print("✅ Archivo _redirects copiado con éxito.")
+    else:
+        print(f"⚠️  No se encontró '{redirects_origen}
