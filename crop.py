@@ -25,4 +25,5 @@ def crop_to_square(input_path, output_path):
 
 
 if __name__ == "__main__":
-    crop_to_square("pope.png", "papa-leon-xiv-square.png")
+    crop_to_square("peru.jpeg", "peru_sq.jpeg")
+    print("Cropped!")
