@@ -1223,3 +1223,159 @@ footer {
   background: #191414; /* fondo negro spotify */
   color: #1DB954;
 }
+
+/* Asegura que el botón de WhatsApp en el hero tenga el estilo correcto */
+.hero-cta-button.whatsapp-button {
+    background-color: #25D366; /* Verde WhatsApp */
+    color: white;
+    border: none; /* Quita el borde si lo hereda */
+    display: inline-flex; /* Para alinear el icono */
+    align-items: center;
+    gap: 10px; /* Espacio entre icono y texto */
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.hero-cta-button.whatsapp-button .fa-whatsapp {
+    font-size: 1.3em; /* Ajusta tamaño del icono si es necesario */
+}
+
+.hero-cta-button.whatsapp-button:hover {
+    background-color: #128C7E; /* Verde oscuro WhatsApp */
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(18, 140, 126, 0.4);
+}
+
+/* Estilo secundario para el botón del archivo en el hero */
+.hero-cta-button.secondary {
+    background-color: transparent;
+    color: #003366; /* Color principal de tu marca */
+    border: 2px solid #003366;
+    padding: 13px 33px; /* Ajusta padding si el borde cambia tamaño */
+}
+
+.hero-cta-button.secondary:hover {
+    background-color: #003366;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* --- Estilos para las Opciones Alternativas en el Hero --- */
+.hero-alt-options {
+    margin-top: 40px; /* Espacio después de los botones principales */
+    text-align: center;
+}
+
+.hero-alt-options p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.hero-alt-options a {
+    display: inline-flex; /* Para alinear icono y texto */
+    align-items: center;
+    gap: 8px; /* Espacio entre icono y texto */
+    color: #003366; /* Color principal */
+    text-decoration: none;
+    font-weight: 700;
+    margin: 0 15px; /* Espacio entre los enlaces */
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-alt-options a i {
+    font-size: 1.2rem; /* Tamaño del icono */
+}
+.hero-alt-options a .fa-spotify {
+    color: #1DB954; /* Color Spotify */
+}
+.hero-alt-options a .fa-envelope {
+    color: #d35400; /* Color naranja */
+}
+
+
+.hero-alt-options a:hover {
+    background-color: rgba(0, 51, 102, 0.05); /* Fondo sutil al pasar */
+    color: #002244; /* Azul un poco más oscuro */
+}
+
+/* Ajustes para móvil */
+@media (max-width: 480px) {
+    .hero-alt-options a {
+        margin: 5px 10px; /* Menos espacio horizontal */
+    }
+}
+
+/* =================================================== */
+/* ===== ESTILOS PARA LA SECCIÓN DE ESTADÍSTICAS ===== */
+/* =================================================== */
+
+.impact-stats-section {
+    padding: 60px 0; /* Padding vertical moderado */
+    background-color: #ffffff; /* Fondo blanco */
+    border-top: 1px solid #e9ecef;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.stats-row {
+    display: flex; /* Activa Flexbox para crear la fila */
+    justify-content: space-around; /* Distribuye el espacio entre columnas */
+    align-items: flex-start; /* Alinea los items arriba */
+    flex-wrap: wrap; /* Permite que se apilen en pantallas pequeñas */
+    gap: 20px; /* Espacio entre columnas si se apilan */
+    max-width: 900px; /* Ancho máximo */
+    margin: 0 auto; /* Centra la fila */
+}
+
+.stat-column {
+    flex: 1; /* Cada columna intenta ocupar el mismo espacio */
+    min-width: 200px; /* Ancho mínimo antes de apilarse */
+    text-align: center;
+    padding: 15px;
+}
+
+.stat-column i {
+    font-size: 2.8rem; /* Icono grande */
+    color: #003366; /* Color principal */
+    margin-bottom: 15px; /* Espacio debajo del icono */
+    display: block; /* Asegura espacio debajo */
+}
+/* Colores específicos opcionales para iconos */
+.stat-column .fa-users { color: #003366; }
+.stat-column .fa-file-alt { color: #d35400; }
+.stat-column .fa-headphones-alt { color: #1DB954; }
+
+.stat-value {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem; /* Número grande */
+    font-weight: 700;
+    color: #2c3e50; /* Color oscuro para el número */
+    margin-bottom: 8px; /* Espacio antes de la descripción */
+    line-height: 1.1;
+}
+
+.stat-description {
+    font-size: 0.95rem; /* Texto descriptivo más pequeño */
+    color: #555;
+    font-weight: 600;
+    line-height: 1.4; /* Espacio entre líneas si el texto ocupa varias */
+}
+
+/* Responsive: Apilar columnas en pantallas más pequeñas */
+@media (max-width: 650px) { /* Ajusta el punto de ruptura si es necesario */
+    .stats-row {
+        flex-direction: column; /* Apila las columnas verticalmente */
+        align-items: center; /* Centra las columnas apiladas */
+        gap: 40px; /* Más espacio vertical cuando están apiladas */
+    }
+    .stat-column {
+        min-width: unset; /* Quita el ancho mínimo */
+        width: 80%; /* Ocupa la mayor parte del ancho */
+    }
+    .stat-value {
+        font-size: 2.5rem; /* Reduce un poco el número en móvil */
+    }
+}

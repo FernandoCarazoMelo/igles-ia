@@ -6,8 +6,8 @@ import locale
 import os
 import re
 import shutil
-from pathlib import Path
 from datetime import datetime
+from pathlib import Path
 
 import markdown
 import yaml  # Necesitarás PyYAML: pip install PyYAML
@@ -163,11 +163,15 @@ def inject_global_vars():
 # 6. RUTAS DE LA APLICACIÓN (Las "páginas" de tu web)
 # ==========================================================================
 
+# En la sección 6. RUTAS DE LA APLICACIÓN
+
 
 @app.route("/")
 def index():
-    """Página de inicio."""
-    return render_template("index.html")
+    """Página de inicio, ahora incluyendo el último resumen."""
+    # ALL_SUMMARIES ya está cargada y ordenada (la más nueva primero)
+    latest_summary_data = ALL_SUMMARIES[0] if ALL_SUMMARIES else None
+    return render_template("index.html", latest_summary=latest_summary_data)
 
 
 @app.route("/resumenes.html")
