@@ -2,11 +2,21 @@
     {
         "titulo_original": "Audiencia general del 22 de octubre de 2025 Ciclo de catequesis - Jubileo 2025. Jesucristo, nuestra esperanza. IV. La resurrección de Cristo y los desafíos del mundo actual 2. La resurrección de Cristo, respuesta a la tristeza del ser humano",
         "titulo_spotify": "[25.1] Audiencia 22/10 | La Resurrección, Fuente de Esperanza | Resurrección y esperanza",
-        "descripcion_spotify": "En esta audiencia, el Papa León XIV nos invita a contemplar la resurrección de Jesucristo como una luz que ilumina nuestra tristeza y desesperanza. Nos recuerda que la Resurrección transforma la realidad, ofreciendo esperanza y alegría incluso en los momentos más oscuros. Podcast creado por igles-ia.es",
+        "descripcion_spotify": "En esta audiencia, el Papa León XIV nos invita a reflexionar sobre cómo la resurrección de Jesucristo puede sanar la tristeza que invade nuestro tiempo. Nos muestra que, aunque la vida pueda parecer oscura y desoladora, la luz de la Pascua trae esperanza y renovación. La resurrección no solo cambió la historia, sino que también puede transformar nuestro corazón. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-22_audiencia_audiencia_general_del_22_de_octubre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_espe.mp3",
         "fecha": "2025-10-22",
         "filename": "2025-10-22_audiencia_audiencia_general_del_22_de_octubre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_espe",
         "tipo": "Audiencia",
         "numero_episodio": "25.1"
+    },
+    {
+        "titulo_original": "A los miembros de la Orden Ecuestre del Santo Sepulcro de Jerusalén (23 de octubre de 2025)",
+        "titulo_spotify": "[25.2] Discurso 23/10 | A los miembros de la Orden Ecuestre del Santo Sepulcro de Jerusalén | Esperanza y fe en Tierra Santa",
+        "descripcion_spotify": "El Papa León XIV en este discurso del 23 de octubre de 2025, resalta la importancia de la esperanza confiada, el servicio y la mirada hacia la meta en la custodia del Santo Sepulcro. Destaca cómo la fe, la caridad y la perseverancia fortalecen a la Iglesia y a las comunidades en Tierra Santa, invitando a vivir con esperanza pascual. Podcast creado por igles-ia.es",
+        "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-23_discurso_a_los_miembros_de_la_orden_ecuestre_del_santo_sepulcro_de_jerusalen_23_de_octubre_de_2025.mp3",
+        "fecha": "2025-10-23",
+        "filename": "2025-10-23_discurso_a_los_miembros_de_la_orden_ecuestre_del_santo_sepulcro_de_jerusalen_23_de_octubre_de_2025",
+        "tipo": "Discurso",
+        "numero_episodio": "25.2"
     }
 ]
