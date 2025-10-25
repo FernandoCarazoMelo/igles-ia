@@ -450,7 +450,7 @@ class VaticanArchiver:
         logging.info("====== INICIANDO ARCHIVO COMPLETO DEL VATICANO ======")
 
         # Paso 1: Encontrar y guardar enlaces
-        # self.find_and_save_links(pope_map, languages)
+        self.find_and_save_links(pope_map, languages)
 
         # Paso 2: Fusionar enlaces a CSV
         links_df = self.merge_links_to_csv()
@@ -508,7 +508,7 @@ if __name__ == "__main__":
     # 2. Inicializar y ejecutar el archivador
 
     # force_refresh=True volverá a descargar todos los índices
-    archiver = VaticanArchiver(force_refresh=False)
+    archiver = VaticanArchiver(force_refresh=True)
 
     # Ejecuta el pipeline completo:
     # 1. Encuentra enlaces

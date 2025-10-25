@@ -1,0 +1,63 @@
+name: 🏛️ Búsqueda Diaria de Archivos del Vaticano
+
+on:
+  schedule:
+    # Se ejecuta cada día a las 03:00 UTC (4:00 o 5:00 AM en España)
+    # Elige una hora de baja actividad.
+    - cron: "0 11 * * *"
+  workflow_dispatch: # Permite la ejecución manual
+
+jobs:
+  build-and-commit:
+    runs-on: ubuntu-latest
+
+    # Permisos necesarios para que la Action pueda hacer 'git push'
+    permissions:
+      contents: write
+
+    steps:
+      - name: 1. Checkout del repositorio
+        uses: actions/checkout@v4
+        with:
+          # fetch-depth: 0 trae todo el historial, necesario para 'git push'
+          fetch-depth: 0
+
+      - name: 2. Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11" # Versión moderna y estable
+
+      - name: 3. Instalar dependencias con uv
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          uv pip install pandas requests beautifulsoup4 markdownify tqdm lxml
+
+      - name: 4. Ejecutar el script de archivado
+        run: |
+          # Asume que tu script se llama 'vatican_archiver.py' y está en la raíz
+          python vatican_archiver.py
+
+      - name: 5. Configurar Git
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions-bot@users.noreply.github.com"
+
+      - name: 6. Hacer commit y push de los cambios
+        run: |
+          git pull --before
+
+          # Añade las carpetas donde tu script guarda los resultados
+          # Según tu __init__, estas son las carpetas clave:
+          git add pope-archive/documents/links/
+          git add documents/
+
+          # Comprueba si hay algo para 'commitear'
+          if git diff --staged --quiet; then
+            echo "✅ No se encontraron nuevos documentos para guardar."
+          else
+            # Crea el commit y empújalo
+            COMMIT_DATE=$(date +'%Y-%m-%d')
+            git commit -m "🏛️ Archivo del Vaticano - Actualización diaria ($COMMIT_DATE)"
+            git push
+            echo "🚀 Nuevos archivos guardados en el repositorio."
+          fi
