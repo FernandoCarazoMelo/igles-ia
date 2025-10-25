@@ -2,39 +2,39 @@ name: 🏛️ Búsqueda Diaria de Archivos del Vaticano
 
 on:
   schedule:
-    # Se ejecuta cada día a las 03:00 UTC (4:00 o 5:00 AM en España)
-    # Elige una hora de baja actividad.
-    - cron: "0 11 * * *"
+    # Se ejecuta cada día a las 03:00 UTC
+    - cron: "0 3 * * *"
   workflow_dispatch: # Permite la ejecución manual
 
 jobs:
   build-and-commit:
     runs-on: ubuntu-latest
-
-    # Permisos necesarios para que la Action pueda hacer 'git push'
     permissions:
-      contents: write
+      contents: write # Permiso para hacer 'git push'
 
     steps:
       - name: 1. Checkout del repositorio
         uses: actions/checkout@v4
         with:
-          # fetch-depth: 0 trae todo el historial, necesario para 'git push'
           fetch-depth: 0
 
       - name: 2. Configurar Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11" # Versión moderna y estable
+          python-version: "3.11"
 
       - name: 3. Instalar dependencias con uv
         run: |
           curl -LsSf https://astral.sh/uv/install.sh | sh
-          uv pip install pandas requests beautifulsoup4 markdownify tqdm lxml
+
+          # --- ¡AQUÍ ESTÁ LA CORRECCIÓN! ---
+          # Añadimos --system para instalar en el entorno global del runner
+          uv pip install pandas requests beautifulsoup4 markdownify tqdm lxml --system
 
       - name: 4. Ejecutar el script de archivado
         run: |
-          # Asume que tu script se llama 'vatican_archiver.py' y está en la raíz
+          # Usamos 'python' directamente, ya que tu script usa un __main__
+          # 'uv run' es más para scripts definidos en pyproject.toml
           python vatican_archiver.py
 
       - name: 5. Configurar Git
@@ -46,16 +46,13 @@ jobs:
         run: |
           git pull --before
 
-          # Añade las carpetas donde tu script guarda los resultados
-          # Según tu __init__, estas son las carpetas clave:
-          git add pope-archive/documents/links/
+          # Carpetas de salida de tu script
+          git add vatican-archiver
           git add documents/
 
-          # Comprueba si hay algo para 'commitear'
           if git diff --staged --quiet; then
             echo "✅ No se encontraron nuevos documentos para guardar."
           else
-            # Crea el commit y empújalo
             COMMIT_DATE=$(date +'%Y-%m-%d')
             git commit -m "🏛️ Archivo del Vaticano - Actualización diaria ($COMMIT_DATE)"
             git push
