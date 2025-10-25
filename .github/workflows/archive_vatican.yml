@@ -2,54 +2,62 @@ name: 🏛️ Búsqueda Diaria de Archivos del Vaticano
 
 on:
   schedule:
-    # Se ejecuta cada día a las 03:00 UTC
-    - cron: "0 3 * * *"
-  workflow_dispatch: # Permite la ejecución manual
+    # Ejecuta el script todos los días a las 18h CEST, UTC = 16h
+    - cron: "0 11 * * *" # Cada día a las 15:00 UTC (18:00 CEST)
+  workflow_dispatch: # Permite ejecutar el workflow manualmente
 
 jobs:
-  build-and-commit:
+  run_script_and_commit: # Renombrado para mayor claridad
     runs-on: ubuntu-latest
+    # Necesitamos permisos para escribir en el repositorio
     permissions:
-      contents: write # Permiso para hacer 'git push'
-
+      contents: write # Permite a la acción hacer commit y push
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      EMAIL_USER: ${{ secrets.EMAIL_USER }}
+      EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+      AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      USER_POOL_ID: ${{ secrets.USER_POOL_ID }}
+      SUMMARIES_FOLDER: web/data/summaries
+      S3_BUCKET_NAME: igles-ia-spotify
     steps:
-      - name: 1. Checkout del repositorio
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          # Necesitamos el token para poder hacer push más adelante
+          # También puedes usar un PAT (Personal Access Token) si tienes configuraciones específicas
+          # token: ${{ secrets.PAT_TOKEN }} # Descomentar si usas un PAT en lugar del GITHUB_TOKEN por defecto
+          fetch-depth: 0 # Obtiene todo el historial para que git sepa en qué rama está
 
-      - name: 2. Configurar Python
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.12" # O la versión que estés usando
 
-      - name: 3. Instalar dependencias con uv
+      - name: Install uv
+        run: curl -LsSf https://astral.sh/uv/install.sh | sh
+
+      - name: Install dependencies with uv
+        run: uv pip install . --system # Asumiendo que tu pyproject.toml está configurado
+      - name: Run the script
         run: |
-          curl -LsSf https://astral.sh/uv/install.sh | sh
+          echo "Running script..."
+          uv run vatican-archiver/vatican_archiver.py
 
-          # --- ¡AQUÍ ESTÁ LA CORRECCIÓN! ---
-          # Añadimos --system para instalar en el entorno global del runner
-          uv pip install pandas requests beautifulsoup4 markdownify tqdm lxml --system
-
-      - name: 4. Ejecutar el script de archivado
-        run: |
-          # Usamos 'python' directamente, ya que tu script usa un __main__
-          # 'uv run' es más para scripts definidos en pyproject.toml
-          python vatican_archiver.py
-
-      - name: 5. Configurar Git
+      # El paso de "Upload results" como artefacto sigue siendo útil para
+      # acceder rápidamente a los archivos de una ejecución específica sin navegar por los commits.
+      - name: Configure Git user
         run: |
           git config --global user.name "GitHub Actions Bot"
-          git config --global user.email "actions-bot@users.noreply.github.com"
+          git config --global user.email "actions-bot@users.noreply.github.com" # Email válido para bots de GitHub
 
-      - name: 6. Hacer commit y push de los cambios
+      - name: Commit and push changes
         run: |
-          git pull --before
-
-          # Carpetas de salida de tu script
+          git pull 
           git add vatican-archiver
-          git add documents/
-
+          # Comprueba si hay algo para confirmar
           if git diff --staged --quiet; then
             echo "✅ No se encontraron nuevos documentos para guardar."
           else
@@ -58,3 +66,6 @@ jobs:
             git push
             echo "🚀 Nuevos archivos guardados en el repositorio."
           fi
+        # La autenticación para git push se maneja automáticamente por actions/checkout@v4
+        # cuando se usa el GITHUB_TOKEN implícito (gracias a `permissions: contents: write`)
+        # o un token explícito.
