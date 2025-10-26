@@ -11,6 +11,7 @@ freeze_old:
 
 
 freeze:
+	uv run generar_rss.py
 	uv run web/app.py
 	rm -rf docs
 	cp -r web/build docs
@@ -22,7 +23,6 @@ create_audio:
 	uv run main.py pipeline-date --run-date "2025-10-16"
 	uv run main.py generar-audios --run-date "2025-10-16" --only-metadata
 	uv run main.py generar-audios --run-date "2025-10-16" --force-create-audio
-	uv run generar_rss.py
 	make freeze
 create_audios_new:
 	uv run main.py preparar-datos-audio --run-date="2025-09-30"
