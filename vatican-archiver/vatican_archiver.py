@@ -326,6 +326,7 @@ class VaticanArchiver:
 
         # Guardar CSV completo
         all_links_path = os.path.join(self.csv_dir, "all_links.csv")
+        df = df.sort_values(by=["date", "title"], ascending=[True, True])
         df.to_csv(all_links_path, index=False, encoding="utf-8")
         logging.info(f"Guardado CSV fusionado en {all_links_path}")
 
@@ -338,7 +339,7 @@ class VaticanArchiver:
         ).reset_index()
 
         # sort by date
-        df_pivot = df_pivot.sort_values(by="date", ascending=True)
+        df_pivot = df_pivot.sort_values(by=["date", "title"], ascending=[True, True])
         # Data to str
 
         # Guardar CSV pivotado
@@ -450,7 +451,7 @@ class VaticanArchiver:
         logging.info("====== INICIANDO ARCHIVO COMPLETO DEL VATICANO ======")
 
         # Paso 1: Encontrar y guardar enlaces
-        self.find_and_save_links(pope_map, languages)
+        # self.find_and_save_links(pope_map, languages)
 
         # Paso 2: Fusionar enlaces a CSV
         links_df = self.merge_links_to_csv()
@@ -511,9 +512,6 @@ if __name__ == "__main__":
     archiver = VaticanArchiver(force_refresh=True)
 
     # Ejecuta el pipeline completo:
-    # 1. Encuentra enlaces
-    # 2. Fusiona a CSV
-    # 3. Descarga (si download=True)
     archiver.run_full_archive(
         pope_map=POPE_MAP_FULL,
         languages=LANGUAGES_FULL,
@@ -521,31 +519,3 @@ if __name__ == "__main__":
         download_filters=DOWNLOAD_FILTERS,
         save_markdown=True,  # Opcional: guardar versión Markdown
     )
-
-    # 3. Ejemplo de cómo lo llamarías desde tu main.py (para León XIV)
-
-    logging.info("\n--- EJEMPLO DE USO COMO MÓDULO ---")
-
-    # Esto es lo que harías en tu otro script (main.py):
-    #
-    # from vatican_archiver import VaticanArchiver
-    #
-    # leo_xiv_map = {"León XIV": "leo-xiv"}
-    # leo_xiv_langs = ["es"] # O los idiomas que necesites
-    #
-    # # force_refresh=True es útil para tu script diario/semanal
-    # daily_scanner = VaticanArchiver(force_refresh=True)
-    #
-    # # Paso 1: Encuentra los enlaces más recientes
-    # daily_scanner.find_and_save_links(pope_map=leo_xiv_map, languages=leo_xiv_langs)
-    #
-    # # Paso 2: Fusiona solo los enlaces de León XIV
-    # # (El script fusionará lo que haya en la carpeta 'links/',
-    # # que en este caso solo será lo de León XIV si la carpeta está limpia)
-    # links_df = daily_scanner.merge_links_to_csv()
-    #
-    # # Ahora podrías usar 'links_df' en tu pipeline de audios
-    # if links_df is not None:
-    #     logging.info(f"Encontrados {len(links_df)} enlaces para León XIV para procesar.")
-    #     # ... tu lógica para 'obtener_todos_los_textos' ...
-    #
