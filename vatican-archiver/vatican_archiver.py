@@ -451,7 +451,7 @@ class VaticanArchiver:
         logging.info("====== INICIANDO ARCHIVO COMPLETO DEL VATICANO ======")
 
         # Paso 1: Encontrar y guardar enlaces
-        # self.find_and_save_links(pope_map, languages)
+        self.find_and_save_links(pope_map, languages)
 
         # Paso 2: Fusionar enlaces a CSV
         links_df = self.merge_links_to_csv()
