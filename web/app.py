@@ -288,6 +288,15 @@ def podcast_feed():
     return send_from_directory(PROJECT_ROOT, "podcast.xml")
 
 
+@app.route("/_redirects")
+def redirects():
+    """
+    Sirve el archivo podcast.xml desde la carpeta raíz del proyecto.
+    """
+    # Esto soluciona el error durante el 'freeze'
+    return send_from_directory(PROJECT_ROOT, "_redirects")
+
+
 # ==========================================================================
 # 7. GENERADOR DE URLS PARA FLASK-FROZEN
 # ==========================================================================
@@ -313,22 +322,22 @@ if __name__ == "__main__":
 
     # --- CORRECCIÓN ---
     # Asegurarse de que la carpeta 'build' existe antes de intentar copiar en ella.
-    os.makedirs(build_dir, exist_ok=True)
+    # os.makedirs(build_dir, exist_ok=True)
 
-    rss_origen = os.path.join(PROJECT_ROOT, "podcast.xml")
-    rss_destino = os.path.join(build_dir, "podcast.xml")
+    # rss_origen = os.path.join(PROJECT_ROOT, "podcast.xml")
+    # rss_destino = os.path.join(build_dir, "podcast.xml")
 
-    if os.path.exists(rss_origen):
-        print(f"Copiando '{rss_origen}' a '{rss_destino}'...")
-        shutil.copy2(rss_origen, rss_destino)
-        print("✅ RSS copiado con éxito.")
-    else:
-        print(f"⚠️  ADVERTENCIA: No se encontró 'podcast.xml' en '{PROJECT_ROOT}'.")
-    redirects_origen = Path(PROJECT_ROOT) / "_redirects"
-    redirects_destino = Path(build_dir) / "_redirects"
-    if redirects_origen.exists():
-        print(f"📂 Copiando '{redirects_origen}' → '{redirects_destino}'...")
-        shutil.copy2(redirects_origen, redirects_destino)
-        print("✅ Archivo _redirects copiado con éxito.")
-    else:
-        print(f"⚠️  No se encontró '{redirects_origen}'.")
+    # if os.path.exists(rss_origen):
+    #     print(f"Copiando '{rss_origen}' a '{rss_destino}'...")
+    #     shutil.copy2(rss_origen, rss_destino)
+    #     print("✅ RSS copiado con éxito.")
+    # else:
+    #     print(f"⚠️  ADVERTENCIA: No se encontró 'podcast.xml' en '{PROJECT_ROOT}'.")
+    # redirects_origen = os.path.join(PROJECT_ROOT, "_redirects")
+    # redirects_destino = os.path.join(build_dir, "_redirects")
+    # if os.path.exists(redirects_origen):
+    #     print(f"📂 Copiando '{redirects_origen}' → '{redirects_destino}'...")
+    #     shutil.copy2(redirects_origen, redirects_destino)
+    #     print("✅ Archivo _redirects copiado con éxito.")
+    # else:
+    #     print(f"⚠️  No se encontró '{redirects_origen}'.")
