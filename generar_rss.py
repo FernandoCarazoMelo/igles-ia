@@ -29,21 +29,22 @@ s3 = boto3.client("s3")
 
 def get_s3_file_size(url: str) -> str:
     """Devuelve el tamaño en bytes de un objeto en S3, o hace fallback a HTTP HEAD."""
-    parsed = urlparse(url)
-    bucket = parsed.netloc.split(".")[
-        0
-    ]  # ej: igles-ia-spotify.s3.us-east-1.amazonaws.com
-    key = parsed.path.lstrip("/")
-
+    # parsed = urlparse(url)
     # 1. Intentar con boto3
-    try:
-        head = s3.head_object(Bucket=bucket, Key=key)
-        return str(head["ContentLength"])
-    except Exception as e:
-        print(f"⚠️ No se pudo obtener tamaño de {url} con boto3: {e}")
+    # bucket = parsed.netloc.split(".")[
+    #     0
+    # ]  # ej: igles-ia-spotify.s3.us-east-1.amazonaws.com
+    # key = parsed.path.lstrip("/")
+
+    # try:
+    #     head = s3.head_object(Bucket=bucket, Key=key)
+    #     return str(head["ContentLength"])
+    # except Exception as e:
+    #     print(f"⚠️ No se pudo obtener tamaño de {url} con boto3: {e}")
 
     # 2. Intentar con HTTP HEAD
     try:
+        print(f"Estimando el tamaño de {url}")
         r = requests.head(url, allow_redirects=True, timeout=10)
         if "Content-Length" in r.headers:
             return r.headers["Content-Length"]
