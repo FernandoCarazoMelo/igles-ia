@@ -2,11 +2,12 @@
     {
         "titulo_original": "Santa Misa con los universitarios de las Universidades Pontificias (27 de octubre de 2025)",
         "titulo_spotify": "[26.1] Homilia 27/10 | Santa Misa con los universitarios de las Universidades Pontificias | Vida en camino",
-        "descripcion_spotify": "El Papa León XIV en esta homilía nos invita a vivir el Año Jubilar como una oportunidad para renovarnos y avanzar en nuestro camino de fe. Nos recuerda que la verdadera transformación ocurre cuando abrimos nuestra mirada a lo alto, dejando atrás la cerrazón y la autosuficiencia. La gracia de la mirada amplia y profunda nos ayuda a entender la vida en su totalidad, encontrando en Cristo la verdadera esperanza. Podcast creado por igles-ia.es",
+        "descripcion_spotify": "El Papa León XIV en esta homilía nos invita a vivir en constante camino, recordando que la vida verdadera se encuentra en la Pascua y en la apertura a la esperanza. Nos anima a ampliar nuestra mirada, a superar la cerrazón y a encontrar en Cristo la verdadera sanación y visión de conjunto. Que esta celebración sea una oportunidad para renovar nuestra fe y nuestro compromiso de seguir a Jesús. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-27_homilia_santa_misa_con_los_universitarios_de_las_universidades_pontificias_27_de_octubre_de_2025.mp3",
         "fecha": "2025-10-27",
         "filename": "2025-10-27_homilia_santa_misa_con_los_universitarios_de_las_universidades_pontificias_27_de_octubre_de_2025",
         "tipo": "Homilia",
-        "numero_episodio": "26.1"
+        "numero_episodio": "26.1",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/homilies/2025/documents/20251027-messa-univ-pontificie.html"
     }
 ]
