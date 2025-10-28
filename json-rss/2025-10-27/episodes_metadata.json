@@ -2,51 +2,56 @@
     {
         "titulo_original": "Audiencia general del 22 de octubre de 2025 Ciclo de catequesis - Jubileo 2025. Jesucristo, nuestra esperanza. IV. La resurrección de Cristo y los desafíos del mundo actual 2. La resurrección de Cristo, respuesta a la tristeza del ser humano",
         "titulo_spotify": "[25.1] Audiencia 22/10 | La Resurrección, Fuente de Esperanza | Resurrección y esperanza",
-        "descripcion_spotify": "En esta Audiencia, el Papa León XIV nos invita a reflexionar sobre la resurrección de Jesucristo como la luz que ilumina nuestra tristeza y desesperanza. Nos muestra cómo la presencia de Cristo resucitado transforma nuestro dolor en alegría y nos llena de esperanza en medio de los desafíos actuales. Podcast creado por igles-ia.es",
+        "descripcion_spotify": "En esta audiencia, el Papa León XIV nos invita a reflexionar sobre la resurrección de Jesucristo como una luz que ilumina nuestra tristeza y desesperanza. Nos muestra cómo la presencia de Jesús resucitado puede transformar nuestro dolor en alegría y renovar nuestra fe en medio de los desafíos actuales. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-22_audiencia_audiencia_general_del_22_de_octubre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_espe.mp3",
         "fecha": "2025-10-22",
         "filename": "2025-10-22_audiencia_audiencia_general_del_22_de_octubre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_espe",
         "tipo": "Audiencia",
-        "numero_episodio": "25.1"
+        "numero_episodio": "25.1",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/audiences/2025/documents/20251022-udienza-generale.html"
     },
     {
         "titulo_original": "A los miembros de la Orden Ecuestre del Santo Sepulcro de Jerusalén (23 de octubre de 2025)",
         "titulo_spotify": "[25.3] Discurso 23/10 | A los miembros de la Orden Ecuestre del Santo Sepulcro de Jerusalén | Esperanza y servicio",
-        "descripcion_spotify": "Este discurso del Papa León XIV en este Discurso el Papa León XIV destaca la importancia de la esperanza confiada, el servicio desinteresado y la mirada hacia la meta en la misión de la Orden Ecuestre del Santo Sepulcro de Jerusalén. En un mundo marcado por la violencia y el sufrimiento, invita a fortalecer la fe, la caridad y la esperanza en la Resurrección de Cristo, como testimonio vivo de amor y misericordia. Podcast creado por igles-ia.es",
+        "descripcion_spotify": "El Papa León XIV en este discurso del 23 de octubre de 2025, destaca la importancia de la esperanza confiada, el servicio desinteresado y la mirada hacia la meta en la misión de la Orden Ecuestre del Santo Sepulcro de Jerusalén. Resalta cómo su labor en Tierra Santa fortalece la fe, apoya a las comunidades cristianas y testimonia el amor de Cristo en medio de las dificultades. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-23_discurso_a_los_miembros_de_la_orden_ecuestre_del_santo_sepulcro_de_jerusalen_23_de_octubre_de_2025.mp3",
         "fecha": "2025-10-23",
         "filename": "2025-10-23_discurso_a_los_miembros_de_la_orden_ecuestre_del_santo_sepulcro_de_jerusalen_23_de_octubre_de_2025",
         "tipo": "Discurso",
-        "numero_episodio": "25.3"
+        "numero_episodio": "25.3",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/october/documents/20251023-ordine-sepolcro-gerusalemme.html"
     },
     {
         "titulo_original": "Santa Misa - Jubileo de los Equipos Sinodales y de los órganos de participación (26 de octubre de 2025)",
-        "titulo_spotify": "[25.5] Homilia 26/10 | Jubileo de los Equipos Sinodales y de los Órganos de Participación | Comunión y Servicio",
-        "descripcion_spotify": "El Papa León XIV en esta homilía nos invita a redescubrir el misterio de la Iglesia como comunidad de amor y comunión, donde todos somos hijos de Dios llamados a servir y caminar juntos. Nos recuerda que la verdadera autoridad en la Iglesia es el amor y la humildad, y que la participación activa y fraterna fortalece nuestra unión en Cristo. Podcast creado por igles-ia.es",
+        "titulo_spotify": "[25.5] Homilia 26/10 | Jubileo de los Equipos Sinodales y Participación | Unidad y Amor en la Iglesia",
+        "descripcion_spotify": "El Papa León XIV en esta homilía nos invita a redescubrir el misterio de la Iglesia como signo de unión entre Dios y los hombres, basada en el amor y la comunión. Destaca la importancia de caminar juntos en humildad, sirviendo y escuchando a los demás, en lugar de buscar el poder o la división. La verdadera comunidad cristiana se construye en la humildad y en el amor mutuo. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-26_homilia_santa_misa_jubileo_de_los_equipos_sinodales_y_de_los_organos_de_participacion_26_de_octubre_de_2025.mp3",
         "fecha": "2025-10-26",
         "filename": "2025-10-26_homilia_santa_misa_jubileo_de_los_equipos_sinodales_y_de_los_organos_de_participacion_26_de_octubre_de_2025",
         "tipo": "Homilia",
-        "numero_episodio": "25.5"
+        "numero_episodio": "25.5",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/homilies/2025/documents/20251026-giubileo-equipe-sinodali.html"
     },
     {
         "titulo_original": "Ángelus, 26 de octubre de 2025",
-        "titulo_spotify": "[25.6] Ángelus 26/10 | La humildad y la misericordia | Oración y perdón",
-        "descripcion_spotify": "En este Ángelus, el Papa León XIV nos invita a reflexionar sobre la importancia de la humildad y la sinceridad en nuestra relación con Dios. Nos recuerda que no es con méritos, sino con honestidad y confianza en la misericordia divina, como encontramos la verdadera justificación. Pidamos a María que nos ayude a crecer en estas virtudes. Podcast creado por igles-ia.es",
+        "titulo_spotify": "[25.6] Ángelus 26/10 | Ángelus, 26 de octubre de 2025 | Humildad y Misericordia",
+        "descripcion_spotify": "En este Ángelus, el Papa León XIV nos invita a reflexionar sobre la importancia de la humildad y la sinceridad en nuestra relación con Dios. Nos recuerda que solo al reconocer nuestras heridas y pedir perdón podemos experimentar la gracia y la renovación divina. Sigamos el ejemplo del publicano, confiando en la misericordia del Señor. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-26_ángelus_angelus_26_de_octubre_de_2025.mp3",
         "fecha": "2025-10-26",
         "filename": "2025-10-26_ángelus_angelus_26_de_octubre_de_2025",
         "tipo": "Ángelus",
-        "numero_episodio": "25.6"
+        "numero_episodio": "25.6",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/angelus/2025/documents/20251026-angelus.html"
     },
     {
         "titulo_original": "Santa Misa y Ordenación Episcopal (26 de octubre de 2025)",
         "titulo_spotify": "[25.7] Homilia 26/10 | Santa Misa y Ordenación Episcopal | Vocación y Humildad",
-        "descripcion_spotify": "En esta homilía, el Papa León XIV destaca que la verdadera vocación cristiana y episcopal se basa en la humildad y en buscar la gloria de Dios a través de la paz entre los hombres. Resalta la importancia de la oración sincera y la fidelidad en el servicio, invitando a los líderes a sembrar con paciencia y esperanza. Podcast creado por igles-ia.es",
+        "descripcion_spotify": "En esta homilía, el Papa León XIV destaca que en esta celebración se refleja la importancia de la humildad y la vocación en el ministerio episcopal. Resalta que la verdadera fuerza proviene de la confianza en Dios y la oración sincera, invitando a los líderes a sembrar con paciencia y fidelidad. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-26_homilia_santa_misa_y_ordenacion_episcopal_26_de_octubre_de_2025.mp3",
         "fecha": "2025-10-26",
         "filename": "2025-10-26_homilia_santa_misa_y_ordenacion_episcopal_26_de_octubre_de_2025",
         "tipo": "Homilia",
-        "numero_episodio": "25.7"
+        "numero_episodio": "25.7",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/homilies/2025/documents/20251026-messa-ordinazione-episcopale.html"
     }
 ]

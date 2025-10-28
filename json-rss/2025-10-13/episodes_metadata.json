@@ -2,71 +2,89 @@
     {
         "titulo_original": "A los Caballeros de Colón (6 de octubre de 2025)",
         "titulo_spotify": "[23.1] Discurso 06/10 | A los Caballeros de Colón | Fe y Esperanza",
-        "descripcion_spotify": "El Papa León XIV en este discurso destaca la importancia de la esperanza y la fe en la vida de los creyentes. Resalta el valor de las obras de arte y la presencia real de Jesús en la Eucaristía como pilares de la fe, agradeciendo a los Caballeros de Colón por su apoyo y dedicación a la Iglesia y a los más vulnerables. Podcast creado por igles-ia.es",
+        "descripcion_spotify": "Este discurso del Papa León XIV en este Discurso el Papa León XIV destaca la importancia de la esperanza en la vida de los creyentes y la labor de los Caballeros de Colón en apoyar la fe, la caridad y la vocación. Resalta cómo sus acciones fortalecen la comunidad y la misión de la Iglesia, invitando a todos a profundizar en su amor por Dios y su servicio a los demás. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-06_discurso_a_los_caballeros_de_colon_6_de_octubre_de_2025.mp3",
         "fecha": "2025-10-06",
         "filename": "2025-10-06_discurso_a_los_caballeros_de_colon_6_de_octubre_de_2025",
         "tipo": "Discurso",
-        "numero_episodio": "23.1"
+        "numero_episodio": "23.1",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/october/documents/20251006-cavalieri-colombo.html"
     },
     {
         "titulo_original": "Audiencia general del 8 de octubre de 2025 Ciclo de catequesis - Jubileo 2025. Jesucristo, nuestra esperanza. III. La Pascua de Jesús. 10. Volver a encender. «¿No ardía acaso nuestro corazón, mientras nos hablaba en el camino y nos explicaba las Escrituras?». (Lc 24, 32)",
-        "titulo_spotify": "[23.2] Audiencia 08/10 | La humildad de la Resurrección | Esperanza y normalidad",
-        "descripcion_spotify": "El Papa León XIV en esta Audiencia nos invita a reflexionar sobre la humildad de la Resurrección de Cristo. Nos enseña que la presencia de Jesús se revela en lo cotidiano, en gestos simples y en la cercanía silenciosa, transformando cada acción en gracia y esperanza. Nos recuerda que incluso en nuestras heridas y dificultades, la fuerza del amor de Dios puede reavivar nuestro corazón y llenarnos de esperanza. Podcast creado por igles-ia.es",
+        "titulo_spotify": "[23.2] Audiencia 08/10 | La humildad de la Resurrección | Esperanza y Vida Nueva",
+        "descripcion_spotify": "El Papa León XIV en esta Audiencia nos invita a reflexionar sobre la humildad de la Resurrección de Cristo. Nos recuerda que Jesús no busca gestos espectaculares, sino la cercanía y la normalidad, transformando cada gesto cotidiano en gracia y esperanza. La Resurrección nos enseña que, incluso en el dolor y las dificultades, la presencia de Dios está con nosotros, renovando nuestra vida y nuestra fe. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-08_audiencia_audiencia_general_del_8_de_octubre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_esper.mp3",
         "fecha": "2025-10-08",
         "filename": "2025-10-08_audiencia_audiencia_general_del_8_de_octubre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_esper",
         "tipo": "Audiencia",
-        "numero_episodio": "23.2"
+        "numero_episodio": "23.2",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/audiences/2025/documents/20251008-udienza-generale.html"
+    },
+    {
+        "titulo_original": "Santa Misa - Jubileo de la Vida Consagrada (9 de octubre de 2025)",
+        "titulo_spotify": "[23.3] Homilia 09/10 | Santa Misa - Jubileo de la Vida Consagrada | Vocación y Confianza en Dios",
+        "descripcion_spotify": "En esta homilía, el Papa León XIV nos invita a confiar en la misericordia del Padre y a reconocer que nuestra vocación es un don gratuito de Dios. Nos anima a pedir, buscar y llamar con fe, recordando que Dios nos ha elegido desde siempre y que en Él encontramos plenitud y sentido. Escuchemos cómo vivir con confianza y entrega en nuestro camino espiritual. Podcast creado por igles-ia.es",
+        "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-09_homilia_santa_misa_jubileo_de_la_vida_consagrada_9_de_octubre_de_2025.mp3",
+        "fecha": "2025-10-09",
+        "filename": "2025-10-09_homilia_santa_misa_jubileo_de_la_vida_consagrada_9_de_octubre_de_2025",
+        "tipo": "Homilia",
+        "numero_episodio": "23.3",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/homilies/2025/documents/20251009-giubileo-vita-consacrata.html"
     },
     {
         "titulo_original": "A los participantes en la conferencia de la Asociación MINDS International (9 de octubre de 2025)",
-        "titulo_spotify": "[23.4] Discurso 09/10 | A los participantes en la conferencia de la Asociación MINDS International | Comunicación responsable",
-        "descripcion_spotify": "El Papa León XIV en este discurso destaca la importancia de la responsabilidad ética en los medios de comunicación y el papel crucial de los periodistas en la construcción de sociedades informadas y responsables. Resalta la necesidad de proteger la libertad de prensa y luchar contra la desinformación, promoviendo una comunicación auténtica y respetuosa con la dignidad humana. Podcast creado por igles-ia.es",
+        "titulo_spotify": "[23.4] Discurso 09/10 | A los participantes en la conferencia de la Asociación MINDS International | Comunicación y Verdad",
+        "descripcion_spotify": "En este discurso, el Papa León XIV destaca la importancia de la responsabilidad ética en los medios de comunicación y la protección de la información libre como base de una sociedad justa. Resalta el valor del trabajo periodístico y la necesidad de defender la verdad frente a la desinformación y la manipulación digital. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-09_discurso_a_los_participantes_en_la_conferencia_de_la_asociacion_minds_international_9_de_octubre_de_2025.mp3",
         "fecha": "2025-10-09",
         "filename": "2025-10-09_discurso_a_los_participantes_en_la_conferencia_de_la_asociacion_minds_international_9_de_octubre_de_2025",
         "tipo": "Discurso",
-        "numero_episodio": "23.4"
+        "numero_episodio": "23.4",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/october/documents/20251009-minds-international.html"
     },
     {
         "titulo_original": "Encuentro con los participantes en el Jubileo de la Vida Consagrada (10 de octubre de 2025)",
-        "titulo_spotify": "[23.5] Discurso 10/10 | Encuentro con los participantes en el Jubileo de la Vida Consagrada | Vida Consagrada",
-        "descripcion_spotify": "El Papa León XIV en este discurso destaca la importancia de la vida consagrada como testimonio vivo de Cristo en el mundo. Invita a los religiosos y religiosas a redescubrir su vocación en el corazón, promoviendo esperanza, paz y fraternidad en sus comunidades y en la sociedad. Nos anima a ser constructores de puentes y portadores de la cultura del encuentro, siguiendo el ejemplo de Cristo. Podcast creado por igles-ia.es",
+        "titulo_spotify": "[23.5] Discurso 10/10 | Encuentro con los participantes en el Jubileo de la Vida Consagrada | Vida Religiosa",
+        "descripcion_spotify": "El Papa León XIV en este discurso destaca la importancia de la vida consagrada como testimonio vivo de Cristo en el mundo. Invita a los religiosos y religiosas a mantener viva la chispa de su vocación, arraigados en la oración y en el amor, para ser portadores de esperanza, paz y reconciliación. Nos anima a construir puentes de fraternidad y a cuidar de la dignidad humana en todos los ámbitos. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-10_discurso_encuentro_con_los_participantes_en_el_jubileo_de_la_vida_consagrada_10_de_octubre_de_2025.mp3",
         "fecha": "2025-10-10",
         "filename": "2025-10-10_discurso_encuentro_con_los_participantes_en_el_jubileo_de_la_vida_consagrada_10_de_octubre_de_2025",
         "tipo": "Discurso",
-        "numero_episodio": "23.5"
+        "numero_episodio": "23.5",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/october/documents/20251010-giubileo-vita-consacrata.html"
     },
     {
         "titulo_original": "Vigilia de oración y rosario por la paz presididos por el Santo Padre - Jubileo de la Espiritualidad Mariana (11 de octubre de 2025)",
-        "titulo_spotify": "[23.6] Discurso 11/10 | Vigilia de oración y rosario por la paz | Paz y Marianismo",
-        "descripcion_spotify": "El Papa León XIV en este discurso nos invita a unirnos en oración junto a María, buscando en ella la guía para vivir con esperanza, compasión y paz. Nos recuerda que la verdadera paz nace del desarme interior y del diálogo fraterno, siguiendo el ejemplo de María y las palabras de Jesús. Podcast creado por igles-ia.es",
+        "titulo_spotify": "[23.6] Discurso 11/10 | Vigilia de oración y rosario por la paz presididos por el Santo Padre | Paz y Espiritualidad Mariana",
+        "descripcion_spotify": "El Papa León XIV en este discurso nos invita a unirnos en oración junto a María, buscando en ella la guía para vivir con esperanza, compasión y paz. Nos recuerda que la verdadera paz nace del desarme del corazón y del compromiso de seguir las palabras de Jesús, especialmente en un mundo que necesita fraternidad y perdón. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-11_discurso_vigilia_de_oracion_y_rosario_por_la_paz_presididos_por_el_santo_padre_jubileo_de_la_espiritualidad_m.mp3",
         "fecha": "2025-10-11",
         "filename": "2025-10-11_discurso_vigilia_de_oracion_y_rosario_por_la_paz_presididos_por_el_santo_padre_jubileo_de_la_espiritualidad_m",
         "tipo": "Discurso",
-        "numero_episodio": "23.6"
+        "numero_episodio": "23.6",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/october/documents/20251011-veglia-di-preghiera.html"
     },
     {
         "titulo_original": "Santa Misa - Jubileo de la Espiritualidad Mariana (12 de octubre de 2025)",
         "titulo_spotify": "[23.7] Homilia 12/10 | Santa Misa - Jubileo de la Espiritualidad Mariana | Espiritualidad y Fe",
-        "descripcion_spotify": "En esta homilía, el Papa León XIV nos invita a recordar que lo central en nuestra vida cristiana es Jesucristo, quien resucitó y es la fidelidad de Dios. La espiritualidad mariana nos ayuda a mantener a Jesús en el centro, fortaleciendo nuestra fe y nuestra convivencia. Nos recuerda que el amor de Dios es un don gratuito que nos llama a vivir con sencillez y humildad. Podcast creado por igles-ia.es",
+        "descripcion_spotify": "En esta homilía, el Papa León XIV nos invita a recordar que Jesucristo, resucitado y descendiente de David, debe ser el centro de nuestra espiritualidad. Nos anima a mantener viva la memoria de Jesús en nuestro sentir y pensar, transformando nuestra convivencia y nuestra relación con Dios. La espiritualidad mariana, al servicio del Evangelio, nos ayuda a acercarnos a Jesús con sencillez y gratuidad, revelando la verdadera esencia del amor divino. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-12_homilia_santa_misa_jubileo_de_la_espiritualidad_mariana_12_de_octubre_de_2025.mp3",
         "fecha": "2025-10-12",
         "filename": "2025-10-12_homilia_santa_misa_jubileo_de_la_espiritualidad_mariana_12_de_octubre_de_2025",
         "tipo": "Homilia",
-        "numero_episodio": "23.7"
+        "numero_episodio": "23.7",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/homilies/2025/documents/20251012-giubileo-spiritualita-mariana.html"
     },
     {
         "titulo_original": "Ángelus, 12 de octubre de 2025",
-        "titulo_spotify": "[23.8] Ángelus 12/10 | Paz, esperanza y reconciliación | Fe y solidaridad",
-        "descripcion_spotify": "El Papa León XIV en este Ángelus invita a fortalecer la espiritualidad en la Sagrada Escritura y la Tradición, y a rezar por la paz en Tierra Santa, Ucrania y Perú. Nos anima a ver al otro como hermano, promoviendo la reconciliación y la esperanza en medio de las dificultades. Podcast creado por igles-ia.es",
+        "titulo_spotify": "[23.8] Ángelus 12/10 | Paz, Esperanza y Reconciliación | Fe y Solidaridad",
+        "descripcion_spotify": "El Papa León XIV en este Ángelus nos invita a fortalecer nuestra espiritualidad en la Sagrada Escritura y la Tradición, a rezar por la paz en Tierra Santa y Ucrania, y a confiar en la presencia de Dios en medio de las dificultades. Nos anima a mirar al otro con ojos de hermano y a promover la reconciliación y la esperanza. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-12_ángelus_angelus_12_de_octubre_de_2025.mp3",
         "fecha": "2025-10-12",
         "filename": "2025-10-12_ángelus_angelus_12_de_octubre_de_2025",
         "tipo": "Ángelus",
-        "numero_episodio": "23.8"
+        "numero_episodio": "23.8",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/angelus/2025/documents/20251012-angelus.html"
     }
 ]

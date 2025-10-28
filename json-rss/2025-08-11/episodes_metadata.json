@@ -1,22 +1,24 @@
 [
     {
         "titulo_original": "Audiencia general del 6 de agosto de 2025 Ciclo de catequesis - Jubileo 2025. Jesucristo, nuestra esperanza. III. La Pascua de Jesús. 1. La preparación de la cena. «Prepárennos allí lo necesario» (Mc 14,15)",
-        "titulo_spotify": "[14.1] Audiencia 06/08 | La preparación de la Pascua | Esperanza en Cristo",
-        "descripcion_spotify": "El Papa León XIV en esta audiencia nos invita a reflexionar sobre la importancia de preparar nuestros corazones y vidas para la Pascua del Señor. Nos recuerda que Dios siempre nos precede y que la verdadera preparación requiere disponibilidad, amor y confianza en su plan. La gracia y nuestra libertad se unen en cada acto de entrega y perdón, creando un espacio donde Dios puede habitar en nosotros. Podcast creado por igles-ia.es",
+        "titulo_spotify": "[14.1] Audiencia 06/08 | Jesucristo, nuestra esperanza | Pasión y preparación",
+        "descripcion_spotify": "El Papa León XIV en esta Audiencia nos invita a reflexionar sobre la importancia de preparar nuestros corazones para la Pascua, entendiendo que Dios siempre nos precede y ha dispuesto todo para nuestro encuentro con Él. Nos anima a vivir cada acto con disponibilidad y amor, dejando espacio para que la gracia transforme nuestra vida. La preparación no es solo ritual, sino una actitud de apertura y entrega diaria. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-06_audiencia_audiencia_general_del_6_de_agosto_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_espera.mp3",
         "fecha": "2025-08-06",
         "filename": "2025-08-06_audiencia_audiencia_general_del_6_de_agosto_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_espera",
         "tipo": "Audiencia",
-        "numero_episodio": "14.1"
+        "numero_episodio": "14.1",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/audiences/2025/documents/20250806-udienza-generale.html"
     },
     {
         "titulo_original": "Ángelus, 10 de agosto de 2025",
         "titulo_spotify": "[14.2] Ángelus 10/08 | Reflexión sobre la generosidad y la misericordia | Vida y misericordia",
-        "descripcion_spotify": "En este Ángelus, el Papa León XIV nos invita a reflexionar sobre cómo invertir el tesoro de nuestra vida a través de la generosidad y la misericordia. Nos anima a compartir nuestros dones y capacidades con amor, transformándonos en verdaderos bienes para los demás. Confiemos en María para ser centinelas de paz y misericordia en un mundo dividido. Podcast creado por igles-ia.es",
+        "descripcion_spotify": "En este Ángelus, el Papa León XIV nos invita a reflexionar sobre cómo invertir el tesoro de nuestra vida a través de la generosidad y la misericordia. Nos anima a compartir nuestros dones y capacidades con amor, transformando nuestras acciones en vida eterna. Confiemos en María para ser centinelas de paz y misericordia en un mundo dividido. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-10_ángelus_angelus_10_de_agosto_de_2025.mp3",
         "fecha": "2025-08-10",
         "filename": "2025-08-10_ángelus_angelus_10_de_agosto_de_2025",
         "tipo": "Ángelus",
-        "numero_episodio": "14.2"
+        "numero_episodio": "14.2",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/angelus/2025/documents/20250810-angelus.html"
     }
 ]

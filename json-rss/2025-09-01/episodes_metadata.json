@@ -1,32 +1,35 @@
 [
     {
         "titulo_original": "Audiencia general del 27 de agosto de 2025 Ciclo de catequesis - Jubileo 2025. Jesucristo, nuestra esperanza. III. La Pascua de Jesús. 4. La entrega. «¿A quién buscan?» (Jn 18,4)",
-        "titulo_spotify": "[17.1] Audiencia 27/08 | Jesús se entrega por amor | Esperanza en la pasión",
-        "descripcion_spotify": "El Papa León XIV en esta audiencia nos invita a reflexionar sobre la valentía y el amor de Jesús en su detención en el huerto de los Olivos. Nos muestra que, incluso en los momentos más oscuros, la verdadera esperanza reside en la entrega total y en la confianza en la vida que surge del sacrificio. Nos anima a seguir su ejemplo de amor desinteresado y a confiar en la misericordia de Dios. Podcast creado por igles-ia.es",
+        "titulo_spotify": "[17.1] Audiencia 27/08 | La entrega de Jesús en la pasión | Amor y sacrificio",
+        "descripcion_spotify": "El Papa León XIV en esta Audiencia nos invita a reflexionar sobre la valentía y el amor de Jesús en su momento de mayor sufrimiento. Nos muestra que su entrega no es debilidad, sino un acto de amor pleno que revela la esperanza en medio de la oscuridad. La verdadera esperanza consiste en confiar en que, incluso en el sufrimiento, se puede sembrar una vida nueva y llena de amor. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-27_audiencia_audiencia_general_del_27_de_agosto_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_esper.mp3",
         "fecha": "2025-08-27",
         "filename": "2025-08-27_audiencia_audiencia_general_del_27_de_agosto_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_esper",
         "tipo": "Audiencia",
-        "numero_episodio": "17.1"
+        "numero_episodio": "17.1",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/audiences/2025/documents/20250827-udienza-generale.html"
     },
     {
         "titulo_original": "A los miembros de las “Escuelas de Evangelización “San Andrés”” (29 de agosto de 2025)",
         "titulo_spotify": "[17.2] Discurso 29/08 | A los miembros de las “Escuelas de Evangelización “San Andrés”” | Misión y Testimonio",
-        "descripcion_spotify": "En este discurso, el Papa León XIV reflexiona sobre la importancia de dar testimonio de la fe y la misión de la Iglesia en el mundo actual. Destaca la vocación de los cristianos de transmitir lo que han recibido de Dios y de vivir en comunión con Él, siguiendo el ejemplo de san Juan Bautista. Podcast creado por igles-ia.es",
+        "descripcion_spotify": "El Papa León XIV en este Discurso nos recuerda que la misión de la Iglesia y de cada cristiano es dar testimonio de su encuentro con Dios, transmitiendo lo que hemos recibido para unirnos en Cristo. Nos invita a contemplar las vidas de los santos y a seguir caminando con esperanza en la evangelización. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-29_discurso_a_los_miembros_de_las_escuelas_de_evangelizacion_san_andres_29_de_agosto_de_2025.mp3",
         "fecha": "2025-08-29",
         "filename": "2025-08-29_discurso_a_los_miembros_de_las_escuelas_de_evangelizacion_san_andres_29_de_agosto_de_2025",
         "tipo": "Discurso",
-        "numero_episodio": "17.2"
+        "numero_episodio": "17.2",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/august/documents/20250829-scuole-evang.html"
     },
     {
         "titulo_original": "Ángelus, 31 de agosto de 2025",
-        "titulo_spotify": "[17.3] Ángelus 31/08 | Ángelus, 31 de agosto de 2025 | Humildad y Comunión",
-        "descripcion_spotify": "En este Ángelus, el Papa León XIV nos invita a reflexionar sobre la importancia de la humildad y la comunión en nuestra vida diaria. Nos recuerda que sentarse a la mesa con Jesús y con los demás es una oportunidad para abrir nuestro corazón, dejar de lado la competencia y aprender a servir con amor. La humildad nos libera y nos acerca más a Dios y a los hermanos. Podcast creado por igles-ia.es",
+        "titulo_spotify": "[17.3] Ángelus 31/08 | Ángelus | Humildad y comunión",
+        "descripcion_spotify": "El Papa León XIV en este Ángelus nos invita a reflexionar sobre la importancia de la humildad y la comunión en nuestra vida cotidiana. Nos anima a abrir nuestro corazón a Jesús, a dejar que su mirada nos transforme y a cultivar una cultura del encuentro basada en la sencillez y el servicio. La humildad, como camino hacia la libertad, nos acerca a la verdadera dignidad y a la presencia de Dios en nuestras vidas. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-31_ángelus_angelus_31_de_agosto_de_2025.mp3",
         "fecha": "2025-08-31",
         "filename": "2025-08-31_ángelus_angelus_31_de_agosto_de_2025",
         "tipo": "Ángelus",
-        "numero_episodio": "17.3"
+        "numero_episodio": "17.3",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/angelus/2025/documents/20250831-angelus.html"
     }
 ]

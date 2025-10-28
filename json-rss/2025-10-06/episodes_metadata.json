@@ -1,52 +1,46 @@
 [
     {
         "titulo_original": "Audiencia general del 1 de octubre de 2025 Ciclo de catequesis - Jubileo 2025. Jesucristo, nuestra esperanza. III. La Pascua de Jesús. 9. La resurreción. «¡La paz esté con ustedes!» (Jn 20,21)",
-        "titulo_spotify": "[22.1] Audiencia 01/10 | La Resurrección y la Paz de Jesús | Esperanza y Perdón",
-        "descripcion_spotify": "El Papa León XIV en esta Audiencia general del 1 de octubre de 2025 nos invita a reflexionar sobre el profundo significado de la resurrección de Jesús. Nos recuerda que su victoria sobre la muerte es un acto de amor, misericordia y reconciliación, que nos llama a vivir en paz y a ser instrumentos de perdón en el mundo. La resurrección no borra el pasado, sino que lo transforma en esperanza y misericordia. Podcast creado por igles-ia.es",
+        "titulo_spotify": "[22.1] Audiencia 01/10 | La Resurrección y la Paz | Esperanza en Cristo",
+        "descripcion_spotify": "El Papa León XIV en esta Audiencia nos recuerda que la resurrección de Jesús es un testimonio del amor que vence la derrota y la traición. Nos invita a mostrar nuestras heridas con humildad y a vivir en paz, confiando en la misericordia de Dios. El mensaje central es que la resurrección transforma el pasado en esperanza y nos llama a ser instrumentos de reconciliación en el mundo. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-01_audiencia_audiencia_general_del_1_de_octubre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_esper.mp3",
         "fecha": "2025-10-01",
         "filename": "2025-10-01_audiencia_audiencia_general_del_1_de_octubre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_esper",
         "tipo": "Audiencia",
-        "numero_episodio": "22.1"
+        "numero_episodio": "22.1",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/audiences/2025/documents/20251001-udienza-generale.html"
     },
     {
         "titulo_original": "A los representantes de la \"Confederación Médica Latinoiberoamericana y del Caribe\" (CONFEMEL) (2 de octubre de 2025)",
-        "titulo_spotify": "[22.2] Discurso 02/10 | A los representantes de la 'Confederación Médica Latinoiberoamericana y del Caribe' | Relación médico-paciente",
-        "descripcion_spotify": "El Papa León XIV en este discurso destaca la importancia de la relación personal entre médico y paciente, basada en el cuidado, la cercanía y la empatía. Resalta que, aunque la inteligencia artificial puede ser una ayuda, nunca podrá reemplazar el gesto humano y la esperanza que los médicos brindan. Nos invita a reflexionar sobre el valor del amor y la compasión en la atención sanitaria. Podcast creado por igles-ia.es",
+        "titulo_spotify": "[22.2] Discurso 02/10 | A los representantes de la \"Confederación Médica Latinoiberoamericana y del Caribe\" | Relación médico-paciente",
+        "descripcion_spotify": "El Papa León XIV en este discurso destaca la importancia de la relación personal entre médicos y pacientes, basada en el cuidado, la cercanía y la compasión. Resalta ejemplos como Jesús y el beato José Gregorio Hernández, recordándonos que el amor y la empatía son esenciales en la medicina. El Papa invita a los profesionales a seguir siendo reservorios de amor y esperanza en su labor. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-02_discurso_a_los_representantes_de_la_confederacion_medica_latinoiberoamericana_y_del_caribe_confemel_2_de_octu.mp3",
         "fecha": "2025-10-02",
         "filename": "2025-10-02_discurso_a_los_representantes_de_la_confederacion_medica_latinoiberoamericana_y_del_caribe_confemel_2_de_octu",
         "tipo": "Discurso",
-        "numero_episodio": "22.2"
-    },
-    {
-        "titulo_original": "Audiencia Jubilar - Catequesis. 6. Esperar es elegir. Clara de Asís (4 de octubre de 2025)",
-        "titulo_spotify": "[22.3] Audiencia 04/10 | Audiencia Jubilar - Catequesis | Responsabilidad y Elecciones",
-        "descripcion_spotify": "El Papa León XIV en esta Audiencia recuerda que no se puede servir a dos señores y nos invita a tomar decisiones responsables que cambien el mundo. Nos anima a seguir el ejemplo de Santa Clara de Asís, quien eligió la pobreza evangélica y las bienaventuranzas con la gracia de Dios. Reflexionemos sobre cómo nuestras elecciones pueden dar sentido a nuestra vida y al Reino de Dios. Podcast creado por igles-ia.es",
-        "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-04_audiencia_audiencia_jubilar_catequesis_6_esperar_es_elegir_clara_de_asis_4_de_octubre_de_2025.mp3",
-        "fecha": "2025-10-04",
-        "filename": "2025-10-04_audiencia_audiencia_jubilar_catequesis_6_esperar_es_elegir_clara_de_asis_4_de_octubre_de_2025",
-        "tipo": "Audiencia",
-        "numero_episodio": "22.3"
+        "numero_episodio": "22.2",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/october/documents/20251002-confemel.html"
     },
     {
         "titulo_original": "Ángelus, 5 de octubre de 2025",
-        "titulo_spotify": "[22.4] Ángelus 05/10 | Paz y Solidaridad | Fe y esperanza",
-        "descripcion_spotify": "En este Ángelus, el Papa León XIV agradece la participación en la celebración dedicada a misioneros y migrantes, resaltando la importancia de la dignidad humana y la solidaridad en tiempos de crisis. Nos invita a mantenernos unidos en oración por la paz en Oriente Medio y por las comunidades afectadas por desastres y conflictos. Podcast creado por igles-ia.es",
+        "titulo_spotify": "[22.4] Ángelus 05/10 | Paz y Solidaridad | Fe y Esperanza",
+        "descripcion_spotify": "En este Ángelus, el Papa León XIV agradece la participación en la celebración dedicada a misioneros y migrantes, resaltando la importancia de respetar la dignidad humana y promover la paz. Nos invita a mantenernos unidos en oración ante los desafíos del mundo, como los desastres naturales, el odio y los conflictos en Oriente Medio. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-05_ángelus_angelus_5_de_octubre_de_2025.mp3",
         "fecha": "2025-10-05",
         "filename": "2025-10-05_ángelus_angelus_5_de_octubre_de_2025",
         "tipo": "Ángelus",
-        "numero_episodio": "22.4"
+        "numero_episodio": "22.4",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/angelus/2025/documents/20251005-angelus.html"
     },
     {
         "titulo_original": "Santa Misa - Jubileo del Mundo Misionero y Jubileo de los Migrantes (5 de octubre de 2025)",
         "titulo_spotify": "[22.5] Homilia 05/10 | Jubileo del Mundo Misionero y de los Migrantes | Vocación Misionera",
-        "descripcion_spotify": "El Papa León XIV en esta homilía nos invita a renovar nuestra conciencia misionera, especialmente en el contexto de los migrantes y las periferias del mundo. Nos anima a llevar la alegría del Evangelio a quienes sufren y enfrentan dificultades, confiando en la fuerza silenciosa de la fe y el amor de Dios. Podcast creado por igles-ia.es",
+        "descripcion_spotify": "El Papa León XIV en esta homilía nos invita a reavivar la vocación misionera, especialmente en el contexto del Jubileo del Mundo Misionero y de los Migrantes. Nos anima a llevar la alegría del Evangelio a quienes enfrentan dificultades, a confiar en la esperanza y a actuar con compasión en las periferias del mundo. La misión hoy trasciende las fronteras geográficas y nos llama a ser instrumentos de salvación en nuestro día a día. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-05_homilia_santa_misa_jubileo_del_mundo_misionero_y_jubileo_de_los_migrantes_5_de_octubre_de_2025.mp3",
         "fecha": "2025-10-05",
         "filename": "2025-10-05_homilia_santa_misa_jubileo_del_mundo_misionero_y_jubileo_de_los_migrantes_5_de_octubre_de_2025",
         "tipo": "Homilia",
-        "numero_episodio": "22.5"
+        "numero_episodio": "22.5",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/homilies/2025/documents/20251005-giubileo-mondo-missionario.html"
     }
 ]

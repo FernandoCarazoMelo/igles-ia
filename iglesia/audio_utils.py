@@ -262,6 +262,7 @@ def procesar_y_generar_episodios(
                 "filename": episodio["filename"],
                 "tipo": episodio["tipo"],
                 "numero_episodio": f"{episodio['pontificate_week']}.{episodio['sub_index']}",
+                "vatican_url": episodio["url"],
             }
         )
 

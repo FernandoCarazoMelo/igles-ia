@@ -1,62 +1,68 @@
 [
     {
         "titulo_original": "A los participantes en el Encuentro de Estudios sobre el cardenal Rafael Merry del Val (13 de octubre de 2025)",
-        "titulo_spotify": "[24.1] Discurso 13/10 | A los participantes en el Encuentro de Estudios sobre el cardenal Rafael Merry del Val | Vocación de servicio y fidelidad",
-        "descripcion_spotify": "El Papa León XIV en este discurso destaca la figura del cardenal Rafael Merry del Val como ejemplo de fidelidad, humildad y servicio desinteresado en la Iglesia. Resalta cómo su vida refleja la importancia de buscar la voluntad de Dios por encima de reconocimientos y honores, y cómo su ejemplo nos invita a vivir con sencillez y entrega total. Podcast creado por igles-ia.es",
+        "titulo_spotify": "[24.1] Discurso 13/10 | A los participantes en el Encuentro de Estudios sobre el cardenal Rafael Merry del Val | Vocación y fidelidad",
+        "descripcion_spotify": "El Papa León XIV en este discurso destaca la figura del cardenal Rafael Merry del Val como ejemplo de fidelidad, humildad y servicio en la Iglesia. Resalta cómo su vida y oración reflejan la importancia de buscar la voluntad de Dios por encima del reconocimiento y los intereses personales. Un mensaje que invita a todos a vivir con humildad y entrega en el servicio a Cristo. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-13_discurso_a_los_participantes_en_el_encuentro_de_estudios_sobre_el_cardenal_rafael_merry_del_val_13_de_octubre.mp3",
         "fecha": "2025-10-13",
         "filename": "2025-10-13_discurso_a_los_participantes_en_el_encuentro_de_estudios_sobre_el_cardenal_rafael_merry_del_val_13_de_octubre",
         "tipo": "Discurso",
-        "numero_episodio": "24.1"
+        "numero_episodio": "24.1",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/october/documents/20251013-card-del-val.html"
     },
     {
         "titulo_original": "Audiencia general del 15 de octubre de 2025 Ciclo de catequesis - Jubileo 2025. Jesucristo, nuestra esperanza. IV. La resurrección de Cristo y los desafíos del mundo actual.  1. El Resucitado, fuente viva de la esperanza humana. (Jn 10,7.9-10)",
-        "titulo_spotify": "[24.2] Audiencia 15/10 | La Resurrección de Cristo y la esperanza | Fe y Salvación",
-        "descripcion_spotify": "El Papa León XIV en esta Audiencia del 15 de octubre de 2025 nos invita a reflexionar sobre el misterio de la Resurrección de Cristo como fuente de esperanza y vida plena. Nos recuerda que Jesús, vivo y victorioso sobre la muerte, es la garantía de que nuestra sed de plenitud será satisfecha en Él. La Resurrección no solo transformó la historia, sino que continúa siendo la fuente inagotable de salvación para cada uno de nosotros. Podcast creado por igles-ia.es",
+        "titulo_spotify": "[24.2] Audiencia 15/10 | Jesucristo, nuestra esperanza | Resurrección y desafíos",
+        "descripcion_spotify": "En esta audiencia, el Papa León XIV nos invita a contemplar el misterio de la Resurrección de Cristo como la fuente viva de esperanza que transforma nuestra realidad. Nos recuerda que Jesús, vivo y victorioso, llena nuestra sed de plenitud y nos acompaña en los momentos de dificultad y búsqueda. La Resurrección no es solo un evento histórico, sino una fuente constante de vida y esperanza para nuestro camino. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-15_audiencia_audiencia_general_del_15_de_octubre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_espe.mp3",
         "fecha": "2025-10-15",
         "filename": "2025-10-15_audiencia_audiencia_general_del_15_de_octubre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_espe",
         "tipo": "Audiencia",
-        "numero_episodio": "24.2"
+        "numero_episodio": "24.2",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/audiences/2025/documents/20251015-udienza-generale.html"
     },
     {
         "titulo_original": "A las Agustinas Recoletas de la Federación de México (15 de octubre de 2025)",
         "titulo_spotify": "[24.3] Discurso 15/10 | A las Agustinas Recoletas de la Federación de México | Camino de amor y misericordia",
-        "descripcion_spotify": "Este discurso del Papa León XIV invita a las hermanas a recorrer el camino hacia Dios a través de la misericordia y la verdad, guiados por el amor. Destaca que el amor es un don que recibimos y que nos impulsa a vivir con paciencia y alegría en la misión. Podcast creado por igles-ia.es",
+        "descripcion_spotify": "Este discurso del Papa León XIV invita a las hermanas a recorrer el camino hacia el Señor a través de la misericordia y la verdad, guiados por el amor. Destaca que el amor recibido de Dios es un don que transforma nuestras acciones y nos acerca a la verdadera felicidad. Invoquemos la protección de Nuestra Madre del Buen Consejo y la intercesión de santo Tomás de Villanueva en nuestro camino de perfección. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-15_discurso_a_las_agustinas_recoletas_de_la_federacion_de_mexico_15_de_octubre_de_2025.mp3",
         "fecha": "2025-10-15",
         "filename": "2025-10-15_discurso_a_las_agustinas_recoletas_de_la_federacion_de_mexico_15_de_octubre_de_2025",
         "tipo": "Discurso",
-        "numero_episodio": "24.3"
+        "numero_episodio": "24.3",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/october/documents/20251015-agostiniane.html"
     },
     {
         "titulo_original": "A la Peregrinación Jubilar desde Rusia (17 de octubre de 2025)",
         "titulo_spotify": "[24.5] Discurso 17/10 | A la Peregrinación Jubilar desde Rusia | Fe y esperanza en la peregrinación",
-        "descripcion_spotify": "El Papa León XIV en este discurso invita a los peregrinos a encontrar en su camino de fe la esperanza y la transformación que ofrece Dios. Destaca la importancia de la comunidad, la oración y la solidaridad como caminos para fortalecer la vida cristiana y construir un mundo nuevo. Podcast creado por igles-ia.es",
+        "descripcion_spotify": "El Papa León XIV en este discurso invita a los peregrinos a encontrar en su camino la esperanza y la fe, recordando que cada uno es una piedra viva en la construcción de la Iglesia. Anima a vivir con amor, fraternidad y solidaridad, fortaleciendo la comunidad y la confianza en Dios. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-17_discurso_a_la_peregrinacion_jubilar_desde_rusia_17_de_octubre_de_2025.mp3",
         "fecha": "2025-10-17",
         "filename": "2025-10-17_discurso_a_la_peregrinacion_jubilar_desde_rusia_17_de_octubre_de_2025",
         "tipo": "Discurso",
-        "numero_episodio": "24.5"
+        "numero_episodio": "24.5",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/october/documents/20251017-pellegrinaggio-russia.html"
     },
     {
         "titulo_original": "Santa Misa y canonización (19 de octubre de 2025)",
         "titulo_spotify": "[24.6] Homilia 19/10 | Santa Misa y canonización | Fe y Oración",
-        "descripcion_spotify": "En esta homilía, el Papa León XIV reflexiona sobre la importancia de la fe como vínculo de amor con Dios y la necesidad de perseverar en la oración. Destaca cómo los santos mantienen viva esa lámpara de fe y nos invita a confiar en la justicia y misericordia del Padre. Podcast creado por igles-ia.es",
+        "descripcion_spotify": "En esta homilía, el Papa León XIV reflexiona sobre la importancia de la fe como vínculo de amor con Dios y la necesidad de perseverar en la oración. Destaca cómo la fe y la oración sostienen nuestra esperanza y confianza en la justicia divina, incluso en tiempos de tribulación. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-19_homilia_santa_misa_y_canonizacion_19_de_octubre_de_2025.mp3",
         "fecha": "2025-10-19",
         "filename": "2025-10-19_homilia_santa_misa_y_canonizacion_19_de_octubre_de_2025",
         "tipo": "Homilia",
-        "numero_episodio": "24.6"
+        "numero_episodio": "24.6",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/homilies/2025/documents/20251019-canonizzazioni.html"
     },
     {
         "titulo_original": "Ángelus, 19 de octubre de 2025",
-        "titulo_spotify": "[24.7] Ángelus 19/10 | Santidad y Misión | Paz y Esperanza",
-        "descripcion_spotify": "En este Ángelus, el Papa León XIV celebra la gran fiesta de la santidad, destacando la importancia de la misión y la esperanza en medio de las dificultades del mundo. Nos invita a orar por la paz en lugares en conflicto y a seguir el ejemplo de los nuevos santos y misioneros. Podcast creado por igles-ia.es",
+        "titulo_spotify": "[24.7] Ángelus 19/10 | Paz y Misión | Fe y Esperanza",
+        "descripcion_spotify": "En este Ángelus, el Papa León XIV comparte su mensaje de esperanza y oración por la paz en el mundo. Destaca la importancia de la misión evangelizadora y la necesidad de promover el diálogo y la paz en lugares afectados por conflictos. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-19_ángelus_angelus_19_de_octubre_de_2025.mp3",
         "fecha": "2025-10-19",
         "filename": "2025-10-19_ángelus_angelus_19_de_octubre_de_2025",
         "tipo": "Ángelus",
-        "numero_episodio": "24.7"
+        "numero_episodio": "24.7",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/angelus/2025/documents/20251019-angelus.html"
     }
 ]

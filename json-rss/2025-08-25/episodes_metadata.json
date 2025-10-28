@@ -1,32 +1,35 @@
 [
     {
         "titulo_original": "Audiencia general del 20 de agosto de 2025 Ciclo de catequesis - Ciclo de catequesis - Jubileo 2025. Jesucristo, nuestra esperanza. III. La Pascua de Jesús. 3. Perdón. «Los amó hasta el extremo» (Jn 13,2)",
-        "titulo_spotify": "[16.1] Audiencia 20/08 | Amor hasta el final | Perdón y esperanza",
-        "descripcion_spotify": "En esta audiencia, el Papa León XIV nos invita a reflexionar sobre el amor incondicional de Jesús durante la última cena, incluso en momentos de traición y dolor. Nos enseña que el perdón y la fidelidad son la verdadera expresión de esperanza y amor que vence al mal. Escucha este mensaje de fe y misericordia. Podcast creado por igles-ia.es",
+        "titulo_spotify": "[16.1] Audiencia 20/08 | La esperanza en el amor hasta el final | Perdón y fidelidad en Jesús",
+        "descripcion_spotify": "El Papa León XIV en esta audiencia nos invita a reflexionar sobre el amor incondicional de Jesús durante la última cena, un amor que no se rinde ante la traición y el rechazo. Nos anima a practicar el perdón y a mantener la esperanza incluso en las situaciones más difíciles, siguiendo el ejemplo de Cristo. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-20_audiencia_audiencia_general_del_20_de_agosto_de_2025_ciclo_de_catequesis_ciclo_de_catequesis_jubileo_2025_jesu.mp3",
         "fecha": "2025-08-20",
         "filename": "2025-08-20_audiencia_audiencia_general_del_20_de_agosto_de_2025_ciclo_de_catequesis_ciclo_de_catequesis_jubileo_2025_jesu",
         "tipo": "Audiencia",
-        "numero_episodio": "16.1"
+        "numero_episodio": "16.1",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/audiences/2025/documents/20250820-udienza-generale.html"
     },
     {
         "titulo_original": "A las participantes en los Capítulos Generales de cuatro Institutos: Misioneras Hijas de la Sagrada Familia de Nazaret, Instituto Hijas de Nazaret, Instituto Apóstoles de la Sagrada Familia, Hermanas de la Caridad de Santa María (Hnas. del Buen Consejo) (23 de agosto de 2025)",
-        "titulo_spotify": "[16.2] Discurso 23/08 | Discurso a participantes en capítulos generales de institutos religiosos | Inspiración y esperanza en la familia",
-        "descripcion_spotify": "El Papa León XIV en este discurso invita a las participantes en los capítulos generales a ser testigos de esperanza y a fortalecer la presencia de la Sagrada Familia en la vida cotidiana. Destaca la importancia de vivir y transmitir valores familiares, promoviendo la oración, el amor y la solidaridad en la sociedad. Un mensaje de aliento para renovar el compromiso con la misión y el ejemplo de Nazaret. Podcast creado por igles-ia.es",
+        "titulo_spotify": "[16.2] Discurso 23/08 | A las participantes en los Capítulos Generales de cuatro Institutos | Esperanza y Vocación Religiosa",
+        "descripcion_spotify": "El Papa León XIV en este discurso destaca la importancia de la esperanza como don divino que fortalece la vocación y el testimonio de las religiosas en sus comunidades. Enfatiza la misión de vivir y transmitir los valores de la Sagrada Familia de Nazaret, promoviendo la familia y el amor en la sociedad. Nos invita a renovar nuestro compromiso de fe y servicio, siendo testigos de esperanza y amor en el mundo. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-23_discurso_a_las_participantes_en_los_capitulos_generales_de_cuatro_institutos_misioneras_hijas_de_la_sagrada_f.mp3",
         "fecha": "2025-08-23",
         "filename": "2025-08-23_discurso_a_las_participantes_en_los_capitulos_generales_de_cuatro_institutos_misioneras_hijas_de_la_sagrada_f",
         "tipo": "Discurso",
-        "numero_episodio": "16.2"
+        "numero_episodio": "16.2",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/august/documents/20250823-capitoli-generali.html"
     },
     {
         "titulo_original": "Ángelus, 24 de agosto de 2025",
-        "titulo_spotify": "[16.3] Ángelus 24/08 | Ángelus, 24 de agosto de 2025 | Puerta estrecha y salvación",
-        "descripcion_spotify": "El Papa León XIV en este Ángelus nos invita a reflexionar sobre la imagen de la puerta estrecha del Evangelio, que nos desafía a vivir una fe auténtica y comprometida. Nos recuerda que la verdadera salvación requiere transformar nuestro corazón y seguir el ejemplo de Jesús, atravesando la puerta del amor y la justicia. Invoca a la Virgen María para que nos ayude a cruzar con valentía este umbral y abrirnos a la misericordia de Dios. Podcast creado por igles-ia.es",
+        "titulo_spotify": "[16.3] Ángelus 24/08 | La puerta estrecha y la verdadera salvación | Fe y amor en la vida cristiana",
+        "descripcion_spotify": "En este Ángelus, el Papa León XIV nos invita a reflexionar sobre la imagen de la puerta estrecha en el Evangelio, recordándonos que la verdadera fe requiere compromiso y amor auténtico que transformen nuestra vida. Nos anima a no confiar en la apariencia de seguridad, sino a vivir con valentía el Evangelio, cruzando la puerta del amor y la justicia. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-08-24_ángelus_angelus_24_de_agosto_de_2025.mp3",
         "fecha": "2025-08-24",
         "filename": "2025-08-24_ángelus_angelus_24_de_agosto_de_2025",
         "tipo": "Ángelus",
-        "numero_episodio": "16.3"
+        "numero_episodio": "16.3",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/angelus/2025/documents/20250824-angelus.html"
     }
 ]

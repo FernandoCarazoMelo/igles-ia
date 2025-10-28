@@ -2,7 +2,7 @@ import json
 import os
 import re
 import unicodedata
-from datetime import datetime, timedelta
+from datetime import datetime
 
 import pandas as pd
 from crewai import LLM
@@ -12,6 +12,8 @@ from iglesia.audio_utils import calculate_pontificate_week
 from iglesia.clean_text import extract_clean_text
 from iglesia.utils import extraer_homilia
 
+tqdm.pandas()
+
 llm_client = LLM(model="gpt-4.1-nano")
 
 
@@ -19,26 +21,9 @@ def enriquecer_episodios(
     path_all_links: str = "vatican-archiver/documents/links/all_links.csv",
     path_types_list: str = "assets/types_list.csv",
     path_output: str = "vatican-archiver/documents/links_enriched",
-    run_date: str = None,
     pope: str = "leo-xiv",
+    language: str = "es",
 ):
-    # if run_date is None:
-    #     run_date = pd.Timestamp.now()
-    # else:
-    #     run_date = pd.to_datetime(run_date)
-
-    # run_date = run_date.strftime("%Y-%m-%d")
-    # dia_semana_actual = pd.Timestamp(run_date).dayofweek  # Lunes=0, Domingo=6
-    # fecha_siguiente_lunes = pd.Timestamp(run_date)
-    # if dia_semana_actual != 0:  # Si no es lunes
-    #     fecha_siguiente_lunes += pd.Timedelta(days=(7 - dia_semana_actual))
-    #     run_date = fecha_siguiente_lunes.strftime("%Y-%m-%d")
-    #     print(f"Ajustando la fecha al siguiente lunes: {run_date}")
-    # else:
-    #     print(f"La fecha es lunes: {run_date}")
-
-    # print(f"Preparando datos de audio para la fecha: {run_date}")
-
     os.makedirs(path_output, exist_ok=True)
 
     def _limpiar_nombre_archivo(nombre):
@@ -105,13 +90,14 @@ def enriquecer_episodios(
             }
 
     homilias = pd.read_csv(path_all_links)
-    homilias = homilias[(homilias["pope"] == pope)]
+    homilias = homilias[(homilias["pope"] == pope) & (homilias["lang"] == language)]
     types_list = pd.read_csv(path_types_list).set_index("type")
     homilias["tipo"] = homilias["type"].map(types_list["tipo"])
     homilias = homilias.rename(columns={"title_human": "titulo", "link": "url"})
+    homilias = homilias.dropna(subset=["date"])
     all_homilias = []
 
-    for i, row in tqdm(homilias.iterrows()):
+    for i, row in tqdm(homilias.iterrows(), total=len(homilias)):
         homilias_df = extraer_homilia(row)
         # Añadir el tipo de homilía al DataFrame
         all_homilias.append(homilias_df)
@@ -146,7 +132,7 @@ def enriquecer_episodios(
     all_homilias["date"] = all_homilias["date"].dt.strftime("%Y-%m-%d")
     all_homilias["fecha"] = all_homilias["date"]
 
-    metadata = all_homilias.apply(
+    metadata = all_homilias.progress_apply(
         lambda row: _generar_metadatos_episodio_new(
             row["texto_limpio"], row, llm_client
         ),

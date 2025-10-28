@@ -1,62 +1,57 @@
 [
     {
-        "titulo_original": "Vigilia del Jubileo de la Consolación (15 de septiembre de 2025)",
-        "titulo_spotify": "[20.1] Homilia 15/09 | Vigilia del Jubileo de la Consolación | Consolación y Fe",
-        "descripcion_spotify": "En esta homilía, el Papa León XIV nos invita a compartir la consolación de Dios con quienes enfrentan dolor y sufrimiento. Nos recuerda que las lágrimas y la fe son caminos para ver a Jesús y encontrar esperanza en medio de la oscuridad. La confianza en la cercanía de Dios nos fortalece y nos une en el amor. Podcast creado por igles-ia.es",
-        "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-15_homilia_vigilia_del_jubileo_de_la_consolacion_15_de_septiembre_de_2025.mp3?año=2025",
-        "fecha": "2025-09-15",
-        "filename": "2025-09-15_homilia_vigilia_del_jubileo_de_la_consolacion_15_de_septiembre_de_2025",
-        "tipo": "Homilia",
-        "numero_episodio": "20.1"
-    },
-    {
         "titulo_original": "Audiencia general del 17 de septiembre de 2025 Ciclo de catequesis - Jubileo 2025. Jesucristo, nuestra esperanza. III. La Pascua de Jesús. 7. La muerte. «Un sepulcro nuevo, en el que nadie había sido depositado aún» (Jn 19,40-41)",
-        "titulo_spotify": "[20.2] Audiencia 17/09 | La esperanza en el silencio del Sábado Santo | Resurrección y espera",
-        "descripcion_spotify": "El Papa León XIV en esta Audiencia nos invita a reflexionar sobre el misterio del Sábado Santo, un día de silencio y espera en el que Dios trabaja en lo profundo. Nos enseña que en la pausa y el descanso se encuentra la semilla de la resurrección y la esperanza cristiana, que nace en la confianza y en el silencio de Dios. Aprendamos a acoger estos momentos como oportunidades de gracia y renovación espiritual. Podcast creado por igles-ia.es",
-        "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-17_audiencia_audiencia_general_del_17_de_septiembre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_e.mp3?año=2025",
+        "titulo_spotify": "[20.2] Audiencia 17/09 | La Pascua de Jesús | Esperanza y Silencio",
+        "descripcion_spotify": "El Papa León XIV en esta audiencia nos invita a reflexionar sobre el misterio del Sábado Santo, un día de silencio y espera en el que Jesús descansa en la tumba. Nos enseña que en la quietud y en los momentos de pausa también se gesta la vida nueva y la esperanza cristiana, que no nace del ruido sino de la confianza en Dios. Aprendamos a valorar el silencio y la espera como caminos de fe y renovación. Podcast creado por igles-ia.es",
+        "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-17_audiencia_audiencia_general_del_17_de_septiembre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_e.mp3",
         "fecha": "2025-09-17",
         "filename": "2025-09-17_audiencia_audiencia_general_del_17_de_septiembre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_e",
         "tipo": "Audiencia",
-        "numero_episodio": "20.2"
+        "numero_episodio": "20.2",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/audiences/2025/documents/20250917-udienza-generale.html"
     },
     {
         "titulo_original": "A los participantes en los Capítulos Generales de: Misioneros de la Preciosísima Sangre; Sociedad de María; Frailes Franciscanos de la Inmaculada; Ursulinas de María Inmaculada (18 de septiembre de 2025)",
         "titulo_spotify": "[20.3] Discurso 18/09 | Participantes en Capítulos Generales | Vocación y Obediencia",
-        "descripcion_spotify": "El Papa León XIV en este discurso destaca la importancia de la vocación religiosa como un testimonio de diversidad y fidelidad al Espíritu Santo. Resalta la relevancia de la vida en comunidad y la obediencia como acto de amor, que fortalece la unión y el compromiso en la misión. Nos invita a redescubrir el valor del sacrificio y la fidelidad en nuestro camino de fe. Podcast creado por igles-ia.es",
-        "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-18_discurso_a_los_participantes_en_los_capitulos_generales_de_misioneros_de_la_preciosisima_sangre_sociedad_de_m.mp3?año=2025",
+        "descripcion_spotify": "El Papa León XIV en este discurso destaca la importancia de la vocación religiosa como testimonio de diversidad y fidelidad al Espíritu Santo. Resalta la fuerza de la vida en comunidad y el valor de la obediencia como acto de amor, que fortalece la entrega y el crecimiento espiritual. Un mensaje que invita a redescubrir el sacrificio y la fidelidad en la vida cristiana. Podcast creado por igles-ia.es",
+        "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-18_discurso_a_los_participantes_en_los_capitulos_generales_de_misioneros_de_la_preciosisima_sangre_sociedad_de_m.mp3",
         "fecha": "2025-09-18",
         "filename": "2025-09-18_discurso_a_los_participantes_en_los_capitulos_generales_de_misioneros_de_la_preciosisima_sangre_sociedad_de_m",
         "tipo": "Discurso",
-        "numero_episodio": "20.3"
+        "numero_episodio": "20.3",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/september/documents/20250918-capitoli-generali.html"
     },
     {
         "titulo_original": "A los participantes en el encuentro promovido por el Consejo Episcopal Latinoamericano (CELAM), la Pontificia Academia para la Vida y el Instituto Juan Pablo II (19 de septiembre de 2025)",
-        "titulo_spotify": "[20.4] Discurso 19/09 | A los participantes en el encuentro promovido por el CELAM, la Pontificia Academia para la Vida y el Instituto Juan Pablo II | Familia, esperanza y fe",
-        "descripcion_spotify": "El Papa León XIV en este discurso invita a reflexionar sobre la importancia de la familia como un don y una tarea, resaltando el valor del regreso a Dios, la esperanza en su misericordia y la necesidad de fortalecer los lazos familiares en medio de los desafíos sociales. Nos anima a vivir en comunión, promoviendo la esperanza y la fe en cada hogar, como camino hacia una vida plena en Cristo. Podcast creado por igles-ia.es",
-        "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-19_discurso_a_los_participantes_en_el_encuentro_promovido_por_el_consejo_episcopal_latinoamericano_celam_la_pont.mp3?año=2025",
+        "titulo_spotify": "[20.4] Discurso 19/09 | Reflexión sobre la familia y la esperanza | Familia y Fe",
+        "descripcion_spotify": "En este discurso, el Papa León XIV comparte un mensaje de esperanza y reflexión sobre la importancia de la familia, la sinodalidad y el regreso a Dios como camino de alegría y justicia. Invita a fortalecer los lazos familiares y a vivir en esperanza, promoviendo el amor y la fe en comunidad. Podcast creado por igles-ia.es",
+        "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-19_discurso_a_los_participantes_en_el_encuentro_promovido_por_el_consejo_episcopal_latinoamericano_celam_la_pont.mp3",
         "fecha": "2025-09-19",
         "filename": "2025-09-19_discurso_a_los_participantes_en_el_encuentro_promovido_por_el_consejo_episcopal_latinoamericano_celam_la_pont",
         "tipo": "Discurso",
-        "numero_episodio": "20.4"
+        "numero_episodio": "20.4",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/september/documents/20250919-incontro.html"
     },
     {
         "titulo_original": "Jubileo de los Trabajadores por la Justicia - Audiencia con el Santo Padre (20 de septiembre de 2025)",
         "titulo_spotify": "[20.5] Discurso 20/09 | Jubileo de los Trabajadores por la Justicia | Justicia y Misericordia",
-        "descripcion_spotify": "El Papa León XIV en este discurso reflexiona sobre la importancia de la justicia como virtud fundamental para la convivencia social y el bien común. Destaca que la justicia va más allá de la ley, integrando la misericordia y el perdón como elementos esenciales para construir relaciones humanas armoniosas. Nos invita a promover una justicia que no solo sancione, sino que también restaure y reconcilie, guiada por el amor y la dignidad de cada persona. Podcast creado por igles-ia.es",
-        "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-20_discurso_jubileo_de_los_trabajadores_por_la_justicia_audiencia_con_el_santo_padre_20_de_septiembre_de_2025.mp3?año=2025",
+        "descripcion_spotify": "El Papa León XIV en este discurso reflexiona sobre la importancia de la justicia como virtud fundamental para la convivencia social y el bien común. Destaca que la justicia no solo implica aplicar leyes, sino también promover la misericordia y el perdón, elementos esenciales para la reconciliación y la dignidad humana. Nos invita a buscar una justicia que transforme y sane, orientada hacia la reconciliación y el amor. Podcast creado por igles-ia.es",
+        "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-20_discurso_jubileo_de_los_trabajadores_por_la_justicia_audiencia_con_el_santo_padre_20_de_septiembre_de_2025.mp3",
         "fecha": "2025-09-20",
         "filename": "2025-09-20_discurso_jubileo_de_los_trabajadores_por_la_justicia_audiencia_con_el_santo_padre_20_de_septiembre_de_2025",
         "tipo": "Discurso",
-        "numero_episodio": "20.5"
+        "numero_episodio": "20.5",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/september/documents/20250920-giubileo-operatori-giustizia.html"
     },
     {
         "titulo_original": "Ángelus, 21 de septiembre de 2025",
         "titulo_spotify": "[20.6] Ángelus 21/09 | Administración de bienes y vida | Responsabilidad y solidaridad",
-        "descripcion_spotify": "En este Ángelus, el Papa León XIV nos invita a reflexionar sobre cómo administramos los bienes materiales y nuestra propia vida, recordándonos que todo es un don de Dios. Nos exhorta a usar nuestros recursos para construir amistad, solidaridad y un mundo más justo, en lugar de acumular solo para nosotros. Pidamos a la Virgen Santa que nos ayude a administrar con justicia y responsabilidad. Podcast creado por igles-ia.es",
-        "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-21_ángelus_angelus_21_de_septiembre_de_2025.mp3?año=2025",
+        "descripcion_spotify": "El Papa León XIV en este Ángelus nos invita a reflexionar sobre cómo administramos los bienes materiales y nuestra propia vida, recordándonos que todo es un don de Dios. Nos exhorta a usar nuestros recursos para crear redes de amistad, solidaridad y justicia, en lugar de acumular egoístamente. Pidamos a la Virgen Santa que nos ayude a administrar con justicia y responsabilidad. Podcast creado por igles-ia.es",
+        "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-21_ángelus_angelus_21_de_septiembre_de_2025.mp3",
         "fecha": "2025-09-21",
         "filename": "2025-09-21_ángelus_angelus_21_de_septiembre_de_2025",
         "tipo": "Ángelus",
-        "numero_episodio": "20.6"
+        "numero_episodio": "20.6",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/angelus/2025/documents/20250921-angelus.html"
     }
 ]

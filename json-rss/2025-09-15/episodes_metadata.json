@@ -1,22 +1,24 @@
 [
     {
         "titulo_original": "Audiencia general del 10 de septiembre de 2025 Ciclo de catequesis - Jubileo 2025. Jesucristo, nuestra esperanza. III. La Pascua de Jesús. 6. La muerte. «Jesús, dando un fuerte grito, expiró» (Mc 15, 37)",
-        "titulo_spotify": "[19.1] Audiencia 10/09 | La Pascua de Jesús y su grito de esperanza | Muerte y Fe",
-        "descripcion_spotify": "El Papa León XIV en esta Audiencia reflexiona sobre la muerte de Jesús en la cruz, resaltando que su grito no fue de desesperación, sino de amor y entrega total. Nos invita a entender que en nuestros momentos de sufrimiento y silencio, también podemos gritar con fe y esperanza, confiando en la presencia del Padre. Este acto de Jesús revela que el amor y la esperanza permanecen incluso en la oscuridad. Podcast creado por igles-ia.es",
+        "titulo_spotify": "[19.1] Audiencia 10/09 | La muerte de Jesús en la cruz | Esperanza y entrega",
+        "descripcion_spotify": "El Papa León XIV en esta audiencia reflexiona sobre la muerte de Jesús en la cruz, resaltando que su grito final encierra dolor, fe y entrega total. Nos invita a entender que el grito puede ser una expresión de esperanza, amor y confianza en Dios, incluso en los momentos más difíciles. Aprendamos a gritar con sinceridad y fe, confiando en que Dios escucha cada corazón. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-10_audiencia_audiencia_general_del_10_de_septiembre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_e.mp3",
         "fecha": "2025-09-10",
         "filename": "2025-09-10_audiencia_audiencia_general_del_10_de_septiembre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_e",
         "tipo": "Audiencia",
-        "numero_episodio": "19.1"
+        "numero_episodio": "19.1",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/audiences/2025/documents/20250910-udienza-generale.html"
     },
     {
         "titulo_original": "Ángelus, 14 de septiembre de 2025",
         "titulo_spotify": "[19.2] Ángelus 14/09 | Exaltación de la Santa Cruz | Fe y Salvación",
-        "descripcion_spotify": "En este Ángelus, el Papa León XIV nos invita a reflexionar sobre la fiesta de la Exaltación de la Santa Cruz, símbolo del amor divino y la redención. Nos recuerda que la cruz, instrumento de muerte, se convirtió en un signo de vida y esperanza gracias al amor inmenso de Dios. Pidamos la intercesión de María para que su amor nos transforme y nos impulse a donarnos a los demás. Podcast creado por igles-ia.es",
+        "descripcion_spotify": "El Papa León XIV en este Ángelus nos invita a reflexionar sobre la fiesta de la Exaltación de la Santa Cruz, recordando cómo Dios transformó la cruz en símbolo de vida y redención. Nos enseña que el amor de Dios, manifestado en la cruz, nos ofrece salvación y esperanza eterna. Pidamos la intercesión de María para que su amor crezca en nosotros y podamos donarnos a los demás. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-09-14_ángelus_angelus_14_de_septiembre_de_2025.mp3",
         "fecha": "2025-09-14",
         "filename": "2025-09-14_ángelus_angelus_14_de_septiembre_de_2025",
         "tipo": "Ángelus",
-        "numero_episodio": "19.2"
+        "numero_episodio": "19.2",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/angelus/2025/documents/20250914-angelus.html"
     }
 ]
