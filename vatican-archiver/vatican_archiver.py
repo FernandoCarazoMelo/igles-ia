@@ -177,8 +177,8 @@ class VaticanArchiver:
 
     def _extract_document_links(
         self, index_url: str, pope_slug: str, language: str
-    ) -> Set[str]:
-        """Extrae todos los enlaces a documentos de una página de índice específica."""
+    ) -> Set[Tuple[str, str]]:
+        """Extrae todos los enlaces a documentos y sus títulos de una página de índice."""
         full_slug = f"{pope_slug}/{language}"
         pope_main_page_url = self._get_pope_main_page_url(pope_slug, language)
 
@@ -187,37 +187,48 @@ class VaticanArchiver:
             logging.error(f"No se pudo acceder a la página {index_url}. Saltando.")
             return set()
 
-        urls_to_visit: Set[str] = set()
-        # Lógica de scraping para encontrar enlaces a documentos
-        url_without_index = index_url.replace(".index.html", "") + "/documents"
+        documents_found: Set[Tuple[str, str]] = set()
+
         try:
+            # Lógica de scraping para encontrar enlaces a documentos
+            url_without_index = index_url.replace(".index.html", "") + "/documents"
             url_without_index = url_without_index.split(full_slug)[1]
+
             content_area = (
                 soup.find("div", class_="document-container")
                 or soup.find("div", id="main-container")
                 or soup.body
             )
+
             for link in content_area.find_all("a", href=True):
                 href = link["href"]
+                # Obtenemos el título humano del texto del enlace
+                titulo = link.get_text(strip=True)
+
                 if (
                     full_slug in href
                     and url_without_index in href
                     and ".html" in href
                     and not href.startswith(("http", "#", "javascript"))
+                    and not titulo.lower() == language
+                    and titulo  # Nos aseguramos que el título no esté vacío
                 ):
                     full_url = urljoin(pope_main_page_url, href)
-                    urls_to_visit.add(full_url)
-        except Exception as e:
-            urls_to_visit = set()
-            logging.warning(f"Error procesando {index_url}: {e}")
+                    # Guardamos la tupla (url, titulo)
+                    documents_found.add((full_url, titulo))
 
-        return urls_to_visit
+        except Exception as e:
+            logging.warning(f"Error procesando {index_url}: {e}")
+            return set()  # Devolvemos un set vacío si hay un error en esta página
+
+        return documents_found
 
     def _get_all_pope_documents(
         self, pope_name: str, pope_slug: str, language: str
-    ) -> List[str]:
-        """Recupera todos los enlaces de documentos disponibles para un Papa e idioma."""
-        all_document_urls: Set[str] = set()
+    ) -> List[Tuple[str, str]]:
+        """Recupera todos los enlaces de documentos y títulos para un Papa e idioma."""
+        # Este set ahora guardará tuplas (url, titulo)
+        all_documents: Set[Tuple[str, str]] = set()
         index_urls = self._process_pope_index_pages(pope_name, pope_slug, language)
 
         if not index_urls:
@@ -230,19 +241,21 @@ class VaticanArchiver:
             f"Escaneando {len(index_urls)} páginas de índice para {pope_name} [{language}]..."
         )
         for url in tqdm(index_urls, desc=f"Scraping {pope_name} [{language}]"):
-            document_urls = self._extract_document_links(url, pope_slug, language)
-            all_document_urls.update(document_urls)
+            # document_data es ahora un set de tuplas (url, titulo)
+            document_data = self._extract_document_links(url, pope_slug, language)
+            all_documents.update(document_data)
 
         logging.info(
-            f"Total de documentos encontrados para {pope_name} [{language}]: {len(all_document_urls)}"
+            f"Total de documentos encontrados para {pope_name} [{language}]: {len(all_documents)}"
         )
-        return sorted(list(all_document_urls))
+        # Devolvemos una lista ordenada de tuplas
+        return sorted(list(all_documents))
 
     def find_and_save_links(
         self, pope_map: Dict[str, str], languages: List[str]
     ) -> Dict[str, dict]:
         """
-        Paso 1: Genera y guarda todos los enlaces de documentos para los Papas e idiomas dados.
+        Paso 1: Genera y guarda todos los enlaces (y títulos) de documentos.
         """
         logging.info("--- INICIANDO PASO 1: Encontrar y Guardar Enlaces ---")
         all_links_found = {}
@@ -253,15 +266,23 @@ class VaticanArchiver:
 
             for lang in languages:
                 logging.info(f"Buscando enlaces para {pope_name} [{lang}]...")
-                links = self._get_all_pope_documents(pope_name, pope_slug, lang)
-                all_links_found[pope_slug][lang] = links
+                # links_data es una lista de tuplas (url, titulo)
+                links_data = self._get_all_pope_documents(pope_name, pope_slug, lang)
+
+                # Convertimos la lista de tuplas en una lista de diccionarios
+                links_json = [
+                    {"link": url, "title_human": title} for url, title in links_data
+                ]
+
+                all_links_found[pope_slug][lang] = links_json
 
                 output_path = os.path.join(pope_dir, f"{lang}.json")
                 try:
                     with open(output_path, "w", encoding="utf-8") as f:
-                        json.dump(links, f, indent=2, ensure_ascii=False)
+                        # Guardamos la nueva estructura JSON
+                        json.dump(links_json, f, indent=2, ensure_ascii=False)
                     logging.info(
-                        f"Guardados {len(links)} enlaces para {pope_name} [{lang}] -> {output_path}"
+                        f"Guardados {len(links_json)} enlaces para {pope_name} [{lang}] -> {output_path}"
                     )
                 except Exception as e:
                     logging.error(f"No se pudo guardar el JSON en {output_path}: {e}")
@@ -285,7 +306,9 @@ class VaticanArchiver:
 
     def merge_links_to_csv(self) -> Optional[pd.DataFrame]:
         """
-        Paso 2: Carga los archivos JSON de enlaces, los fusiona, procesa y guarda como CSV.
+        Paso 2: Carga los JSON de enlaces/títulos, los fusiona y guarda como CSV.
+        Maneja tanto el formato antiguo (lista de strings) como el nuevo (lista de dicts).
+        El pivot_links.csv final SOLO contendrá los enlaces.
         """
         logging.info("--- INICIANDO PASO 2: Fusionar Enlaces a CSV ---")
         rows = []
@@ -299,13 +322,41 @@ class VaticanArchiver:
                     file_path = os.path.join(pope_path, file)
                     try:
                         with open(file_path, "r", encoding="utf-8") as f:
-                            links = json.load(f)
-                            for link in links:
-                                rows.append(
-                                    {"pope": pope_slug, "lang": lang, "link": link}
+                            links_data = json.load(f)
+
+                            if not links_data:  # Si el JSON está vacío, saltar
+                                continue
+
+                            # --- INICIO DE LA LÓGICA DE DETECCIÓN ---
+                            if isinstance(links_data[0], str):
+                                # Es el FORMATO ANTIGUO (lista de strings)
+                                logging.warning(
+                                    f"Detectado formato JSON antiguo en {file_path}. No se cargarán 'title_human'."
                                 )
+                                for link in links_data:
+                                    rows.append(
+                                        {
+                                            "pope": pope_slug,
+                                            "lang": lang,
+                                            "link": link,
+                                            "title_human": None,  # No tenemos título
+                                        }
+                                    )
+                            elif isinstance(links_data[0], dict):
+                                # Es el FORMATO NUEVO (lista de diccionarios)
+                                for doc_info in links_data:
+                                    rows.append(
+                                        {
+                                            "pope": pope_slug,
+                                            "lang": lang,
+                                            "link": doc_info.get("link"),
+                                            "title_human": doc_info.get("title_human"),
+                                        }
+                                    )
+                            # --- FIN DE LA LÓGICA DE DETECCIÓN ---
+
                     except Exception as e:
-                        logging.error(f"No se pudo cargar {file_path}: {e}")
+                        logging.error(f"No se pudo cargar o procesar {file_path}: {e}")
 
         if not rows:
             logging.warning(
@@ -314,8 +365,9 @@ class VaticanArchiver:
             return None
 
         df = pd.DataFrame(rows)
+        df = df.dropna(subset=["link"])  # Quitar filas donde el link sea nulo
 
-        # Procesar DataFrame
+        # Procesar DataFrame (esto se mantiene igual)
         df["parts"] = df["link"].str.split("/")
         df["title"] = df["parts"].apply(lambda parts: max(parts, key=len))
         df["type"] = df["parts"].apply(
@@ -323,29 +375,31 @@ class VaticanArchiver:
         )
         df["date"] = df["title"].apply(self._extract_date_from_title)
         df = df.drop(columns=["parts"])
+        df["title_human"] = df["title_human"].fillna(pd.NA)
 
-        # Guardar CSV completo
+        # Guardar CSV completo (all_links.csv SÍ tendrá 'title_human')
         all_links_path = os.path.join(self.csv_dir, "all_links.csv")
         df = df.sort_values(by=["date", "title"], ascending=[True, True])
         df.to_csv(all_links_path, index=False, encoding="utf-8")
         logging.info(f"Guardado CSV fusionado en {all_links_path}")
 
+        # --- ¡CAMBIO CLAVE AQUÍ! ---
         # Pivotar DataFrame
         df_pivot = df.pivot_table(
-            index=["pope", "type", "title", "date"],
+            index=["pope", "type", "title", "date"],  # 'title' es el slug (común)
             columns="lang",
+            # Volvemos a poner 'link' como único valor
             values="link",
             aggfunc="first",
         ).reset_index()
 
         # sort by date
         df_pivot = df_pivot.sort_values(by=["date", "title"], ascending=[True, True])
-        # Data to str
 
-        # Guardar CSV pivotado
+        # Guardar CSV pivotado (ahora solo con enlaces)
         pivot_path = os.path.join(self.csv_dir, "pivot_links.csv")
         df_pivot.to_csv(pivot_path, index=False, encoding="utf-8")
-        logging.info(f"Guardado CSV pivotado en {pivot_path}")
+        logging.info(f"Guardado CSV pivotado (solo enlaces) en {pivot_path}")
 
         logging.info(f"Resumen: {len(df)} enlaces totales procesados.")
         logging.info("\nEnlaces por Papa:\n" + str(df.groupby("pope")["link"].count()))
@@ -451,7 +505,7 @@ class VaticanArchiver:
         logging.info("====== INICIANDO ARCHIVO COMPLETO DEL VATICANO ======")
 
         # Paso 1: Encontrar y guardar enlaces
-        self.find_and_save_links(pope_map, languages)
+        # self.find_and_save_links(pope_map, languages)
 
         # Paso 2: Fusionar enlaces a CSV
         links_df = self.merge_links_to_csv()

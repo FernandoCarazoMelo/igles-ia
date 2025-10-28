@@ -1,231 +1,918 @@
 [
-  "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250511-regina-caeli.html",
-  "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250518-regina-caeli.html",
-  "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250525-regina-caeli.html",
-  "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250601-regina-caeli.html",
-  "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250608-regina-caeli.html",
-  "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250615-angelus.html",
-  "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250622-angelus.html",
-  "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250629-angelus.html",
-  "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250706-angelus.html",
-  "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250713-angelus.html",
-  "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250720-angelus.html",
-  "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250727-angelus.html",
-  "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250803-angelus.html",
-  "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250810-angelus.html",
-  "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250815-angelus.html",
-  "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250817-angelus.html",
-  "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250824-angelus.html",
-  "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250831-angelus.html",
-  "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250907-angelus.html",
-  "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250914-angelus.html",
-  "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250921-angelus.html",
-  "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250928-angelus.html",
-  "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20251005-angelus.html",
-  "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20251012-angelus.html",
-  "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20251019-angelus.html",
-  "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20251026-angelus.html",
-  "https://www.vatican.va/content/leo-xiv/en/apost_exhortations/documents/20251004-dilexi-te.html",
-  "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250521-udienza-generale.html",
-  "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250528-udienza-generale.html",
-  "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250604-udienza-generale.html",
-  "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250611-udienza-generale.html",
-  "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250614-udienza-giubilare.html",
-  "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250618-udienza-generale.html",
-  "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250625-udienza-generale.html",
-  "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250730-udienza-generale.html",
-  "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250806-udienza-generale.html",
-  "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250813-udienza-generale.html",
-  "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250820-udienza-generale.html",
-  "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250827-udienza-generale.html",
-  "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250903-udienza-generale.html",
-  "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250906-udienza-giubilare.html",
-  "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250910-udienza-generale.html",
-  "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250917-udienza-generale.html",
-  "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250924-udienza-generale.html",
-  "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250927-udienza-giubilare.html",
-  "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20251001-udienza-generale.html",
-  "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20251004-udienza-giubilare.html",
-  "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20251008-udienza-generale.html",
-  "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20251015-udienza-generale.html",
-  "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20251022-udienza-generale.html",
-  "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20251025-udienza-giubilare.html",
-  "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250509-messa-cardinali.html",
-  "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250511-messa-grotte-vaticane.html",
-  "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250518-inizio-pontificato.html",
-  "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250520-visita-sanpaolo.html",
-  "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250525-possesso-cattedra-laterano.html",
-  "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250531-ordinazioni-presbiterali.html",
-  "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250601-omelia-giubileo-famiglie.html",
-  "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250607-veglia-pentecoste.html",
-  "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250608-omelia-pentecoste.html",
-  "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250609-omelia-giubileo-santa-sede.html",
-  "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250615-omelia-giubileo-sport.html",
-  "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250622-omelia-corpus-domini.html",
-  "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250627-omelia-giubileo-sacerdoti.html",
-  "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250629-omelia-pallio.html",
-  "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250709-omelia-custodia-creazione.html",
-  "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250713-omelia-castelgandolfo.html",
-  "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250715-omelia-carabinieri.html",
-  "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250720-omelia-albano.html",
-  "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250803-omelia-giubileo-giovani.html",
-  "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250815-omelia-castelgandolfo.html",
-  "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250817-omelia-albano.html",
-  "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250901-messa-sant-agostino.html",
-  "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250905-inaugurazione-borgo-laudatosi.html",
-  "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250907-omelia-frassati-acutis.html",
-  "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250914-omelia-martiri.html",
-  "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250915-veglia-giubileo-consolazione.html",
-  "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250928-omelia-giubileo-catechisti.html",
-  "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20251005-giubileo-mondo-missionario.html",
-  "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20251006-vespri.html",
-  "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20251009-giubileo-vita-consacrata.html",
-  "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20251012-giubileo-spiritualita-mariana.html",
-  "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20251019-canonizzazioni.html",
-  "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20251026-giubileo-equipe-sinodali.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/creation/documents/20250630-messaggio-giornata-curacreato.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/grandparents/documents/20250626-messaggio-nonni-anziani.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/migration/documents/20250725-world-migrants-day-2025.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/mission/documents/20251013-giornata-missionaria.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250520-videomessaggio-universita-rio.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250523-messaggio-movimento-anabattista.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250528-messaggio-dicastero-prolaicis.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250528-messaggio-vescovi-francia.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250604-messaggio-sacerdoti-parigi.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250614-videomessaggio-giovani.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250617-messaggio-ia.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250624-messaggio-ordine-malta.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250627-messaggio-santificazione-sacerdotale.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250630-messaggio-fao.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250708-messaggio-aiforgood-ginevra.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250709-messaggio-festival-medjugorje.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250712-messaggio-assemblea-pittsburgh.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250714-messaggio-hiroshima-nagasaki.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250715-videomessaggio-partitadelcuore.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250720-messaggio-pax-christi.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250721-messaggio-fiuc.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250725-videomessaggio-catechisti-vietnamiti.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250804-messaggio-settimana-sociale-peru.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250806-videomessaggio-cavalieri-di-colombo.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250806-videomessaggio-rete-cattolica-panafricana.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250811-messaggio-meeting-rimini.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250815-messaggio-santa-francesca-romana.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250822-messaggio-stoccolma.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250828-messaggio-incontro-bangladesh.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250829-videomessaggio-santommaso-davillanova.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250903-messaggio-congresso.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250912-videomessaggio-progetto-unesco.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250914-messaggio-congresso-religioni.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250920-videomessaggio-walk-for-life.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20251001-messaggio-10canonizzazione-genitori-teresa.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20251003-messaggio-congresso-filosofia.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20251004-messaggio-catholic-charities.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20251012-messaggio-jubileo-pueblos-originarios.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/poor/documents/20250613-messaggio-giornata-poveri.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/urbi/documents/20250508-prima-benedizione-urbietorbi.html",
-  "https://www.vatican.va/content/leo-xiv/en/messages/youth/documents/20251007-messaggio-xl-gmg.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/august/documents/20250802-artisti-torvergata.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/august/documents/20250802-pellegrini-egitto.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/august/documents/20250802-veglia-tor-vergata.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/august/documents/20250817-pranzo-poveri-castelgandolfo.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/august/documents/20250823-capitoli-generali.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/august/documents/20250823-legislatori-cattolici.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/august/documents/20250825-ministranti-francesi.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/august/documents/20250828-politici-francia.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/august/documents/20250829-scuole-evang.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/july/documents/20250702-chiesa-grecocatt-ucraina.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/july/documents/20250705-agostiniane.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/july/documents/20250705-insegnanti-giovani.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/july/documents/20250712-capitoli-generali.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/july/documents/20250717-pellegrinaggio-ecumenico-usa.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/july/documents/20250725-sacerdoti.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/july/documents/20250728-giovani-peru.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/july/documents/20250729-inizio-giubileo-giovani.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/july/documents/20250729-missionari-digitali.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250601-benedizione-giro-ditalia.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250602-beato-hossu.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250604-niaf.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250605-segreteria-distato.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250606-capitoli-generali.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250606-moderatori.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250607-simposio-nicea.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250610-rappresentanti-pontifici.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250612-clero-romano.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250616-pellegrini-congo.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250616-specola.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250616-vescovi-madagascar.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250617-cei.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250618-fondazione-bartolucci.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250620-capitoli-generali.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250620-sacerdoti.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250621-giubileo-governanti.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250624-giubileo-seminaristi.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250625-giubileo-vescovi.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250625-seminaristi-triveneto.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250626-giornata-lotta-droga.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250626-incontro-dicastero-clero.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250626-redentoristi-scalabriniani.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250626-roaco.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250628-chiesa-greco-cattolica-ucraina.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250628-congregazione-vallombrosana.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250628-patriarcato-ecumenico.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250630-capitoli-generali-suore.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/may/documents/20250510-collegio-cardinalizio.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/may/documents/20250512-media.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/may/documents/20250514-giubileo-chiese-orientali.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/may/documents/20250515-fratelli-scuole-cristiane.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/may/documents/20250516-corpo-diplomatico.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/may/documents/20250517-centesimus-annus-pro-pontifice.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/may/documents/20250519-altre-religioni.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/may/documents/20250522-pom.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/may/documents/20250524-dipendenti-curia-scv.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/may/documents/20250525-possesso-cattedra-laterano.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/may/documents/20250525-sindaco-roma.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/may/documents/20250525-visita-santamaria-maggiore.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/may/documents/20250526-messa-pace-africa.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/may/documents/20250527-ssc-napoli.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/may/documents/20250530-movimenti-pace.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/may/documents/20250531-conclusione-mesemariano.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251001-conferenza-mariapoli.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251002-capitolo-paoline.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251002-confemel.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251002-incontro-refugees-migrants.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251003-guardie-svizzere.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251003-pastorale-anziani.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251006-cavalieri-colombo.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251009-minds-international.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251009-union-leaders.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251010-acs.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251011-dicastero-comunicazione.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251011-eremiti.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251011-pellegrini-toscana.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251011-veglia-di-preghiera.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251013-card-del-val.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251015-agostiniane.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251016-fao.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251017-nave-scuolapace.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251017-pellegrinaggio-russia.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251018-consulta-antiusura.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251018-giubileo-rom.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251020-lusitanum.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251020-pellegrini-canonizzazioni.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251022-delegazione-burundi.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251024-compagnia-gesu.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251024-pellegrinaggio-estonia.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251027-chiesa-assira-oriente.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/september/documents/20250901-osf-milano.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/september/documents/20250905-giovani-mediterraneo.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/september/documents/20250906-congresso-mariologico-mariano.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/september/documents/20250911-vescovi.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/september/documents/20250912-meeting-human-fraternity.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/september/documents/20250913-pellegrini-umbria.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/september/documents/20250913-seminario-pat.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/september/documents/20250915-ordine-santagostino.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/september/documents/20250918-capitoli-generali.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/september/documents/20250919-apertura-annopastorale.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/september/documents/20250920-giubileo-operatori-giustizia.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/september/documents/20250922-capitoli-generali.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/september/documents/20250922-indonesiani.html",
-  "https://www.vatican.va/content/leo-xiv/en/speeches/2025/september/documents/20250929-interreligious-dialogue.html",
-  "https://www.vatican.va/content/leo-xiv/en/travels/2025/documents/turchia-libano-2025.html"
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250511-regina-caeli.html",
+    "title_human": "Regina Caeli, 11 May 2025"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250518-regina-caeli.html",
+    "title_human": "Regina Caeli, 18 May 2025"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250525-regina-caeli.html",
+    "title_human": "Regina Caeli, 25 May 2025"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250601-regina-caeli.html",
+    "title_human": "Regina Caeli, 1st June 2025"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250608-regina-caeli.html",
+    "title_human": "Regina Caeli, 8 June 2025, Solemnity of Pentecost"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250615-angelus.html",
+    "title_human": "Angelus, 15 June 2025"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250622-angelus.html",
+    "title_human": "Angelus, 22 June 2025,Solemnity of the Most Holy Body and Blood of Christ"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250629-angelus.html",
+    "title_human": "Angelus, 29 June 2025,Solemnity of the Holy Apostles Peter and Paul"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250706-angelus.html",
+    "title_human": "Angelus, 6 July 2025"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250713-angelus.html",
+    "title_human": "Angelus, 13 July 2025"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250720-angelus.html",
+    "title_human": "Angelus, 20 July 2025"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250727-angelus.html",
+    "title_human": "Angelus, 27 July 2025"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250803-angelus.html",
+    "title_human": "Angelus, 3 August 2025"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250810-angelus.html",
+    "title_human": "Angelus, 10 August 2025"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250815-angelus.html",
+    "title_human": "Angelus, 15 August 2025,Solemnity of the Assumption of the Blessed Virgin Mary"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250817-angelus.html",
+    "title_human": "Angelus, 17 August 2025"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250824-angelus.html",
+    "title_human": "Angelus, 24 August 2025"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250831-angelus.html",
+    "title_human": "Angelus, 31 August 2025"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250907-angelus.html",
+    "title_human": "Angelus, 7 September 2025"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250914-angelus.html",
+    "title_human": "Angelus, 14 September 2025"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250921-angelus.html",
+    "title_human": "Angelus, 21 September 2025"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20250928-angelus.html",
+    "title_human": "Angelus, 28 September 2025"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20251005-angelus.html",
+    "title_human": "Angelus, 5 October 2025"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20251012-angelus.html",
+    "title_human": "Angelus, 12 October 2025"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20251019-angelus.html",
+    "title_human": "Angelus, 19 October 2025"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20251026-angelus.html",
+    "title_human": "Angelus, 26 October 2025"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/apost_exhortations/documents/20251004-dilexi-te.html",
+    "title_human": "Apostolic ExhortationDilexi teof the Holy Father Leo XIV on Love for the Poor (4 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250521-udienza-generale.html",
+    "title_human": "General Audience of 21 May 2025 - Cycle of Catechesis – Jubilee 2025. Jesus Christ our Hope. II. The life of Jesus. The parables 6. The sower."
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250528-udienza-generale.html",
+    "title_human": "General Audience of 28 May 2025 Cycle of Catechesis – Jubilee 2025. Jesus Christ our Hope. II. The life of Jesus. The parables 7. “Jesus Christ our hope. The Samaritan. When he saw him, he had compassion” (Lk 10:33b)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250604-udienza-generale.html",
+    "title_human": "General Audience of 4 June 2025 - Cycle of Catechesis – Jubilee 2025. Jesus Christ our Hope. II. The life of Jesus. The parables 8. The labourers in the vineyard. “And he said to them, ‘You too go into my vineyard’”(Mt 20:4)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250611-udienza-generale.html",
+    "title_human": "General Audience of 11 June 2025 - Cycle of Catechesis – Jubilee 2025. Jesus Christ our Hope. II. The life of Jesus. The parables 9. Bartimaeus. \"“Take courage; get up, he is calling you.”"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250614-udienza-giubilare.html",
+    "title_human": "Jubilee Audience:To hope is to connect. Irenaeus of Lyon(14 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250618-udienza-generale.html",
+    "title_human": "General Audience of 18 June 2025 - Cycle of Catechesis – Jubilee 2025. Jesus Christ our Hope. II. The life of Jesus. The Healings. 10. The healing of the paralytic. \"When Jesus saw him lying there and knew that he had been ill for a long time, he said to him, “Do you want to be well?”\""
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250625-udienza-generale.html",
+    "title_human": "General Audience of 25 June 2025 - Cycle of Catechesis – Jubilee 2025. Jesus Christ our Hope. II. The life of Jesus. The Healings. 11. The bleeding woman and Jairus’ daughter. “Do not be afraid; just have faith!” (Mk 5:36)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250730-udienza-generale.html",
+    "title_human": "General Audience of 30 July 2025 - Cycle of Catechesis - Jubilee 2025. Jesus Christ our hope. II. The life of Jesus. The healings. 12. The healing of a deaf man with a speech impediment. They were exceedingly astonished and they said, \"He has done all things well; he even makes the deaf hear and the dumb speak.\" (Mk 7:37)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250806-udienza-generale.html",
+    "title_human": "General Audience of 6 August 2025 - Cycle of Catechesis – Jubilee 2025. Jesus Christ our Hope. III. The Passover of Jesus. 1. The preparation of the supper. “Make the preparations for us there” (Mk 14:15)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250813-udienza-generale.html",
+    "title_human": "General Audience of 13 August 2025 - Cycle of Catechesis – Jubilee 2025. Jesus Christ our Hope. III. The Passover of Jesus. 2. The betrayal. “Surely it is not I?” (Mk 14,19)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250820-udienza-generale.html",
+    "title_human": "General Audience of 20 August 2025 - Cycle of Catechesis – Jubilee 2025. Jesus Christ our Hope. III. The Passover of Jesus. 3. Forgiveness. «He loved them to the end» (Jn 13:2)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250827-udienza-generale.html",
+    "title_human": "General Audience of 27 August 2025 - Cycle of Catechesis - Jubilee 2025. Jesus Christ, our hope. III. The Passover of Jesus. 4.  The surrender. ‘Whom are you looking for?’ (Jn 18:4)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250903-udienza-generale.html",
+    "title_human": "General Audience of 3 September 2025 - Cycle of Catechesis – Jubilee 2025. Jesus Christ our Hope. III. The Passover of Jesus. 5. The Crucifiction. «I thirst» (Jn 19:28)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250906-udienza-giubilare.html",
+    "title_human": "Jubilee Audience - Catechesis. 4. To hope is to dig. Empress Helena (6 September 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250910-udienza-generale.html",
+    "title_human": "General Audience of 10 September 2025 - Cycle of Catechesis – Jubilee 2025. Jesus Christ our Hope. III. The Passover of Jesus. 6. Death. \"Jesus uttered a loud cry, and breathed his last\" (Mk 15:37)."
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250917-udienza-generale.html",
+    "title_human": "General Audience of 17 September 2025 - Cycle of Catechesis – Jubilee 2025. Jesus Christ our Hope. III. The Passover of Jesus. 7. Death. “In the garden was a new tomb, in which no one had yet been buried.”"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250924-udienza-generale.html",
+    "title_human": "General Audience of 24 September 2025 - Cycle of Catechesis - Jubilee 2025. Jesus Christ our Hope. III. The Passover of Jesus. 8. The Descent. In the Spirit \"he also went to preach to the spirits in prison” (1 Pt 3:19)."
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20250927-udienza-giubilare.html",
+    "title_human": "Jubilee Audience - Catechesis - 5. To hope is to intuit. Ambrose of Milan (27 September 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20251001-udienza-generale.html",
+    "title_human": "General Audience of 1 October 2025 - Cycle of Catechesis - Jubilee 2025. Jesus Christ our Hope. III. The Passover of Jesus. 9. The Resurrection. “Peace be with you!” (Jn 20:21)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20251004-udienza-giubilare.html",
+    "title_human": "Jubilee Audience - Catechesis. 6. To Hope is to Choose. Clare of Assisi (4 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20251008-udienza-generale.html",
+    "title_human": "General Audience of 8 October 2025 - Cycle of Catechesis – Jubilee 2025. Jesus Christ our Hope. 10. Rekindling. “Were not our hearts burning within us?” (Lk 24:32)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20251015-udienza-generale.html",
+    "title_human": "General Audience of 15 October 2025 - Cycle of Catechesis – Jubilee 2025. Jesus Christ our Hope. IV. The Resurrection of Christ and the Challenges of the Contemporary World 1. The Risen One, the Living Source of Human Hope"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20251022-udienza-generale.html",
+    "title_human": "General Audience of 22 October 2025 - Cycle of Catechesis – Jubilee 2025. Jesus Christ our Hope. IV. The Resurrection of Christ and the Challenges of the Contemporary World 2. The Resurrection of Christ, the Response to Human Sadness"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20251025-udienza-giubilare.html",
+    "title_human": "Jubilee Audience - Catechesis 7. To hope is not to know. Nicola Cusano (25 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250509-messa-cardinali.html",
+    "title_human": "Holy Mass pro Ecclesia celebrated by the Roman Pontiff Leo XIV with the Cardinals (9 May 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250511-messa-grotte-vaticane.html",
+    "title_human": "Holy Mass in the Crypt of Saint Peter’s Basilica (11 May 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250518-inizio-pontificato.html",
+    "title_human": "5thSunday in the Time of Easter - Holy Mass for the Beginning of the Pontificate of Pope Leo XIV (18 May 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250520-visita-sanpaolo.html",
+    "title_human": "Visit to the Tomb of St. Paul (20 May 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250525-possesso-cattedra-laterano.html",
+    "title_human": "Papal Mass For The Possession Of The Chair Of The Bishop Of Rome (25 May 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250531-ordinazioni-presbiterali.html",
+    "title_human": "Holy Mass with Presbyteral Ordinations (31 May 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250601-omelia-giubileo-famiglie.html",
+    "title_human": "Holy Mass for the Jubilee of Families, Children, Grandparents and the Elderly (1 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250607-veglia-pentecoste.html",
+    "title_human": "Jubilee of Ecclesial Movements - Vigil of Pentecost (7 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250608-omelia-pentecoste.html",
+    "title_human": "Pentecost Sunday - Holy Mass in the Jubilee of Movements, Associations and New Communities (8 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250609-omelia-giubileo-santa-sede.html",
+    "title_human": "Holy Mass for the Jubilee of the Holy See (9 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250615-omelia-giubileo-sport.html",
+    "title_human": "Holy Mass for the Jubilee of Sport on the Solemnity of the Holy Trinity (15 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250622-omelia-corpus-domini.html",
+    "title_human": "Most Holy Body and Blood of Christ - Holy Mass, Procession and Eucharistic Blessing (22 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250627-omelia-giubileo-sacerdoti.html",
+    "title_human": "Most Sacred Heart of Jesus - Holy Mass and priestly Ordinations (27 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250629-omelia-pallio.html",
+    "title_human": "Holy Mass and Blessing of the Sacred Pallium for the new Metropolitan Archbishops on the Solemnity of Saints Peter and Paul (29 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250709-omelia-custodia-creazione.html",
+    "title_human": "Holy Mass for the Care of Creation (9 July 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250713-omelia-castelgandolfo.html",
+    "title_human": "Holy Mass (Castel Gandolfo, 13 July 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250715-omelia-carabinieri.html",
+    "title_human": "Holy Mass at the Chapel of the Carabinieri Station in Castel Gandolfo (15 July 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250720-omelia-albano.html",
+    "title_human": "Holy Mass at the Cathedral of Albano (20 July 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250803-omelia-giubileo-giovani.html",
+    "title_human": "Holy Mass for the Jubilee of Youth (3 August 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250815-omelia-castelgandolfo.html",
+    "title_human": "Castel Gandolfo: Holy Mass on the Solemnity of the Assumption of the Blessed Virgin Mary (15 August 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250817-omelia-albano.html",
+    "title_human": "Shrine of Santa Maria della Rotonda, Albano: Holy Mass (17 August 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250901-messa-sant-agostino.html",
+    "title_human": "Holy Mass for the Opening of the General Chapter of the Order of Saint Augustine (1st September 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250905-inaugurazione-borgo-laudatosi.html",
+    "title_human": "Inauguration and blessing of the Borgo Laudato si' (Castel Gandolfo, 5 September 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250907-omelia-frassati-acutis.html",
+    "title_human": "Holy Mass with Canonizations (7 September 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250914-omelia-martiri.html",
+    "title_human": "Commemoration of the Martyrs and Witnesses of the Faith of the 21stcentury (14 September 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250915-veglia-giubileo-consolazione.html",
+    "title_human": "Prayer Vigil – Jubilee of Consolation (15 September 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250928-omelia-giubileo-catechisti.html",
+    "title_human": "Holy Mass for the Jubilee of Catechists (28 September 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20251005-giubileo-mondo-missionario.html",
+    "title_human": "Holy Mass - Jubilee of the Missionary World and Jubilee of Migrants (5 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20251006-vespri.html",
+    "title_human": "Celebration of Vespers (Domus Australia, 6 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20251009-giubileo-vita-consacrata.html",
+    "title_human": "Holy Mass - Jubilee of Consecrated Life (9 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20251012-giubileo-spiritualita-mariana.html",
+    "title_human": "Holy Mass - Jubilee of Marian Spirituality (12 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20251019-canonizzazioni.html",
+    "title_human": "Holy Mass and canonisation (19 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20251026-giubileo-equipe-sinodali.html",
+    "title_human": "Holy Mass - Jubilee of the Synodal Teams and Participatory Bodies (26 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/creation/documents/20250630-messaggio-giornata-curacreato.html",
+    "title_human": "Message of the Holy Father on the occasion of the World Day of Prayer for the Care of Creation [1 September 2025] (30 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/grandparents/documents/20250626-messaggio-nonni-anziani.html",
+    "title_human": "Message of the Holy Father for the 5thWorld Day for Grandparents and the Elderly, 2025: Blessed are those who have not lost hope (cf. Sir 14:2) (27 July 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/migration/documents/20250725-world-migrants-day-2025.html",
+    "title_human": "Message of the Holy Father for the 111thWorld Day of Migrants and Refugees 2025"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/mission/documents/20251013-giornata-missionaria.html",
+    "title_human": "Video message of Pope Leo XIV for World Mission Day 2025"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250520-videomessaggio-universita-rio.html",
+    "title_human": "Video Message of the Holy Father on the occasion of the meeting of Universities in Rio de Janeiro onLaudato si'(20 May 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250523-messaggio-movimento-anabattista.html",
+    "title_human": "Message of the Holy Father to the Participants in the Commemoration of 500 years of the Anabaptist movement [Zurich, 29 May 2025] (23 May 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250528-messaggio-dicastero-prolaicis.html",
+    "title_human": "Message of His Holiness Pope Leo XIV to Participants in the Seminar “Evangelizing with the Families of Today and Tomorrow: Ecclesiological and Pastoral Challenges”, organised by the Dicastery for Laity, Family and Life (28 May 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250528-messaggio-vescovi-francia.html",
+    "title_human": "Message of the Holy Father Leo XIV to the Bishops’ Conference of France on the occasion of the 100thanniversary of the canonization of Saint John Eudes, Saint John Mary Vianney, and Saint Thérèse of the Child Jesus (28 May 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250604-messaggio-sacerdoti-parigi.html",
+    "title_human": "Message of the Holy Father for the Gathering of Priests belonging to the Ecclesiastical Province of Paris [5 June 2025] (4 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250614-videomessaggio-giovani.html",
+    "title_human": "Video Message of the Holy Father to the young people of Chicago and the whole world (14 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250617-messaggio-ia.html",
+    "title_human": "Message of the Holy Father to participants in the Second Annual Conference on Artificial Intelligence, Ethics, and Corporate Governance [Rome, 19–20 June 2025] (17 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250624-messaggio-ordine-malta.html",
+    "title_human": "Message of the Holy Father to members of the Sovereign Military Order of Malta, on the occasion of the celebration of the Solemnity of Saint John the Baptist (24 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250627-messaggio-santificazione-sacerdotale.html",
+    "title_human": "Message of the Holy Father to Priests on the Occasion of the World Day of Prayer for the Sanctification of Priests (27 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250630-messaggio-fao.html",
+    "title_human": "Message of the Holy Father to Participants in the 44thSession of the FAO Conference (30 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250708-messaggio-aiforgood-ginevra.html",
+    "title_human": "Message of the Holy Father, signed by the Cardinal Secretary of State Pietro Parolin, on the occasion of theAI for Good Summit 2025[Geneva] (10 July 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250709-messaggio-festival-medjugorje.html",
+    "title_human": "Message of the Holy Father Leo XIV to Participants in the 36th International Youth Festival (Mladifest) [Medjugorje, 4-8 August] (9 July 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250712-messaggio-assemblea-pittsburgh.html",
+    "title_human": "Message of the Holy Father to the Participants in the Third Metropolitan Assembly of the Byzantine Catholic Archeparchy of Pittsburgh [16-20 July 2025] (12 July 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250714-messaggio-hiroshima-nagasaki.html",
+    "title_human": "Message of the Holy Father for the 80th anniversary of the atomic bombings of Hiroshima and Nagasaki (14 July 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250715-videomessaggio-partitadelcuore.html",
+    "title_human": "Videomessage of the Holy Father for the Charity Football Match \"Partita del Cuore\" 2025 (15 July 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250720-messaggio-pax-christi.html",
+    "title_human": "Message of the Holy Father to the Participants in the National Assembly of Pax Christi USA [Detroit, Michigan, 25-27 July 2025] (20 July 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250721-messaggio-fiuc.html",
+    "title_human": "Message from the Holy Father to participants in the 28th General Assembly of the FIUC (International Federation of Catholic Universities) [Guadalajara, Mexico, 28 July - 1 August 2025] (21 July 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250725-videomessaggio-catechisti-vietnamiti.html",
+    "title_human": "Video Message of the Holy Father to Vietnamese Catechists on the occasion of the 400th anniversary of Blessed Andrew Phú Yên’s Birth [26 July 2025] (25 July 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250804-messaggio-settimana-sociale-peru.html",
+    "title_human": "Message of the Holy Father to participants in the Social Week in Peru [Lima, 14–16 August 2025] (4 August 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250806-videomessaggio-cavalieri-di-colombo.html",
+    "title_human": "Video Message of the Holy Father to participants in the 143rdSupreme Convention of the Knights of Columbus gathered in Washington D.C., 6 August 2025"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250806-videomessaggio-rete-cattolica-panafricana.html",
+    "title_human": "Video Message of the Holy Father to the Pan-African Catholic Theology and Pastoral Network on the occasion of their Third Congress (6 August 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250811-messaggio-meeting-rimini.html",
+    "title_human": "Message of His Holiness, signed by the Secretary of State Cardinal Pietro Parolin, on the occasion of the 46th Meeting for Friendship among Peoples [Rimini, 22-27 August 2025] (11 August 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250815-messaggio-santa-francesca-romana.html",
+    "title_human": "Message of the Holy Father to the Oblate Sisters of Tor de' Specchi on the occasion of the 600th anniversary of the Oblation of St. Frances of Rome (15 August 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250822-messaggio-stoccolma.html",
+    "title_human": "Message of His Holiness to the Participants in the Ecumenical Week in Stockholm on the Centenary of the 1925 Ecumenical Meeting [Stockholm, 18 – 24 August 2025] (22 August 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250828-messaggio-incontro-bangladesh.html",
+    "title_human": "Message of the Holy Father to Participants in the Interreligious Meeting in Bangladesh [6–12 September 2025] (28 August 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250829-videomessaggio-santommaso-davillanova.html",
+    "title_human": "Video message of the Holy Father to the Augustinian Province of St. Thomas of Villanova (29 August 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250903-messaggio-congresso.html",
+    "title_human": "Message of the Holy Father, signed by the Secretary of State, to participants in the 12th Latin American Congress on Science and Religion [Pontifical Athenaeum Regina Apostolorum, Rome, 10–12 September, 2025] (3 September 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250912-videomessaggio-progetto-unesco.html",
+    "title_human": "Video message from the Holy Father on the occasion of the presentation of the candidacy of the project ‘Gestures of Welcome’ to the UNESCO Intangible Cultural Heritage list [Lampedusa, Friday, 12 September 2025] (12 September 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250914-messaggio-congresso-religioni.html",
+    "title_human": "Message of the Holy Father to the Participants in the 8th Congress of the Leaders of World and Traditional Religions [Palace of the Independence in Astana (Kazakhstan), 17-18 September 2025] (14 September 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20250920-videomessaggio-walk-for-life.html",
+    "title_human": "Video Message from the Holy Father on the occasion of the \"ALS Walk for Life\" in Chicago (20 September 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20251001-messaggio-10canonizzazione-genitori-teresa.html",
+    "title_human": "Message of the Holy Father on the occasion of the Tenth Anniversary of the Canonization of the parents of Saint Thérèse of the Child Jesus (1 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20251003-messaggio-congresso-filosofia.html",
+    "title_human": "Message of the Holy Father on the occasion of the International Congress of Philosophy (3 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20251004-messaggio-catholic-charities.html",
+    "title_human": "Message of the Holy Father Leo XIV to participants in the 115thAnnual Meeting  of the Catholic Charities USA Network (4 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/pont-messages/2025/documents/20251012-messaggio-jubileo-pueblos-originarios.html",
+    "title_human": "Message from the Holy Father for theJubileo de los Pueblos Originarios[14-16 October, 2025] (12 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/poor/documents/20250613-messaggio-giornata-poveri.html",
+    "title_human": "Message of the Holy Father for the 9th World Day of the Poor [16 November 2025] (13 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/urbi/documents/20250508-prima-benedizione-urbietorbi.html",
+    "title_human": "First Blessing  ‘Urbi et Orbi’ of the Holy Father Leo XIV (8 May 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/messages/youth/documents/20251007-messaggio-xl-gmg.html",
+    "title_human": "Message of the Holy Father Leo XIV for the 40th World Youth Day [23 November 2025] (7 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/august/documents/20250802-artisti-torvergata.html",
+    "title_human": "To the Artists who will animate the Youth Vigil at Tor Vergata on the occasion of the Jubilee of Young People (2 August 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/august/documents/20250802-pellegrini-egitto.html",
+    "title_human": "To young Egyptian pilgrims, who have come to Rome for the Jubilee of Youth with the young Pascale Rafic (2 August 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/august/documents/20250802-veglia-tor-vergata.html",
+    "title_human": "Prayer Vigil with the young people (Tor Vergata, 2 August 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/august/documents/20250817-pranzo-poveri-castelgandolfo.html",
+    "title_human": "Lunch with the poor assisted by the Diocese of Albano and with the Diocesan Caritas workers (17 August 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/august/documents/20250823-capitoli-generali.html",
+    "title_human": "To the Participants in the General Chapters of four Institutes: Missionary Daughters of the Holy Family of Nazareth, Daughters of Nazareth Institute, Apostles of the Holy Family Institute, Sisters of Charity of Saint Mary (also called “of Good Counsel”) (23 August 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/august/documents/20250823-legislatori-cattolici.html",
+    "title_human": "To Members of the \"International Catholic Legislators Network\" (23 August 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/august/documents/20250825-ministranti-francesi.html",
+    "title_human": "To the altar servers from France (25 August 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/august/documents/20250828-politici-francia.html",
+    "title_human": "To a delegation of French political figures (28 August 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/august/documents/20250829-scuole-evang.html",
+    "title_human": "To the members of the “Escuelas de Evangelización San Andrés” (29 August 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/july/documents/20250702-chiesa-grecocatt-ucraina.html",
+    "title_human": "To Members of the Synod of the Ukrainian Greek-Catholic Church (2 July 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/july/documents/20250705-agostiniane.html",
+    "title_human": "To the Augustinian Sisters, Servants of Jesus and Mary (5 July 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/july/documents/20250705-insegnanti-giovani.html",
+    "title_human": "To Teachers of Catholic Schools in Ireland, England, Wales, and Scotland; and to the Young People of the Diocese of Copenhagen (5 July 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/july/documents/20250712-capitoli-generali.html",
+    "title_human": "To Participants in the General Chapters of the Pontifical Institute for Foreign Missions (PIME), the Maestre Pie Filippini, the Maestre Pie Venerini, the Daughters of the Church, the Salesian Oblates of the Sacred Heart, the Angeline Franciscan Sisters,  the Institute of Oblates of Jesus and Mary, and the Daughters of Mary, Sisters of the Pious Schools (Scolopians) (12 July 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/july/documents/20250717-pellegrinaggio-ecumenico-usa.html",
+    "title_human": "To Participants of the Orthodox-Catholic Ecumenical Pilgrimage from the United States of America (17 July 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/july/documents/20250725-sacerdoti.html",
+    "title_human": "To two groups of priests: to Participants in the Course for Formators in Seminaries and to Participants in the General Chapter of the Xaverian Brothers (25 July 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/july/documents/20250728-giovani-peru.html",
+    "title_human": "To a group of young people from Peru (28 July 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/july/documents/20250729-inizio-giubileo-giovani.html",
+    "title_human": "To the young people gathered in St. Peter's Square for the Holy Mass of Welcome to the Jubilee of Young People, at the end of the tour in the popemobile (29 July 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/july/documents/20250729-missionari-digitali.html",
+    "title_human": "To Influencers and Digital Missionaries (29 July 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250601-benedizione-giro-ditalia.html",
+    "title_human": "The Holy Father attends and blesses the passage of the Giro d'Italia through the Vatican (1st June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250602-beato-hossu.html",
+    "title_human": "Commemoration of Cardinal Iuliu Hossu (2 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250604-niaf.html",
+    "title_human": "To the Delegation of \"The National Italian American Foundation\" (4 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250605-segreteria-distato.html",
+    "title_human": "To Superiors and Officials of the Secretariat of State (5 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250606-capitoli-generali.html",
+    "title_human": "To Participants in the General Chapters of the Society of African Missions, of the third Order Regular of St Francis, of the Formators of the Servants of the Paraclete (6 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250606-moderatori.html",
+    "title_human": "To the Moderators of Lay Associations, Ecclesial Movements and New Communities (6 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250607-simposio-nicea.html",
+    "title_human": "To participants in the Ecumenical Symposium on the occasion of the 1700th Anniversary of the Council of Nicaea (7 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250610-rappresentanti-pontifici.html",
+    "title_human": "To Participants in the Jubilee and the Meeting of Pontifical Representatives (10 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250612-clero-romano.html",
+    "title_human": "To the Clergy of the Diocese of Rome (12 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250616-pellegrini-congo.html",
+    "title_human": "To pilgrims from the Democratic Republic of Congo, gathered for the Beatification of Floribert Bwana Chui (16 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250616-specola.html",
+    "title_human": "To the participants of the Summer School of Astrophysics promoted by the Vatican Observatory (16 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250616-vescovi-madagascar.html",
+    "title_human": "To the Bishops of Madagascar (16 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250617-cei.html",
+    "title_human": "To the Italian Episcopal Conference (17 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250618-fondazione-bartolucci.html",
+    "title_human": "To participants in the event promoted by the Cardinal Domenico Bartolucci Foundation (18 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250620-capitoli-generali.html",
+    "title_human": "To the Participants in the General Chapters of the Conventual Franciscans and of the Order of the Most Holy Trinity and of the Captives (Trinitarians) (20 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250620-sacerdoti.html",
+    "title_human": "To Priests of the Pontifical Ecclesiastical Academy returning after a missionary year (20 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250621-giubileo-governanti.html",
+    "title_human": "To Participants in the Jubilee of Governments (21 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250624-giubileo-seminaristi.html",
+    "title_human": "Meditation of the Holy Father on the occasion of the Jubilee of Seminarians (24 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250625-giubileo-vescovi.html",
+    "title_human": "Meditation of the Holy Father on the occasion of the Jubilee of Bishops (25 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250625-seminaristi-triveneto.html",
+    "title_human": "To the Seminarians of the Dioceses of Triveneto (25 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250626-giornata-lotta-droga.html",
+    "title_human": "To Participants in the International Day against Drug Abuse and Illicit Trafficking (26 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250626-incontro-dicastero-clero.html",
+    "title_human": "To Participants in the Meeting of Priests promoted by the Dicastery for the Clergy (26 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250626-redentoristi-scalabriniani.html",
+    "title_human": "To Redemptorist and Scalabrinian Bishops (26 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250626-roaco.html",
+    "title_human": "To Participants in the Plenary Session of the “Reunion of Aid Agencies for the Oriental Churches” (ROACO) (26 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250628-chiesa-greco-cattolica-ucraina.html",
+    "title_human": "To Pilgrims of the Ukrainian Greek-Catholic Church (28 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250628-congregazione-vallombrosana.html",
+    "title_human": "Audience with participants in the General Chapter of Vallombrosians (28 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250628-patriarcato-ecumenico.html",
+    "title_human": "Address of His Holiness Pope Leo XIV to the Delegation of the Ecumenical Patriarchate on the occasion of the Solemnity of Saints Peter and Paul (28 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/june/documents/20250630-capitoli-generali-suore.html",
+    "title_human": "To Participants in the General Chapters of the Daughters of Divine Charity, of the Sisters of the Order of Saint Basil the Great, of the Augustinian Sisters of Amparo and of the Franciscan Sisters of the Sacred Heart (30 June 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/may/documents/20250510-collegio-cardinalizio.html",
+    "title_human": "Address of the Holy Father to the College of Cardinals (10 May 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/may/documents/20250512-media.html",
+    "title_human": "Audience of the Holy Father Leo XIV to representatives of the media (12 May 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/may/documents/20250514-giubileo-chiese-orientali.html",
+    "title_human": "To participants in the Jubilee of the Oriental Churches (14 May 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/may/documents/20250515-fratelli-scuole-cristiane.html",
+    "title_human": "To the Brothers of the Christian Schools (15 May 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/may/documents/20250516-corpo-diplomatico.html",
+    "title_human": "To Members of the Diplomatic Corps (16 May 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/may/documents/20250517-centesimus-annus-pro-pontifice.html",
+    "title_human": "To the members of the \"Centesimus Annus Pro Pontifice\" Foundation (17 May 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/may/documents/20250519-altre-religioni.html",
+    "title_human": "To Representatives of other Churches and Ecclesial Communities, and Other Religions (19 May 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/may/documents/20250522-pom.html",
+    "title_human": "To Members of Pontifical Mission Societies (22 May 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/may/documents/20250524-dipendenti-curia-scv.html",
+    "title_human": "Meeting of the Holy Father with Employees of the Holy See and the Vatican City State (24 May 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/may/documents/20250525-possesso-cattedra-laterano.html",
+    "title_human": "Greeting of the Holy Father at the end of the Eucharistic Celebration on the occasion of his installation on the Chair of Bishop of Rome (25 May 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/may/documents/20250525-sindaco-roma.html",
+    "title_human": "Greeting of the Holy Father to the Mayor of Rome (25 May 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/may/documents/20250525-visita-santamaria-maggiore.html",
+    "title_human": "Visit to the Basilica of St. Mary Major and veneration of the Icon of the Blessed Virgin Mary ‘Salus Populi Romani’ (25 May 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/may/documents/20250526-messa-pace-africa.html",
+    "title_human": "Greeting of the Holy Father at the end of the Mass presided over by Card. Arinze, on the occasion of the Jubilee Pilgrimage for Peace in Africa (26 May 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/may/documents/20250527-ssc-napoli.html",
+    "title_human": "Greeting of the Holy Father to the S.S.C. Napoli football team (27 May 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/may/documents/20250530-movimenti-pace.html",
+    "title_human": "To the Members of the Popular Movements for Peace (30 May 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/may/documents/20250531-conclusione-mesemariano.html",
+    "title_human": "Conclusion of the month of May (31 May 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251001-conferenza-mariapoli.html",
+    "title_human": "International Conference “Raising Hope for Climate Justice” on the occasion of the 10th Anniversary of the Encyclical Laudato Si’, at the Mariapolis Center (Castel Gandolfo, 1st October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251002-capitolo-paoline.html",
+    "title_human": "To Participants in the General Chapter of the Daughters of St. Paul (2 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251002-confemel.html",
+    "title_human": "To Representatives of the \"Confederación Médica Latinoiberoamericana y del Caribe\" (CONFEMEL) (2 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251002-incontro-refugees-migrants.html",
+    "title_human": "To Participants in the Meeting “Refugees & Migrants in Our Common Home” (2 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251003-guardie-svizzere.html",
+    "title_human": "To the Pontifical Swiss Guards on the occasion of their Oath-taking Ceremony (3 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251003-pastorale-anziani.html",
+    "title_human": "To Participants in the Second International Congress on the Pastoral Care of the Elderly (3 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251006-cavalieri-colombo.html",
+    "title_human": "To the Knights of Columbus (6 october 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251009-minds-international.html",
+    "title_human": "To Participants in the MINDS International Association Conference (9 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251009-union-leaders.html",
+    "title_human": "Greeting of His Holiness Pope Leo XIV to Labor Leaders from Chicago (9 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251010-acs.html",
+    "title_human": "To a Delegation of \"Aid to the Church in Need\" (10 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251011-dicastero-comunicazione.html",
+    "title_human": "To Employees of the Dicastery for Communication and their families (11 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251011-eremiti.html",
+    "title_human": "To Italian Hermits participating in the Jubilee of Consecrated Life (11 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251011-pellegrini-toscana.html",
+    "title_human": "To Pilgrims from the Dioceses of Tuscany and others (11 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251011-veglia-di-preghiera.html",
+    "title_human": "Prayer Vigil and Rosary for Peace presided over by the Holy Father – Jubilee of Marian Spirituality (11 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251013-card-del-val.html",
+    "title_human": "To Participants in the Meeting of Studies on Cardinal Rafael Merry del Val (13 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251015-agostiniane.html",
+    "title_human": "To the Augustinian Recollect Nuns of the Federation of Mexico (15 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251016-fao.html",
+    "title_human": "Visit to the FAO Headquarters in Rome (16 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251017-nave-scuolapace.html",
+    "title_human": "Marina di Ostia: Visito to the “Nave-Scuola MED 25 Bel Espoir” (17 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251017-pellegrinaggio-russia.html",
+    "title_human": "To a group of Catholic pilgrims from Russia (17 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251018-consulta-antiusura.html",
+    "title_human": "To Members of the National Anti-Usury Council (18 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251018-giubileo-rom.html",
+    "title_human": "To Participants in the Jubilee of the Roma, Sinti and Travelling Peoples (18 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251020-lusitanum.html",
+    "title_human": "To the Community of the Pontifical Portuguese College in Rome (20 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251020-pellegrini-canonizzazioni.html",
+    "title_human": "To Pilgrims who have come to Rome for the Canonisations on Sunday (20 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251022-delegazione-burundi.html",
+    "title_human": "To a Delegation of the \"Monsignor Courtney Fraternity\" (Burundi) (22 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251024-compagnia-gesu.html",
+    "title_human": "To the Major Superiors of the Society of Jesus (24 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251024-pellegrinaggio-estonia.html",
+    "title_human": "To a Group of Pilgrims from Estonia (24 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251027-chiesa-assira-oriente.html",
+    "title_human": "Address of His Holiness Pope Leo XIV to His Holiness Mar Awa III, Catholicos Patriarch of the Assyrian Church of the East, and to the Members of the Joint Commission for Theological Dialogue between the Catholic Church and the Assyrian Church of the East (27 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/september/documents/20250901-osf-milano.html",
+    "title_human": "To Members of the \"Opera San Francesco\" for the Poor in Milan (1 September 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/september/documents/20250905-giovani-mediterraneo.html",
+    "title_human": "To the Mediterranean Youth Council (5 September 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/september/documents/20250906-congresso-mariologico-mariano.html",
+    "title_human": "To Participants in the Mariological Marian International Congress (6 September 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/september/documents/20250911-vescovi.html",
+    "title_human": "To new Bishops and to Bishops of mission countries (11 September 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/september/documents/20250912-meeting-human-fraternity.html",
+    "title_human": "To the Participants in the 3rd World Meeting on Human Fraternity (12 September 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/september/documents/20250913-pellegrini-umbria.html",
+    "title_human": "Greeting to Pilgrims from the Dioceses of Umbria (13 September 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/september/documents/20250913-seminario-pat.html",
+    "title_human": "To Participants in the Seminar promoted by the Pontifical Academy of Theology [Casina Pio IV, 11–12 September 2025] (13 September 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/september/documents/20250915-ordine-santagostino.html",
+    "title_human": "Meeting with Participants in the General Chapter of the Order of Saint Augustine (15 September 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/september/documents/20250918-capitoli-generali.html",
+    "title_human": "To Participants in the General Chapters of the Missionaries of the Precious Blood of the Society of Mary of the Franciscan Friars of the Immaculate of the Ursuline Sisters Daughters of Mary Immaculate (18 September)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/september/documents/20250919-apertura-annopastorale.html",
+    "title_human": "Liturgy of the Word on the occasion of the beginning of the new pastoral year of the Diocese of Rome (19 September 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/september/documents/20250920-giubileo-operatori-giustizia.html",
+    "title_human": "Jubilee of Justice - Audience with the Holy Father (20 September 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/september/documents/20250922-capitoli-generali.html",
+    "title_human": "To Participants in the General Chapters of the Sisters of Saint Paul of Chartres, of the Salesian Missionaries of Mary Immaculate, of the Sisters of Saint Catherine, Virgin and Martyr, and of the Discalced Carmelites of the Holy Land (22 September 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/september/documents/20250922-indonesiani.html",
+    "title_human": "To the Indonesian Community in Rome (22 September 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/september/documents/20250929-interreligious-dialogue.html",
+    "title_human": "To members of the \"Working Group on Intercultural and Interreligious Dialogue\" (29 September 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/travels/2025/documents/turchia-libano-2025.html",
+    "title_human": "Apostolic Journey of His Holiness to Türkiye and Lebanon with Pilgrimage to İznik (Türkiye) on the occasion of the 1700th Anniversary of the First Council of Nicaea (27 November - 2 December 2025)"
+  }
 ]

@@ -1,13 +1,46 @@
 [
-  "https://www.vatican.va/content/leo-xiv/la/homilies/2025/documents/20250509-messa-cardinali.html",
-  "https://www.vatican.va/content/leo-xiv/la/letters/2025/documents/20250516-lettera-diocesi-plock.html",
-  "https://www.vatican.va/content/leo-xiv/la/letters/2025/documents/20250529-lettera-arcidiocesi-rijeka.html",
-  "https://www.vatican.va/content/leo-xiv/la/letters/2025/documents/20250619-lettera-paraylemonial.html",
-  "https://www.vatican.va/content/leo-xiv/la/letters/2025/documents/20250625-lettera-auray.html",
-  "https://www.vatican.va/content/leo-xiv/la/letters/2025/documents/20250716-lettera-assunta-gozo.html",
-  "https://www.vatican.va/content/leo-xiv/la/letters/2025/documents/20250806-lettera-metropolia-halic.html",
-  "https://www.vatican.va/content/leo-xiv/la/letters/2025/documents/20250815-lettera-madonna-nera.html",
-  "https://www.vatican.va/content/leo-xiv/la/letters/2025/documents/20250914-lettera-gdansk.html",
-  "https://www.vatican.va/content/leo-xiv/la/letters/2025/documents/20250915-lettera-ghana.html",
-  "https://www.vatican.va/content/leo-xiv/la/letters/2025/documents/20251007-lettera-100-diocesi-pinsk.html"
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/la/homilies/2025/documents/20250509-messa-cardinali.html",
+    "title_human": "Homilia Summi Pontificis Missa cum Cardinalibus electoribus (in Sacello Sixtino, die IX mensis Maii MMXXV)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/la/letters/2025/documents/20250516-lettera-diocesi-plock.html",
+    "title_human": "Epistula data Ladislao S.R.E. Cardinali Nemet, S.V.D. (die XVI mensis Maii, Anno Sancto MMXXV)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/la/letters/2025/documents/20250529-lettera-arcidiocesi-rijeka.html",
+    "title_human": "Epistula data Matthaeo Mariae S.R.E. Cardinali Zuppi (die XXIX mensis Maii, Anno Sancto MMXXV)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/la/letters/2025/documents/20250619-lettera-paraylemonial.html",
+    "title_human": "Epistula data S.R.E. Cardinali Bustillo, O.F.M. Conv. (die XIX mensis Iunii, in sollemnitate Ss.mi Corporis et Sanguinis Christi, Anno Sancto MMXXV)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/la/letters/2025/documents/20250625-lettera-auray.html",
+    "title_human": "Epistula data Roberto S.R.E. Cardinali Sarah (die XXV mensis Iunii, Anno Sancto MMXXV)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/la/letters/2025/documents/20250716-lettera-assunta-gozo.html",
+    "title_human": "Epistula data Mario S.R.E. Cardinali Grech (die XVI mensis Iulii, in memoria Beatae Mariae Virginis de Monte Carmelo, Anno Sancto MMXXV)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/la/letters/2025/documents/20250806-lettera-metropolia-halic.html",
+    "title_human": "Epistula data Crescentio S.R.E. Cardinali Sepe (die VI mensis Augusti, in festo Transfigurationis Domini, Anno Sancto MMXXV)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/la/letters/2025/documents/20250815-lettera-madonna-nera.html",
+    "title_human": "Epistula data Christophoro S.R.E. Cardinali Schönborn, O.P. (die XV mensis Augusti, in sollemnitate Assumptionis Beatae Mariae Virginis, Anno Sancto MMXXV)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/la/letters/2025/documents/20250914-lettera-gdansk.html",
+    "title_human": "Epistula data Dominico S.R.E. Cardinali Duka (die XIV mensis Septembris, in festo Exaltationis Sanctae Crucis, Anno Sancto MMXXV)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/la/letters/2025/documents/20250915-lettera-ghana.html",
+    "title_human": "Epistula data Vilfrido Fox S.R.E. Cardinali Napier, O.F.M. (die XV mensis Septembris, Anno Sancto MMXXV)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/la/letters/2025/documents/20251007-lettera-100-diocesi-pinsk.html",
+    "title_human": "Epistula data Claudio S.R.E. Cardinali Gugerotti (die VII mensis Octobris, in memoria Beatae Mariae Virginis a Rosario, Anno Sancto MMXXV)"
+  }
 ]

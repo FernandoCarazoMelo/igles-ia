@@ -5,3 +5,4 @@ env_iglesia.txt
 .DS_Store
 *.mp3
 cache/
+iglesia.egg-info/
