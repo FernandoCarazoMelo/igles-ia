@@ -2,12 +2,45 @@
     {
         "titulo_original": "Santa Misa con los universitarios de las Universidades Pontificias (27 de octubre de 2025)",
         "titulo_spotify": "[26.1] Homilia 27/10 | Santa Misa con los universitarios de las Universidades Pontificias | Vida en camino",
-        "descripcion_spotify": "El Papa León XIV en esta homilía nos invita a vivir en constante camino, recordando que la vida verdadera se encuentra en la Pascua y en la apertura a la esperanza. Nos anima a ampliar nuestra mirada, a superar la cerrazón y a encontrar en Cristo la verdadera sanación y visión de conjunto. Que esta celebración sea una oportunidad para renovar nuestra fe y nuestro compromiso de seguir a Jesús. Podcast creado por igles-ia.es",
+        "descripcion_spotify": "El Papa León XIV en esta homilía nos invita a vivir en constante camino, recordando que la vida solo es plena cuando se vive en Pascua, con esperanza y apertura a una mirada más amplia. Nos anima a superar la cerrazón y a abrir nuestro corazón a la gracia de una visión que trasciende lo inmediato, encontrando en Cristo la verdadera transformación. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-27_homilia_santa_misa_con_los_universitarios_de_las_universidades_pontificias_27_de_octubre_de_2025.mp3",
         "fecha": "2025-10-27",
         "filename": "2025-10-27_homilia_santa_misa_con_los_universitarios_de_las_universidades_pontificias_27_de_octubre_de_2025",
         "tipo": "Homilia",
         "numero_episodio": "26.1",
         "vatican_url": "https://www.vatican.va/content/leo-xiv/es/homilies/2025/documents/20251027-messa-univ-pontificie.html"
+    },
+    {
+        "titulo_original": "Encuentro Internacional por la Paz, promovido por la Comunidad de Sant'Egidio (28 de octubre de 2025)",
+        "titulo_spotify": "[26.2] Discurso 28/10 | Encuentro Internacional por la Paz, promovido por la Comunidad de Sant'Egidio | Paz y Reconciliación",
+        "descripcion_spotify": "El Papa León XIV en este discurso destaca que la paz es un camino de reconciliación que requiere oración y apertura del corazón. Resalta la importancia del diálogo interreligioso y la responsabilidad común de promover la fraternidad entre los pueblos. La oración y la fe son herramientas poderosas para transformar la historia y construir un mundo más justo y pacífico. Podcast creado por igles-ia.es",
+        "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-28_discurso_encuentro_internacional_por_la_paz_promovido_por_la_comunidad_de_santegidio_28_de_octubre_de_2025.mp3",
+        "fecha": "2025-10-28",
+        "filename": "2025-10-28_discurso_encuentro_internacional_por_la_paz_promovido_por_la_comunidad_de_santegidio_28_de_octubre_de_2025",
+        "tipo": "Discurso",
+        "numero_episodio": "26.2",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/october/documents/20251028-meeting-pace.html"
+    },
+    {
+        "titulo_original": "Conmemoración de la Declaración conciliar «Nostra Aetate» (28 de octubre de 2025)",
+        "titulo_spotify": "[26.3] Discurso 28/10 | Conmemoración de la Declaración conciliar Nostra Aetate | Diálogo interreligioso",
+        "descripcion_spotify": "El Papa León XIV en este discurso destaca la importancia de la conmemoración de la Nostra Aetate, un documento que sembró la semilla del diálogo interreligioso hace sesenta años. Resalta cómo esa semilla ha crecido en un árbol fuerte de comprensión, amistad y paz, y subraya la relevancia de seguir promoviendo la unidad y el respeto entre las religiones. Podcast creado por igles-ia.es",
+        "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-28_discurso_conmemoracion_de_la_declaracion_conciliar_nostra_aetate_28_de_octubre_de_2025.mp3",
+        "fecha": "2025-10-28",
+        "filename": "2025-10-28_discurso_conmemoracion_de_la_declaracion_conciliar_nostra_aetate_28_de_octubre_de_2025",
+        "tipo": "Discurso",
+        "numero_episodio": "26.3",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/october/documents/20251028-nostra-aetate.html"
+    },
+    {
+        "titulo_original": "Audiencia general del 29 de octubre de 2025 Catequesis con motivo del 60.º aniversario de la Declaración conciliar Nostra aetate",
+        "titulo_spotify": "[26.4] Audiencia 29/10 | Audiencia general del 29 de octubre de 2025 Catequesis con motivo del 60.º aniversario de la Declaración conciliar Nostra aetate | Diálogo interreligioso",
+        "descripcion_spotify": "En esta audiencia, el Papa León XIV comparte que el diálogo interreligioso se basa en la sinceridad, la escucha y el reconocimiento de la presencia de Dios más allá de las fronteras. Destaca la importancia del legado del Concilio Vaticano II y la necesidad de promover el respeto, la amistad y la colaboración entre diferentes tradiciones religiosas. El Papa invita a todos a seguir buscando la verdad con humildad y reverencia. Podcast creado por igles-ia.es",
+        "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-29_audiencia_audiencia_general_del_29_de_octubre_de_2025_catequesis_con_motivo_del_60o_aniversario_de_la_declarac.mp3",
+        "fecha": "2025-10-29",
+        "filename": "2025-10-29_audiencia_audiencia_general_del_29_de_octubre_de_2025_catequesis_con_motivo_del_60o_aniversario_de_la_declarac",
+        "tipo": "Audiencia",
+        "numero_episodio": "26.4",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/audiences/2025/documents/20251029-udienza-generale.html"
     }
 ]
