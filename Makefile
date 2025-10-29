@@ -30,3 +30,11 @@ create_audios_new:
 	uv run main.py generar-audios 
 	uv run generar_rss.py
 	make freeze	
+
+update_superbase:
+	uv run vatican-archiver/vatican_archiver.py
+	uv run superbase/1_seed_database.py
+	uv run superbase/2_update_metadata.py
+	uv run superbase/3_update_semanas_traducciones.py
+	uv run superbase/4_update_all_links_enriched.py
+	uv run superbase/5_update_audio_urls.py
