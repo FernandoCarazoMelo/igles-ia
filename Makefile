@@ -1,3 +1,6 @@
+export SUPABASE_URL
+export SUPABASE_SERVICE_KEY
+
 run:
 	uv run main.py
 run-web:

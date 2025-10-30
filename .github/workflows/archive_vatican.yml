@@ -46,7 +46,7 @@ jobs:
       - name: Run the script
         run: |
           echo "Running script..."
-          uv run vatican-archiver/vatican_archiver.py
+          # uv run vatican-archiver/vatican_archiver.py
           make update_superbase
 
       # El paso de "Upload results" como artefacto sigue siendo útil para
