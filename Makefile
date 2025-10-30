@@ -35,7 +35,6 @@ create_audios_new:
 	make freeze	
 
 update_superbase:
-	uv run vatican-archiver/vatican_archiver.py
 	uv run superbase/1_seed_database.py
 	uv run superbase/2_update_metadata.py
 	uv run superbase/3_update_semanas_traducciones.py
