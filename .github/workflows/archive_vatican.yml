@@ -43,11 +43,11 @@ jobs:
 
       - name: Install dependencies with uv
         run: uv pip install . --system # Asumiendo que tu pyproject.toml está configurado
-      - name: Run the script
+      - name: Run superbase update
         run: |
-          echo "Running script..."
-          # uv run vatican-archiver/vatican_archiver.py
+          echo "Running superbase..."
           make update_superbase
+          
 
       # El paso de "Upload results" como artefacto sigue siendo útil para
       # acceder rápidamente a los archivos de una ejecución específica sin navegar por los commits.
