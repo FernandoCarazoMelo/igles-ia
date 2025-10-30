@@ -379,7 +379,8 @@ class VaticanArchiver:
 
         # Guardar CSV completo (all_links.csv SÍ tendrá 'title_human')
         all_links_path = os.path.join(self.csv_dir, "all_links.csv")
-        df = df.sort_values(by=["date", "title"], ascending=[True, True])
+        df = df.sort_values(by=["date", "title", "lang"], ascending=[True, True, True])
+        df = df.dropna(subset=["date"])
         df.to_csv(all_links_path, index=False, encoding="utf-8")
         logging.info(f"Guardado CSV fusionado en {all_links_path}")
 
@@ -505,7 +506,7 @@ class VaticanArchiver:
         logging.info("====== INICIANDO ARCHIVO COMPLETO DEL VATICANO ======")
 
         # Paso 1: Encontrar y guardar enlaces
-        # self.find_and_save_links(pope_map, languages)
+        self.find_and_save_links(pope_map, languages)
 
         # Paso 2: Fusionar enlaces a CSV
         links_df = self.merge_links_to_csv()

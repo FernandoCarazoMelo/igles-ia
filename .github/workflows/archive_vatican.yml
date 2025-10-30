@@ -14,6 +14,8 @@ jobs:
       contents: write # Permite a la acción hacer commit y push
     env:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
       EMAIL_USER: ${{ secrets.EMAIL_USER }}
       EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
       AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
@@ -45,6 +47,7 @@ jobs:
         run: |
           echo "Running script..."
           uv run vatican-archiver/vatican_archiver.py
+          make update_superbase
 
       # El paso de "Upload results" como artefacto sigue siendo útil para
       # acceder rápidamente a los archivos de una ejecución específica sin navegar por los commits.
