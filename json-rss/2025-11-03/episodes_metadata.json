@@ -2,7 +2,7 @@
     {
         "titulo_original": "Santa Misa con los universitarios de las Universidades Pontificias (27 de octubre de 2025)",
         "titulo_spotify": "[26.1] Homilia 27/10 | Santa Misa con los universitarios de las Universidades Pontificias | Vida en camino",
-        "descripcion_spotify": "El Papa León XIV en esta homilía nos invita a vivir en constante camino, recordando que la vida solo es plena cuando se vive en Pascua, con esperanza y apertura a la transformación. Nos anima a ampliar nuestra mirada, a superar la cerrazón y a encontrar en Cristo la verdadera visión que cambia vidas. La espiritualidad y el estudio deben ir de la mano para alcanzar una comprensión más profunda de la realidad. Podcast creado por igles-ia.es",
+        "descripcion_spotify": "El Papa León XIV en esta homilía nos invita a vivir el Año Jubilar como un camino de transformación y esperanza, recordándonos que la vida solo cobra sentido si estamos en constante peregrinación hacia Jesús. Destaca la importancia de ampliar nuestra mirada, superar la cerrazón y abrirnos a la gracia que transforma nuestra visión del mundo y de nosotros mismos. La verdadera sanación y crecimiento espiritual provienen de una mirada más amplia, que nos permite ver más allá de lo inmediato y conectar con el misterio de la vida. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-27_homilia_santa_misa_con_los_universitarios_de_las_universidades_pontificias_27_de_octubre_de_2025.mp3",
         "fecha": "2025-10-27",
         "filename": "2025-10-27_homilia_santa_misa_con_los_universitarios_de_las_universidades_pontificias_27_de_octubre_de_2025",
@@ -11,31 +11,31 @@
         "vatican_url": "https://www.vatican.va/content/leo-xiv/es/homilies/2025/documents/20251027-messa-univ-pontificie.html"
     },
     {
-        "titulo_original": "Conmemoración de la Declaración conciliar «Nostra Aetate» (28 de octubre de 2025)",
-        "titulo_spotify": "[26.2] Discurso 28/10 | Conmemoración de la Declaración conciliar Nostra Aetate | Diálogo interreligioso",
-        "descripcion_spotify": "En este discurso, el Papa León XIV recuerda la importancia de la declaración Nostra aetate, que sembró la semilla del diálogo y la comprensión entre las religiones. Destaca cómo, tras sesenta años, esa semilla ha crecido en un árbol de paz, amistad y cooperación, fortaleciendo los lazos entre diferentes comunidades religiosas. El Papa invita a reflexionar sobre la relevancia de sus enseñanzas para promover la unidad y el respeto mutuo en el mundo actual. Podcast creado por igles-ia.es",
-        "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-28_discurso_conmemoracion_de_la_declaracion_conciliar_nostra_aetate_28_de_octubre_de_2025.mp3",
-        "fecha": "2025-10-28",
-        "filename": "2025-10-28_discurso_conmemoracion_de_la_declaracion_conciliar_nostra_aetate_28_de_octubre_de_2025",
-        "tipo": "Discurso",
-        "numero_episodio": "26.2",
-        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/october/documents/20251028-nostra-aetate.html"
-    },
-    {
         "titulo_original": "Encuentro Internacional por la Paz, promovido por la Comunidad de Sant'Egidio (28 de octubre de 2025)",
-        "titulo_spotify": "[26.3] Discurso 28/10 | Encuentro Internacional por la Paz, promovido por la Comunidad de Sant'Egidio | Paz y Reconciliación",
-        "descripcion_spotify": "El Papa León XIV en este discurso destaca la importancia de la oración y la reconciliación como caminos esenciales para alcanzar la paz en el mundo. Resalta que la verdadera paz requiere un compromiso común entre las religiones y la humanidad, promoviendo el diálogo y la fraternidad. La oración, como fuerza transformadora, nos invita a construir un mundo más justo y pacífico. Podcast creado por igles-ia.es",
+        "titulo_spotify": "[26.2] Discurso 28/10 | Encuentro Internacional por la Paz, promovido por la Comunidad de Sant'Egidio | Paz y Reconciliación",
+        "descripcion_spotify": "El Papa León XIV en este discurso destaca que la paz es un camino de reconciliación que requiere oración y apertura del corazón. Resalta la importancia del diálogo interreligioso y la responsabilidad de todos para construir un mundo más fraterno y libre de conflictos. La oración y la fraternidad son claves para transformar la historia y promover la paz. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-28_discurso_encuentro_internacional_por_la_paz_promovido_por_la_comunidad_de_santegidio_28_de_octubre_de_2025.mp3",
         "fecha": "2025-10-28",
         "filename": "2025-10-28_discurso_encuentro_internacional_por_la_paz_promovido_por_la_comunidad_de_santegidio_28_de_octubre_de_2025",
         "tipo": "Discurso",
-        "numero_episodio": "26.3",
+        "numero_episodio": "26.2",
         "vatican_url": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/october/documents/20251028-meeting-pace.html"
     },
     {
+        "titulo_original": "Conmemoración de la Declaración conciliar «Nostra Aetate» (28 de octubre de 2025)",
+        "titulo_spotify": "[26.3] Discurso 28/10 | Conmemoración de la Declaración conciliar «Nostra Aetate» | Diálogo Interreligioso",
+        "descripcion_spotify": "En este discurso, el Papa León XIV recuerda la importancia de la declaración Nostra aetate, que sembró la semilla del diálogo y la comprensión entre religiones hace sesenta años. Destaca cómo la colaboración y el respeto mutuo fortalecen los lazos entre diferentes comunidades de fe, promoviendo la paz y la unidad en la humanidad. El Papa invita a reflexionar sobre la relevancia de estos valores en nuestro tiempo. Podcast creado por igles-ia.es",
+        "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-28_discurso_conmemoracion_de_la_declaracion_conciliar_nostra_aetate_28_de_octubre_de_2025.mp3",
+        "fecha": "2025-10-28",
+        "filename": "2025-10-28_discurso_conmemoracion_de_la_declaracion_conciliar_nostra_aetate_28_de_octubre_de_2025",
+        "tipo": "Discurso",
+        "numero_episodio": "26.3",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/october/documents/20251028-nostra-aetate.html"
+    },
+    {
         "titulo_original": "Audiencia general del 29 de octubre de 2025 Catequesis con motivo del 60.º aniversario de la Declaración conciliar Nostra aetate",
-        "titulo_spotify": "[26.4] Audiencia 29/10 | Audiencia general del 29 de octubre de 2025 Catequesis con motivo del 60.º aniversario de la Declaración conciliar Nostra aetate | Diálogo interreligioso",
-        "descripcion_spotify": "En esta audiencia, el Papa León XIV comparte que el diálogo interreligioso se basa en la sinceridad, la escucha y el reconocimiento de la presencia de Dios más allá de las fronteras. Destaca la importancia de la Declaración Nostra aetate para promover el respeto, la amistad y la colaboración entre diferentes tradiciones religiosas, recordando que todas reflejan un destello de la Verdad. El Papa invita a seguir promoviendo el entendimiento y la fraternidad entre las religiones en un espíritu de humildad y amor. Podcast creado por igles-ia.es",
+        "titulo_spotify": "[26.4] Audiencia 29/10 | Catequesis con motivo del 60.º aniversario de la Declaración conciliar Nostra aetate | Diálogo interreligioso",
+        "descripcion_spotify": "En esta audiencia, el Papa León XIV comparte que el diálogo interreligioso se basa en la sinceridad, la escucha y el reconocimiento de la presencia de Dios más allá de las fronteras. Destaca la importancia de la Declaración Nostra aetate, que abrió un camino de respeto, encuentro y colaboración entre diferentes tradiciones religiosas, promoviendo la fraternidad y la búsqueda común de la verdad. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-29_audiencia_audiencia_general_del_29_de_octubre_de_2025_catequesis_con_motivo_del_60o_aniversario_de_la_declarac.mp3",
         "fecha": "2025-10-29",
         "filename": "2025-10-29_audiencia_audiencia_general_del_29_de_octubre_de_2025_catequesis_con_motivo_del_60o_aniversario_de_la_declarac",
@@ -46,7 +46,7 @@
     {
         "titulo_original": "A los participantes en el Jubileo del Mundo Educativo (Encuentro con los educadores) (31 de octubre de 2025)",
         "titulo_spotify": "[26.6] Discurso 31/10 | A los participantes en el Jubileo del Mundo Educativo | Educación cristiana",
-        "descripcion_spotify": "El Papa León XIV en este discurso destaca la importancia de la interioridad, la unidad, el amor y la alegría como pilares fundamentales en la educación cristiana. Invita a educadores y estudiantes a buscar la verdad en el interior y a construir comunidades educativas basadas en la unidad en Cristo. Este mensaje fomenta un camino de crecimiento mutuo y compromiso con la formación integral. Podcast creado por igles-ia.es",
+        "descripcion_spotify": "El Papa León XIV en este discurso destaca la importancia de la interioridad, la unidad, el amor y la alegría como pilares fundamentales en la educación cristiana. Invita a educadores y estudiantes a buscar la verdad en el interior y a construir comunidades educativas basadas en la reciprocidad y el crecimiento conjunto. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-31_discurso_a_los_participantes_en_el_jubileo_del_mundo_educativo_encuentro_con_los_educadores_31_de_octubre_de_.mp3",
         "fecha": "2025-10-31",
         "filename": "2025-10-31_discurso_a_los_participantes_en_el_jubileo_del_mundo_educativo_encuentro_con_los_educadores_31_de_octubre_de_",
@@ -56,8 +56,8 @@
     },
     {
         "titulo_original": "A los miembros del \"International Youth Advisory Body\" (31 de octubre de 2025)",
-        "titulo_spotify": "[26.7] Discurso 31/10 | A los miembros del 'International Youth Advisory Body' | Participación y Sinodalidad",
-        "descripcion_spotify": "El Papa León XIV en este discurso invita a los jóvenes a sentirse partícipes de la misión universal de la Iglesia, basada en la cercanía al Corazón de Cristo. Destaca la importancia de la participación activa y la sinodalidad como caminos para fortalecer la comunión y escuchar las voces de todos, especialmente de los más vulnerables. Podcast creado por igles-ia.es",
+        "titulo_spotify": "[26.7] Discurso 31/10 | A los miembros del International Youth Advisory Body | Participación, Sinodalidad y Misión",
+        "descripcion_spotify": "El Papa León XIV en este discurso invita a los jóvenes a sentirse parte activa de la misión de la Iglesia, basada en la cercanía a Cristo y en la participación espiritual. Destaca la importancia de la sinodalidad como camino de comunión y escucha mutua, especialmente atendiendo a las voces de los jóvenes más vulnerables. Un llamado a madurar en la fe y a colaborar en la construcción de una Iglesia inclusiva y en misión. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-31_discurso_a_los_miembros_del_international_youth_advisory_body_31_de_octubre_de_2025.mp3",
         "fecha": "2025-10-31",
         "filename": "2025-10-31_discurso_a_los_miembros_del_international_youth_advisory_body_31_de_octubre_de_2025",
@@ -68,7 +68,7 @@
     {
         "titulo_original": "A los miembros de la \"Organización de Universidades Católicas de América Latina y el Caribe\" (ODUCAL) (31 de octubre de 2025)",
         "titulo_spotify": "[26.8] Discurso 31/10 | Organización de Universidades Católicas de América Latina y el Caribe | Educación y Fe",
-        "descripcion_spotify": "En este discurso, el Papa León XIV destaca la importancia de la educación superior católica como un medio para promover el desarrollo integral de la persona, la fe y la cultura. Resalta el papel de las universidades en servir a la sociedad y en anunciar el Evangelio, invitando a seguir adelante con esta misión con creatividad y fe. Podcast creado por igles-ia.es",
+        "descripcion_spotify": "El Papa León XIV en este discurso destaca la importancia de la educación superior católica como un medio para promover el desarrollo integral de la persona, combinando fe y cultura. Enfatiza el papel de las universidades en América Latina como centros de creatividad, saber y evangelización, y los anima a seguir adelante con su misión con amor y compromiso. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-10-31_discurso_a_los_miembros_de_la_organizacion_de_universidades_catolicas_de_america_latina_y_el_caribe_oducal_31.mp3",
         "fecha": "2025-10-31",
         "filename": "2025-10-31_discurso_a_los_miembros_de_la_organizacion_de_universidades_catolicas_de_america_latina_y_el_caribe_oducal_31",
@@ -77,25 +77,25 @@
         "vatican_url": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/october/documents/20251031-oducal.html"
     },
     {
-        "titulo_original": "Solemnidad de Todos los Santos – Santa Misa y proclamación de san John Henry Newman como «Doctor de la Iglesia» (1 de noviembre de 2025)",
-        "titulo_spotify": "[26.9] Homilia 01/11 | Solemnidad de Todos los Santos – Santa Misa y proclamación de san John Henry Newman como «Doctor de la Iglesia» | Santos y Educación",
-        "descripcion_spotify": "El Papa León XIV en esta Homilia destaca la importancia de los santos como modelos de vida apasionada y coherente en medio de la complejidad del presente. Enfatiza que las escuelas y universidades deben ser laboratorios de esperanza y profecía, iluminando con el Evangelio y la verdad. Nos invita a no rendirnos ante los desafíos, confiando en la guía de la luz de Cristo, como san John Henry Newman y su himno Lead, kindly light. Podcast creado por igles-ia.es",
-        "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-11-01_homilia_solemnidad_de_todos_los_santos_santa_misa_y_proclamacion_de_san_john_henry_newman_como_doctor_de_la_.mp3",
-        "fecha": "2025-11-01",
-        "filename": "2025-11-01_homilia_solemnidad_de_todos_los_santos_santa_misa_y_proclamacion_de_san_john_henry_newman_como_doctor_de_la_",
-        "tipo": "Homilia",
-        "numero_episodio": "26.9",
-        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/homilies/2025/documents/20251101-messa-giubileo-formatori.html"
-    },
-    {
         "titulo_original": "Ángelus, 1 de noviembre de 2025, Solemnidad de Todos los Santos",
         "titulo_spotify": "[26.10] Ángelus 01/11 | Solemnidad de Todos los Santos | Unidad y fraternidad",
-        "descripcion_spotify": "En este Ángelus, el Papa León XIV recuerda la importancia de la comunión de los santos como un destino final de amor y belleza, invitándonos a ser constructores de fraternidad en medio de las injusticias y guerras. Nos anima a encomendarnos a la Virgen María y a todos los santos en nuestro camino de fe. Podcast creado por igles-ia.es",
+        "descripcion_spotify": "En este Ángelus, el Papa León XIV destaca la importancia de la comunión de los santos como un recordatorio del destino final de la humanidad: una gran fiesta en el amor de Dios. Nos invita a fortalecer nuestra fraternidad y a orar por la paz y justicia en el mundo, acompañados por la intercesión de la Virgen María y los santos. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-11-01_ángelus_angelus_1_de_noviembre_de_2025_solemnidad_de_todos_los_santos.mp3",
         "fecha": "2025-11-01",
         "filename": "2025-11-01_ángelus_angelus_1_de_noviembre_de_2025_solemnidad_de_todos_los_santos",
         "tipo": "Ángelus",
         "numero_episodio": "26.10",
         "vatican_url": "https://www.vatican.va/content/leo-xiv/es/angelus/2025/documents/20251101-angelus.html"
+    },
+    {
+        "titulo_original": "Ángelus, 2 de noviembre de 2025, Conmemoración de todos los fieles difuntos",
+        "titulo_spotify": "[26.11] Ángelus 02/11 | Conmemoración de todos los fieles difuntos | Vida eterna y esperanza",
+        "descripcion_spotify": "En este Ángelus, el Papa León XIV nos recuerda que la resurrección de Jesús revela que nadie se pierde para siempre y que cada vida tiene un valor infinito. La conmemoración de los fieles difuntos nos invita a confiar en la esperanza de la vida eterna y a mantener viva la memoria en Jesús, piedra angular de nuestra fe. Podcast creado por igles-ia.es",
+        "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-11-02_ángelus_angelus_2_de_noviembre_de_2025_conmemoracion_de_todos_los_fieles_difuntos.mp3",
+        "fecha": "2025-11-02",
+        "filename": "2025-11-02_ángelus_angelus_2_de_noviembre_de_2025_conmemoracion_de_todos_los_fieles_difuntos",
+        "tipo": "Ángelus",
+        "numero_episodio": "26.11",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/angelus/2025/documents/20251102-angelus.html"
     }
 ]
