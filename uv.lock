@@ -1,5 +1,5 @@
 version = 1
-revision = 2
+revision = 3
 requires-python = ">=3.12"
 resolution-markers = [
     "python_full_version >= '3.13' and platform_machine == 'x86_64' and sys_platform == 'darwin'",
@@ -305,18 +305,6 @@ sdist = { url = "https://files.pythonhosted.org/packages/98/46/cb33f5a0b00086a97
 wheels = [
     { url = "https://files.pythonhosted.org/packages/ec/b7/37d9f1a633e72250408cb7d53d8915561ac6108b5c3a1973eb8f53ce2990/botocore-1.38.41-py3-none-any.whl", hash = "sha256:06069a06f1352accb1f6c9505d6e323753627112be80a9d2e057c6d9c9779ffd", size = 13690225, upload-time = "2025-06-20T19:26:26.014Z" },
 ]
-
-[[package]]
-name = "brevo-python"
-version = "1.1.2"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "certifi" },
-    { name = "python-dateutil" },
-    { name = "six" },
-    { name = "urllib3" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/e6/ad/598764cae6ed65002b0ecc158a3bd033e538e52f0e11e2e95aca1ea6e4d2/brevo_python-1.1.2.tar.gz", hash = "sha256:07b90d8f5f4db8941281c781382cfa6ef68f8b1fbdb9cbc89fefc96f6b6df4bb", size = 339502, upload-time = "2024-07-15T10:56:22.811Z" }
 
 [[package]]
 name = "bs4"
@@ -1182,7 +1170,6 @@ source = { virtual = "." }
 dependencies = [
     { name = "azure-cognitiveservices-speech" },
     { name = "boto3" },
-    { name = "brevo-python" },
     { name = "bs4" },
     { name = "click" },
     { name = "crewai" },
@@ -1209,7 +1196,6 @@ dependencies = [
 requires-dist = [
     { name = "azure-cognitiveservices-speech", specifier = ">=1.45.0" },
     { name = "boto3", specifier = ">=1.38.41" },
-    { name = "brevo-python", specifier = ">=1.1.2" },
     { name = "bs4", specifier = ">=0.0.2" },
     { name = "click", specifier = "==8.1.7" },
     { name = "crewai", specifier = ">=0.120.1" },
