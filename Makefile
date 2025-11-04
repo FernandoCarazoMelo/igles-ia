@@ -31,6 +31,9 @@ create_audios_new:
 	uv run generar_rss.py
 	make freeze	
 
+vatican_archiver:
+	uv run vatican-archiver/vatican_archiver.py
+	
 update_superbase:
 	uv run superbase/1_seed_database.py
 	uv run superbase/2_update_metadata.py

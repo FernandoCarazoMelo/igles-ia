@@ -47,12 +47,10 @@ jobs:
       - name: Vatican archiver
         run: |
           echo "Running script..."
-          # uv run vatican-archiver/vatican_archiver.py
+          make vatican-archiver
 
       - name: Superbase update
         run: |
-          echo "SUPABASE_URL: ${SUPABASE_URL}"
-          echo "SUPABASE_SERVICE_KEY length: ${#SUPABASE_SERVICE_KEY}"
           echo "Running script..."
           make update_superbase
 
