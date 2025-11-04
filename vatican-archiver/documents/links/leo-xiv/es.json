@@ -104,6 +104,14 @@
     "title_human": "Ángelus, 26 de octubre de 2025"
   },
   {
+    "link": "https://www.vatican.va/content/leo-xiv/es/angelus/2025/documents/20251101-angelus.html",
+    "title_human": "Ángelus, 1 de noviembre de 2025, Solemnidad de Todos los Santos"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/es/angelus/2025/documents/20251102-angelus.html",
+    "title_human": "Ángelus, 2 de noviembre de 2025, Conmemoración de todos los fieles difuntos"
+  },
+  {
     "link": "https://www.vatican.va/content/leo-xiv/es/apost_exhortations/documents/20251004-dilexi-te.html",
     "title_human": "Exhortación Apostólica Dilexi te del Santo Padre León XIV sobre el amor hacia los pobres (4 de octubre de 2025)"
   },
@@ -342,6 +350,14 @@
   {
     "link": "https://www.vatican.va/content/leo-xiv/es/homilies/2025/documents/20251027-messa-univ-pontificie.html",
     "title_human": "Santa Misa con los universitarios de las Universidades Pontificias (27 de octubre de 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/es/homilies/2025/documents/20251101-messa-giubileo-formatori.html",
+    "title_human": "Solemnidad de Todos los Santos – Santa Misa y proclamación de san John Henry Newman como «Doctor de la Iglesia» (1 de noviembre de 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/es/homilies/2025/documents/20251102-messa-fedeli-defunti.html",
+    "title_human": "Conmemoración de todos los fieles difuntos – Santa Misa (2 de noviembre de 2025)"
   },
   {
     "link": "https://www.vatican.va/content/leo-xiv/es/messages/creation/documents/20250630-messaggio-giornata-curacreato.html",
@@ -698,6 +714,18 @@
   {
     "link": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/october/documents/20251030-giubileo-studenti.html",
     "title_human": "A los estudiantes participantes en el Jubileo del mundo educativo (30 de octubre de 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/october/documents/20251031-giubileo-educatori.html",
+    "title_human": "A los participantes en el Jubileo del Mundo Educativo (Encuentro con los educadores) (31 de octubre de 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/october/documents/20251031-iyab.html",
+    "title_human": "A los miembros del \"International Youth Advisory Body\" (31 de octubre de 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/october/documents/20251031-oducal.html",
+    "title_human": "A los miembros de la \"Organización de Universidades Católicas de América Latina y el Caribe\" (ODUCAL) (31 de octubre de 2025)"
   },
   {
     "link": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/september/documents/20250901-osf-milano.html",

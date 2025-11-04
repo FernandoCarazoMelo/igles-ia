@@ -104,6 +104,14 @@
     "title_human": "Angelus, 26 October 2025"
   },
   {
+    "link": "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20251101-angelus.html",
+    "title_human": "Angelus, 1st November 2025,Solemnity of All Saints"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20251102-angelus.html",
+    "title_human": "Angelus, 2 November 2025,Commemoration of all the faithful departed"
+  },
+  {
     "link": "https://www.vatican.va/content/leo-xiv/en/apost_exhortations/documents/20251004-dilexi-te.html",
     "title_human": "Apostolic ExhortationDilexi teof the Holy Father Leo XIV on Love for the Poor (4 October 2025)"
   },
@@ -346,6 +354,18 @@
   {
     "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20251027-messa-univ-pontificie.html",
     "title_human": "Holy Mass with students from Pontifical Universities (27 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20251101-messa-giubileo-formatori.html",
+    "title_human": "All Saints' Day – Holy Mass and proclamation of St. John Henry Newman as “Doctor of the Church” (1 November 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20251102-messa-fedeli-defunti.html",
+    "title_human": "Commemoration of all the Faithful departed - Holy Mass (2 November 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20251103-messa-cardinali-defunti.html",
+    "title_human": "Holy Mass in memory of the late Pope Francis and for Cardinals and Bishops who have died over the past year (3 November 2025)"
   },
   {
     "link": "https://www.vatican.va/content/leo-xiv/en/messages/creation/documents/20250630-messaggio-giornata-curacreato.html",
@@ -882,6 +902,18 @@
   {
     "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251030-giubileo-studenti.html",
     "title_human": "To Students participating in the Jubilee of the World of Education (30 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251031-giubileo-educatori.html",
+    "title_human": "To Participants in the Jubilee of the World of Education (Meeting with Educators) (31 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251031-iyab.html",
+    "title_human": "To the Members of the International Youth Advisory Body (31 October 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251031-oducal.html",
+    "title_human": "To the Members of the Organisation of Catholic Universities of Latin America and the Caribbean (ODUCAL) (31 October 2025)"
   },
   {
     "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/september/documents/20250901-osf-milano.html",
