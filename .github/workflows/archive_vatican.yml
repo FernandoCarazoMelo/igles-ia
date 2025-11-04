@@ -47,7 +47,7 @@ jobs:
       - name: Vatican archiver
         run: |
           echo "Running script..."
-          make vatican-archiver
+          make vatican_archiver
 
       - name: Superbase update
         run: |
