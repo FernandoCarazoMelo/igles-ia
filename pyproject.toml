@@ -28,6 +28,8 @@ dependencies = [
     "pytest>=8.4.2",
     "supabase>=2.22.3",
     "python-frontmatter>=1.1.0",
+    "psycopg2-binary>=2.9.11",
+    "sqlalchemy>=2.0.44",
 ]
 
 [tool.setuptools.packages]
