@@ -1,9 +1,9 @@
 name: 🏛️ Búsqueda Diaria de Archivos del Vaticano
 
 on:
-  schedule:
-    # Ejecuta el script todos los días a las 18h CEST, UTC = 16h
-    - cron: "0 12 * * *" # Cada día a las 15:00 UTC (18:00 CEST)
+  # schedule:
+  #   # Ejecuta el script todos los días a las 18h CEST, UTC = 16h
+  #   - cron: "0 12 * * *" # Cada día a las 15:00 UTC (18:00 CEST)
   workflow_dispatch: # Permite ejecutar el workflow manualmente
 
 jobs:

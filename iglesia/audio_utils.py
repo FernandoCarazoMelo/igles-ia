@@ -203,8 +203,8 @@ def procesar_y_generar_episodios(
         texto_limpio = extract_clean_text(texto_original)
         print(f"Texto limpio:\n{texto_limpio}\n--- Fin del texto limpio ---\n")
 
-        # ✅ Regla 2: Saltar episodios demasiado largos (>10k caracteres)
-        if len(texto_limpio) > 10000:
+        # ✅ Regla 2: Saltar episodios demasiado largos (>20k caracteres)
+        if len(texto_limpio) > 20000:
             print(
                 f"⚠️ Episodio demasiado largo ({len(texto_limpio)} caracteres). Saltando..."
             )

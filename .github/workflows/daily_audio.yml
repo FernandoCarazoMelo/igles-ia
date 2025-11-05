@@ -41,12 +41,24 @@ jobs:
 
       - name: Install dependencies with uv
         run: uv pip install . --system # Asumiendo que tu pyproject.toml está configurado
-      - name: Run the script
+      
+      - name: 🎧 Spotify Daily
         run: |
           echo "Folder: $SUMMARIES_FOLDER"
           echo "Running script..."
           uv run main.py generar-audios-diarios
           uv run generar_rss.py
+
+      - name: 🏛️ Vatican archiver
+        run: |
+          echo "Running script..."
+          make vatican_archiver
+
+      - name: Superbase update
+        run: |
+          echo "Running script..."
+          make update_superbase
+
       - name: Freeze site and generate docs
         run: make freeze
 
@@ -72,6 +84,7 @@ jobs:
       - name: Commit and push changes
         run: |
           git pull 
+          git add vatican-archiver
           git add docs/
           git add data_web/
           git add web/

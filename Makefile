@@ -33,6 +33,7 @@ create_audios_new:
 
 vatican_archiver:
 	uv run vatican-archiver/vatican_archiver.py
+	uv run vatican-archiver/vatican_archive_enriquecer_episodios.py
 	
 update_superbase:
 	uv run superbase/1_seed_database.py
