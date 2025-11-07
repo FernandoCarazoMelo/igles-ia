@@ -15,8 +15,18 @@
       <itunes:category text="Christianity"/>
     </itunes:category>
     <item>
-      <title>[27.1] Audiencia 05/11 | La Resurrección, fuente de esperanza | Vida y fe en Cristo Resucitado</title>
-      <description>&lt;![CDATA[El Papa León XIV en esta Audiencia nos recuerda que la Pascua de Jesús no es solo un evento pasado, sino una realidad presente que llena de esperanza nuestra vida cotidiana. La Resurrección es la victoria del amor y la vida sobre el pecado y la muerte, y nos invita a encontrar sentido en medio de los desafíos del mundo actual. Meditar en este misterio nos fortalece y nos anima a ser testigos de la alegría pascual en nuestro día a día. Podcast creado por igles-ia.es]]&gt;</description>
+      <title>[27.2] Discurso 06/11 | Participantes en los Capítulos Generales | Vocación y Fidelidad</title>
+      <description>&lt;![CDATA[El Papa León XIV en este discurso destaca la importancia de la fidelidad y la respuesta a la vocación en medio de dificultades, inspirándose en ejemplos como Santa Claudine Thévenet y San Juan Scalabrini. Enfatiza que la presencia de Jesús en nuestras vidas y en los momentos de prueba fortalece nuestro compromiso con la caridad y el servicio a los demás. Nos invita a escuchar a Dios en la oración y a buscar en el hermano la presencia divina. Podcast creado por igles-ia.es]]&gt;</description>
+      <pubDate>Thu, 06 Nov 2025 12:00:00 GMT</pubDate>
+      <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-11-06_discurso_a_las_participantes_en_los_capitulos_generales_de_las_religiosas_de_jesus_maria_y_de_las_hermanas_mi.mp3" type="audio/mpeg" length="1465432"/>
+      <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-11-06_discurso_a_las_participantes_en_los_capitulos_generales_de_las_religiosas_de_jesus_maria_y_de_las_hermanas_mi.mp3</guid>
+      <itunes:author>igles-ia.es</itunes:author>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
+      <itunes:episode>27.2</itunes:episode>
+    </item>
+    <item>
+      <title>[27.1] Audiencia 05/11 | La esperanza en la Resurrección | Fe y Vida Eterna</title>
+      <description>&lt;![CDATA[El Papa León XIV en esta Audiencia nos recuerda que la Pascua de Jesús no es solo un evento pasado, sino una realidad presente que llena de esperanza nuestra vida cotidiana. La Resurrección es la victoria del amor y la vida sobre el pecado y la muerte, ofreciéndonos un sentido profundo en medio de los desafíos del mundo actual. Nos invita a vivir con la certeza de que Cristo vive y nos acompaña siempre. Podcast creado por igles-ia.es]]&gt;</description>
       <pubDate>Wed, 05 Nov 2025 12:00:00 GMT</pubDate>
       <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-11-05_audiencia_audiencia_general_del_5_de_noviembre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_esp.mp3" type="audio/mpeg" length="1828456"/>
       <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-11-05_audiencia_audiencia_general_del_5_de_noviembre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_esp.mp3</guid>
