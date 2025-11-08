@@ -41,3 +41,6 @@ update_superbase:
 	uv run superbase/3_update_semanas_traducciones.py
 	uv run superbase/4_update_all_links_enriched.py
 	uv run superbase/5_update_audio_urls.py
+
+flask_dev:
+	flask --app web/app.py run --debug

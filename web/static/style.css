@@ -1286,14 +1286,25 @@ footer {
 }
 
 .hero-alt-options a i {
-    font-size: 1.2rem; /* Tamaño del icono */
+  font-size: 2.5rem; /* Tamaño del icono */
 }
+
 .hero-alt-options a .fa-spotify {
-    color: #1DB954; /* Color Spotify */
+  color: #1DB954; /* Verde Spotify */
 }
+
 .hero-alt-options a .fa-envelope {
-    color: #d35400; /* Color naranja */
+  color: #d35400; /* Naranja Email */
 }
+
+.hero-alt-options a .fa-apple {
+  color: #000000; /* Negro Apple Podcasts */
+}
+
+.hero-alt-options a .fa-podcast {
+  color: #f15a24; /* Naranja iVoox */
+}
+
 
 
 .hero-alt-options a:hover {
