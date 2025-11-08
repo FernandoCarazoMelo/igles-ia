@@ -11,7 +11,7 @@ freeze_old:
 
 
 freeze:
-	uv run generar_rss.py
+# 	uv run generar_rss.py
 	uv run web/app.py
 	rm -rf docs
 	cp -r web/build docs

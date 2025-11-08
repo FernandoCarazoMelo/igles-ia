@@ -1390,3 +1390,22 @@ footer {
         font-size: 2.5rem; /* Reduce un poco el número en móvil */
     }
 }
+
+.email-button {
+  display: inline-block;
+  background-color: #a2acb4; /* gris suave */
+  color: #f8f9fa;
+  padding: 8px 35px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);
+}
+
+.email-button:hover {
+  background-color: #919496; /* un poco más oscuro al pasar el ratón */
+  transform: translateY(-2px);
+}
