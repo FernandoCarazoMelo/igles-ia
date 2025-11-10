@@ -1,8 +1,8 @@
 [
     {
         "titulo_original": "Audiencia general del 5 de noviembre de 2025 Ciclo de catequesis - Jubileo 2025. Jesucristo, nuestra esperanza. IV. La resurrección de Cristo y los retos del mundo actual 3. La Pascua da esperanza a la vida cotidiana",
-        "titulo_spotify": "[27.1] Audiencia 05/11 | La esperanza en la Resurrección | Fe y Vida Eterna",
-        "descripcion_spotify": "El Papa León XIV en esta Audiencia nos recuerda que la Pascua de Jesús no es solo un evento pasado, sino una realidad presente que transforma nuestra vida cotidiana. La Resurrección es la victoria del amor y la vida sobre el pecado y la muerte, ofreciéndonos esperanza y sentido en medio de los desafíos del mundo actual. Nos invita a vivir con la certeza de que Jesús vive y nos acompaña siempre. Podcast creado por igles-ia.es",
+        "titulo_spotify": "[27.1] Audiencia 05/11 | La Resurrección y la esperanza en la vida cotidiana | Fe y esperanza pascual",
+        "descripcion_spotify": "En esta audiencia, el Papa León XIV nos invita a reflexionar sobre el significado profundo de la Pascua y la Resurrección de Jesús como fuente de esperanza y sanación en nuestra vida diaria. Nos recuerda que la victoria del amor y la vida sobre el pecado y la muerte nos impulsa a encontrar sentido incluso en medio del sufrimiento y los desafíos actuales. La Resurrección no es solo un evento pasado, sino una realidad presente que transforma nuestro caminar. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-11-05_audiencia_audiencia_general_del_5_de_noviembre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_esp.mp3",
         "fecha": "2025-11-05",
         "filename": "2025-11-05_audiencia_audiencia_general_del_5_de_noviembre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_esp",
@@ -12,8 +12,8 @@
     },
     {
         "titulo_original": "A las Participantes en los Capítulos Generales de las Religiosas de Jesús-María y de las Hermanas Misioneras de San Carlos Borromeo (Scalabrinianas) (6 de noviembre de 2025)",
-        "titulo_spotify": "[27.2] Discurso 06/11 | A las Participantes en los Capítulos Generales de las Religiosas de Jesús-María y de las Hermanas Misioneras de San Carlos Borromeo | Fidelidad y Caridad",
-        "descripcion_spotify": "El Papa León XIV en este discurso destaca la importancia de la fidelidad a Jesús Resucitado como fuente de fortaleza en las dificultades. Invita a las religiosas a vivir estos días de Capítulo con oración, escucha y valentía, poniendo en el centro el servicio a los demás y la presencia de Dios en cada hermano. Podcast creado por igles-ia.es",
+        "titulo_spotify": "[27.2] Discurso 06/11 | Participantes en los Capítulos Generales | Vocación y Fidelidad",
+        "descripcion_spotify": "El Papa León XIV en este discurso destaca la importancia de la fidelidad a Jesús Resucitado en las vocaciones religiosas, resaltando cómo la oración, el silencio y la escucha de la Palabra fortalecen el compromiso con la caridad y el servicio a los más necesitados. Invita a las religiosas a vivir estos momentos con valentía y humildad, confiando en la presencia de Dios en su labor. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-11-06_discurso_a_las_participantes_en_los_capitulos_generales_de_las_religiosas_de_jesus_maria_y_de_las_hermanas_mi.mp3",
         "fecha": "2025-11-06",
         "filename": "2025-11-06_discurso_a_las_participantes_en_los_capitulos_generales_de_las_religiosas_de_jesus_maria_y_de_las_hermanas_mi",
@@ -22,25 +22,36 @@
         "vatican_url": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/november/documents/20251106-capitoli-generali.html"
     },
     {
+        "titulo_original": "A los miembros de la \"Fondation Internationale Religions et Sociétés\" (7 de noviembre de 2025)",
+        "titulo_spotify": "[27.3] Discurso 07/11 | Fondation Internationale Religions et Sociétés | Educación y Misión",
+        "descripcion_spotify": "En este discurso, el Papa León XIV destaca la importancia de la educación católica en África y la colaboración misionera entre el Norte y el Sur. Resalta la necesidad de fortalecer la solidaridad pastoral y promover una evangelización valiente y amorosa. Podcast creado por igles-ia.es",
+        "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-11-07_discurso_a_los_miembros_de_la_fondation_internationale_religions_et_societes_7_de_noviembre_de_2025.mp3",
+        "fecha": "2025-11-07",
+        "filename": "2025-11-07_discurso_a_los_miembros_de_la_fondation_internationale_religions_et_societes_7_de_noviembre_de_2025",
+        "tipo": "Discurso",
+        "numero_episodio": "27.3",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/november/documents/20251107-firs.html"
+    },
+    {
         "titulo_original": "Dedicación de la Basílica de Letrán – Santa Misa (9 de noviembre de 2025)",
-        "titulo_spotify": "[27.4] Homilia 09/11 | Dedicación de la Basílica de Letrán – Santa Misa | Iglesia y fe",
-        "descripcion_spotify": "En esta homilía, el Papa León XIV nos invita a reflexionar sobre la importancia de construir nuestra fe sobre cimientos sólidos en Cristo, como la Basílica de Letrán. Nos anima a excavar en nuestro interior, superar el orgullo y fortalecer nuestra comunidad eclesial con paciencia y humildad. Solo así podremos edificar una Iglesia viva y auténtica. Podcast creado por igles-ia.es",
+        "titulo_spotify": "[27.5] Homilia 09/11 | Dedicación de la Basílica de Letrán – Santa Misa | Iglesia y fe",
+        "descripcion_spotify": "En esta homilía, el Papa León XIV nos invita a reflexionar sobre la importancia de la base sólida en nuestra vida de fe y en la comunidad eclesial. Nos recuerda que, como la Basílica de Letrán, nuestra existencia debe estar fundada en Jesucristo, piedra angular, y en la paciencia y humildad para construir una verdadera comunidad de fe. Escuchemos cómo la historia y la enseñanza del Evangelio nos inspiran a fortalecer nuestra relación con Dios y con los demás. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-11-09_homilia_dedicacion_de_la_basilica_de_letran_santa_misa_9_de_noviembre_de_2025.mp3",
         "fecha": "2025-11-09",
         "filename": "2025-11-09_homilia_dedicacion_de_la_basilica_de_letran_santa_misa_9_de_noviembre_de_2025",
         "tipo": "Homilia",
-        "numero_episodio": "27.4",
+        "numero_episodio": "27.5",
         "vatican_url": "https://www.vatican.va/content/leo-xiv/es/homilies/2025/documents/20251109-dedicazione-basilica-lateranense.html"
     },
     {
         "titulo_original": "Ángelus, 9 de noviembre de 2025",
-        "titulo_spotify": "[27.5] Ángelus 09/11 | Dedicación de la Basílica de San Juan de Letrán | Unidad y Comunión en la Iglesia",
-        "descripcion_spotify": "El Papa León XIV en este Ángelus nos invita a reflexionar sobre el misterio de la Iglesia como comunidad de fe y comunión, resaltando su papel como madre y protectora de los cristianos. Nos recuerda que la verdadera santidad reside en Cristo, mediador y redentor, y nos llama a vivir con alegría y testimonio de vida. Invoquemos a María, Madre de la Iglesia, para fortalecer nuestro camino espiritual. Podcast creado por igles-ia.es",
+        "titulo_spotify": "[27.6] Ángelus 09/11 | Dedicación de la Basílica de San Juan de Letrán | Unidad y Comunión en la Iglesia",
+        "descripcion_spotify": "En este Ángelus, el Papa León XIV nos invita a reflexionar sobre el misterio de unidad y comunión en la Iglesia, resaltando su papel como madre que cuida la fe y el camino de los cristianos. Nos recuerda que la verdadera santidad reside en Cristo, y que somos piedras vivas que construyen su cuerpo espiritual, llamados a difundir su Evangelio con alegría y fe. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-11-09_ángelus_angelus_9_de_noviembre_de_2025.mp3",
         "fecha": "2025-11-09",
         "filename": "2025-11-09_ángelus_angelus_9_de_noviembre_de_2025",
         "tipo": "Ángelus",
-        "numero_episodio": "27.5",
+        "numero_episodio": "27.6",
         "vatican_url": "https://www.vatican.va/content/leo-xiv/es/angelus/2025/documents/20251109-angelus.html"
     }
 ]
