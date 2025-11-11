@@ -1409,3 +1409,392 @@ footer {
   background-color: #919496; /* un poco más oscuro al pasar el ratón */
   transform: translateY(-2px);
 }
+
+/* ================================================= */
+/* ===== NETFLIX-STYLE CAROUSEL (QUOTES) ===== */
+/* ================================================= */
+
+.featured-quotes-section {
+    padding: 40px 0;
+    background: #ffffff;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.section-header .section-title {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+.see-all {
+    color: #003366;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.see-all:hover {
+    color: #FF6B6B;
+}
+
+/* Quote Carousel Container */
+.quote-carousel-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.quote-carousel-wrapper {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.quote-carousel {
+    display: flex;
+    gap: 15px;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Quote Card */
+.quote-card-carousel {
+    flex: 0 0 100%;
+    height: 250px;
+    border-radius: 12px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.quote-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    transition: background 0.3s ease;
+}
+
+.quote-card-carousel:hover .quote-card-overlay {
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.quote-card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    z-index: 2;
+    position: relative;
+}
+
+.quote-card-carousel:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.quote-card-icon {
+    font-size: 2.5rem;
+    opacity: 0.9;
+    color: white;
+    z-index: 1;
+    margin-bottom: 10px;
+}
+
+.quote-card-text {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    font-weight: 500;
+    margin: 10px 0 0 0;
+    z-index: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: white;
+}
+
+.quote-card-source {
+    font-size: 0.9rem;
+    opacity: 0.95;
+    margin: 0;
+    z-index: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: white;
+}
+
+/* Carousel Navigation Buttons */
+.carousel-nav-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #003366;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.carousel-nav-btn:hover {
+    background: #FF6B6B;
+    transform: scale(1.1);
+}
+
+.carousel-nav-btn:active {
+    transform: scale(0.95);
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #d0d0d0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: #003366;
+    width: 30px;
+    border-radius: 5px;
+}
+
+.indicator:hover {
+    background: #003366;
+}
+
+/* Document Card - Professional Style */
+.doc-card {
+    flex: 0 0 240px;
+    height: 160px;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #2c3e50;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.doc-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    pointer-events: none;
+}
+
+.doc-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    border-color: #b3d9ff;
+}
+
+.doc-type-badge {
+    display: inline-block;
+    background: #f0f0f0;
+    color: #666666;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    width: fit-content;
+    z-index: 1;
+    margin-bottom: 8px;
+}
+
+.doc-title {
+    font-size: 1rem;
+    line-height: 1.3;
+    font-weight: 600;
+    margin: 0;
+    z-index: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Document Type Sections */
+.recent-documents-section {
+    padding: 40px 0;
+    background: #ffffff;
+}
+
+.document-type-section {
+    margin-bottom: 45px;
+}
+
+.document-type-section:last-child {
+    margin-bottom: 0;
+}
+
+.document-type-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0 0 20px 0;
+    text-transform: capitalize;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .quote-card-carousel {
+        height: 220px;
+    }
+
+    .quote-card-text {
+        font-size: 1rem;
+    }
+
+    .doc-card {
+        flex: 0 0 200px;
+        height: 140px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .section-header .section-title {
+        font-size: 1.3rem;
+    }
+
+    .quote-carousel-container {
+        gap: 10px;
+    }
+
+    .carousel-nav-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+
+    .quote-card-carousel {
+        flex: 0 0 100%;
+        height: 280px;
+        min-height: 280px;
+    }
+
+    .quote-card-content {
+        padding: 25px;
+    }
+
+    .quote-card-text {
+        font-size: 1.05rem;
+        line-height: 1.6;
+        -webkit-line-clamp: 4;
+        margin-top: 15px;
+    }
+
+    .quote-card-source {
+        font-size: 0.85rem;
+        margin-top: 10px;
+    }
+
+    .quote-card-icon {
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+
+    .doc-card {
+        flex: 0 0 180px;
+        height: 140px;
+    }
+
+    .doc-title {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .quote-carousel-wrapper {
+        border-radius: 8px;
+    }
+
+    .quote-card-carousel {
+        height: 320px;
+        border-radius: 8px;
+    }
+
+    .quote-card-content {
+        padding: 20px;
+    }
+
+    .quote-card-text {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .quote-card-source {
+        font-size: 0.8rem;
+    }
+
+    .carousel-indicators {
+        gap: 6px;
+    }
+
+    .indicator {
+        width: 8px;
+        height: 8px;
+    }
+
+    .indicator.active {
+        width: 25px;
+    }
+}

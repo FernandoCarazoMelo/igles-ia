@@ -8,7 +8,7 @@
     </h1>
 
   <p class="hero-subtitle">
-    Cada lunes, recibe un resumen claro y profundo de las homilías y discursos del Papa León XIV, 
+    Recibe cada lunes un resumen fiel, claro y accesible de las homilías y discursos del Papa León XIV, 
     elaborado con IA y revisado por nuestro equipo.
   </p>
 
@@ -38,7 +38,7 @@
   <!-- Otras opciones -->
   <div class="hero-alt-options">
     <p>
-      Escucha el texto original de las homilías leido por IA:
+      Escucha el texto original de las homilías del Papa leido por IA
     </p>
 
     <a
@@ -94,6 +94,47 @@
         </div>
     </div>
 </section>
+
+{% if featured_quotes %}
+<section id="featured-quotes" class="featured-quotes-section">
+    <div class="container">
+        <h2 class="section-title">Frases destacadas</h2>
+
+        <div class="quote-carousel-container">
+            <button class="carousel-nav-btn carousel-prev" id="quote-prev-btn" aria-label="Anterior">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <div class="quote-carousel-wrapper">
+                <div class="quote-carousel" id="quoteCarousel">
+                    {% for quote in featured_quotes %}
+                    <a href="/resumen/{{ quote.week_slug }}.html#{{ quote.doc_slug }}" class="quote-card-carousel" style="background-image: url('{{ url_for('static', filename='img/' + quote.image) }}');">
+                        <div class="quote-card-overlay"></div>
+                        <div class="quote-card-content">
+                            <div class="quote-card-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p class="quote-card-text">{{ quote.text }}</p>
+                            <p class="quote-card-source">{{ quote.source_doc }}</p>
+                        </div>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <button class="carousel-nav-btn carousel-next" id="quote-next-btn" aria-label="Siguiente">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <div class="carousel-indicators">
+            {% for quote in featured_quotes %}
+            <span class="indicator" data-slide="{{ loop.index0 }}"></span>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
 
 {% if latest_summary %}
 <section id="latest-summary-embedded" class="sample-summary" style="padding-top: 60px;">
@@ -189,6 +230,31 @@
     </a>
   </div>
 </section>
+
+{% if docs_by_type %}
+<section id="recent-documents" class="recent-documents-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">📚 Últimos Documentos</h2>
+            <a href="/resumenes.html" class="see-all">Ver archivo →</a>
+        </div>
+
+        {% for doc_type, documents in docs_by_type %}
+        <div class="document-type-section">
+            <h3 class="document-type-title">{{ doc_type }}</h3>
+            <div class="horizontal-scroll" id="scroll-{{ loop.index0 }}">
+                {% for doc in documents %}
+                <a href="/resumen/{{ doc.week_slug }}.html#{{ doc.doc_slug }}" class="doc-card">
+                    <div class="doc-type-badge">{{ doc.tipo }}</div>
+                    <h4 class="doc-title">{{ doc.title }}</h4>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
 
 <section class="features">
   <div class="container">
