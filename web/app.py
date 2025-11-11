@@ -158,12 +158,12 @@ def extract_featured_quotes(summaries, limit=8):
     """
     Extrae citas destacadas de los últimos documentos.
     Intenta usar frases_seleccionadas primero, luego ideas_clave como fallback.
-    Retorna una lista de dicts con: quote, source_doc, source_link, week_slug, image
+    Retorna una lista de dicts con: quote, source_doc, source_link, week_slug, color
     """
     import random
 
     quotes = []
-    # Lista de imágenes disponibles para las citas
+    # Imágenes disponibles para las citas
     available_images = [
         'capilla_sixtina.jpg',
         'coliseo.jpg',
@@ -248,9 +248,20 @@ def get_recent_documents_timeline(summaries, weeks=2, max_docs=12):
 def get_documents_by_type(summaries, weeks=3):
     """
     Retorna documentos agrupados por tipo (Homilías, Discursos, etc.)
-    para mostrar en secciones de scroll horizontal.
+    para mostrar en secciones de scroll horizontal con colores y descripción.
     """
     from collections import defaultdict
+
+    # Colores por tipo de documento
+    TYPE_COLORS = {
+        "Homilia": "#E74C3C",       # Rojo
+        "Discurso": "#3498DB",      # Azul
+        "Ángelus": "#27AE60",       # Verde
+        "Audiencia": "#F39C12",     # Naranja
+        "Misa": "#9B59B6",          # Púrpura
+        "Santa Misa": "#9B59B6",    # Púrpura
+        "Documento": "#95A5A6",     # Gris
+    }
 
     docs_by_type = defaultdict(list)
 
@@ -258,18 +269,36 @@ def get_documents_by_type(summaries, weeks=3):
         for doc in summary.get("documents", []):
             doc_type = doc.get("tipo_documento", "Documento")
             if len(docs_by_type[doc_type]) < 8:  # Límite de documentos por tipo
+                # Extrae descripción del resumen general
+                excerpt = doc.get("resumen_general", "")
+                if isinstance(excerpt, str) and excerpt:
+                    # Limpia markdown
+                    excerpt = re.sub(r'<[^>]+>', '', excerpt)
+                    excerpt = re.sub(r'\*\*([^*]+)\*\*', r'\1', excerpt)
+                    excerpt = excerpt.strip()[:100] + "..." if len(excerpt) > 100 else excerpt.strip()
+                else:
+                    excerpt = ""
+
                 docs_by_type[doc_type].append({
                     "title": doc.get("fuente_documento", "Documento"),
+                    "excerpt": excerpt,
                     "doc_slug": doc.get("doc_slug", ""),
                     "tipo": doc_type,
                     "week_slug": summary.get("slug", ""),
+                    "color": TYPE_COLORS.get(doc_type, "#95A5A6"),
                 })
 
-    # Ordena los tipos por cantidad de documentos (mayor primero)
-    sorted_types = sorted(docs_by_type.items(),
-                         key=lambda x: len(x[1]),
-                         reverse=True)
+    # Ordena los tipos: Homilías primero, luego otros ordenados por cantidad
+    type_order = ["Homilia", "Santa Misa", "Discurso", "Ángelus", "Audiencia", "Misa"]
 
+    def sort_key(item):
+        doc_type = item[0]
+        try:
+            return (type_order.index(doc_type), -len(item[1]))
+        except ValueError:
+            return (len(type_order), -len(item[1]))
+
+    sorted_types = sorted(docs_by_type.items(), key=sort_key)
     return sorted_types
 
 

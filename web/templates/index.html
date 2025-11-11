@@ -108,8 +108,7 @@
             <div class="quote-carousel-wrapper">
                 <div class="quote-carousel" id="quoteCarousel">
                     {% for quote in featured_quotes %}
-                    <a href="/resumen/{{ quote.week_slug }}.html#{{ quote.doc_slug }}" class="quote-card-carousel" style="background-image: url('{{ url_for('static', filename='img/' + quote.image) }}');">
-                        <div class="quote-card-overlay"></div>
+                    <a href="/resumen/{{ quote.week_slug }}.html#{{ quote.doc_slug }}" class="quote-card-carousel" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.55) 100%), url('static/img/{{ quote.image }}');">
                         <div class="quote-card-content">
                             <p class="quote-card-text">{{ quote.text }}</p>
                             <p class="quote-card-source">{{ quote.source_doc }}</p>
@@ -238,12 +237,15 @@
 
         {% for doc_type, documents in docs_by_type %}
         <div class="document-type-section">
-            <h3 class="document-type-title">{{ doc_type }}</h3>
+            <h3 class="document-type-title" style="border-left: 4px solid {{ documents[0].color }}; padding-left: 15px;">{{ doc_type }}</h3>
             <div class="horizontal-scroll" id="scroll-{{ loop.index0 }}">
                 {% for doc in documents %}
-                <a href="/resumen/{{ doc.week_slug }}.html#{{ doc.doc_slug }}" class="doc-card">
-                    <div class="doc-type-badge">{{ doc.tipo }}</div>
+                <a href="/resumen/{{ doc.week_slug }}.html#{{ doc.doc_slug }}" class="doc-card" style="border-top: 4px solid {{ doc.color }};">
+                    <div class="doc-type-badge" style="background-color: {{ doc.color }};">{{ doc.tipo }}</div>
                     <h4 class="doc-title">{{ doc.title }}</h4>
+                    {% if doc.excerpt %}
+                    <p class="doc-excerpt">{{ doc.excerpt }}</p>
+                    {% endif %}
                 </a>
                 {% endfor %}
             </div>
