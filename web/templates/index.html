@@ -98,7 +98,7 @@
 {% if featured_quotes %}
 <section id="featured-quotes" class="featured-quotes-section">
     <div class="container">
-        <h2 class="section-title">Frases destacadas</h2>
+        <h2 class="section-title">Las claves de la semana del Papa</h2>
 
         <div class="quote-carousel-container">
             <button class="carousel-nav-btn carousel-prev" id="quote-prev-btn" aria-label="Anterior">
@@ -111,9 +111,6 @@
                     <a href="/resumen/{{ quote.week_slug }}.html#{{ quote.doc_slug }}" class="quote-card-carousel" style="background-image: url('{{ url_for('static', filename='img/' + quote.image) }}');">
                         <div class="quote-card-overlay"></div>
                         <div class="quote-card-content">
-                            <div class="quote-card-icon">
-                                <i class="fas fa-quote-left"></i>
-                            </div>
                             <p class="quote-card-text">{{ quote.text }}</p>
                             <p class="quote-card-source">{{ quote.source_doc }}</p>
                         </div>
