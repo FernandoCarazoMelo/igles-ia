@@ -151,6 +151,158 @@ ALL_SUMMARIES = load_all_summaries()
 
 
 # ==========================================================================
+# 5. FUNCIONES AUXILIARES PARA ENGAGEMENT
+# ==========================================================================
+
+def extract_featured_quotes(summaries, limit=8):
+    """
+    Extrae citas destacadas de los últimos documentos.
+    Intenta usar frases_seleccionadas primero, luego ideas_clave como fallback.
+    Retorna una lista de dicts con: quote, source_doc, source_link, week_slug, color
+    """
+    import random
+
+    quotes = []
+    # Imágenes disponibles para las citas
+    available_images = [
+        'capilla_sixtina.jpg',
+        'coliseo.jpg',
+        'plaza-vaticana.jpg',
+        'Roma-vaticano.jpg',
+        'rome-italy.jpg',
+        'vaticano.jpg',
+        'peru.jpeg'
+    ]
+
+    # Limitamos a las últimas 4 semanas para contenido fresco
+    recent_summaries = summaries[:4]
+
+    for summary in recent_summaries:
+        for doc in summary.get("documents", []):
+            # Intentar usar frases_seleccionadas primero
+            phrases = doc.get("frases_seleccionadas", [])
+            if isinstance(phrases, str):
+                # Si es string (JSON string), intentar parsearlo
+                try:
+                    phrases = json.loads(phrases)
+                except:
+                    phrases = []
+
+            # Si no hay frases_seleccionadas, usar ideas_clave como fallback
+            if not phrases:
+                phrases = doc.get("ideas_clave", [])
+
+            if phrases:
+                for phrase in phrases[:1]:  # Máx 1 frase/idea por documento
+                    # Extraer el texto de markdown si es necesario
+                    text = phrase
+                    if isinstance(text, str):
+                        # Remover etiquetas HTML/markdown si las hay
+                        text = re.sub(r'<[^>]+>', '', text)
+                        text = re.sub(r'\*\*([^*]+)\*\*', r'\1', text)
+                        text = re.sub(r'__([^_]+)__', r'\1', text)
+
+                    quotes.append({
+                        "text": text[:150] + "..." if len(text) > 150 else text,
+                        "source_doc": doc.get("fuente_documento", "Documento"),
+                        "doc_slug": doc.get("doc_slug", ""),
+                        "week_slug": summary.get("slug", ""),
+                        "week_of": summary.get("week_of", ""),
+                        "image": random.choice(available_images),
+                    })
+                    if len(quotes) >= limit:
+                        break
+        if len(quotes) >= limit:
+            break
+
+    return quotes
+
+
+def get_recent_documents_timeline(summaries, weeks=2, max_docs=12):
+    """
+    Retorna una línea de tiempo con los documentos más recientes.
+    Agrupa por semana para claridad.
+    """
+    timeline = []
+    for summary in summaries[:weeks]:
+        week_data = {
+            "week_slug": summary.get("slug", ""),
+            "week_of": summary.get("week_of", ""),
+            "documents": []
+        }
+
+        for doc in summary.get("documents", [])[:max_docs]:
+            week_data["documents"].append({
+                "title": doc.get("fuente_documento", "Documento"),
+                "excerpt": doc.get("resumen_general", "")[:120] + "...",
+                "doc_slug": doc.get("doc_slug", ""),
+                "tipo": doc.get("tipo_documento", "Documento"),
+            })
+
+        if week_data["documents"]:
+            timeline.append(week_data)
+
+    return timeline
+
+
+def get_documents_by_type(summaries, weeks=3):
+    """
+    Retorna documentos agrupados por tipo (Homilías, Discursos, etc.)
+    para mostrar en secciones de scroll horizontal con colores y descripción.
+    """
+    from collections import defaultdict
+
+    # Colores por tipo de documento
+    TYPE_COLORS = {
+        "Homilia": "#E74C3C",       # Rojo
+        "Discurso": "#3498DB",      # Azul
+        "Ángelus": "#27AE60",       # Verde
+        "Audiencia": "#F39C12",     # Naranja
+        "Misa": "#9B59B6",          # Púrpura
+        "Santa Misa": "#9B59B6",    # Púrpura
+        "Documento": "#95A5A6",     # Gris
+    }
+
+    docs_by_type = defaultdict(list)
+
+    for summary in summaries[:weeks]:
+        for doc in summary.get("documents", []):
+            doc_type = doc.get("tipo_documento", "Documento")
+            if len(docs_by_type[doc_type]) < 8:  # Límite de documentos por tipo
+                # Extrae descripción del resumen general
+                excerpt = doc.get("resumen_general", "")
+                if isinstance(excerpt, str) and excerpt:
+                    # Limpia markdown
+                    excerpt = re.sub(r'<[^>]+>', '', excerpt)
+                    excerpt = re.sub(r'\*\*([^*]+)\*\*', r'\1', excerpt)
+                    excerpt = excerpt.strip()[:100] + "..." if len(excerpt) > 100 else excerpt.strip()
+                else:
+                    excerpt = ""
+
+                docs_by_type[doc_type].append({
+                    "title": doc.get("fuente_documento", "Documento"),
+                    "excerpt": excerpt,
+                    "doc_slug": doc.get("doc_slug", ""),
+                    "tipo": doc_type,
+                    "week_slug": summary.get("slug", ""),
+                    "color": TYPE_COLORS.get(doc_type, "#95A5A6"),
+                })
+
+    # Ordena los tipos: Homilías primero, luego otros ordenados por cantidad
+    type_order = ["Homilia", "Santa Misa", "Discurso", "Ángelus", "Audiencia", "Misa"]
+
+    def sort_key(item):
+        doc_type = item[0]
+        try:
+            return (type_order.index(doc_type), -len(item[1]))
+        except ValueError:
+            return (len(type_order), -len(item[1]))
+
+    sorted_types = sorted(docs_by_type.items(), key=sort_key)
+    return sorted_types
+
+
+# ==========================================================================
 # 5. PROCESADOR DE CONTEXTO (Variables globales para las plantillas)
 # ==========================================================================
 @app.context_processor
@@ -168,10 +320,20 @@ def inject_global_vars():
 
 @app.route("/")
 def index():
-    """Página de inicio, ahora incluyendo el último resumen."""
+    """Página de inicio con contenido para engagement y retención."""
     # ALL_SUMMARIES ya está cargada y ordenada (la más nueva primero)
     latest_summary_data = ALL_SUMMARIES[0] if ALL_SUMMARIES else None
-    return render_template("index.html", latest_summary=latest_summary_data)
+    featured_quotes = extract_featured_quotes(ALL_SUMMARIES, limit=8)
+    timeline = get_recent_documents_timeline(ALL_SUMMARIES, weeks=2, max_docs=6)
+    docs_by_type = get_documents_by_type(ALL_SUMMARIES, weeks=3)
+
+    return render_template(
+        "index.html",
+        latest_summary=latest_summary_data,
+        featured_quotes=featured_quotes,
+        timeline=timeline,
+        docs_by_type=docs_by_type
+    )
 
 
 @app.route("/resumenes.html")
