@@ -115,6 +115,11 @@
                         linear-gradient(135deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.55) 100%), 
                         url('{{ url_for('static', filename='img/' + quote.image) }}');"
                     >
+                      <div class="quote-card-content">
+                        <p class="quote-card-text">{{ quote.text }}</p>
+                        <p class="quote-card-source">{{ quote.source_doc }}</p>
+                      </div>
+                    </a>
                     {% endfor %}
                 </div>
             </div>
