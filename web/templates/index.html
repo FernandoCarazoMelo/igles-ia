@@ -26,12 +26,12 @@
   <br>
   <div class="hero-cta-container">
     <a
-      href="https://eu-west-15yl5gwygk.auth.eu-west-1.amazoncognito.com/signup?client_id=7capb584va4pdmme83bjgh4c2q&redirect_uri=https%3A%2F%2Figles-ia.es%2Fcallback.html&response_type=code&scope=email+openid+phone&lang=es"
+      href="https://igles-ia.es/resumenes"
       class="hero-cta-button email-button"
       target="_blank"
       rel="noopener noreferrer"
     >
-      <i class="fas fa-envelope"></i> Recibir por Email
+      <i class="fas fa-envelope"></i> Resúmenes anteriores
     </a>
   </div>
 
@@ -108,11 +108,17 @@
             <div class="quote-carousel-wrapper">
                 <div class="quote-carousel" id="quoteCarousel">
                     {% for quote in featured_quotes %}
-                    <a href="/resumen/{{ quote.week_slug }}.html#{{ quote.doc_slug }}" class="quote-card-carousel" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.55) 100%), url('static/img/{{ quote.image }}');">
-                        <div class="quote-card-content">
-                            <p class="quote-card-text">{{ quote.text }}</p>
-                            <p class="quote-card-source">{{ quote.source_doc }}</p>
-                        </div>
+                    <a 
+                      href="/resumen/{{ quote.week_slug }}.html#{{ quote.doc_slug }}" 
+                      class="quote-card-carousel" 
+                      style="background-image: 
+                        linear-gradient(135deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.55) 100%), 
+                        url('static/img/{{ quote.image }}');"
+                    >
+                      <div class="quote-card-content">
+                        <p class="quote-card-text">{{ quote.text }}</p>
+                        <p class="quote-card-source">{{ quote.source_doc }}</p>
+                      </div>
                     </a>
                     {% endfor %}
                 </div>
