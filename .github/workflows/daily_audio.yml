@@ -91,6 +91,8 @@ jobs:
           git add data_web/
           git add web/
           git add json-rss/
+          git add podcast.xml
+          git add build
           # Comprueba si hay algo para confirmar
           if git diff --staged --quiet; then
             echo "No changes to commit in summaries directory."
