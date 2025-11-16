@@ -116,6 +116,10 @@
     "title_human": "Angelus, 9 November 2025, Feast of the Dedication of the Basilica of Saint John Lateran"
   },
   {
+    "link": "https://www.vatican.va/content/leo-xiv/en/angelus/2025/documents/20251116-angelus.html",
+    "title_human": "Angelus, 16 November 2025"
+  },
+  {
     "link": "https://www.vatican.va/content/leo-xiv/en/apost_exhortations/documents/20251004-dilexi-te.html",
     "title_human": "Apostolic ExhortationDilexi teof the Holy Father Leo XIV on Love for the Poor (4 October 2025)"
   },
@@ -230,10 +234,6 @@
   {
     "link": "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20251108-udienza-giubilare.html",
     "title_human": "Jubilee Audience - Catechesis. 8. To hope is to bear witness. Isidore Bakanja (8 November 2025)"
-  },
-  {
-    "link": "https://www.vatican.va/content/leo-xiv/en/audiences/2025/documents/20251112-udienza-generale.html",
-    "title_human": "General Audience of 12 November 2025 - Catechesis Cycle – Jubilee 2025: Jesus Christ Our Hope. 4. The Resurrection of Christ and the Challenges of today's world 4. Easter spirituality animates fraternity. “Love One Another As I Have Loved You” (Cf. Jn 15:12)"
   },
   {
     "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20250509-messa-cardinali.html",
@@ -390,6 +390,10 @@
   {
     "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20251109-dedicazione-basilica-lateranense.html",
     "title_human": "Feast of the Dedication of the Basilica of St John Lateran - Holy Mass (9 November 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/homilies/2025/documents/20251116-messa-giornata-poveri.html",
+    "title_human": "Holy Mass on the occasion of the World Day of the Poor (16 November 2025)"
   },
   {
     "link": "https://www.vatican.va/content/leo-xiv/en/letters/2025/documents/20250917-lettera-seminario-trujillo.html",
@@ -862,6 +866,10 @@
   {
     "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/november/documents/20251113-monasteri-agostiniani.html",
     "title_human": "To the Participants in the Meeting of the Federation of Augustinian Monasteries of Italy (13 November 2025)"
+  },
+  {
+    "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/november/documents/20251115-mondo-del-cinema.html",
+    "title_human": "Encounter with the World of Cinema (15 November 2025)"
   },
   {
     "link": "https://www.vatican.va/content/leo-xiv/en/speeches/2025/october/documents/20251001-conferenza-mariapoli.html",

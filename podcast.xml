@@ -15,8 +15,28 @@
       <itunes:category text="Christianity"/>
     </itunes:category>
     <item>
-      <title>[28.1] Audiencia 12/11 | La resurrección y la fraternidad en Pascua | Esperanza y amor cristiano</title>
-      <description>&lt;![CDATA[El Papa León XIV en esta Audiencia nos invita a reflexionar sobre la importancia de la esperanza en la resurrección de Cristo y cómo esta inspira una fraternidad auténtica y universal. Nos anima a construir vínculos sinceros y a vivir el amor fraterno siguiendo el ejemplo de Jesús, quien nos enseñó a amarnos unos a otros como Él nos amó. Podcast creado por igles-ia.es]]&gt;</description>
+      <title>[28.3] Ángelus 16/11 | Reflexión sobre el fin de las cosas y la esperanza en Cristo | Fe y esperanza</title>
+      <description>&lt;![CDATA[En este Ángelus, el Papa León XIV nos invita a confiar en la esperanza que Cristo nos ofrece ante los desafíos y sufrimientos del mundo. Nos anima a dar testimonio de la verdad y a mantener la fe en medio de las dificultades, recordando que la alegría en Él es eterna. Podcast creado por igles-ia.es]]&gt;</description>
+      <pubDate>Sun, 16 Nov 2025 12:00:00 GMT</pubDate>
+      <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-11-16_ángelus_angelus_16_de_noviembre_de_2025.mp3" type="audio/mpeg" length="1009196"/>
+      <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-11-16_ángelus_angelus_16_de_noviembre_de_2025.mp3</guid>
+      <itunes:author>igles-ia.es</itunes:author>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
+      <itunes:episode>28.3</itunes:episode>
+    </item>
+    <item>
+      <title>[28.2] Homilia 16/11 | Santa Misa con ocasión de la Jornada Mundial de los Pobres | Esperanza y Pobreza</title>
+      <description>&lt;![CDATA[En esta homilía, el Papa León XIV nos invita a reflexionar sobre la esperanza en medio de las dificultades y la importancia de acompañar a los más pobres y vulnerables. Nos recuerda que Dios siempre está de nuestro lado, amándonos con un amor eterno, y nos llama a vivir con ternura y solidaridad, rompiendo la soledad y promoviendo una cultura de atención. Podcast creado por igles-ia.es]]&gt;</description>
+      <pubDate>Sun, 16 Nov 2025 12:00:00 GMT</pubDate>
+      <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-11-16_homilia_santa_misa_con_ocasion_de_la_jornada_mundial_de_los_pobres_16_de_noviembre_de_2025.mp3" type="audio/mpeg" length="2824836"/>
+      <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-11-16_homilia_santa_misa_con_ocasion_de_la_jornada_mundial_de_los_pobres_16_de_noviembre_de_2025.mp3</guid>
+      <itunes:author>igles-ia.es</itunes:author>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
+      <itunes:episode>28.2</itunes:episode>
+    </item>
+    <item>
+      <title>[28.1] Audiencia 12/11 | La resurrección y la fraternidad pascual | Esperanza y amor cristiano</title>
+      <description>&lt;![CDATA[El Papa León XIV en esta Audiencia nos recuerda que creer en la resurrección de Cristo infunde esperanza y nos invita a vivir una espiritualidad pascual que inspire la fraternidad. Nos anima a construir vínculos auténticos y a reconocer en cada hermano la dignidad y el llamado a amarnos como Jesús nos enseñó. Podcast creado por igles-ia.es]]&gt;</description>
       <pubDate>Wed, 12 Nov 2025 12:00:00 GMT</pubDate>
       <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-11-12_audiencia_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_esperanza_iv_la_resurreccion_de_cristo_y_los_des.mp3" type="audio/mpeg" length="1946536"/>
       <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-11-12_audiencia_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_esperanza_iv_la_resurreccion_de_cristo_y_los_des.mp3</guid>
