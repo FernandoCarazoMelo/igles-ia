@@ -1,5 +1,5 @@
 ---
-title: "Esperanza y Solidaridad en la Lucha por la Justicia y la Vida Digna"
+title: "Jubileo de los Pobres y Cataquesis sobre la Esperanza"
 week_of: "Semana del 10/11 al 16/11 de 2025"
 date: "2025-11-17"
 pontificate_week: 28
