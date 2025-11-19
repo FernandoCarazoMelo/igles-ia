@@ -2,12 +2,23 @@
     {
         "titulo_original": "A los participantes en el \"Seminario de Ética en el Gerenciamiento de la Salud\"  (17 de noviembre de 2025)",
         "titulo_spotify": "[29.1] Discurso 17/11 | A los participantes en el Seminario de Ética en el Gerenciamiento de la Salud | Ética y dignidad en salud",
-        "descripcion_spotify": "En este discurso, el Papa León XIV reflexiona sobre la importancia de mantener una visión ética y humanista en la gestión de la salud, destacando los riesgos del sesgo y la manipulación en el uso de la inteligencia artificial. Nos invita a valorar la dignidad de cada persona y a actuar con generosidad, solidaridad y respeto, poniendo siempre en el centro el bienestar del enfermo. Podcast creado por igles-ia.es",
+        "descripcion_spotify": "En este discurso, el Papa León XIV reflexiona sobre la importancia de mantener la dignidad humana en la gestión de la salud, advirtiendo sobre los riesgos de sesgos y manipulaciones en la inteligencia artificial. Nos invita a mirar con una visión amplia y humana, priorizando siempre el trato personal y solidario. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-11-17_discurso_a_los_participantes_en_el_seminario_de_etica_en_el_gerenciamiento_de_la_salud_17_de_noviembre_de_202.mp3",
         "fecha": "2025-11-17",
         "filename": "2025-11-17_discurso_a_los_participantes_en_el_seminario_de_etica_en_el_gerenciamiento_de_la_salud_17_de_noviembre_de_202",
         "tipo": "Discurso",
         "numero_episodio": "29.1",
         "vatican_url": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/november/documents/20251117-seminario-etica.html"
+    },
+    {
+        "titulo_original": "Audiencia general del 19 de noviembre de 2025 Ciclo de catequesis - Jubileo 2025. Jesucristo, nuestra esperanza. IV. La Resurreción de Cristo y los desafíos del mundo actual 5. Espiritualidad pascual y ecología integral",
+        "titulo_spotify": "[29.2] Audiencia 19/11 | Resurrección y Ecología | Esperanza y Cuidado del Crecimiento",
+        "descripcion_spotify": "El Papa León XIV en esta Audiencia del 19 de noviembre de 2025 nos invita a reflexionar sobre la relación entre la Resurrección de Cristo y los desafíos actuales, especialmente en el ámbito ecológico. Nos anima a cultivar y custodiar el jardín de la creación, promoviendo una espiritualidad integral que impulse la conversión ecológica y la esperanza en un mundo renovado. Podcast creado por igles-ia.es",
+        "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-11-19_audiencia_audiencia_general_del_19_de_noviembre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_es.mp3",
+        "fecha": "2025-11-19",
+        "filename": "2025-11-19_audiencia_audiencia_general_del_19_de_noviembre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_es",
+        "tipo": "Audiencia",
+        "numero_episodio": "29.2",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/audiences/2025/documents/20251119-udienza-generale.html"
     }
 ]
