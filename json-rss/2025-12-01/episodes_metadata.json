@@ -2,12 +2,45 @@
     {
         "titulo_original": "Audiencia general del 26 de noviembre de 2025 Ciclo de catequesis - Jubileo 2025. Jesucristo, nuestra esperanza. IV. La Resurrección de Cristo y los desafíos del mundo actual 6. Esperar en la vida para generar vida",
         "titulo_spotify": "[30.1] Audiencia 26/11 | Jesucristo, nuestra esperanza | Resurrección y desafíos",
-        "descripcion_spotify": "El Papa León XIV en esta Audiencia nos recuerda que la Pascua ilumina el misterio de la vida y nos invita a vivir con esperanza, confiando en el amor de un Padre que nos ha creado y nos quiere felices. Nos anima a valorar la vida como un don, a generar vida en el amor y a confiar en la misericordia de Dios, incluso en medio de las dificultades del mundo actual. Podcast creado por igles-ia.es",
+        "descripcion_spotify": "En esta audiencia, el Papa León XIV nos recuerda que la Pascua de Cristo ilumina el misterio de la vida y nos llena de esperanza. Nos invita a confiar en el amor del Padre, a valorar la vida como un don y a perseverar en la esperanza, incluso en medio de dificultades y sufrimientos. La vida, generada por Dios, requiere cuidado, fe y confianza en su plan de amor. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-11-26_audiencia_audiencia_general_del_26_de_noviembre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_es.mp3",
         "fecha": "2025-11-26",
         "filename": "2025-11-26_audiencia_audiencia_general_del_26_de_noviembre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_es",
         "tipo": "Audiencia",
         "numero_episodio": "30.1",
         "vatican_url": "https://www.vatican.va/content/leo-xiv/es/audiences/2025/documents/20251126-udienza-generale.html"
+    },
+    {
+        "titulo_original": "Viaje apostólico a Türkiye: Encuentro con las autoridades, la sociedad civil y el cuerpo diplomático (Ankara, 27 de noviembre de 2025)",
+        "titulo_spotify": "[30.2] Discurso 27/11 | Viaje apostólico a Türkiye | Unidad y fraternidad",
+        "descripcion_spotify": "El Papa León XIV en este discurso destaca la importancia de la fraternidad, el respeto por las diversidades y la necesidad de construir puentes de entendimiento entre culturas y religiones. Invita a valorar la historia y la riqueza cultural de Türkiye como un ejemplo de convivencia y paz en un mundo polarizado. Podcast creado por igles-ia.es",
+        "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-11-27_discurso_viaje_apostolico_a_turkiye_encuentro_con_las_autoridades_la_sociedad_civil_y_el_cuerpo_diplomatico_a.mp3",
+        "fecha": "2025-11-27",
+        "filename": "2025-11-27_discurso_viaje_apostolico_a_turkiye_encuentro_con_las_autoridades_la_sociedad_civil_y_el_cuerpo_diplomatico_a",
+        "tipo": "Discurso",
+        "numero_episodio": "30.2",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/november/documents/20251127-turchia-autorita.html"
+    },
+    {
+        "titulo_original": "Viaje apostólico a Türkiye: visita a la residencia de ancianos de las Hermanitas de los Pobres (Estambul, 28 de noviembre de 2025)",
+        "titulo_spotify": "[30.3] Discurso 28/11 | Viaje apostólico a Türkiye: visita a la residencia de ancianos de las Hermanitas de los Pobres | Fraternidad y Sabiduría de los Mayores",
+        "descripcion_spotify": "El Papa León XIV en este discurso comparte la importancia de la hospitalidad y la fraternidad, resaltando que las Hermanitas de los Pobres son llamadas a ser hermanas en el amor de Cristo. Destaca también el valor de los adultos mayores como portadores de sabiduría y riqueza para toda la comunidad, invitándonos a valorar y respetar a los mayores. Podcast creado por igles-ia.es",
+        "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-11-28_discurso_viaje_apostolico_a_turkiye_visita_a_la_residencia_de_ancianos_de_las_hermanitas_de_los_pobres_estamb.mp3",
+        "fecha": "2025-11-28",
+        "filename": "2025-11-28_discurso_viaje_apostolico_a_turkiye_visita_a_la_residencia_de_ancianos_de_las_hermanitas_de_los_pobres_estamb",
+        "tipo": "Discurso",
+        "numero_episodio": "30.3",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/november/documents/20251128-turchia-anziani.html"
+    },
+    {
+        "titulo_original": "Viaje apostólico a Türkiye: Encuentro de oración con los obispos, sacerdotes, diáconos, consagrados, consagradas y operadores pastorales en la Catedral del Espíritu Santo (Estambul, 28 de noviembre de 2025)",
+        "titulo_spotify": "[30.4] Discurso 28/11 | Viaje apostólico a Türkiye: Encuentro de oración con obispos y comunidades cristianas | Fe y esperanza en la pequeñez",
+        "descripcion_spotify": "El Papa León XIV en este discurso comparte la alegría de su primer viaje apostólico a Türkiye, resaltando la historia de fe que une a la región y a la Iglesia universal. Invita a las comunidades a cultivar la semilla de la fe desde la humildad y la pequeñez, confiando en la fuerza del Espíritu Santo y en la promesa del Reino de Dios. Podcast creado por igles-ia.es",
+        "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-11-28_discurso_viaje_apostolico_a_turkiye_encuentro_de_oracion_con_los_obispos_sacerdotes_diaconos_consagrados_cons.mp3",
+        "fecha": "2025-11-28",
+        "filename": "2025-11-28_discurso_viaje_apostolico_a_turkiye_encuentro_de_oracion_con_los_obispos_sacerdotes_diaconos_consagrados_cons",
+        "tipo": "Discurso",
+        "numero_episodio": "30.4",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/november/documents/20251128-turchia-clero.html"
     }
 ]
