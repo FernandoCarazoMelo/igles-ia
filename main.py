@@ -217,7 +217,7 @@ def pipeline_semanal(debug: bool = True, fecha_de_hoy: str = None):
         print("Solo para pruebas, usar el último contacto\n")
         print(contacts)
         contacts = contacts[
-            contacts["email"].str.contains("carazom@gmail|droaguilor@gm")
+            contacts["email"].str.contains("carazom@gmail|droaguilor@gm|gdomingobrice@g")
         ]
 
     enviar_correos_todos(contacts, fecha_de_hoy)
@@ -241,7 +241,7 @@ def pipeline_diaria(
     print("Solo para pruebas, usar el último contacto\n")
     print(contacts)
     contacts = contacts[
-        contacts["email"].str.contains("nando.carazom@gmai|droaguilor@")
+        contacts["email"].str.contains("nando.carazom@gmai|droaguilor@|gdomingobrice@g")
     ]
 
     enviar_correos_todos(contacts, fecha_de_hoy)
@@ -272,7 +272,7 @@ def pipeline_date(
     contacts = cognito_get_verified_emails()
     print(f"COGNITO. Total de contactos obtenidos: {len(contacts)}")
     print("Solo para pruebas, usar el último contacto\n")
-    contacts = contacts[contacts["email"].str.contains("nando.carazom@gmai|droaguilor")]
+    contacts = contacts[contacts["email"].str.contains("nando.carazom@gmai|droaguilor|gdomingobrice@g")]
     print(contacts)
     enviar_correos_todos(contacts, run_date)
 
