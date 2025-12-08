@@ -20,16 +20,6 @@
     <div class="container">
         <h2 class="section-title" style="margin-top: 60px;">La voz del Papa: reflexiones de la semana</h2>
         
-        {% if summary.documents %}
-        <div class="document-index">
-            <h4>Índice de Documentos</h4>
-            <ul>
-                {% for doc in summary.documents %}
-                <li><a href="#{{ doc.doc_slug }}">📄 {{ doc.fuente_documento }}</a></li>
-                {% endfor %}
-            </ul>
-        </div>
-        {% endif %}
 
         {% for doc in summary.documents %}
         <div class="document-detail-card" id="{{ doc.doc_slug }}">
@@ -59,6 +49,17 @@
         {% else %}
         <p style="text-align: center;">No hay documentos detallados para esta semana.</p>
         {% endfor %}
+
+        {% if summary.documents %}
+        <div class="document-index">
+            <h4>Índice de Documentos</h4>
+            <ul>
+                {% for doc in summary.documents %}
+                <li><a href="#{{ doc.doc_slug }}">📄 {{ doc.fuente_documento }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
 
         <div class="back-to-archive-link">
             <a href="{{ url_for('archive') }}" class="card-button">‹ Ir al Archivo</a>
