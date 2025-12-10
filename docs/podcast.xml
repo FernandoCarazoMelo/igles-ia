@@ -15,8 +15,18 @@
       <itunes:category text="Christianity"/>
     </itunes:category>
     <item>
+      <title>[32.2] Audiencia 10/12 | La Pascua de Jesús | Vida eterna</title>
+      <description>&lt;![CDATA[El Papa León XIV en esta audiencia reflexiona sobre el misterio de la muerte, destacando que la resurrección de Cristo revela que la muerte no es el final, sino un paso hacia la vida eterna. Nos invita a vivir con esperanza y a prepararnos para la eternidad, dejando atrás el miedo y las ilusiones de inmortalidad terrenal. Podcast creado por igles-ia.es]]&gt;</description>
+      <pubDate>Wed, 10 Dec 2025 12:00:00 GMT</pubDate>
+      <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-12-10_audiencia_audiencia_general_del_10_de_diciembre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_es.mp3" type="audio/mpeg" length="1865032"/>
+      <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-12-10_audiencia_audiencia_general_del_10_de_diciembre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_es.mp3</guid>
+      <itunes:author>igles-ia.es</itunes:author>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
+      <itunes:episode>32.2</itunes:episode>
+    </item>
+    <item>
       <title>[32.1] Ángelus 08/12 | Solemnidad de la Inmaculada Concepción | Fe y Pureza</title>
-      <description>&lt;![CDATA[En este Ángelus, el Papa León XIV celebra la solemnidad de la Inmaculada Concepción de la Virgen María, resaltando su pureza y la gracia que recibió para confiarle la salvación. Nos invita a creer como ella y a renovar nuestro compromiso con Dios a través del Bautismo y la fidelidad diaria. Podcast creado por igles-ia.es]]&gt;</description>
+      <description>&lt;![CDATA[En este Ángelus, el Papa León XIV celebra la solemnidad de la Inmaculada Concepción de la Virgen María, resaltando su pureza y su papel en la salvación. Nos invita a creer como ella creyó y a renovar nuestro compromiso con Dios a través del Bautismo y la fidelidad diaria. Podcast creado por igles-ia.es]]&gt;</description>
       <pubDate>Mon, 08 Dec 2025 12:00:00 GMT</pubDate>
       <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-12-08_ángelus_angelus_8_de_diciembre_de_2025_solemnidad_de_la_inmaculada_concepcion_de_la_bienaventurada_virgen_ma.mp3" type="audio/mpeg" length="1127852"/>
       <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-12-08_ángelus_angelus_8_de_diciembre_de_2025_solemnidad_de_la_inmaculada_concepcion_de_la_bienaventurada_virgen_ma.mp3</guid>
