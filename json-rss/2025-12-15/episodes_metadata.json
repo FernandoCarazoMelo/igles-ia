@@ -1,8 +1,8 @@
 [
     {
         "titulo_original": "Ángelus, 8 de diciembre de 2025, Solemnidad de la Inmaculada Concepción de la Bienaventurada Virgen María",
-        "titulo_spotify": "[32.1] Ángelus 08/12 | Solemnidad de la Inmaculada Concepción | Fe y Pureza",
-        "descripcion_spotify": "En este Ángelus, el Papa León XIV celebra la solemnidad de la Inmaculada Concepción de la Virgen María, resaltando su pureza y la gracia que recibió para confiarle la salvación. Nos invita a creer como ella y a renovar nuestro compromiso con el bautismo y la misión de llevar a Cristo al mundo. Podcast creado por igles-ia.es",
+        "titulo_spotify": "[32.1] Ángelus 08/12 | Solemnidad de la Inmaculada Concepción | Virgen María, Inmaculada, Fe, Gracia, Salvación",
+        "descripcion_spotify": "En este Ángelus, el Papa León XIV celebra la solemnidad de la Inmaculada Concepción de la Virgen María, resaltando su pureza y su papel en la salvación. Nos invita a creer como ella creyó, aceptando los dones de Dios y renovando nuestro compromiso de seguir a Cristo en nuestra vida diaria. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-12-08_ángelus_angelus_8_de_diciembre_de_2025_solemnidad_de_la_inmaculada_concepcion_de_la_bienaventurada_virgen_ma.mp3",
         "fecha": "2025-12-08",
         "filename": "2025-12-08_ángelus_angelus_8_de_diciembre_de_2025_solemnidad_de_la_inmaculada_concepcion_de_la_bienaventurada_virgen_ma",
@@ -11,31 +11,31 @@
         "vatican_url": "https://www.vatican.va/content/leo-xiv/es/angelus/2025/documents/20251208-angelus.html"
     },
     {
-        "titulo_original": "Audiencia general del 10 de diciembre de 2025 Ciclo de catequesis - Jubileo 2025. Jesucristo, nuestra esperanza. III. La Pascua de Jesús. 8. La muerte. «Un sepulcro nuevo, en el que nadie había sido depositado aún» (Jn 19,40-41)",
-        "titulo_spotify": "[32.2] Audiencia 10/12 | La Pascua de Jesús | Vida eterna",
-        "descripcion_spotify": "El Papa León XIV en esta Audiencia nos invita a reflexionar sobre el misterio de la muerte y su relación con la vida eterna. Nos recuerda que la resurrección de Cristo revela que la muerte no es el final, sino un paso hacia la plenitud de la vida en Dios. Meditar sobre estos misterios nos ayuda a vivir con esperanza y autenticidad. Podcast creado por igles-ia.es",
-        "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-12-10_audiencia_audiencia_general_del_10_de_diciembre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_es.mp3",
-        "fecha": "2025-12-10",
-        "filename": "2025-12-10_audiencia_audiencia_general_del_10_de_diciembre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_es",
-        "tipo": "Audiencia",
-        "numero_episodio": "32.2",
-        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/audiences/2025/documents/20251210-udienza-generale.html"
-    },
-    {
         "titulo_original": "A los miembros del \"European Conservatives and Reformists Group\" del Parlamento Europeo (10 de diciembre de 2025)",
-        "titulo_spotify": "[32.3] Discurso 10/12 | A los miembros del European Conservatives and Reformists Group | Valores y fe en Europa",
-        "descripcion_spotify": "En este discurso, el Papa León XIV destaca la importancia de promover el bien común, respetar la dignidad de todas las personas y valorar las raíces judeocristianas que han formado la historia y cultura europea. Resalta la necesidad de diálogo respetuoso y de mantener vivo el legado religioso para afrontar los desafíos sociales y éticos actuales. Podcast creado por igles-ia.es",
+        "titulo_spotify": "[32.2] Discurso 10/12 | A los miembros del European Conservatives and Reformists Group | Valores y fe en Europa",
+        "descripcion_spotify": "En este discurso, el Papa León XIV destaca la importancia de promover el bien común, respetar la dignidad de todas las personas y valorar las raíces judeocristianas que han formado la historia europea. Resalta la contribución de la fe y la cultura cristiana en los avances sociales, culturales y éticos del continente, y llama a mantener un diálogo respetuoso entre la razón y la fe. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-12-10_discurso_a_los_miembros_del_european_conservatives_and_reformists_group_del_parlamento_europeo_10_de_diciembr.mp3",
         "fecha": "2025-12-10",
         "filename": "2025-12-10_discurso_a_los_miembros_del_european_conservatives_and_reformists_group_del_parlamento_europeo_10_de_diciembr",
         "tipo": "Discurso",
-        "numero_episodio": "32.3",
+        "numero_episodio": "32.2",
         "vatican_url": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/december/documents/20251210-ecr.html"
+    },
+    {
+        "titulo_original": "Audiencia general del 10 de diciembre de 2025 Ciclo de catequesis - Jubileo 2025. Jesucristo, nuestra esperanza. III. La Pascua de Jesús. 8. La muerte. «Un sepulcro nuevo, en el que nadie había sido depositado aún» (Jn 19,40-41)",
+        "titulo_spotify": "[32.3] Audiencia 10/12 | La Pascua de Jesús | Vida eterna",
+        "descripcion_spotify": "El Papa León XIV en esta audiencia reflexiona sobre el misterio de la muerte y su relación con la vida y la esperanza cristiana. Destaca que la resurrección de Cristo revela que la muerte no es el fin, sino un paso hacia la vida eterna, iluminando nuestro camino en medio del sufrimiento y las pruebas. Podcast creado por igles-ia.es",
+        "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-12-10_audiencia_audiencia_general_del_10_de_diciembre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_es.mp3",
+        "fecha": "2025-12-10",
+        "filename": "2025-12-10_audiencia_audiencia_general_del_10_de_diciembre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_es",
+        "tipo": "Audiencia",
+        "numero_episodio": "32.3",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/audiences/2025/documents/20251210-udienza-generale.html"
     },
     {
         "titulo_original": "A los profesores y estudiantes del Pontificio Instituto de Arqueología Cristiana (11 de diciembre de 2025)",
         "titulo_spotify": "[32.4] Discurso 11/12 | A los profesores y estudiantes del Pontificio Instituto de Arqueología Cristiana | Educación y fe",
-        "descripcion_spotify": "Este discurso del Papa León XIV destaca la importancia de la arqueología cristiana como una disciplina que une historia, fe y cultura. El Papa resalta el papel de los estudios arqueológicos en la promoción del ecumenismo, la paz y la esperanza en el mundo actual. Podcast creado por igles-ia.es",
+        "descripcion_spotify": "Este discurso del Papa León XIV destaca la importancia de la arqueología cristiana como una disciplina que une historia, fe y cultura. El Papa resalta el papel de los estudios arqueológicos en la promoción del ecumenismo, la paz y la esperanza en el mundo actual. Nos invita a valorar la investigación científica como un medio para fortalecer la identidad cristiana y construir puentes entre las naciones. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-12-11_discurso_a_los_profesores_y_estudiantes_del_pontificio_instituto_de_arqueologia_cristiana_11_de_diciembre_de_.mp3",
         "fecha": "2025-12-11",
         "filename": "2025-12-11_discurso_a_los_profesores_y_estudiantes_del_pontificio_instituto_de_arqueologia_cristiana_11_de_diciembre_de_",
@@ -46,7 +46,7 @@
     {
         "titulo_original": "A los miembros de la Comisión del «Premio Zayed a la Fraternidad Humana 2026» (11 de diciembre de 2025)",
         "titulo_spotify": "[32.5] Discurso 11/12 | A los miembros de la Comisión del «Premio Zayed a la Fraternidad Humana 2026» | Fraternidad y Solidaridad",
-        "descripcion_spotify": "El Papa León XIV en este discurso destaca la importancia de la fraternidad humana y la necesidad de gestos concretos de amor y solidaridad para superar divisiones y conflictos. Resalta el valor del diálogo interreligioso y el legado del Premio Zayed como ejemplo de acciones que promueven la compasión y la fraternidad en el mundo. Podcast creado por igles-ia.es",
+        "descripcion_spotify": "El Papa León XIV en este discurso destaca la importancia de la fraternidad humana y la necesidad de gestos concretos de amor y solidaridad en un mundo dividido. Resalta el valor del diálogo interreligioso y la contribución de acciones tangibles para promover la amistad entre todos. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-12-11_discurso_a_los_miembros_de_la_comision_del_premio_zayed_a_la_fraternidad_humana_2026_11_de_diciembre_de_2025.mp3",
         "fecha": "2025-12-11",
         "filename": "2025-12-11_discurso_a_los_miembros_de_la_comision_del_premio_zayed_a_la_fraternidad_humana_2026_11_de_diciembre_de_2025",
@@ -57,7 +57,7 @@
     {
         "titulo_original": "Santa Misa con motivo de la fiesta de la Bienaventurada Virgen María de Guadalupe (12 de diciembre de 2025)",
         "titulo_spotify": "[32.6] Homilia 12/12 | Santa Misa con motivo de la fiesta de la Bienaventurada Virgen María de Guadalupe | María y la fidelidad divina",
-        "descripcion_spotify": "En esta homilía, el Papa León XIV nos invita a reflexionar sobre la figura de María como madre amorosa y fiel, que nos acompaña en los momentos de dificultad y nos recuerda la promesa de la fidelidad divina. Nos anima a seguir su ejemplo de fe y esperanza, confiando en la presencia de Dios en nuestras vidas. Podcast creado por igles-ia.es",
+        "descripcion_spotify": "En esta homilía, el Papa León XIV nos invita a reflexionar sobre la figura de María como madre amorosa y fiel, que nos acompaña en los momentos de dificultad y nos recuerda la promesa de la fidelidad divina. Nos anima a seguir su ejemplo de fe y confianza en Dios, especialmente en tiempos de incertidumbre. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-12-12_homilia_santa_misa_con_motivo_de_la_fiesta_de_la_bienaventurada_virgen_maria_de_guadalupe_12_de_diciembre_de.mp3",
         "fecha": "2025-12-12",
         "filename": "2025-12-12_homilia_santa_misa_con_motivo_de_la_fiesta_de_la_bienaventurada_virgen_maria_de_guadalupe_12_de_diciembre_de",
@@ -66,25 +66,36 @@
         "vatican_url": "https://www.vatican.va/content/leo-xiv/es/homilies/2025/documents/20251212-messa-guadalupe.html"
     },
     {
+        "titulo_original": "A los directivos y funcionarios de los servicios de inteligencia italianos (12 de diciembre de 2025)",
+        "titulo_spotify": "[32.7] Discurso 12/12 | A los directivos y funcionarios de los servicios de inteligencia italianos | Ética y dignidad",
+        "descripcion_spotify": "Este discurso del Papa León XIV en el centenario del servicio de inteligencia italiano destaca la importancia de realizar su labor con ética, respeto a la dignidad humana y transparencia. El Papa enfatiza la necesidad de equilibrar la seguridad con los derechos individuales y la responsabilidad en la comunicación en la era digital. Podcast creado por igles-ia.es",
+        "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-12-12_discurso_a_los_directivos_y_funcionarios_de_los_servicios_de_inteligencia_italianos_12_de_diciembre_de_2025.mp3",
+        "fecha": "2025-12-12",
+        "filename": "2025-12-12_discurso_a_los_directivos_y_funcionarios_de_los_servicios_de_inteligencia_italianos_12_de_diciembre_de_2025",
+        "tipo": "Discurso",
+        "numero_episodio": "32.7",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/december/documents/20251212-intelligence-italiana.html"
+    },
+    {
         "titulo_original": "Santa Misa con motivo del Jubileo de los Presos (14 de diciembre de 2025)",
-        "titulo_spotify": "[32.7] Homilia 14/12 | Santa Misa con motivo del Jubileo de los Presos | Esperanza y Reconciliación",
-        "descripcion_spotify": "En esta homilía, el Papa León XIV nos invita a reflexionar sobre el Jubileo de la esperanza para los presos y la importancia de la misericordia, la justicia y la conversión. Nos recuerda que, incluso en las condiciones más difíciles, la fe y la caridad pueden florecer, promoviendo una civilización basada en el amor y la reconciliación. Podcast creado por igles-ia.es",
+        "titulo_spotify": "[32.8] Homilia 14/12 | Santa Misa con motivo del Jubileo de los Presos | Esperanza y Reconciliación",
+        "descripcion_spotify": "En esta homilía, el Papa León XIV comparte el mensaje de esperanza y misericordia en el contexto del Jubileo de los Presos. Nos invita a mantener viva la fe en la redención, promoviendo la justicia, la caridad y la transformación interior, incluso en ambientes difíciles como las cárceles. Un llamado a la conversión y a la construcción de una civilización basada en el amor. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-12-14_homilia_santa_misa_con_motivo_del_jubileo_de_los_presos_14_de_diciembre_de_2025.mp3",
         "fecha": "2025-12-14",
         "filename": "2025-12-14_homilia_santa_misa_con_motivo_del_jubileo_de_los_presos_14_de_diciembre_de_2025",
         "tipo": "Homilia",
-        "numero_episodio": "32.7",
+        "numero_episodio": "32.8",
         "vatican_url": "https://www.vatican.va/content/leo-xiv/es/homilies/2025/documents/20251214-giubileo-detenuti.html"
     },
     {
         "titulo_original": "Ángelus, 14 de diciembre de 2025",
-        "titulo_spotify": "[32.8] Ángelus 14/12 | Ángelus | Esperanza y Justicia",
-        "descripcion_spotify": "En este Ángelus, el Papa León XIV nos invita a reflexionar sobre la esperanza en medio de la prisión y el sufrimiento, recordándonos que la profecía y la verdad siguen libres en Cristo. Nos anima a buscar a Jesús en los pobres y los oprimidos, y a celebrar la alegría del Adviento con fe y esperanza. Podcast creado por igles-ia.es",
+        "titulo_spotify": "[32.9] Ángelus 14/12 | Ángelus | Esperanza y Justicia",
+        "descripcion_spotify": "En este Ángelus, el Papa León XIV nos invita a reflexionar sobre la esperanza en medio de la prisión y la incertidumbre, recordándonos que la profecía y la verdad siguen libres en Cristo. Nos anima a buscar a Jesús en los pobres y los necesitados, y a alegrarnos en la esperanza que Él nos ofrece. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-12-14_ángelus_angelus_14_de_diciembre_de_2025.mp3",
         "fecha": "2025-12-14",
         "filename": "2025-12-14_ángelus_angelus_14_de_diciembre_de_2025",
         "tipo": "Ángelus",
-        "numero_episodio": "32.8",
+        "numero_episodio": "32.9",
         "vatican_url": "https://www.vatican.va/content/leo-xiv/es/angelus/2025/documents/20251214-angelus.html"
     }
 ]
