@@ -15,11 +15,21 @@
       <itunes:category text="Christianity"/>
     </itunes:category>
     <item>
-      <title>[33.1] Audiencia 17/12 | Jesucristo, nuestra esperanza | Resurrección y corazón</title>
-      <description>&lt;![CDATA[El Papa León XIV en esta audiencia nos invita a reflexionar sobre cómo la resurrección de Jesús ilumina nuestro corazón y nuestra vida cotidiana. Nos anima a buscar en el amor de Dios la verdadera plenitud, dejando de lado las distracciones y enfocándonos en lo que realmente importa: amar y servir a nuestro prójimo. La clave está en volver a la fuente de nuestro ser, encontrando paz y alegría en la esperanza de la Pascua. Podcast creado por igles-ia.es]]&gt;</description>
+      <title>[33.2] Audiencia 17/12 | La Pascua de Jesús y el corazón inquieto | Esperanza y amor divino</title>
+      <description>&lt;![CDATA[El Papa León XIV en esta audiencia nos invita a reflexionar sobre cómo la resurrección de Jesús ilumina nuestro corazón inquieto, impulsándonos a buscar en Dios la verdadera plenitud. Nos anima a priorizar el amor a Dios y al prójimo, encontrando en la fe el descanso y la alegría que nuestro corazón anhela. Escuchar este mensaje nos ayuda a redescubrir el sentido profundo de nuestra existencia y la importancia de vivir con esperanza. Podcast creado por igles-ia.es]]&gt;</description>
       <pubDate>Wed, 17 Dec 2025 12:00:00 GMT</pubDate>
       <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-12-17_audiencia_audiencia_general_del_17_de_diciembre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_es.mp3" type="audio/mpeg" length="1872664"/>
       <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-12-17_audiencia_audiencia_general_del_17_de_diciembre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_es.mp3</guid>
+      <itunes:author>igles-ia.es</itunes:author>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
+      <itunes:episode>33.2</itunes:episode>
+    </item>
+    <item>
+      <title>[33.1] Discurso 15/12 | A los donantes del belén del Aula Pablo VI, del árbol de Navidad y del belén de la Plaza de San Pedro | Fe y esperanza</title>
+      <description>&lt;![CDATA[El Papa León XIV en este discurso agradece a los donantes y colaboradores que han contribuido a la creación de los belenes, árboles y nacimientos en la Plaza de San Pedro, resaltando su significado espiritual y cultural. Destaca que estos signos de fe y esperanza nos invitan a reflexionar sobre la humildad, el amor y la protección de la vida, especialmente en tiempos difíciles. Nos llama a buscar la paz, la fraternidad y a eliminar el odio en nuestros corazones. Podcast creado por igles-ia.es]]&gt;</description>
+      <pubDate>Mon, 15 Dec 2025 12:00:00 GMT</pubDate>
+      <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-12-15_discurso_a_los_donantes_del_belen_del_aula_pablo_vi_del_arbol_de_navidad_y_del_belen_de_la_plaza_de_san_pedro.mp3" type="audio/mpeg" length="1838680"/>
+      <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-12-15_discurso_a_los_donantes_del_belen_del_aula_pablo_vi_del_arbol_de_navidad_y_del_belen_de_la_plaza_de_san_pedro.mp3</guid>
       <itunes:author>igles-ia.es</itunes:author>
       <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
       <itunes:episode>33.1</itunes:episode>
