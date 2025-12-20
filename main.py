@@ -15,6 +15,7 @@ from iglesia.audio_utils import procesar_y_generar_episodios
 from iglesia.cognito_utils import cognito_get_verified_emails
 from iglesia.email_utils_3 import enviar_correos_todos
 from iglesia.utils import obtener_todos_los_textos
+from iglesia.telegram_utils import send_telegram_notification
 
 app = Typer()
 
@@ -318,6 +319,26 @@ def generar_audios(
         json_path, llm_real, only_metadata, force_create_audio, index_files
     )
 
+    # 🔔 Notificación a Telegram para nuevas Homilías
+    token = os.environ.get("TELEGRAM_BOT_TOKEN")
+    chat_id = "@HomiliasPapa"
+
+    print("📢 Verificando si hay homilías nuevas para notificar en Telegram...")
+    for item in resultados:
+        # Verificar si es tipo Homilia (ajustar mayúsculas según data real) y si es nuevo
+        if item.get("tipo") == "Homilia" and item.get("is_new") is True:
+            titulo = item.get("titulo_spotify", "Nueva Homilía")
+            url_audio = item.get("url_audio", "")
+            resumen_spotify = item.get("resumen_spotify", "")
+            vatican_url = item.get("url", "")
+            tipo = item.get("tipo", "")
+            
+            # Mensaje simple sin Markdown complicado para asegurar entrega
+            msg = f"🎧 Nuevo documento: {tipo}\n\n{titulo}\n\nEscúchala aquí: {url_audio}\n\nResumen: {resumen_spotify}\n\nDocucumento original: {vatican_url}"
+            
+            print(f"  -> Enviando notificación para: {titulo}")
+            send_telegram_notification(token, chat_id, msg)
+            
     print("\n\n--- RESULTADOS DEL LLM ---")
     print(json.dumps(resultados, indent=4, ensure_ascii=False))
     print("---------------------------")
