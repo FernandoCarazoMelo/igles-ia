@@ -3,7 +3,7 @@ title: "Reflexiones sobre la Esperanza, Misericordia y la Maternidad de María e
 week_of: "Semana del 08/12 al 14/12 de 2025"
 date: "2025-12-15"
 pontificate_week: 32
-excerpt: "Esta semana, el Papa Francisco nos invita a profundizar en la esperanza activa, la misericordia en la justicia social y el ejemplo de María como modelo de fe y confianza en Dios, en un tiempo de preparación para la Navidad."
+excerpt: "Esta semana, el Papa León XIV nos invita a profundizar en la esperanza activa, la misericordia en la justicia social y el ejemplo de María como modelo de fe y confianza en Dios, en un tiempo de preparación para la Navidad."
 slug: "semana-32-esperanza-misericordia-maria"
 ---
 
