@@ -326,15 +326,15 @@ def generar_audios(
     print("📢 Verificando si hay homilías nuevas para notificar en Telegram...")
     for item in resultados:
         # Verificar si es tipo Homilia (ajustar mayúsculas según data real) y si es nuevo
-        if item.get("tipo") == "Homilia" and item.get("is_new") is True:
+        if item.get("is_new") is True:
             titulo = item.get("titulo_spotify", "Nueva Homilía")
             url_audio = item.get("url_audio", "")
-            resumen_spotify = item.get("resumen_spotify", "")
-            vatican_url = item.get("url", "")
+            resumen_spotify = item.get("descripcion_spotify", "")
+            vatican_url = item.get("vatican_url", "")
             tipo = item.get("tipo", "")
             
             # Mensaje simple sin Markdown complicado para asegurar entrega
-            msg = f"🎧 Nuevo documento: {tipo}\n\n{titulo}\n\nEscúchala aquí: {url_audio}\n\nResumen: {resumen_spotify}\n\nDocucumento original: {vatican_url}"
+            msg = f"*🎧 Nueva intervención del Papa León XIV*: {tipo}\n\n*{titulo}*\n\n*Escúchala aquí*: {url_audio}\n\n*Resumen*:\n{resumen_spotify}\n\n*Docucumento original*: {vatican_url}"
             
             print(f"  -> Enviando notificación para: {titulo}")
             send_telegram_notification(token, chat_id, msg)
