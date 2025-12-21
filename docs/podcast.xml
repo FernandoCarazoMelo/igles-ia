@@ -15,8 +15,18 @@
       <itunes:category text="Christianity"/>
     </itunes:category>
     <item>
+      <title>[33.3] Discurso 18/12 | A los asesores laborales | Dignidad y Justicia</title>
+      <description>&lt;![CDATA[El Papa León XIV en este discurso resalta la importancia de poner a la persona en el centro del trabajo, promoviendo la dignidad, la justicia y el bienestar familiar. Invita a los asesores laborales a actuar con cercanía, justicia y responsabilidad, fomentando ambientes laborales fraternos y seguros. Podcast creado por igles-ia.es]]&gt;</description>
+      <pubDate>Thu, 18 Dec 2025 12:00:00 GMT</pubDate>
+      <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-12-18_discurso_a_los_asesores_laborales_18_de_diciembre_de_2025.mp3" type="audio/mpeg" length="1990744"/>
+      <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-12-18_discurso_a_los_asesores_laborales_18_de_diciembre_de_2025.mp3</guid>
+      <itunes:author>igles-ia.es</itunes:author>
+      <itunes:image href="https://igles-ia.es/static/papa-leon-xiv-spotify_3.png"/>
+      <itunes:episode>33.3</itunes:episode>
+    </item>
+    <item>
       <title>[33.2] Audiencia 17/12 | Jesucristo, nuestra esperanza | Resurrección y corazón</title>
-      <description>&lt;![CDATA[El Papa León XIV en esta Audiencia nos invita a reflexionar sobre cómo la resurrección de Jesús ilumina nuestro corazón y nuestra vida. Nos anima a encontrar en la fe la paz y la alegría que trascienden las actividades diarias, recordándonos que el verdadero tesoro está en amar a Dios y al prójimo. Solo así podremos experimentar la plenitud y el descanso que ofrece la esperanza en Cristo. Podcast creado por igles-ia.es]]&gt;</description>
+      <description>&lt;![CDATA[El Papa León XIV en esta Audiencia nos invita a reflexionar sobre cómo la resurrección de Jesús ilumina nuestro corazón, impulsándonos a buscar la verdadera plenitud en el amor de Dios y en la entrega al prójimo. Nos recuerda que, aunque la vida moderna nos disperse y agote, nuestro corazón inquieto busca su destino en la paz y alegría que solo Cristo ofrece. Escucha este mensaje de esperanza y transformación. Podcast creado por igles-ia.es]]&gt;</description>
       <pubDate>Wed, 17 Dec 2025 12:00:00 GMT</pubDate>
       <enclosure url="https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-12-17_audiencia_audiencia_general_del_17_de_diciembre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_es.mp3" type="audio/mpeg" length="1872664"/>
       <guid>https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-12-17_audiencia_audiencia_general_del_17_de_diciembre_de_2025_ciclo_de_catequesis_jubileo_2025_jesucristo_nuestra_es.mp3</guid>
