@@ -3,7 +3,7 @@ title: "La Esperanza que Genera Vida en la Navidad y el Adviento"
 week_of: "Semana del 15/12 al 21/12 de 2025"
 date: "2025-12-22"
 pontificate_week: 33
-excerpt: "El Papa Francisco y León XIV nos invitan a vivir la esperanza activa y fecunda, inspirada en María, san José y la Resurrección, que transforma nuestro corazón y nuestras acciones en esta temporada navideña."
+excerpt: "El Papa León XIV nos invita a vivir la esperanza activa y fecunda, inspirada en María, san José y la Resurrección, que transforma nuestro corazón y nuestras acciones en esta temporada navideña."
 slug: "semana-33-esperanza-vida"
 ---
 
