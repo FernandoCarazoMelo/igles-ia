@@ -21,6 +21,7 @@ jobs:
       AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       USER_POOL_ID: ${{ secrets.USER_POOL_ID }}
       SUMMARIES_FOLDER: web/data/summaries
       S3_BUCKET_NAME: igles-ia-spotify
