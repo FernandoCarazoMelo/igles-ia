@@ -1,0 +1,26 @@
+[
+    {
+        "titulo_original": "Felicitaciones a los empleados de la Curia Romana, de la Gobernación del Estado de la Ciudad del Vaticano y del Vicariato de Roma, junto con sus familiares (22 de diciembre de 2025)",
+        "titulo_spotify": "[34.1] Discurso 22/12 | Felicitaciones a los empleados de la Curia Romana | Trabajo y Navidad",
+        "descripcion_spotify": "El Papa León XIV en este discurso navideño agradece a los empleados de la Curia Romana, sus familias y a todos los colaboradores del Vaticano. Destaca la importancia de realizar nuestras tareas con dedicación y amor, reflejando la sencillez y humildad de la Navidad. Nos invita a vivir con alegría y serenidad el espíritu navideño, poniendo en práctica los valores de servicio y fe. Podcast creado por igles-ia.es",
+        "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-12-22_discurso_felicitaciones_a_los_empleados_de_la_curia_romana_de_la_gobernacion_del_estado_de_la_ciudad_del_vati.mp3",
+        "fecha": "2025-12-22",
+        "filename": "2025-12-22_discurso_felicitaciones_a_los_empleados_de_la_curia_romana_de_la_gobernacion_del_estado_de_la_ciudad_del_vati",
+        "tipo": "Discurso",
+        "numero_episodio": "34.1",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/december/documents/20251222-auguri-dipendenti.html",
+        "is_new": true
+    },
+    {
+        "titulo_original": "Felicitaciones a la Curia Romana (22 de diciembre de 2025)",
+        "titulo_spotify": "[34.2] Discurso 22/12 | Felicitaciones a la Curia Romana | Misión y Comunión",
+        "descripcion_spotify": "Este discurso del Papa León XIV destaca la importancia de la Navidad como un momento de renovación y esperanza, recordándonos que Dios se hizo carne y nos invita a vivir en alegría y gratitud. El Papa enfatiza la misión de la Iglesia como un acto de salida y servicio, inspirada en el ejemplo de Cristo y en la misericordia divina. Además, llama a la Curia Romana a ser cada vez más misionera, promoviendo la comunión y la evangelización en medio de los desafíos actuales. Podcast creado por igles-ia.es",
+        "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-12-22_discurso_felicitaciones_a_la_curia_romana_22_de_diciembre_de_2025.mp3",
+        "fecha": "2025-12-22",
+        "filename": "2025-12-22_discurso_felicitaciones_a_la_curia_romana_22_de_diciembre_de_2025",
+        "tipo": "Discurso",
+        "numero_episodio": "34.2",
+        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/speeches/2025/december/documents/20251222-curia-romana.html",
+        "is_new": true
+    }
+]
