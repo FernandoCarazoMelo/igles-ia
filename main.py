@@ -326,7 +326,7 @@ def generar_audios(
     print("📢 Verificando si hay homilías nuevas para notificar en Telegram...")
     for item in resultados:
         # Verificar si es tipo Homilia (ajustar mayúsculas según data real) y si es nuevo
-        if item.get("is_new") is True:
+        if item.get("is_new"):
             titulo = item.get("titulo_spotify", "Nueva Homilía")
             url_audio = item.get("url_audio", "")
             resumen_spotify = item.get("descripcion_spotify", "")
