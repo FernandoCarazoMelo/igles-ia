@@ -220,6 +220,7 @@ def procesar_y_generar_episodios(
 
         filename_mp3 = episodio["filename"] + ".mp3"
 
+        is_new = False
         # ✅ Regla 1: Saltar si el archivo ya está en S3
         if force_create_audio:
             # Forzar generación de audio aunque ya exista en S3
@@ -231,12 +232,14 @@ def procesar_y_generar_episodios(
                 S3_BUCKET_NAME,
                 only_metadata,
             )
+            is_new = True
         else:
             # Comprobar si el archivo ya existe en S3
             try:
                 s3.head_object(Bucket=S3_BUCKET_NAME, Key=filename_mp3)
                 print(f"☁️ Episodio ya existe en S3: {filename_mp3}. Saltando...")
                 url_audio = f"https://{S3_BUCKET_NAME}.s3.{s3.get_bucket_location(Bucket=S3_BUCKET_NAME)['LocationConstraint'] or 'us-east-1'}.amazonaws.com/{filename_mp3}"
+                is_new = False
             except s3.exceptions.ClientError as e:
                 if e.response["Error"]["Code"] == "404":
                     # No existe → generamos audio
@@ -248,6 +251,7 @@ def procesar_y_generar_episodios(
                         S3_BUCKET_NAME,
                         only_metadata,
                     )
+                    is_new = True
                 else:
                     print(f"❌ Error al comprobar S3: {e}")
                     continue
@@ -263,6 +267,7 @@ def procesar_y_generar_episodios(
                 "tipo": episodio["tipo"],
                 "numero_episodio": f"{episodio['pontificate_week']}.{episodio['sub_index']}",
                 "vatican_url": episodio["url"],
+                "is_new": is_new,
             }
         )
 
