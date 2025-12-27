@@ -2,7 +2,7 @@
     {
         "titulo_original": "Felicitaciones a los empleados de la Curia Romana, de la Gobernación del Estado de la Ciudad del Vaticano y del Vicariato de Roma, junto con sus familiares (22 de diciembre de 2025)",
         "titulo_spotify": "[34.1] Discurso 22/12 | Felicitaciones a los empleados de la Curia Romana | Trabajo y Navidad",
-        "descripcion_spotify": "El Papa León XIV en este discurso navideño agradece a los empleados de la Curia Romana, destacando la importancia de realizar nuestras tareas con dedicación y amor, como una forma de glorificar a Dios. Nos invita a aprender del estilo de sencillez y humildad de la Navidad, viviendo con alegría y serenidad. Podcast creado por igles-ia.es",
+        "descripcion_spotify": "El Papa León XIV en este discurso navideño agradece a los empleados de la Curia Romana, sus familias y a todos los que trabajan en el Vaticano. Destaca la importancia de realizar nuestras tareas con dedicación y amor, reflejando la sencillez y humildad de la Navidad. Nos invita a encontrar a Dios en nuestras actividades cotidianas y a vivir con alegría y serenidad esta temporada. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-12-22_discurso_felicitaciones_a_los_empleados_de_la_curia_romana_de_la_gobernacion_del_estado_de_la_ciudad_del_vati.mp3",
         "fecha": "2025-12-22",
         "filename": "2025-12-22_discurso_felicitaciones_a_los_empleados_de_la_curia_romana_de_la_gobernacion_del_estado_de_la_ciudad_del_vati",
@@ -14,7 +14,7 @@
     {
         "titulo_original": "Felicitaciones a la Curia Romana (22 de diciembre de 2025)",
         "titulo_spotify": "[34.2] Discurso 22/12 | Felicitaciones a la Curia Romana | Misión y Comunión",
-        "descripcion_spotify": "Este discurso del Papa León XIV en Navidad nos invita a redescubrir la alegría y esperanza que trae la venida de Cristo, resaltando la importancia de la misión y la comunión en la Iglesia. Nos anima a vivir con espíritu misionero, abiertos al mundo y comprometidos en la evangelización, siguiendo el ejemplo del amor divino. Podcast creado por igles-ia.es",
+        "descripcion_spotify": "Este discurso del Papa León XIV en Navidad nos invita a redescubrir la alegría de la misión evangelizadora y la importancia de la comunión en la Iglesia. Nos anima a vivir con espíritu misionero, siguiendo el ejemplo de Cristo, y a fortalecer la colaboración en la Curia para servir mejor a las comunidades. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-12-22_discurso_felicitaciones_a_la_curia_romana_22_de_diciembre_de_2025.mp3",
         "fecha": "2025-12-22",
         "filename": "2025-12-22_discurso_felicitaciones_a_la_curia_romana_22_de_diciembre_de_2025",
@@ -24,21 +24,9 @@
         "is_new": false
     },
     {
-        "titulo_original": "Navidad del Señor – Santa Misa de Nochebuena (24 de diciembre de 2025)",
-        "titulo_spotify": "[34.3] Homilia 24/12 | Navidad del Señor – Santa Misa de Nochebuena | Nacimiento de Jesús",
-        "descripcion_spotify": "En esta homilía, el Papa León XIV nos invita a reflexionar sobre el significado profundo de la Navidad, destacando que en el nacimiento de Jesús Dios se revela en la humildad y en la cercanía con la humanidad. Nos recuerda que la verdadera luz y esperanza nacen en un pesebre, iluminando nuestras vidas y transformando nuestro corazón. Podcast creado por igles-ia.es",
-        "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-12-24_homilia_navidad_del_senor_santa_misa_de_nochebuena_24_de_diciembre_de_2025.mp3",
-        "fecha": "2025-12-24",
-        "filename": "2025-12-24_homilia_navidad_del_senor_santa_misa_de_nochebuena_24_de_diciembre_de_2025",
-        "tipo": "Homilia",
-        "numero_episodio": "34.3",
-        "vatican_url": "https://www.vatican.va/content/leo-xiv/es/homilies/2025/documents/20251224-messa-notte-natale.html",
-        "is_new": false
-    },
-    {
         "titulo_original": "Natividad del Señor – Santa Misa del día (25 de diciembre de 2025)",
         "titulo_spotify": "[34.4] Homilia 25/12 | Natividad del Señor – Santa Misa del día | Paz y ternura divina",
-        "descripcion_spotify": "En esta homilía, el Papa León XIV nos invita a reflexionar sobre la alegría y la paz que trae la Navidad, manifestada en la sencillez del Verbo hecho carne. Nos recuerda que la verdadera paz y poder divino se revelan en la acogida, la ternura y la solidaridad con los más frágiles. La Navidad nos llama a vivir con amor y entrega, reconociendo la presencia de Dios en cada rostro vulnerable. Podcast creado por igles-ia.es",
+        "descripcion_spotify": "En esta homilía, el Papa León XIV nos invita a reflexionar sobre el significado de la Navidad como un momento de alegría, paz y presencia divina en medio de la fragilidad humana. Nos recuerda que el Verbo de Dios se hizo carne para mostrarnos la ternura y el poder del amor divino, que nos llama a ser instrumentos de paz y misericordia. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-12-25_homilia_natividad_del_senor_santa_misa_del_dia_25_de_diciembre_de_2025.mp3",
         "fecha": "2025-12-25",
         "filename": "2025-12-25_homilia_natividad_del_senor_santa_misa_del_dia_25_de_diciembre_de_2025",
@@ -49,14 +37,14 @@
     },
     {
         "titulo_original": "Ángelus, 26 de diciembre de 2025, Fiesta de San Esteban Protomártir",
-        "titulo_spotify": "[34.5] Ángelus 26/12 | Fiesta de San Esteban Protomártir | Luz y fe en el martirio",
-        "descripcion_spotify": "En este Ángelus, el Papa León XIV nos invita a reflexionar sobre el significado del martirio como un nacimiento al cielo y la verdadera luz que brilla en la oscuridad. Nos recuerda que la fe y el amor divino, ejemplificados en san Esteban, nos llaman a vivir con valentía, justicia y fraternidad, incluso en tiempos difíciles. La alegría de la Navidad se encuentra en reconocer la dignidad de cada ser humano y en seguir el ejemplo de perdón y amor de Jesús. Podcast creado por igles-ia.es",
+        "titulo_spotify": "[34.5] Ángelus 26/12 | Fiesta de San Esteban Protomártir | Luz y fe en la adversidad",
+        "descripcion_spotify": "En este Ángelus, el Papa León XIV nos invita a reflexionar sobre el significado del martirio y la luz que brilla en quienes enfrentan la adversidad con amor y fe. Nos recuerda que la verdadera fuerza proviene del amor divino, que nos llama a vivir en fraternidad y esperanza, incluso en tiempos difíciles. La Navidad nos inspira a renacer en la luz y a seguir el ejemplo de San Esteban, que perdonó y vivió en la verdad. Podcast creado por igles-ia.es",
         "url_audio": "https://igles-ia-spotify.s3.us-east-1.amazonaws.com/2025-12-26_ángelus_angelus_26_de_diciembre_de_2025_fiesta_de_san_esteban_protomartir.mp3",
         "fecha": "2025-12-26",
         "filename": "2025-12-26_ángelus_angelus_26_de_diciembre_de_2025_fiesta_de_san_esteban_protomartir",
         "tipo": "Ángelus",
         "numero_episodio": "34.5",
         "vatican_url": "https://www.vatican.va/content/leo-xiv/es/angelus/2025/documents/20251226-angelus.html",
-        "is_new": true
+        "is_new": false
     }
 ]
